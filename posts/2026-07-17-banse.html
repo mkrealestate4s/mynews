@@ -48,6 +48,8 @@ section h2{font-family:'Noto Serif KR',serif;font-weight:900;font-size:1.9rem;ma
 .bar{margin-bottom:18px}
 .bar label{font-weight:700;font-size:.95rem;display:block;margin-bottom:6px}
 .rail{background:#0f1c30;border-radius:9px;height:34px;position:relative;overflow:hidden}
+.railval{position:absolute;top:50%;transform:translateY(-50%);
+  font-weight:700;font-size:.9rem;color:var(--ink);white-space:nowrap}
 .fill{height:100%;border-radius:9px;display:flex;align-items:center;justify-content:flex-end;
   padding-right:12px;font-weight:700;font-size:.9rem;color:#0D1829;background:var(--grad)}
 .fill.gray{background:var(--line);color:var(--ink)}
@@ -65,10 +67,10 @@ ol.check li::before{content:"0" counter(c);position:absolute;left:0;top:2px;
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* card news */
-.cards{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+.cards{display:flex;align-items:flex-start;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
   padding:6px 0 14px;-webkit-overflow-scrolling:touch}
-.cards img{width:340px;max-width:78vw;aspect-ratio:1;border-radius:14px;
-  border:1px solid var(--line);scroll-snap-align:start;flex:none}
+.cards img{width:340px;max-width:78vw;height:auto;aspect-ratio:1/1;object-fit:cover;
+  border-radius:14px;border:1px solid var(--line);scroll-snap-align:start;flex:none}
 .cards-hint{color:var(--mute);font-size:.9rem;margin-bottom:14px}
 figure.cardimg{margin:1.8em 0}
 figure.cardimg img{width:100%;max-width:560px;display:block;border-radius:14px;border:1px solid var(--line)}
@@ -111,7 +113,7 @@ footer a{color:var(--teal)}
     <div class="bar"><label>10대 건설사 브랜드 단지</label>
       <div class="rail"><div class="fill" style="width:100%">9.76 : 1</div></div></div>
     <div class="bar"><label>그 외 건설사 단지</label>
-      <div class="rail"><div class="fill gray" style="width:22%">2.17 : 1</div></div></div>
+      <div class="rail"><div class="fill gray" style="width:22%"></div><span class="railval" style="left:calc(22% + 12px)">2.17 : 1</span></div></div>
     <div class="cap">격차 약 4.5배 — 같은 반세권이어도 브랜드 단지에만 수요가 몰립니다.</div>
   </div>
 </section>
