@@ -12,32 +12,81 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0D1829;--panel:#132239;--ink:#F2F6FA;--mute:#96A5BA;
-  --teal:#5EE6D0;--peri:#7C8CF8;--line:#2C3E5A;
-  --grad:linear-gradient(92deg,var(--teal),var(--peri))}
+/* ── theme: 다크 리포트 (기본) ─────────────────────────── */
+:root{
+  --bg:#0D1829; --panel:#132239; --ink:#F2F6FA; --mute:#96A5BA;
+  --accent:#5EE6D0; --line:#2C3E5A;
+  --grad:linear-gradient(92deg,#5EE6D0,#7C8CF8);
+  --radius:16px; --card-shadow:none;
+  --head-font:'Noto Serif KR',serif; --head-space:0;
+}
+/* ── theme: 모던 미니멀 화이트 (애플풍) ─────────────────── */
+:root[data-theme="white"]{
+  --bg:#ffffff; --panel:#f5f5f7; --ink:#1d1d1f; --mute:#6e6e73;
+  --accent:#0071e3; --line:#e5e5ea;
+  --grad:linear-gradient(92deg,#0071e3,#5ac8fa);
+  --radius:18px; --card-shadow:0 4px 20px rgba(0,0,0,.06);
+  --head-font:'Noto Sans KR',sans-serif; --head-space:-0.02em;
+}
+/* ── theme: 에디토리얼 매거진 ──────────────────────────── */
+:root[data-theme="editorial"]{
+  --bg:#F7F2E9; --panel:#FFFDF8; --ink:#2B2118; --mute:#8A7B6C;
+  --accent:#C24D2C; --line:#E4D9C6;
+  --grad:linear-gradient(92deg,#C24D2C,#8A5A2B);
+  --radius:6px; --card-shadow:0 2px 0 var(--line);
+  --head-font:'Noto Serif KR',serif; --head-space:0;
+}
+
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--navy);color:var(--ink);font-family:'Noto Sans KR',sans-serif;line-height:1.7}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',sans-serif;line-height:1.7;
+  transition:background .35s,color .35s}
 .wrap{max-width:760px;margin:0 auto;padding:0 24px}
 .gtx{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 header{padding:88px 0 40px}
-.eyebrow{color:var(--teal);font-weight:700;letter-spacing:.14em;font-size:.85rem}
-h1{font-family:'Noto Serif KR',serif;font-weight:900;font-size:clamp(2.4rem,8vw,3.6rem);margin:.3em 0 .2em}
+.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.14em;font-size:.85rem}
+h1{font-family:var(--head-font);letter-spacing:var(--head-space);
+  font-weight:900;font-size:clamp(2.4rem,8vw,3.6rem);margin:.3em 0 .2em}
 .sub{color:var(--mute)}
 .trace{height:44px;position:relative;margin:24px 0 40px}
 .trace::before{content:"";position:absolute;left:0;top:50%;width:100%;height:2px;background:var(--line)}
 .trace::after{content:"";position:absolute;right:0;top:50%;width:14px;height:14px;transform:translateY(-50%);
-  border:3px solid var(--teal);border-radius:50%;background:var(--navy)}
+  border:3px solid var(--accent);border-radius:50%;background:var(--bg)}
 .post{display:block;text-decoration:none;color:inherit;background:var(--panel);
-  border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:16px;transition:border-color .2s}
-.post:hover{border-color:var(--teal)}
+  border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--card-shadow);
+  padding:26px;margin-bottom:16px;transition:border-color .2s,box-shadow .2s,background .35s}
+.post:hover{border-color:var(--accent)}
 .post .date{color:var(--mute);font-size:.82rem;letter-spacing:.06em}
-.post .kw{font-family:'Noto Serif KR',serif;font-weight:900;font-size:1.7rem;margin:4px 0}
+.post .kw{font-family:var(--head-font);letter-spacing:var(--head-space);
+  font-weight:900;font-size:1.7rem;margin:4px 0}
 .post p{color:var(--mute);font-size:.95rem}
-.post .go{color:var(--teal);font-weight:700;font-size:.9rem;margin-top:10px;display:inline-block}
+.post .go{color:var(--accent);font-weight:700;font-size:.9rem;margin-top:10px;display:inline-block}
 footer{padding:56px 0 72px;color:var(--mute);font-size:.82rem}
+
+/* ── 테마 선택 아이콘 (오른쪽 위) ──────────────────────── */
+.themes{position:fixed;top:16px;right:16px;display:flex;gap:10px;z-index:50;
+  background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(8px);
+  padding:8px 10px;border-radius:999px;border:1px solid var(--line)}
+.tbtn{width:32px;height:32px;border-radius:50%;cursor:pointer;padding:0;
+  border:2px solid var(--line);
+  background:linear-gradient(135deg,var(--sa) 0 52%,var(--sb) 52% 100%);
+  transition:transform .15s,border-color .15s}
+.tbtn:hover{transform:scale(1.12)}
+.tbtn[aria-pressed="true"]{border-color:var(--accent);
+  outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:520px){.themes{top:10px;right:10px;gap:8px}.tbtn{width:28px;height:28px}}
 </style>
 </head>
 <body>
+
+<div class="themes" role="group" aria-label="디자인 테마 선택">
+  <button class="tbtn" data-set="report" title="다크 리포트" aria-label="다크 리포트 테마"
+    style="--sa:#0D1829;--sb:#5EE6D0"></button>
+  <button class="tbtn" data-set="white" title="모던 미니멀 화이트" aria-label="모던 미니멀 화이트 테마"
+    style="--sa:#ffffff;--sb:#0071e3"></button>
+  <button class="tbtn" data-set="editorial" title="에디토리얼 매거진" aria-label="에디토리얼 매거진 테마"
+    style="--sa:#F7F2E9;--sb:#C24D2C"></button>
+</div>
+
 <div class="wrap">
 <header>
   <div class="eyebrow">DAILY REAL ESTATE KEYWORD REPORT</div>
@@ -56,5 +105,27 @@ footer{padding:56px 0 72px;color:var(--mute);font-size:.82rem}
 
 <footer>© 2026 부동산 인사이트 · 정보 제공 목적이며 투자 권유가 아닙니다.</footer>
 </div>
+
+<script>
+(function(){
+  var KEY='mynews-theme', root=document.documentElement;
+  function apply(name){
+    if(name==='report'){root.removeAttribute('data-theme');}
+    else{root.setAttribute('data-theme',name);}
+    document.querySelectorAll('.tbtn').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b.dataset.set===name));
+    });
+  }
+  var saved=null;
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  apply(saved||'report');
+  document.querySelectorAll('.tbtn').forEach(function(b){
+    b.addEventListener('click',function(){
+      apply(b.dataset.set);
+      try{localStorage.setItem(KEY,b.dataset.set);}catch(e){}
+    });
+  });
+})();
+</script>
 </body>
 </html>
