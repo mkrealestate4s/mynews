@@ -87,7 +87,7 @@ def cards():
     <div style="width:120px;height:52%;border-radius:10px 10px 0 0;background:var(--fillgray)"></div>
     <div style="width:120px;height:74%;border-radius:10px 10px 0 0;background:var(--grad)"></div>
     <div style="width:120px;height:100%;border-radius:10px 10px 0 0;background:var(--grad)"></div>
-    <div style="margin-left:18px;font-size:30px;color:var(--mute);align-self:center">검색 관심도<br>급상승 중</div>
+    <div style="margin-left:18px;font-size:30px;color:var(--mute);align-self:flex-end;line-height:1.4;padding-bottom:2px">검색 관심도<br>급상승 중</div>
   </div>
   <div style="font-size:36px;color:var(--ink);font-weight:500">
     뜻 · 데이터 · 체크포인트, <span class="gtx" style="font-weight:700">그래프로 빠르게</span></div>
@@ -129,10 +129,8 @@ def cards():
   <div style="font-size:29px;color:var(--mute);margin-bottom:40px">2026 상반기 1순위 평균 청약 경쟁률</div>
 """ + hbar("10대 건설사 브랜드 단지", "9.76 : 1", 100) \
     + hbar("그 외 건설사 단지", "2.17 : 1", 22, gray=True) + """
-  <div style="display:flex;align-items:baseline;gap:20px;margin-top:26px">
-    <div class="serif gtx" style="font-size:110px;font-weight:900;line-height:1">4.5배</div>
-    <div style="font-size:31px;color:var(--body)">격차 — 같은 반세권이어도<br><strong>브랜드 단지에만</strong> 수요가 몰립니다.</div>
-  </div>
+  <div class="serif gtx" style="font-size:96px;font-weight:900;line-height:1;margin-top:26px">4.5배</div>
+  <div style="font-size:31px;color:var(--body);margin-top:12px">격차 — 같은 반세권이어도 <strong>브랜드 단지에만</strong> 수요가 몰립니다.</div>
 </div>""" + foot()
 
     c["05-check"] = top("05") + """
