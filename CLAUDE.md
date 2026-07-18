@@ -15,6 +15,8 @@ URL: https://mkrealestate4s.github.io/mynews/
 1. WebSearch로 당일 부동산 이슈 검색 → 데이터가 풍부한 키워드 1개 선정.
 2. 본문: 대시보드(kcard 4 + 차트) → 카드뉴스 갤러리 → 기사(섹션별 차트) → 체크포인트 3 → 출처.
 3. 카드뉴스 6장 × 3테마 생성(스킬 참조), 인덱스에 글 카드 추가, 커밋·푸시, 배포 success 확인.
+4. **SEO**: 새 글마다 `sitemap.xml`과 `feed.xml`에 항목 추가, 포스트 head에
+   canonical/og:url/JSON-LD(NewsArticle) 포함 (기존 포스트 복제 시 URL·제목·날짜 교체 확인).
 
 ## 데이터 시각화 표준 (중요 — 사용자 요구사항)
 - **촘촘하게**: 헤드라인 숫자 2개 비교로 끝내지 않는다. 가능하면
