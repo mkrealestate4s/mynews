@@ -122,6 +122,24 @@ figure.cardimg figcaption{color:var(--mute);font-size:.82rem;margin-top:8px}
 footer{padding:48px 0 72px;color:var(--mute);font-size:.82rem}
 footer a{color:var(--teal)}
 
+/* ── 복사/저장 버튼 ────────────────────────────────────── */
+.copybar{display:flex;gap:10px;margin:10px 0 4px}
+.cbtn{cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);
+  font:inherit;font-size:.85rem;font-weight:700;border-radius:999px;padding:6px 16px;
+  transition:border-color .15s,transform .1s}
+.cbtn:hover{border-color:var(--teal)}
+.cbtn:active{transform:scale(.96)}
+.imgwrap{position:relative;flex:none}
+.cards .imgwrap{scroll-snap-align:start}
+.imgbtns{position:absolute;top:10px;right:10px;display:flex;gap:8px;z-index:5}
+.imgbtns .cbtn{font-size:.75rem;padding:4px 12px;
+  background:color-mix(in srgb,var(--navy) 80%,transparent);backdrop-filter:blur(6px)}
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:var(--navy);font-weight:700;font-size:.9rem;
+  padding:10px 22px;border-radius:999px;opacity:0;pointer-events:none;
+  transition:opacity .25s,transform .25s;z-index:99}
+#toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
 /* ── 테마 선택 아이콘 (오른쪽 위) ──────────────────────── */
 .themes{position:fixed;top:16px;right:16px;display:flex;gap:10px;z-index:50;
   background:color-mix(in srgb,var(--navy) 72%,transparent);backdrop-filter:blur(8px);
@@ -201,6 +219,10 @@ footer a{color:var(--teal)}
 
 <article>
   <h2>반세권 뜻과 2026년 7월 청약 시장 총정리</h2>
+  <div class="copybar">
+    <button class="cbtn" id="copyBody">📋 본문 복사</button>
+    <button class="cbtn" id="copyLink">🔗 링크 복사</button>
+  </div>
 
   <p>요즘 부동산 기사마다 등장하는 단어, <strong>반세권</strong>. 처음 들으면 "반지하? 반값?" 싶지만, 2026년 7월 청약 시장을 이해하는 핵심 키워드입니다. 이 글 하나로 반세권의 뜻, 지금 뜨는 이유, 그리고 청약 전 반드시 확인할 체크포인트 3가지까지 정리해 드립니다.</p>
 
@@ -291,6 +313,50 @@ footer a{color:var(--teal)}
       apply(b.dataset.set);
       try{localStorage.setItem(KEY,b.dataset.set);}catch(e){}
     });
+  });
+
+  /* ── 복사/저장 유틸 ── */
+  var toast=document.createElement('div'); toast.id='toast'; document.body.appendChild(toast);
+  var toastTimer=null;
+  function say(msg){toast.textContent=msg;toast.classList.add('on');
+    clearTimeout(toastTimer);toastTimer=setTimeout(function(){toast.classList.remove('on');},1800);}
+
+  function copyText(t,okMsg){
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(function(){say(okMsg);},function(){say('복사 실패 — 길게 눌러 복사해 주세요');});
+    }else{say('이 브라우저는 자동 복사를 지원하지 않아요');}
+  }
+  var bodyBtn=document.getElementById('copyBody');
+  if(bodyBtn)bodyBtn.addEventListener('click',function(){
+    var art=document.querySelector('article');
+    var t=document.title+'\n'+location.href+'\n\n'+art.innerText;
+    copyText(t,'본문이 복사됐습니다 ✓');
+  });
+  var linkBtn=document.getElementById('copyLink');
+  if(linkBtn)linkBtn.addEventListener('click',function(){copyText(location.href,'링크가 복사됐습니다 ✓');});
+
+  function downloadImg(img){
+    var a=document.createElement('a');
+    a.href=img.src;a.download=img.dataset.file||'card.png';
+    document.body.appendChild(a);a.click();a.remove();say('저장을 시작했습니다 ✓');
+  }
+  function copyImg(img){
+    if(!(navigator.clipboard&&window.ClipboardItem)){downloadImg(img);return;}
+    fetch(img.src).then(function(r){return r.blob();}).then(function(b){
+      if(b.type!=='image/png'){b=b.slice(0,b.size,'image/png');}
+      return navigator.clipboard.write([new ClipboardItem({'image/png':b})]);
+    }).then(function(){say('이미지가 복사됐습니다 ✓');})
+      .catch(function(){downloadImg(img);});
+  }
+  document.querySelectorAll('img.card-art').forEach(function(img){
+    var wrap=document.createElement('div');wrap.className='imgwrap';
+    img.parentNode.insertBefore(wrap,img);wrap.appendChild(img);
+    var btns=document.createElement('div');btns.className='imgbtns';
+    var c=document.createElement('button');c.className='cbtn';c.textContent='복사';
+    c.addEventListener('click',function(e){e.preventDefault();copyImg(img);});
+    var d=document.createElement('button');d.className='cbtn';d.textContent='저장';
+    d.addEventListener('click',function(e){e.preventDefault();downloadImg(img);});
+    btns.appendChild(c);btns.appendChild(d);wrap.appendChild(btns);
   });
 })();
 </script>
