@@ -1,0 +1,133 @@
+{
+  "_about": "디자인 컨셉 프리셋 라이브러리. 각 항목은 index/post의 CSS 변수 체계와 make_cards.py 테마 딕셔너리에 그대로 꽂을 수 있는 형태. 이미지가 아닌 스타일 요소(색·타이포·무드)만 보관한다.",
+  "_source": "자체 제작 3종 + 99designs by Vista '2026 웹디자인 트렌드' 리포트에서 스타일 요소를 추출해 재해석 (개별 디자이너 작품을 복제하지 않음)",
+  "_updated": "2026-07-18",
+  "active": ["report", "white", "editorial"],
+  "presets": {
+    "report": {
+      "label": "다크 리포트",
+      "mood": "데이터 리포트, 신뢰감, 테크",
+      "vars": {
+        "bg": "#0D1829", "panel": "#132239", "ink": "#F2F6FA", "mute": "#96A5BA",
+        "accent": "#5EE6D0", "accent2": "#7C8CF8", "line": "#2C3E5A",
+        "rail": "#0f1c30", "fillgray": "#2C3E5A", "onfill": "#0D1829", "body": "#DCE5EF"
+      },
+      "typography": { "heading": "'Noto Serif KR',serif", "headSpace": "0", "gradientText": true },
+      "shape": { "radius": "16px", "border": "1px line", "shadow": "none" }
+    },
+    "white": {
+      "label": "모던 미니멀 화이트 (애플풍)",
+      "mood": "절제, 순백, 프리미엄 하드웨어 브랜드",
+      "vars": {
+        "bg": "#ffffff", "panel": "#f5f5f7", "ink": "#1d1d1f", "mute": "#6e6e73",
+        "accent": "#0071e3", "accent2": "#0071e3", "line": "#e5e5ea",
+        "rail": "#eeeef0", "fillgray": "#c7c7cc", "onfill": "#ffffff", "body": "#3a3a3c"
+      },
+      "typography": { "heading": "-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif", "headSpace": "-0.02em", "gradientText": false },
+      "shape": { "radius": "18px", "border": "none", "shadow": "0 4px 20px rgba(0,0,0,.06)" },
+      "notes": "제목은 단색 검정, 파랑은 포인트 한 곳만. 테두리 대신 그림자."
+    },
+    "editorial": {
+      "label": "에디토리얼 매거진",
+      "mood": "종이 질감, 세리프, 아날로그 잡지",
+      "vars": {
+        "bg": "#F7F2E9", "panel": "#FFFDF8", "ink": "#2B2118", "mute": "#8A7B6C",
+        "accent": "#C24D2C", "accent2": "#8A5A2B", "line": "#E4D9C6",
+        "rail": "#EFE7D8", "fillgray": "#D2BC94", "onfill": "#FFFDF8", "body": "#4A3D2F"
+      },
+      "typography": { "heading": "'Noto Serif KR',serif", "headSpace": "0", "gradientText": true },
+      "shape": { "radius": "6px", "border": "1px line", "shadow": "0 2px 0 line" }
+    },
+
+    "resonant-stark": {
+      "label": "레조넌트 스타크",
+      "trend": "99designs/Vista 2026 #3 Resonant Stark",
+      "mood": "초미니멀 + 감성. 얇은 폰트, 넉넉한 여백, 은은한 그라디언트. 테크·헬스케어·신뢰 중심 브랜드",
+      "vars": {
+        "bg": "#FAFBFC", "panel": "#FFFFFF", "ink": "#16181D", "mute": "#8B93A1",
+        "accent": "#3D5AFE", "accent2": "#8C9EFF", "line": "#ECEEF2",
+        "rail": "#F1F3F6", "fillgray": "#C9CFD9", "onfill": "#FFFFFF", "body": "#3C4250"
+      },
+      "typography": { "heading": "'Noto Sans KR',sans-serif", "headWeight": "300-400 (얇게)", "headSpace": "-0.01em", "gradientText": false },
+      "shape": { "radius": "20px", "border": "none", "shadow": "0 1px 2px rgba(22,24,29,.05)" },
+      "notes": "요소 수를 줄이고 마이크로 인터랙션·모션으로 감성 부여"
+    },
+    "frosted-touch": {
+      "label": "프로스티드 터치 (글래스모피즘)",
+      "trend": "99designs/Vista 2026 #4 Frosted Touch",
+      "mood": "반투명 유리 패널, 확산 그림자, 부드럽고 미래적. 테크 스타트업·대시보드",
+      "vars": {
+        "bg": "#0E1220 → 라디얼 그라디언트 배경 권장", "panel": "rgba(255,255,255,.08) + backdrop-blur(20px)",
+        "ink": "#F4F6FB", "mute": "#9AA3B8",
+        "accent": "#64D2FF", "accent2": "#BF5AF2", "line": "rgba(255,255,255,.14)",
+        "rail": "rgba(255,255,255,.06)", "fillgray": "rgba(255,255,255,.22)", "onfill": "#0E1220", "body": "#D7DCE8"
+      },
+      "typography": { "heading": "'Noto Sans KR',sans-serif", "headSpace": "-0.01em", "gradientText": true },
+      "shape": { "radius": "24px", "border": "1px rgba-white", "shadow": "0 8px 32px rgba(0,0,0,.35)" },
+      "notes": "카드뉴스 이미지로 구울 때 blur는 미리 배경에 합성"
+    },
+    "snug-simple": {
+      "label": "스너그 심플 (코지 파스텔)",
+      "trend": "99designs/Vista 2026 #7 Snug Simple",
+      "mood": "포근한 뉴트럴 + 파스텔 블록, 둥근 모서리, 청키 타이포. 웰니스·라이프스타일·커뮤니티",
+      "vars": {
+        "bg": "#FBF7F1", "panel": "#FFFFFF", "ink": "#43382F", "mute": "#A6988A",
+        "accent": "#E88D67", "accent2": "#9DBEBB", "line": "#EFE5D8",
+        "rail": "#F3ECE1", "fillgray": "#DFCFBB", "onfill": "#FFFFFF", "body": "#5C5044"
+      },
+      "typography": { "heading": "'Noto Sans KR',sans-serif", "headWeight": "900 (청키)", "headSpace": "0", "gradientText": false },
+      "shape": { "radius": "28px", "border": "none", "shadow": "0 6px 24px rgba(67,56,47,.08)" }
+    },
+    "light-skeuo": {
+      "label": "라이트 스큐어모피즘",
+      "trend": "99designs/Vista 2026 #5 Light Skeuomorphism",
+      "mood": "살짝 눌리는 버튼, 미세한 엠보스, 밝은 3D 촉감. 인터랙션 강조 서비스",
+      "vars": {
+        "bg": "#EDF0F4", "panel": "#F7F9FC", "ink": "#232A33", "mute": "#7C8794",
+        "accent": "#3478F6", "accent2": "#5AC8FA", "line": "#DDE3EA",
+        "rail": "inset 그림자 트랙", "fillgray": "#C3CBD6", "onfill": "#FFFFFF", "body": "#404A56"
+      },
+      "typography": { "heading": "'Noto Sans KR',sans-serif", "headSpace": "-0.01em", "gradientText": false },
+      "shape": { "radius": "16px", "border": "none", "shadow": "outset 2px + inset 하이라이트 (뉴모피즘 라이트)" },
+      "notes": "과하면 촌스러움 — '라이트'하게"
+    },
+    "dialup-y2k": {
+      "label": "다이얼업 딜라이트 (Y2K)",
+      "trend": "99designs/Vista 2026 #2 Dial-Up Delight",
+      "mood": "네온 그라디언트 + 고딕 폰트 + 메탈릭, 의도된 과잉. 패션·음악·서브컬처",
+      "vars": {
+        "bg": "#0B0B12", "panel": "#161425", "ink": "#F5F1FF", "mute": "#9D93BF",
+        "accent": "#FF3DBD", "accent2": "#38F0E5", "line": "#332B55",
+        "rail": "#100E1E", "fillgray": "#332B55", "onfill": "#0B0B12", "body": "#D9D2EE"
+      },
+      "typography": { "heading": "고딕/블랙레터 계열 + 'Noto Sans KR'", "headSpace": "0", "gradientText": true },
+      "shape": { "radius": "4px", "border": "1px 네온", "shadow": "네온 글로우 0 0 24px accent" },
+      "notes": "부동산 리포트 톤과는 거리가 있음 — 이벤트성 콘텐츠용"
+    },
+    "cute-alism": {
+      "label": "큐트얼리즘",
+      "trend": "99designs/Vista 2026 #1 Cute-alism",
+      "mood": "브루탈리즘 골격 + 카와이 디테일(스티커·이모지·비비드), Z세대 타깃",
+      "vars": {
+        "bg": "#FFFDF5", "panel": "#FFFFFF", "ink": "#141414", "mute": "#7A7A72",
+        "accent": "#FF5DA2", "accent2": "#FFC53D", "line": "#141414 (2px 하드 보더)",
+        "rail": "#F2EFE4", "fillgray": "#D9D4C3", "onfill": "#141414", "body": "#33322D"
+      },
+      "typography": { "heading": "시스템 모노/고딕 믹스", "headSpace": "0", "gradientText": false },
+      "shape": { "radius": "0px + 일부 999px 혼용", "border": "2px 검정 하드 보더", "shadow": "4px 4px 0 #141414 (오프셋 블록)" }
+    },
+    "human-scribble": {
+      "label": "휴먼 스크리블",
+      "trend": "99designs/Vista 2026 #8 Human Scribble",
+      "mood": "손글씨·낙서 오버레이, 의도된 불완전함, AI 시대의 사람 냄새. 푸드·호스피탈리티",
+      "vars": {
+        "bg": "#FCFAF4", "panel": "#FFFFFF", "ink": "#26241F", "mute": "#8F8A7D",
+        "accent": "#E4572E", "accent2": "#2E6FE4", "line": "#E7E2D4",
+        "rail": "#F2EEE2", "fillgray": "#D8D1BE", "onfill": "#FFFFFF", "body": "#44413A"
+      },
+      "typography": { "heading": "'Noto Serif KR' + 손글씨 폰트 포인트(예: Nanum Pen Script)", "headSpace": "0", "gradientText": false },
+      "shape": { "radius": "14px", "border": "손그림 느낌 불규칙 보더/밑줄 SVG", "shadow": "none" },
+      "notes": "숫자 강조에 형광펜 마커 스타일 하이라이트 활용 가능"
+    }
+  }
+}
