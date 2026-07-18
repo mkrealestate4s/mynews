@@ -220,7 +220,7 @@ footer a{color:var(--teal)}
 <article>
   <h2>반세권 뜻과 2026년 7월 청약 시장 총정리</h2>
   <div class="copybar">
-    <button class="cbtn" id="copyBody">📋 본문 복사</button>
+    <button class="cbtn" id="copyBody">📋 블로그용 본문 복사</button>
     <button class="cbtn" id="copyLink">🔗 링크 복사</button>
   </div>
 
@@ -326,11 +326,35 @@ footer a{color:var(--teal)}
       navigator.clipboard.writeText(t).then(function(){say(okMsg);},function(){say('복사 실패 — 길게 눌러 복사해 주세요');});
     }else{say('이 브라우저는 자동 복사를 지원하지 않아요');}
   }
+  function blogText(){
+    var art=document.querySelector('article');
+    var out=[]; var imgN=0;
+    function pushImg(label){imgN++;out.push('[이미지'+imgN+(label?' : '+label:'')+']');}
+    Array.prototype.forEach.call(art.children,function(el){
+      if(el.classList&&el.classList.contains('copybar'))return;
+      var tag=el.tagName;
+      if(tag==='H2'){out.push(el.innerText.trim());return;}
+      if(tag==='H3'){out.push('■ '+el.innerText.trim());return;}
+      if(tag==='P'){out.push(el.innerText.trim());return;}
+      if(el.classList&&(el.classList.contains('chart')||el.classList.contains('colchart'))){
+        var hs=el.querySelectorAll('h3,h4');
+        if(hs.length){Array.prototype.forEach.call(hs,function(h){pushImg(h.innerText.trim());});}
+        else{pushImg('차트');}
+        return;}
+      if(tag==='FIGURE'){var c=el.querySelector('figcaption');
+        pushImg(c?c.innerText.trim():'카드 이미지');return;}
+      if(tag==='OL'){var i=0;
+        Array.prototype.forEach.call(el.querySelectorAll('li'),function(li){
+          i++;out.push(i+') '+li.innerText.trim());});return;}
+      if(el.innerText&&el.innerText.trim())out.push(el.innerText.trim());
+    });
+    out.push('※ [이미지N] 자리에 카드뉴스에서 저장한 이미지를 넣어주세요.');
+    out.push('원문: '+location.href);
+    return out.join('\n\n');
+  }
   var bodyBtn=document.getElementById('copyBody');
   if(bodyBtn)bodyBtn.addEventListener('click',function(){
-    var art=document.querySelector('article');
-    var t=document.title+'\n'+location.href+'\n\n'+art.innerText;
-    copyText(t,'본문이 복사됐습니다 ✓');
+    copyText(blogText(),'블로그용 본문이 복사됐습니다 ✓');
   });
   var linkBtn=document.getElementById('copyLink');
   if(linkBtn)linkBtn.addEventListener('click',function(){copyText(location.href,'링크가 복사됐습니다 ✓');});
