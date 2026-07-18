@@ -19,26 +19,44 @@ if(t&&t!=='report')document.documentElement.setAttribute('data-theme',t);}catch(
 :root{
   --navy:#0D1829; --panel:#132239; --ink:#F2F6FA; --mute:#96A5BA;
   --teal:#5EE6D0; --peri:#7C8CF8; --line:#2C3E5A;
-  --rail:#0f1c30; --onfill:#0D1829; --body-ink:#DCE5EF;
+  --rail:#0f1c30; --fillgray:#2C3E5A; --onfill:#0D1829; --body-ink:#DCE5EF;
   --grad:linear-gradient(92deg,var(--teal),var(--peri));
+  --sans:'Noto Sans KR',sans-serif;
   --head-font:'Noto Serif KR',serif; --head-space:0;
 }
 /* ── theme: 모던 미니멀 화이트 ─────────────────────────── */
 :root[data-theme="white"]{
   --navy:#ffffff; --panel:#f5f5f7; --ink:#1d1d1f; --mute:#6e6e73;
-  --teal:#0071e3; --peri:#5ac8fa; --line:#e5e5ea;
-  --rail:#e9e9ee; --onfill:#ffffff; --body-ink:#3a3a3c;
-  --head-font:'Noto Sans KR',sans-serif; --head-space:-0.02em;
+  --teal:#0071e3; --peri:#0071e3; --line:#e5e5ea;
+  --rail:#eeeef0; --fillgray:#c7c7cc; --onfill:#ffffff; --body-ink:#3a3a3c;
+  --sans:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  --head-font:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  --head-space:-0.02em;
 }
 /* ── theme: 에디토리얼 매거진 ──────────────────────────── */
 :root[data-theme="editorial"]{
   --navy:#F7F2E9; --panel:#FFFDF8; --ink:#2B2118; --mute:#8A7B6C;
   --teal:#C24D2C; --peri:#8A5A2B; --line:#E4D9C6;
-  --rail:#EFE7D8; --onfill:#FFFDF8; --body-ink:#4A3D2F;
+  --rail:#EFE7D8; --fillgray:#D2BC94; --onfill:#FFFDF8; --body-ink:#4A3D2F;
+  --sans:'Noto Sans KR',sans-serif;
   --head-font:'Noto Serif KR',serif; --head-space:0;
 }
+/* 화이트 테마 — 애플 스타일 보정: 단색 제목, 절제된 파랑, 테두리 대신 그림자 */
+:root[data-theme="white"] h1.gtx,
+:root[data-theme="white"] .post .kw.gtx,
+:root[data-theme="white"] .statrow .big{
+  background:none;-webkit-text-fill-color:var(--ink);color:var(--ink)}
+:root[data-theme="white"] article .mark,
+:root[data-theme="white"] ol.check li::before{
+  background:none;-webkit-text-fill-color:var(--teal);color:var(--teal)}
+:root[data-theme="white"] .kcard,
+:root[data-theme="white"] .chart{
+  border-color:transparent;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+:root[data-theme="white"] .cards img,
+:root[data-theme="white"] figure.cardimg img{
+  border-color:transparent;box-shadow:0 4px 20px rgba(0,0,0,.08)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--navy);color:var(--ink);font-family:'Noto Sans KR',sans-serif;line-height:1.75;
+body{background:var(--navy);color:var(--ink);font-family:var(--sans);line-height:1.75;
   transition:background .35s,color .35s}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px}
 .serif{font-family:var(--head-font);letter-spacing:var(--head-space)}
@@ -72,7 +90,7 @@ section h2{font-family:var(--head-font);letter-spacing:var(--head-space);font-we
   font-weight:700;font-size:.9rem;color:var(--ink);white-space:nowrap}
 .fill{height:100%;border-radius:9px;display:flex;align-items:center;justify-content:flex-end;
   padding-right:12px;font-weight:700;font-size:.9rem;color:var(--onfill);background:var(--grad)}
-.fill.gray{background:var(--line);color:var(--ink)}
+.fill.gray{background:var(--fillgray);color:var(--ink)}
 .chart .cap{color:var(--mute);font-size:.88rem;margin-top:8px}
 .statrow{display:flex;align-items:baseline;gap:14px;margin-top:16px}
 .statrow .big{font-family:var(--head-font);font-weight:900;font-size:2.6rem;line-height:1;
