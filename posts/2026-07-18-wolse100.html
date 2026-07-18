@@ -254,12 +254,21 @@ footer a{color:var(--teal)}
     <div class="cap">전세는 한 분기 만에 상승폭이 두 배 가까이(+0.24→+0.40) 커졌고, 월세가 가장 가파릅니다.</div>
 
     <h4>월세 재계약 사례 (만원/월)</h4>
-    <div class="bar"><label>기존 계약</label>
-      <div class="rail"><div class="fill gray" style="width:78%">180만원</div></div></div>
-    <div class="bar"><label>재계약</label>
-      <div class="rail"><div class="fill" style="width:100%">230만원</div></div></div>
-    <div class="statrow"><span class="big">+28%</span>
-      <span class="desc">한 번의 재계약으로 늘어난 월 부담 (보도 사례)</span></div>
+    <svg viewBox="0 0 800 250" style="width:100%;max-width:560px;height:auto;display:block" role="img"
+      aria-label="월세 재계약 슬로프 차트: 기존 계약 180만원에서 재계약 230만원으로 28% 상승">
+      <line x1="40" y1="52"  x2="760" y2="52"  style="stroke:var(--line);stroke-width:2"/>
+      <line x1="40" y1="125" x2="760" y2="125" style="stroke:var(--line);stroke-width:2"/>
+      <line x1="40" y1="198" x2="760" y2="198" style="stroke:var(--line);stroke-width:2"/>
+      <line x1="150" y1="198" x2="650" y2="66" style="stroke:var(--teal);stroke-width:8;stroke-linecap:round"/>
+      <circle cx="150" cy="198" r="12" style="fill:var(--fillgray)"/>
+      <circle cx="650" cy="66" r="12" style="fill:var(--teal)"/>
+      <text x="150" y="164" text-anchor="middle" style="font-family:'Noto Sans KR',sans-serif;font-weight:900;font-size:36px;fill:var(--ink)">180</text>
+      <text x="650" y="36" text-anchor="middle" style="font-family:'Noto Sans KR',sans-serif;font-weight:900;font-size:40px;fill:var(--teal)">230</text>
+      <text x="400" y="105" text-anchor="middle" style="font-family:'Noto Sans KR',sans-serif;font-weight:900;font-size:34px;fill:var(--teal)">+28%</text>
+      <text x="150" y="238" text-anchor="middle" style="font-family:'Noto Sans KR',sans-serif;font-size:24px;fill:var(--mute)">기존 계약</text>
+      <text x="650" y="238" text-anchor="middle" style="font-family:'Noto Sans KR',sans-serif;font-size:24px;fill:var(--mute)">재계약</text>
+    </svg>
+    <div class="cap">한 번의 재계약으로 월 부담이 28% 늘어난 보도 사례.</div>
   </div>
 
   <h3>숫자로 보는 월세 100 시대</h3>
