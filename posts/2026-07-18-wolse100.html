@@ -92,6 +92,22 @@ section h2{font-family:var(--head-font);letter-spacing:var(--head-space);font-we
   padding-right:12px;font-weight:700;font-size:.9rem;color:var(--onfill);background:var(--grad)}
 .fill.gray{background:var(--fillgray);color:var(--ink)}
 .chart .cap{color:var(--mute);font-size:.88rem;margin-top:8px}
+/* dense column chart */
+.colchart{margin-top:28px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
+.colchart h3{font-size:1rem;color:var(--mute);font-weight:500;margin-bottom:8px}
+.badge{display:inline-block;background:var(--grad);color:var(--onfill);font-weight:700;
+  font-size:.78rem;border-radius:999px;padding:2px 12px;margin-bottom:16px}
+.cols{display:flex;align-items:flex-end;gap:14px;height:190px;border-bottom:2px solid var(--line);
+  background:repeating-linear-gradient(to top,transparent 0 45.5px,var(--line) 45.5px 47.5px)}
+.col{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}
+.col .v{font-size:.9rem;font-weight:900}
+.col .barv{width:100%;max-width:56px;border-radius:7px 7px 0 0;background:var(--grad)}
+.col.dim .barv{background:var(--fillgray)}
+.col .peak{font-size:.68rem;font-weight:700;color:var(--teal);text-align:center;line-height:1.3}
+.collbl{display:flex;gap:14px;margin-top:8px}
+.collbl span{flex:1;text-align:center;color:var(--mute);font-size:.78rem}
+.chart h4{font-size:.92rem;color:var(--mute);font-weight:500;margin:20px 0 12px}
+
 .statrow{display:flex;align-items:baseline;gap:14px;margin-top:16px}
 .statrow .big{font-family:var(--head-font);font-weight:900;font-size:2.6rem;line-height:1;
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -168,7 +184,7 @@ footer a{color:var(--teal)}
     <div class="kcard"><div class="hot">데이터 이슈</div><div class="kw">오피스텔 트리플 상승</div>
       <p>매매·전세·월세 동반 상승. 전셋값 2분기 +0.40%, 4년 만에 최대 분기 상승폭.</p></div>
     <div class="kcard"><div class="hot">실수요 이슈</div><div class="kw">아파트 전세난</div>
-      <p>서울 아파트 전셋값 4주 연속 0.3%↑ — 10년 7개월 만의 기록. 매물은 급감.</p></div>
+      <p>서울 아파트 전셋값 70주 연속 상승, 주간 0.35%는 12년 8개월 만 최고. 매물은 급감.</p></div>
     <div class="kcard"><div class="hot">정책 이슈</div><div class="kw">규제와 집값</div>
       <p>"1년간 서울 집값 13.1% 상승" — 규제 중심 정책의 효과 논쟁 재점화.</p></div>
   </div>
@@ -190,11 +206,12 @@ footer a{color:var(--teal)}
   <h2>카드뉴스로 한눈에</h2>
   <p class="cards-hint">옆으로 넘기며 핵심만 — 이미지를 저장해 활용하셔도 좋습니다.</p>
   <div class="cards">
-    <img class="card-art" data-file="wolse-01-cover.png" src="../images/cards/report/wolse-01-cover.png" alt="카드뉴스 1/5 — 표지: 월세 100 시대, 전세난이 밀어올린 새 표준" loading="lazy" width="1080" height="1080">
-    <img class="card-art" data-file="wolse-02-meaning.png" src="../images/cards/report/wolse-02-meaning.png" alt="카드뉴스 2/5 — 전세난에서 풍선효과로: 아파트에서 밀려난 수요가 오피스텔·월세로 이동" loading="lazy" width="1080" height="1080">
-    <img class="card-art" data-file="wolse-03-data1.png" src="../images/cards/report/wolse-03-data1.png" alt="카드뉴스 3/5 — 월세 100만원 이상 계약 지수: 2022년 100에서 2026년 463으로, +363%" loading="lazy" width="1080" height="1080">
-    <img class="card-art" data-file="wolse-04-data2.png" src="../images/cards/report/wolse-04-data2.png" alt="카드뉴스 4/5 — 재계약 사례: 월 180만원에서 230만원으로 +28%, 오피스텔 트리플 상승" loading="lazy" width="1080" height="1080">
-    <img class="card-art" data-file="wolse-05-check.png" src="../images/cards/report/wolse-05-check.png" alt="카드뉴스 5/5 — 월세 계약 전 체크포인트 3가지: 전월세 전환율, 갱신요구권·5% 상한, 보증금 안전장치" loading="lazy" width="1080" height="1080">
+    <img class="card-art" data-file="wolse-01-cover.png" src="../images/cards/report/wolse-01-cover.png" alt="카드뉴스 1/6 — 표지: 월세 100 시대, 전세난이 밀어올린 새 표준" loading="lazy" width="1080" height="1080">
+    <img class="card-art" data-file="wolse-02-meaning.png" src="../images/cards/report/wolse-02-meaning.png" alt="카드뉴스 2/6 — 전세난에서 풍선효과로: 70주 연속 상승, 아파트에서 밀려난 수요가 오피스텔·월세로 이동" loading="lazy" width="1080" height="1080">
+    <img class="card-art" data-file="wolse-03-weekly.png" src="../images/cards/report/wolse-03-weekly.png" alt="카드뉴스 3/6 — 주간 시계열: 서울 아파트 전세가격 변동률 6/8 0.32, 6/15 0.32, 6/22 0.35(12년 8개월 만 최고), 7/6 0.31, 7/13 0.28" loading="lazy" width="1080" height="1080">
+    <img class="card-art" data-file="wolse-04-wolse.png" src="../images/cards/report/wolse-04-wolse.png" alt="카드뉴스 4/6 — 월세 100만원 이상 계약 지수 100에서 463으로 +363%, 재계약 180만원에서 230만원으로" loading="lazy" width="1080" height="1080">
+    <img class="card-art" data-file="wolse-05-triple.png" src="../images/cards/report/wolse-05-triple.png" alt="카드뉴스 5/6 — 트리플 강세: 1년간 서울 아파트 매매 +13.1% 월세 +7.4% 전세 +6.3%, 오피스텔 2분기 월세 +0.90 전세 +0.40 매매 +0.24" loading="lazy" width="1080" height="1080">
+    <img class="card-art" data-file="wolse-06-check.png" src="../images/cards/report/wolse-06-check.png" alt="카드뉴스 6/6 — 월세 계약 전 체크포인트 3가지: 전월세 전환율, 갱신요구권·5% 상한, 보증금 안전장치" loading="lazy" width="1080" height="1080">
   </div>
 </section>
 
@@ -206,20 +223,55 @@ footer a{color:var(--teal)}
   <p>"월세 100만원"이 뉴스 헤드라인을 덮고 있습니다. 한때 고급 오피스텔의 상징이던 <strong>월 100만원 이상 임대차 계약이 서울 오피스텔에서 4년 새 363% 폭증</strong>했습니다. 이 글 하나로 지금 임대차 시장에서 벌어지는 일과, 월세 계약 전 반드시 확인할 체크포인트 3가지까지 정리해 드립니다.</p>
 
   <h3>무슨 일이 벌어지고 있나 — 전세난의 풍선효과</h3>
-  <p>출발점은 아파트 전세난입니다. 서울 아파트 전셋값은 <span class="mark">4주 연속 0.3% 이상 상승</span> — 약 10년 7개월 만의 기록입니다. 올해 누적 상승률은 5.42%로 매매가격 상승률과 같은 수준까지 올라왔고, 전세 매물은 수요 대비 급감하고 있습니다.</p>
+  <p>출발점은 아파트 전세난입니다. 서울 아파트 전셋값은 <span class="mark">70주 연속 상승</span> 중이고, 6월 넷째 주 상승률 0.35%는 <strong>2013년 10월 이후 12년 8개월 만의 최고치</strong>였습니다. 올해 누적 상승률은 5.42%로 매매가격 상승률과 같은 수준까지 올라왔고, 전세 매물은 수요 대비 급감하고 있습니다.</p>
+
+  <div class="colchart">
+    <h3>서울 아파트 주간 전세가격 변동률 (%, 한국부동산원 · 눈금 0.1%p)</h3>
+    <span class="badge">70주 연속 상승</span>
+    <div class="cols">
+      <div class="col dim"><div class="v">0.32</div><div class="barv" style="height:80%"></div></div>
+      <div class="col dim"><div class="v">0.32</div><div class="barv" style="height:80%"></div></div>
+      <div class="col"><div class="peak">12년 8개월 來 최고</div><div class="v gtx">0.35</div><div class="barv" style="height:87.5%"></div></div>
+      <div class="col dim"><div class="v">0.31</div><div class="barv" style="height:77.5%"></div></div>
+      <div class="col dim"><div class="v">0.28</div><div class="barv" style="height:70%"></div></div>
+    </div>
+    <div class="collbl"><span>6/8</span><span>6/15</span><span>6/22</span><span>7/6</span><span>7/13</span></div>
+    <div class="cap">7월 들어 오름폭이 소폭 둔화됐지만(0.31→0.28), 여전히 예년의 3배 수준입니다.</div>
+  </div>
   <p>아파트에서 밀려난 임대 수요는 <strong>역세권·중대형 오피스텔</strong>로 이동했습니다. 그 결과 서울 오피스텔은 매매·전세·월세가 모두 오르는 <span class="mark">'트리플 상승'</span> 국면에 들어섰습니다. 전세사기 우려로 보증금 대신 월세를 택하는 흐름까지 겹치면서, 월세 가격이 특히 가파릅니다.</p>
 
   <div class="chart">
-    <h3>서울 오피스텔 · 임대차 지표 한눈에</h3>
-    <div class="bar"><label>월세 재계약 사례 — 기존</label>
+    <h3>서울 오피스텔 2026년 2분기 변동률 (전분기 대비, %, KB부동산)</h3>
+    <div class="bar"><label>월세</label>
+      <div class="rail"><div class="fill" style="width:100%">+0.90</div></div></div>
+    <div class="bar"><label>전세 <span style="color:var(--mute);font-weight:400">(1분기 +0.24)</span></label>
+      <div class="rail"><div class="fill gray" style="width:44.4%"></div><span class="railval" style="left:calc(44.4% + 12px)">+0.40</span></div></div>
+    <div class="bar"><label>매매 <span style="color:var(--mute);font-weight:400">(1분기 +0.23)</span></label>
+      <div class="rail"><div class="fill gray" style="width:26.7%"></div><span class="railval" style="left:calc(26.7% + 12px)">+0.24</span></div></div>
+    <div class="cap">전세는 한 분기 만에 상승폭이 두 배 가까이(+0.24→+0.40) 커졌고, 월세가 가장 가파릅니다.</div>
+
+    <h4>월세 재계약 사례 (만원/월)</h4>
+    <div class="bar"><label>기존 계약</label>
       <div class="rail"><div class="fill gray" style="width:78%">180만원</div></div></div>
-    <div class="bar"><label>월세 재계약 사례 — 갱신 후</label>
+    <div class="bar"><label>재계약</label>
       <div class="rail"><div class="fill" style="width:100%">230만원</div></div></div>
-    <div class="cap">한 번의 재계약으로 월 부담이 약 28% 증가한 사례. 오피스텔 전셋값도 2분기 +0.40%로 4년 만에 최대 분기 상승폭.</div>
+    <div class="statrow"><span class="big">+28%</span>
+      <span class="desc">한 번의 재계약으로 늘어난 월 부담 (보도 사례)</span></div>
   </div>
 
   <h3>숫자로 보는 월세 100 시대</h3>
-  <p>핵심 데이터를 다시 정리하면 이렇습니다. <strong>월세 100만원 이상 서울 오피스텔 계약은 4년 새 363% 증가</strong>했고, 재계약 한 번에 월세가 180만원에서 230만원으로 뛴 사례가 보도될 정도입니다. 서울 전체로는 <strong>1년간 집값이 13.1% 상승</strong>했다는 진단까지 나오면서, 임대차 시장의 부담이 매매 시장으로 번지는 악순환을 걱정하는 목소리도 커지고 있습니다.</p>
+  <p>핵심 데이터를 다시 정리하면 이렇습니다. <strong>월세 100만원 이상 서울 오피스텔 계약은 4년 새 363% 증가</strong>했고, 재계약 한 번에 월세가 180만원에서 230만원으로 뛴 사례가 보도될 정도입니다. 더 넓게 보면 최근 1년 서울 아파트는 <strong>매매 +13.1%, 월세 +7.4%, 전세 +6.3%</strong> — 세 가격이 동시에 오르는 이례적 '트리플 강세'입니다.</p>
+
+  <div class="chart">
+    <h3>최근 1년 서울 아파트 상승률 (%) — '트리플 강세'</h3>
+    <div class="bar"><label>매매</label>
+      <div class="rail"><div class="fill gray" style="width:100%">+13.1%</div></div></div>
+    <div class="bar"><label>월세</label>
+      <div class="rail"><div class="fill" style="width:56.5%">+7.4%</div></div></div>
+    <div class="bar"><label>전세</label>
+      <div class="rail"><div class="fill gray" style="width:48.1%">+6.3%</div></div></div>
+    <div class="cap">임대차(전·월세) 부담이 매매 가격을 밀어올리는 악순환을 걱정하는 목소리가 커지고 있습니다.</div>
+  </div>
   <p>즉 지금의 월세 급등은 일시적 이상 신호가 아니라, <span class="mark">전세 공급 부족 → 전셋값 상승 → 비아파트·월세로의 수요 이동</span>이라는 구조적 흐름의 결과입니다.</p>
 
   <h3>월세 계약 전 체크포인트 3가지</h3>
@@ -230,7 +282,7 @@ footer a{color:var(--teal)}
   </ol>
 
   <figure class="cardimg">
-    <img class="card-art" data-file="wolse-05-check.png" src="../images/cards/report/wolse-05-check.png" alt="체크포인트 카드 — 1. 전월세 전환율 계산, 2. 갱신요구권·5% 상한 확인, 3. 보증금 안전장치" loading="lazy" width="1080" height="1080">
+    <img class="card-art" data-file="wolse-06-check.png" src="../images/cards/report/wolse-06-check.png" alt="체크포인트 카드 — 1. 전월세 전환율 계산, 2. 갱신요구권·5% 상한 확인, 3. 보증금 안전장치" loading="lazy" width="1080" height="1080">
     <figcaption>월세 계약 전 체크포인트 3가지 — 저장해 두고 확인하세요.</figcaption>
   </figure>
 
@@ -243,7 +295,7 @@ footer a{color:var(--teal)}
 <div class="trace"></div>
 
 <footer>
-  참고 자료: 헤럴드경제 부동산360(2026.7) · 아주경제(2026.7) · 파이낸셜뉴스(2026.7) · 아시아투데이(2026.7) · NSP통신(2026.7) · 뉴스핌 AI 부동산 투데이(2026.7)<br>
+  참고 자료: 한국부동산원 주간아파트가격동향(2026.6~7) · KB부동산 오피스텔 통계(2026.2Q) · 헤럴드경제 부동산360(2026.7) · 아주경제(2026.7) · 서울경제(2026.7) · 이투데이(2026.6) · 뉴스핌(2026.7) · 아시아투데이(2026.7)<br>
   © 2026 부동산 인사이트 · 데이터 기준일 2026-07-18 · <a href="../index.html">← 홈으로</a>
 </footer>
 
