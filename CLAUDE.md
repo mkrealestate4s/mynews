@@ -39,6 +39,9 @@ URL: https://mkrealestate4s.github.io/mynews/
 - **제목은 결론형**으로: "주간 전세가격 변동률" ❌ → "5억 전세라면, 매주 이만큼" ⭕
 - 전문용어(트리플 강세, QoQ, 지수) 대신 쉬운 말. 괄호 병기(1분기 +0.24 등)는 카드에서 제거.
 - 흐름 설명은 텍스트 문단 대신 **번호 흐름도(1→2→3)**로.
+- **블로그용 복사 매핑**: 본문의 차트/figure에는 `data-img="카드뉴스 N번 · 카드 제목"`을 달아
+  복사 텍스트의 [이미지N] 라벨이 실제 카드 번호·제목과 1:1로 일치하게 한다. 표지·흐름도처럼
+  본문에 대응 요소가 없는 카드는 `<span class="imgslot" hidden data-img="...">`로 위치를 지정.
 
 ## 검증 체크리스트 (푸시 전)
 - playwright-core(executablePath /opt/pw-browsers/chromium)로 모바일 390px 확인:
