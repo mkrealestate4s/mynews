@@ -161,6 +161,12 @@ footer a{color:var(--teal)}
   transition:border-color .15s,transform .1s}
 .cbtn:hover{border-color:var(--teal)}
 .cbtn:active{transform:scale(.96)}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 14px}
+.taglab{color:var(--mute);font-size:.78rem}
+.tagchip{cursor:pointer;border:1px dashed var(--line);background:transparent;color:var(--teal);
+  font:inherit;font-size:.8rem;border-radius:999px;padding:3px 12px;transition:border-color .15s}
+.tagchip:hover{border-color:var(--teal)}
+.tagall{color:var(--mute);font-weight:700;border-style:solid}
 .imgwrap{position:relative;flex:none}
 .cards .imgwrap{scroll-snap-align:start}
 .imgbtns{position:absolute;top:10px;right:10px;display:flex;gap:8px;z-index:5}
@@ -384,7 +390,7 @@ footer a{color:var(--teal)}
       var n=m?parseInt(m[1],10):(++autoN);
       out.push('[이미지'+n+(label?' : '+label:'')+']');}
     Array.prototype.forEach.call(art.children,function(el){
-      if(el.classList&&el.classList.contains('copybar'))return;
+      if(el.classList&&(el.classList.contains('copybar')||el.classList.contains('tagrow')))return;
       var tag=el.tagName;
       if(tag==='H2'){out.push(el.innerText.trim());return;}
       if(tag==='H3'){out.push('■ '+el.innerText.trim());return;}
@@ -413,6 +419,26 @@ footer a{color:var(--teal)}
   });
   var linkBtn=document.getElementById('copyLink');
   if(linkBtn)linkBtn.addEventListener('click',function(){copyText(location.href,'링크가 복사됐습니다 ✓');});
+
+  /* ── 추천 태그 노출 (칩 클릭 = 태그 하나 복사) ── */
+  (function(){
+    var art=document.querySelector('article');
+    var tags=(art.getAttribute('data-tags')||'').trim();
+    if(!tags)return;
+    var row=document.createElement('div');row.className='tagrow';
+    var lab=document.createElement('span');lab.className='taglab';
+    lab.textContent='추천 태그 · 누르면 하나씩 복사';row.appendChild(lab);
+    tags.split(',').forEach(function(t){t=t.trim();if(!t)return;
+      var b=document.createElement('button');b.className='tagchip';b.type='button';b.textContent='#'+t;
+      b.addEventListener('click',function(){copyText(t,"'"+t+"' 복사됨 ✓ 태그창에 붙여넣으세요");});
+      row.appendChild(b);});
+    var all=document.createElement('button');all.className='tagchip tagall';all.type='button';all.textContent='전체 복사';
+    all.addEventListener('click',function(){
+      copyText(tags.split(',').map(function(t){return t.trim();}).join(' '),'태그 전체가 복사됐습니다 ✓');});
+    row.appendChild(all);
+    var bar=art.querySelector('.copybar');
+    if(bar)bar.parentNode.insertBefore(row,bar.nextSibling);else art.insertBefore(row,art.firstChild);
+  })();
 
   function downloadImg(img){
     var a=document.createElement('a');
