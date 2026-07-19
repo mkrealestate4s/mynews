@@ -47,6 +47,13 @@ URL: https://mkrealestate4s.github.io/mynews/
 - **블로그용 복사 매핑**: 본문의 차트/figure에는 `data-img="카드뉴스 N번 · 카드 제목"`을 달아
   복사 텍스트의 [이미지N] 라벨이 실제 카드 번호·제목과 1:1로 일치하게 한다. 표지·흐름도처럼
   본문에 대응 요소가 없는 카드는 `<span class="imgslot" hidden data-img="...">`로 위치를 지정.
+  - **[이미지N]의 N은 순번이 아니라 카드뉴스 번호** — blogText()가 data-img의 "카드뉴스 N번"에서
+    번호를 파싱한다(2026-07-19 이후 포스트 스크립트 기준). 라벨에 카드 번호를 반드시 포함할 것.
+  - **카드 6장 전부 `<article>` 안에 자리가 있어야 한다.** 대시보드 등 article 밖 차트에 대응하는
+    카드는 article 안에 hidden imgslot을 따로 둔다. 푸시 전 복사 텍스트에 [이미지1]~[이미지6]이
+    모두 나오는지 확인.
+  - **이미지 자리는 해당 소제목(H3) 바로 아래**에 둔다(블로그 발행 관행: 소제목→이미지→본문).
+    한 섹션에 카드가 2장이면 첫 장은 소제목 아래, 둘째 장은 문단 뒤.
 
 ## 검증 체크리스트 (푸시 전)
 - playwright-core(executablePath /opt/pw-browsers/chromium)로 모바일 390px 확인:

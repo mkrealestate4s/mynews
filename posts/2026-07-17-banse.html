@@ -342,8 +342,11 @@ footer a{color:var(--teal)}
   }
   function blogText(){
     var art=document.querySelector('article');
-    var out=[]; var imgN=0;
-    function pushImg(label){imgN++;out.push('[이미지'+imgN+(label?' : '+label:'')+']');}
+    var out=[]; var autoN=0;
+    function pushImg(label){
+      var m=label&&label.match(/카드뉴스\s*(\d+)번/);
+      var n=m?parseInt(m[1],10):(++autoN);
+      out.push('[이미지'+n+(label?' : '+label:'')+']');}
     Array.prototype.forEach.call(art.children,function(el){
       if(el.classList&&el.classList.contains('copybar'))return;
       var tag=el.tagName;
