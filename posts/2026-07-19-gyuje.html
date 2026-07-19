@@ -258,7 +258,7 @@ footer a{color:var(--teal)}
 
 <div class="trace"></div>
 
-<article>
+<article data-tags="부동산규제,동탄,기흥,구리,투기과열지구,조정대상지역,토지거래허가구역,풍선효과,수도권아파트,부동산전망">
   <h2>3중 규제 — 눌러도 옆이 뛴다, 첫 주 성적표</h2>
   <div class="copybar">
     <button class="cbtn" id="copyBody">📋 블로그용 본문 복사</button>
@@ -402,6 +402,8 @@ footer a{color:var(--teal)}
       if(el.innerText&&el.innerText.trim())out.push(el.innerText.trim());
     });
     out.push('※ [이미지N]의 N은 카드뉴스 갤러리의 N번째 이미지와 같습니다. 표시된 자리에 같은 번호의 카드를 붙여넣어 주세요.');
+    var tags=(art.getAttribute('data-tags')||'').trim();
+    if(tags){out.push('추천 태그 (태그 입력창에 붙여넣기): '+tags.split(',').map(function(t){return '#'+t.trim();}).join(' '));}
     out.push('원문: '+location.href);
     return out.join('\n\n');
   }

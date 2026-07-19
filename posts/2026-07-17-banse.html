@@ -230,7 +230,7 @@ footer a{color:var(--teal)}
 
 <div class="trace"></div>
 
-<article>
+<article data-tags="반세권,청약,반도체클러스터,용인,평택,분양,청약경쟁률,신축아파트,수도권분양,부동산전망">
   <h2>반세권 뜻과 2026년 7월 청약 시장 총정리</h2>
   <div class="copybar">
     <button class="cbtn" id="copyBody">📋 블로그용 본문 복사</button>
@@ -366,6 +366,8 @@ footer a{color:var(--teal)}
       if(el.innerText&&el.innerText.trim())out.push(el.innerText.trim());
     });
     out.push('※ [이미지N] 자리에 표시된 번호의 카드뉴스 이미지를 붙여넣어 주세요.');
+    var tags=(art.getAttribute('data-tags')||'').trim();
+    if(tags){out.push('추천 태그 (태그 입력창에 붙여넣기): '+tags.split(',').map(function(t){return '#'+t.trim();}).join(' '));}
     out.push('원문: '+location.href);
     return out.join('\n\n');
   }

@@ -251,7 +251,7 @@ footer a{color:var(--teal)}
 
 <div class="trace"></div>
 
-<article>
+<article data-tags="월세,월세100만원,오피스텔월세,전세난,풍선효과,임대차시장,서울월세,재계약,주거비,부동산전망">
   <h2>월세 100 시대 — 전세난이 만든 풍선효과 총정리</h2>
   <div class="copybar">
     <button class="cbtn" id="copyBody">📋 블로그용 본문 복사</button>
@@ -413,6 +413,8 @@ footer a{color:var(--teal)}
       if(el.innerText&&el.innerText.trim())out.push(el.innerText.trim());
     });
     out.push('※ [이미지N] 자리에 표시된 번호의 카드뉴스 이미지를 붙여넣어 주세요.');
+    var tags=(art.getAttribute('data-tags')||'').trim();
+    if(tags){out.push('추천 태그 (태그 입력창에 붙여넣기): '+tags.split(',').map(function(t){return '#'+t.trim();}).join(' '));}
     out.push('원문: '+location.href);
     return out.join('\n\n');
   }
