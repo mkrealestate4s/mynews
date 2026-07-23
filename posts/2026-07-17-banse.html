@@ -372,8 +372,7 @@ footer a{color:var(--teal)}
       if(el.innerText&&el.innerText.trim())out.push(el.innerText.trim());
     });
     var ft=document.querySelector('footer');
-    if(ft){var srcline=ft.innerText.split('
-')[0].trim();if(srcline)out.push(srcline);}
+    if(ft){var srcline=ft.innerText.split('\n')[0].trim();if(srcline)out.push(srcline);}
     out.push('──── 아래는 작업용 안내 · 발행 전 삭제 ────');
     out.push('※ [이미지N] 자리에 표시된 번호의 카드뉴스 이미지를 붙여넣어 주세요.');
     var tags=(art.getAttribute('data-tags')||'').trim();
