@@ -9,6 +9,9 @@ URL: https://mkrealestate4s.github.io/mynews/
 - `images/cards/{report,white,editorial}/<slug>-*.png` — 카드뉴스 (테마별 동일 파일명).
 - `themes/design-library.json` + `themes/preview.html` — 디자인 프리셋 라이브러리/카탈로그.
 - `tools/make_cards.py`, `tools/fetch_fonts.py` — 카드뉴스 생성 (스킬 `.claude/skills/theme-preset` 참조).
+- `title.txt` — **당일 블로그 제목 추천 3줄만**(주석·빈줄 없음). 로컬 포스팅 자동화 프로그램이
+  `https://mkrealestate4s.github.io/mynews/title.txt`로 받아쓴다 → 형식을 바꾸지 말 것.
+  `titles-archive.txt`는 날짜·리포트 번호가 붙은 누적 기록(사람용).
 - 테마 3종(report/white/editorial)은 CSS 변수 + `localStorage['mynews-theme']` 공유.
 
 ## 데일리 리포트 작성 절차
@@ -17,6 +20,9 @@ URL: https://mkrealestate4s.github.io/mynews/
 3. 카드뉴스 6장 × 3테마 생성(스킬 참조), 인덱스에 글 카드 추가, 커밋·푸시, 배포 success 확인.
 4. **SEO**: 새 글마다 `sitemap.xml`과 `feed.xml`에 항목 추가, 포스트 head에
    canonical/og:url/JSON-LD(NewsArticle) 포함 (기존 포스트 복제 시 URL·제목·날짜 교체 확인).
+5. **제목 추천 파일**: 사용자 보고에 넣는 블로그 제목 3개를 `title.txt`에 **덮어쓰고**
+   (3줄만, 주석 금지 — 로컬 프로그램이 그대로 읽는다), `titles-archive.txt` 맨 위(주석 블록 아래)에
+   `날짜 · #번호 · 키워드 · 포스트경로` + 1)2)3) 블록을 추가한다. 커밋에 함께 포함.
 
 ## 데이터 시각화 표준 (중요 — 사용자 요구사항)
 - **촘촘하게**: 헤드라인 숫자 2개 비교로 끝내지 않는다. 가능하면
