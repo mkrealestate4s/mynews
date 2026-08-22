@@ -1,8 +1,41 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-22T16:05:00+09:00",
+  "updated_at": "2026-08-23T07:25:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다.",
   "items": [
+    {
+      "slug": "2026-08-23-michakgong",
+      "report_no": 36,
+      "date": "2026-08-23",
+      "keyword": "멈춰 선 70곳",
+      "status": "pending",
+      "titles": [
+        "인허가 받고도 못 짓는 70곳 — 재건축이 멈춘 진짜 이유",
+        "용적률은 풀리는데 왜 삽을 못 뜨나 (공사비 평당 1,000만원)",
+        "정비사업 매물 볼 때 꼭 물어야 할 3가지"
+      ],
+      "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-",
+      "images": [
+        "01-cover.png",
+        "02-flow.png",
+        "03-stuck.png",
+        "04-yong.png",
+        "05-cost.png",
+        "06-check.png"
+      ],
+      "tags": [
+        "정비사업",
+        "재건축",
+        "재개발",
+        "도시정비법",
+        "용적률",
+        "관리처분인가",
+        "착공",
+        "공사비",
+        "이주비",
+        "신속통합기획"
+      ]
+    },
     {
       "slug": "2026-08-22-shgukmin",
       "report_no": 35,
@@ -18,12 +51,24 @@
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-22-shgukmin.txt",
       "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-",
       "images": [
-        "01-cover.png", "02-sched.png", "03-car.png",
-        "04-double.png", "05-multi.png", "06-check.png"
+        "01-cover.png",
+        "02-sched.png",
+        "03-car.png",
+        "04-double.png",
+        "05-multi.png",
+        "06-check.png"
       ],
       "tags": [
-        "SH국민임대", "국민임대주택", "임대주택자격", "서울임대주택", "자동차기준",
-        "2026국민임대", "미리내집", "청약", "무주택", "배점표"
+        "SH국민임대",
+        "국민임대주택",
+        "임대주택자격",
+        "서울임대주택",
+        "자동차기준",
+        "2026국민임대",
+        "미리내집",
+        "청약",
+        "무주택",
+        "배점표"
       ]
     },
     {
@@ -39,12 +84,24 @@
       ],
       "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/pyeongkyun-",
       "images": [
-        "01-cover.png", "02-flow.png", "03-gap.png",
-        "04-band.png", "05-vol.png", "06-check.png"
+        "01-cover.png",
+        "02-flow.png",
+        "03-gap.png",
+        "04-band.png",
+        "05-vol.png",
+        "06-check.png"
       ],
       "tags": [
-        "서울아파트", "평균가격", "중위가격", "실거래가", "10억이하",
-        "거래량", "대출규제", "내집마련", "예산잡기", "국토교통부"
+        "서울아파트",
+        "평균가격",
+        "중위가격",
+        "실거래가",
+        "10억이하",
+        "거래량",
+        "대출규제",
+        "내집마련",
+        "예산잡기",
+        "국토교통부"
       ]
     },
     {
@@ -60,12 +117,24 @@
       ],
       "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/twoseoul-",
       "images": [
-        "01-cover.png", "02-flow.png", "03-trend.png",
-        "04-north.png", "05-jeonse.png", "06-check.png"
+        "01-cover.png",
+        "02-flow.png",
+        "03-trend.png",
+        "04-north.png",
+        "05-jeonse.png",
+        "06-check.png"
       ],
       "tags": [
-        "강남", "서초", "아파트값", "주간동향", "세제개편",
-        "성북", "강북", "전세하락", "한국부동산원", "재건축"
+        "강남",
+        "서초",
+        "아파트값",
+        "주간동향",
+        "세제개편",
+        "성북",
+        "강북",
+        "전세하락",
+        "한국부동산원",
+        "재건축"
       ]
     }
   ]
