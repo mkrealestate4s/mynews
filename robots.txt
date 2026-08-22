@@ -8,5 +8,6 @@ User-agent: *
 Allow: /
 Disallow: /title.txt
 Disallow: /titles-archive.txt
+Disallow: /publish/
 
 Sitemap: https://mkrealestate4s.github.io/mynews/sitemap.xml
