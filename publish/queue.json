@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "updated_at": "2026-08-22T16:05:00+09:00",
+  "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다.",
+  "items": [
+    {
+      "slug": "2026-08-22-shgukmin",
+      "report_no": 35,
+      "date": "2026-08-22",
+      "keyword": "SH 국민임대 특집",
+      "status": "designated",
+      "deadline": "2026-09-03",
+      "titles": [
+        "국민임대 접수 9월 3일까지 — 올해는 자동차 기준이 다릅니다",
+        "작년에 차 때문에 떨어졌다면, 올해는 다시 넣어보세요 (한도 4,542만원)",
+        "국민임대 접수 전 꼭 볼 3가지 — 자동차는 두 번 걸립니다"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-22-shgukmin.txt",
+      "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-",
+      "images": [
+        "01-cover.png", "02-sched.png", "03-car.png",
+        "04-double.png", "05-multi.png", "06-check.png"
+      ],
+      "tags": [
+        "SH국민임대", "국민임대주택", "임대주택자격", "서울임대주택", "자동차기준",
+        "2026국민임대", "미리내집", "청약", "무주택", "배점표"
+      ]
+    },
+    {
+      "slug": "2026-08-22-pyeongkyun",
+      "report_no": 34,
+      "date": "2026-08-22",
+      "keyword": "평균의 함정",
+      "status": "pending",
+      "titles": [
+        "서울 아파트 평균 11억7천? 실제 거래 절반은 9억대였습니다",
+        "평균의 함정 — 강남 몇 건이 만든 숫자에 속지 않는 법",
+        "8월 서울 아파트 거래, 열 건 중 여섯 건이 10억 이하"
+      ],
+      "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/pyeongkyun-",
+      "images": [
+        "01-cover.png", "02-flow.png", "03-gap.png",
+        "04-band.png", "05-vol.png", "06-check.png"
+      ],
+      "tags": [
+        "서울아파트", "평균가격", "중위가격", "실거래가", "10억이하",
+        "거래량", "대출규제", "내집마련", "예산잡기", "국토교통부"
+      ]
+    },
+    {
+      "slug": "2026-08-21-twoseoul",
+      "report_no": 33,
+      "date": "2026-08-21",
+      "keyword": "두 개의 서울",
+      "status": "pending",
+      "titles": [
+        "강남은 떨어지는데 서울 집값이 오른 이유 — 두 개의 서울",
+        "강남 2주 연속 하락, 4주 그래프가 보여주는 방향",
+        "서초 전세 49주 만에 하락 — 전세 시장에 무슨 일이"
+      ],
+      "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/twoseoul-",
+      "images": [
+        "01-cover.png", "02-flow.png", "03-trend.png",
+        "04-north.png", "05-jeonse.png", "06-check.png"
+      ],
+      "tags": [
+        "강남", "서초", "아파트값", "주간동향", "세제개편",
+        "성북", "강북", "전세하락", "한국부동산원", "재건축"
+      ]
+    }
+  ]
+}

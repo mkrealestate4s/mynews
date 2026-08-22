@@ -1,6 +1,8 @@
 # 데일리 리포트 블로그 제목 추천 — 누적 기록 (최신이 맨 위)
-# 오늘 것만 필요하면 title.txt (제목 3줄만, 주석 없음)를 쓰세요.
+# 지정된 한 편만 필요하면 title.txt (제목 3줄만, 주석 없음)
 #   https://mkrealestate4s.github.io/mynews/title.txt
+# 여러 편(같은 날 2편·밀린 날)을 다뤄야 하면 queue.json — 프로그램용 목록
+#   https://mkrealestate4s.github.io/mynews/publish/queue.json
 
 2026-08-22 · #35 · SH 국민임대 특집 · posts/2026-08-22-shgukmin.html
   ※ 네이버 포스팅 확정 — title.txt 반영 완료 (접수 마감 9/3)

@@ -23,6 +23,7 @@ import urllib.request
 from dataclasses import dataclass, field
 
 MANIFEST_URL = "https://mkrealestate4s.github.io/mynews/publish/manifest.json"
+QUEUE_URL = "https://mkrealestate4s.github.io/mynews/publish/queue.json"
 STATE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "posted.log")
 UA = {"User-Agent": "mynews-naver-poster/1"}
 
@@ -115,7 +116,35 @@ def mark_done(job):
         f.write(job.job_id + "\n")
 
 
+def fetch_queue(include_pending=True):
+    """발행 후보 목록을 오래된 것부터 돌려준다. 로컬 posted.log에 있는 건 제외.
+
+    같은 날 글이 여러 개거나 며칠 밀렸을 때 title.txt(한 칸)로는 앞선 글이
+    덮여 사라지므로, 목록을 받아 순서대로 처리한다.
+
+    반환: [{"slug","report_no","titles",...}, ...]  (오래된 순)
+    """
+    q = json.loads(_get(QUEUE_URL))
+    wanted = {"designated", "pending"} if include_pending else {"designated"}
+    items = [it for it in q.get("items", [])
+             if it.get("status") in wanted and not _already_posted(it["slug"])]
+    items.sort(key=lambda it: (it.get("date", ""), it.get("report_no", 0)))
+    return items
+
+
+def mark_slug_done(slug):
+    """슬러그 단위 완료 기록 — fetch_queue로 처리한 항목에 사용."""
+    with open(STATE_FILE, "a", encoding="utf-8") as f:
+        f.write(slug + "\n")
+
+
 if __name__ == "__main__":
+    print("=== 발행 후보 목록 (오래된 순) ===")
+    for it in fetch_queue():
+        print(f"  #{it.get('report_no')} {it['date']} {it['slug']} [{it['status']}]")
+        print(f"     → {it['titles'][0]}")
+    print()
+
     j = fetch_job()
     if j is None:
         print("발행할 작업 없음 (status != ready 또는 이미 처리됨)")
