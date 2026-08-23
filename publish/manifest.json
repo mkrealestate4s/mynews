@@ -1,58 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-08-23-michakgong-01",
+  "job_id": "2026-08-24-oegukin-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-08-23T09:40:00+09:00",
-  "note": "#35 국민임대는 사용자 판단으로 보류 — queue.json에 pending으로 남겨둠.",
+  "requested_at": "2026-08-24T07:25:00+09:00",
   "post": {
-    "report_no": 36,
-    "slug": "2026-08-23-michakgong",
-    "title": "인허가 받고도 못 짓는 70곳 — 재건축이 멈춘 진짜 이유",
+    "report_no": 37,
+    "slug": "2026-08-24-oegukin",
+    "title": "외국인은 실거주 아니면 서울 집 못 삽니다 — 8월 26일부터 1년 더",
     "title_alts": [
-      "용적률은 풀리는데 왜 삽을 못 뜨나 (공사비 평당 1,000만원)",
-      "정비사업 매물 볼 때 꼭 물어야 할 3가지"
+      "외국인 주택 매수 27% 줄었다 — 서울은 37% 감소",
+      "외국인 손님 응대 전 확인할 3가지 (허가·4개월·2년)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-23-michakgong.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-24-oegukin.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-02-flow.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-02-flow.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-03-stuck.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-03-vol.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-04-yong.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-04-region.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-05-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-05-req.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-06-check.png"
       }
     ],
     "tags": [
-      "정비사업",
-      "재건축",
-      "재개발",
-      "도시정비법",
-      "용적률",
-      "관리처분인가",
-      "착공",
-      "공사비",
-      "이주비",
-      "신속통합기획"
+      "외국인부동산",
+      "토지거래허가구역",
+      "토허제",
+      "실거주의무",
+      "수도권주택",
+      "외국인주택거래",
+      "국토교통부",
+      "중개실무",
+      "부동산거래신고법",
+      "외국인투기"
     ]
   }
 }

@@ -1,14 +1,48 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-23T09:40:00+09:00",
+  "updated_at": "2026-08-24T07:25:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다.",
   "items": [
+    {
+      "slug": "2026-08-24-oegukin",
+      "report_no": 37,
+      "date": "2026-08-24",
+      "keyword": "실거주 아니면 못 산다",
+      "status": "designated",
+      "titles": [
+        "외국인은 실거주 아니면 서울 집 못 삽니다 — 8월 26일부터 1년 더",
+        "외국인 주택 매수 27% 줄었다 — 서울은 37% 감소",
+        "외국인 손님 응대 전 확인할 3가지 (허가·4개월·2년)"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-24-oegukin.txt",
+      "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-",
+      "images": [
+        "01-cover.png",
+        "02-flow.png",
+        "03-vol.png",
+        "04-region.png",
+        "05-req.png",
+        "06-check.png"
+      ],
+      "tags": [
+        "외국인부동산",
+        "토지거래허가구역",
+        "토허제",
+        "실거주의무",
+        "수도권주택",
+        "외국인주택거래",
+        "국토교통부",
+        "중개실무",
+        "부동산거래신고법",
+        "외국인투기"
+      ]
+    },
     {
       "slug": "2026-08-23-michakgong",
       "report_no": 36,
       "date": "2026-08-23",
       "keyword": "멈춰 선 70곳",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "인허가 받고도 못 짓는 70곳 — 재건축이 멈춘 진짜 이유",
         "용적률은 풀리는데 왜 삽을 못 뜨나 (공사비 평당 1,000만원)",
