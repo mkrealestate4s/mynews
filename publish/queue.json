@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-23T07:25:00+09:00",
+  "updated_at": "2026-08-23T09:40:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다.",
   "items": [
     {
@@ -8,7 +8,7 @@
       "report_no": 36,
       "date": "2026-08-23",
       "keyword": "멈춰 선 70곳",
-      "status": "pending",
+      "status": "designated",
       "titles": [
         "인허가 받고도 못 짓는 70곳 — 재건축이 멈춘 진짜 이유",
         "용적률은 풀리는데 왜 삽을 못 뜨나 (공사비 평당 1,000만원)",
@@ -34,14 +34,15 @@
         "공사비",
         "이주비",
         "신속통합기획"
-      ]
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-23-michakgong.txt"
     },
     {
       "slug": "2026-08-22-shgukmin",
       "report_no": 35,
       "date": "2026-08-22",
       "keyword": "SH 국민임대 특집",
-      "status": "designated",
+      "status": "pending",
       "deadline": "2026-09-03",
       "titles": [
         "국민임대 접수 9월 3일까지 — 올해는 자동차 기준이 다릅니다",
@@ -69,7 +70,8 @@
         "청약",
         "무주택",
         "배점표"
-      ]
+      ],
+      "note": "사용자 판단으로 보류 (접수 마감 9/3 — 그 전에 올릴지 재검토)"
     },
     {
       "slug": "2026-08-22-pyeongkyun",

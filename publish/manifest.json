@@ -1,32 +1,58 @@
 {
   "schema": 1,
-  "job_id": "2026-08-22-shgukmin-01",
+  "job_id": "2026-08-23-michakgong-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-08-22T14:10:00+09:00",
-  "note": "테스트 작업 — 임시저장까지만 진행하고 발행 버튼은 누르지 않습니다.",
+  "requested_at": "2026-08-23T09:40:00+09:00",
+  "note": "#35 국민임대는 사용자 판단으로 보류 — queue.json에 pending으로 남겨둠.",
   "post": {
-    "report_no": 35,
-    "slug": "2026-08-22-shgukmin",
-    "title": "국민임대 접수 9월 3일까지 — 올해는 자동차 기준이 다릅니다",
+    "report_no": 36,
+    "slug": "2026-08-23-michakgong",
+    "title": "인허가 받고도 못 짓는 70곳 — 재건축이 멈춘 진짜 이유",
     "title_alts": [
-      "작년에 차 때문에 떨어졌다면, 올해는 다시 넣어보세요 (한도 4,542만원)",
-      "국민임대 접수 전 꼭 볼 3가지 — 자동차는 두 번 걸립니다"
+      "용적률은 풀리는데 왜 삽을 못 뜨나 (공사비 평당 1,000만원)",
+      "정비사업 매물 볼 때 꼭 물어야 할 3가지"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-22-shgukmin.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-23-michakgong.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
-      { "n": 1, "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-01-cover.png" },
-      { "n": 2, "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-02-sched.png" },
-      { "n": 3, "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-03-car.png" },
-      { "n": 4, "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-04-double.png" },
-      { "n": 5, "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-05-multi.png" },
-      { "n": 6, "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shgukmin-06-check.png" }
+      {
+        "n": 1,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-01-cover.png"
+      },
+      {
+        "n": 2,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-02-flow.png"
+      },
+      {
+        "n": 3,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-03-stuck.png"
+      },
+      {
+        "n": 4,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-04-yong.png"
+      },
+      {
+        "n": 5,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-05-cost.png"
+      },
+      {
+        "n": 6,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/michakgong-06-check.png"
+      }
     ],
     "tags": [
-      "SH국민임대", "국민임대주택", "임대주택자격", "서울임대주택", "자동차기준",
-      "2026국민임대", "미리내집", "청약", "무주택", "배점표"
+      "정비사업",
+      "재건축",
+      "재개발",
+      "도시정비법",
+      "용적률",
+      "관리처분인가",
+      "착공",
+      "공사비",
+      "이주비",
+      "신속통합기획"
     ]
   }
 }
