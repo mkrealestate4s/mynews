@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-08-24-oegukin-01",
+  "job_id": "2026-08-25-yukbeop-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-08-24T07:25:00+09:00",
+  "requested_at": "2026-08-25T07:25:00+09:00",
   "post": {
-    "report_no": 37,
-    "slug": "2026-08-24-oegukin",
-    "title": "외국인은 실거주 아니면 서울 집 못 삽니다 — 8월 26일부터 1년 더",
+    "report_no": 38,
+    "slug": "2026-08-25-yukbeop",
+    "title": "빈집 13만4천 세기 시작 — 공급 6법 국회 통과, 그런데 용적률은 빠졌다",
     "title_alts": [
-      "외국인 주택 매수 27% 줄었다 — 서울은 37% 감소",
-      "외국인 손님 응대 전 확인할 3가지 (허가·4개월·2년)"
+      "옆 단지와 묶으면 리모델링 됩니다 — 작은 단지에 열린 길",
+      "폐교·낡은 청사에 집을 짓는다 — 통과한 6법 정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-24-oegukin.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-25-yukbeop.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-02-flow.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-02-flow.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-03-vol.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-03-empty.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-04-region.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-04-trend.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-05-req.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-05-law.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/oegukin-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-06-check.png"
       }
     ],
     "tags": [
-      "외국인부동산",
-      "토지거래허가구역",
-      "토허제",
-      "실거주의무",
-      "수도권주택",
-      "외국인주택거래",
-      "국토교통부",
-      "중개실무",
-      "부동산거래신고법",
-      "외국인투기"
+      "주택공급법",
+      "리모델링",
+      "빈집",
+      "빈건축물",
+      "도시정비법",
+      "용적률",
+      "폐교용지",
+      "노후청사",
+      "국회통과",
+      "중개실무"
     ]
   }
 }

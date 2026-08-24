@@ -1,14 +1,48 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-24T07:25:00+09:00",
+  "updated_at": "2026-08-25T07:25:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다.",
   "items": [
+    {
+      "slug": "2026-08-25-yukbeop",
+      "report_no": 38,
+      "date": "2026-08-25",
+      "keyword": "통과한 6법, 빠진 1법",
+      "status": "designated",
+      "titles": [
+        "빈집 13만4천 세기 시작 — 공급 6법 국회 통과, 그런데 용적률은 빠졌다",
+        "옆 단지와 묶으면 리모델링 됩니다 — 작은 단지에 열린 길",
+        "폐교·낡은 청사에 집을 짓는다 — 통과한 6법 정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-25-yukbeop.txt",
+      "image_prefix": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-",
+      "images": [
+        "01-cover.png",
+        "02-flow.png",
+        "03-empty.png",
+        "04-trend.png",
+        "05-law.png",
+        "06-check.png"
+      ],
+      "tags": [
+        "주택공급법",
+        "리모델링",
+        "빈집",
+        "빈건축물",
+        "도시정비법",
+        "용적률",
+        "폐교용지",
+        "노후청사",
+        "국회통과",
+        "중개실무"
+      ]
+    },
     {
       "slug": "2026-08-24-oegukin",
       "report_no": 37,
       "date": "2026-08-24",
       "keyword": "실거주 아니면 못 산다",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "외국인은 실거주 아니면 서울 집 못 삽니다 — 8월 26일부터 1년 더",
         "외국인 주택 매수 27% 줄었다 — 서울은 37% 감소",
