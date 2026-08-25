@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-08-25-yukbeop-01",
+  "job_id": "2026-08-26-isipdae-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-08-25T07:25:00+09:00",
+  "requested_at": "2026-08-26T07:25:00+09:00",
   "post": {
-    "report_no": 38,
-    "slug": "2026-08-25-yukbeop",
-    "title": "빈집 13만4천 세기 시작 — 공급 6법 국회 통과, 그런데 용적률은 빠졌다",
+    "report_no": 39,
+    "slug": "2026-08-26-isipdae",
+    "title": "신규 주담대 2,110만원 줄었는데 — 20대만 392만원 늘었습니다 (한국은행 2분기)",
     "title_alts": [
-      "옆 단지와 묶으면 리모델링 됩니다 — 작은 단지에 열린 길",
-      "폐교·낡은 청사에 집을 짓는다 — 통과한 6법 정리"
+      "20대가 40대보다 빚이 많아졌다 — 1인당 주담대 2억394만원",
+      "30·40대 손님 예산, 반년 전 기준으로 잡으면 안 되는 이유"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-25-yukbeop.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-26-isipdae.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isipdae-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-02-flow.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isipdae-02-flow.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-03-empty.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isipdae-03-drop.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-04-trend.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isipdae-04-age.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-05-law.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isipdae-05-share.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yukbeop-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isipdae-06-check.png"
       }
     ],
     "tags": [
-      "주택공급법",
-      "리모델링",
-      "빈집",
-      "빈건축물",
-      "도시정비법",
-      "용적률",
-      "폐교용지",
-      "노후청사",
-      "국회통과",
+      "주택담보대출",
+      "가계부채",
+      "한국은행",
+      "20대영끌",
+      "생애최초",
+      "LTV",
+      "DSR",
+      "대출규제",
+      "내집마련",
       "중개실무"
     ]
   }
