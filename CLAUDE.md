@@ -78,8 +78,12 @@ URL: https://mkrealestate4s.github.io/mynews/
 3. `python3 make_carousel.py <slug>` → 창 1080x1437 렌더 → 상단 1080x1350 크롭.
 4. `python3 tools/add_insta_section.py posts/<slug>.html <카드접두어>` —
    포스트 페이지 맨 아래에 인스타 이미지 받기 섹션(캐러셀 6 + 릴스 6)을 붙인다.
-   **article 밖**에 두므로 복사 텍스트에는 영향이 없고, 인스타 이미지는 `img.insta-art`로
-   분리해 테마 전환 시 src가 바뀌지 않게 한다(테마 전환은 `img.card-art`만 대상).
+   **로컬 자동포스팅 프로그램을 깨지 않기 위한 3중 격리** — 바꾸지 말 것:
+   ① `<article>` 밖에 둔다 → blogText()는 article.children만 훑으므로 [이미지1~6] 유지.
+   ② **서빙 HTML에 `<img>` 태그를 남기지 않는다** → JS가 data 속성에서 생성한다.
+      HTML을 파싱하는 프로그램에는 기존과 동일하게 `<img>` 7개(카드 6 + figure 1)만 보인다.
+   ③ 인스타 이미지는 `img.insta-art` → 테마 전환은 `img.card-art`만 대상이라 경로가 안 덮인다.
+   푸시 전 확인: `grep -c '<img' posts/<slug>.html` 이 어제 글과 같은 수인지.
 5. `publish/reels/<slug>-script.txt` 작성: 씬별 나레이션·자막·초수(총 45~60초, TTS 초당 5자),
    인스타 캡션, 해시태그 15개 내외. **숫자는 한글로 적는다**(TTS 오독 방지) — 자막은 숫자로.
    릴스 편집 순서는 카드 번호순이 아니라 기사 흐름순(예: 1-3-4-2-5-6), 캐러셀은 카드 번호순.

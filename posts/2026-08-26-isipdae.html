@@ -354,7 +354,7 @@ footer a{color:var(--teal)}
 
 <div class="trace"></div>
 
-<section id="insta">
+<section id="insta" data-slug="isipdae" data-files="01-cover,02-flow,03-drop,04-age,05-share,06-check">
   <h2>인스타(임장로그)용 이미지</h2>
   <p class="cards-hint">위 카드뉴스와 같은 내용을, 인스타 규격으로 다시 조판한 것입니다 —
     채널명은 <b>임장로그</b>입니다. 이미지를 눌러 <b>복사</b>·<b>저장</b>하세요.
@@ -362,25 +362,11 @@ footer a{color:var(--teal)}
 
   <div class="ilabel"><span class="t">캐러셀 · 4:5</span>
     <span class="s">1080 × 1350 · 카드 번호 순서(1→6)로 올리세요</span></div>
-  <div class="iscroll car">
-    <img class="insta-art" data-file="isipdae-01-cover.png" src="../images/cards/carousel/isipdae-01-cover.png" alt="캐러셀 1/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-02-flow.png" src="../images/cards/carousel/isipdae-02-flow.png" alt="캐러셀 2/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-03-drop.png" src="../images/cards/carousel/isipdae-03-drop.png" alt="캐러셀 3/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-04-age.png" src="../images/cards/carousel/isipdae-04-age.png" alt="캐러셀 4/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-05-share.png" src="../images/cards/carousel/isipdae-05-share.png" alt="캐러셀 5/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-06-check.png" src="../images/cards/carousel/isipdae-06-check.png" alt="캐러셀 6/6" loading="lazy">
-  </div>
+  <div class="iscroll car" data-folder="carousel" data-kind="캐러셀"></div>
 
   <div class="ilabel"><span class="t">릴스 · 9:16</span>
     <span class="s">1080 × 1920 · 하단 400px는 인스타 UI 자리로 비워 뒀습니다</span></div>
-  <div class="iscroll reel">
-    <img class="insta-art" data-file="isipdae-01-cover.png" src="../images/cards/reels/isipdae-01-cover.png" alt="릴스 1/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-02-flow.png" src="../images/cards/reels/isipdae-02-flow.png" alt="릴스 2/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-03-drop.png" src="../images/cards/reels/isipdae-03-drop.png" alt="릴스 3/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-04-age.png" src="../images/cards/reels/isipdae-04-age.png" alt="릴스 4/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-05-share.png" src="../images/cards/reels/isipdae-05-share.png" alt="릴스 5/6" loading="lazy">
-    <img class="insta-art" data-file="isipdae-06-check.png" src="../images/cards/reels/isipdae-06-check.png" alt="릴스 6/6" loading="lazy">
-  </div>
+  <div class="iscroll reel" data-folder="reels" data-kind="릴스"></div>
 
   <p class="cards-hint" style="margin-top:16px">나레이션 스크립트·자막·초수와 인스타 캡션·해시태그는
     <a href="../publish/reels/2026-08-26-isipdae-script.txt" style="color:var(--teal)">여기</a>에 있습니다.</p>
@@ -485,6 +471,26 @@ footer a{color:var(--teal)}
     row.appendChild(all);
     var bar=art.querySelector('.copybar');
     if(bar)bar.parentNode.insertBefore(row,bar.nextSibling);else art.insertBefore(row,art.firstChild);
+  })();
+
+  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지 않는다:
+        로컬 포스팅 프로그램이 포스트 페이지를 파싱할 때 카드 6장만 보이게) ── */
+  (function(){
+    var sec=document.getElementById('insta');
+    if(!sec)return;
+    var slug=sec.dataset.slug, files=(sec.dataset.files||'').split(',').filter(Boolean);
+    sec.querySelectorAll('.iscroll').forEach(function(row){
+      var folder=row.dataset.folder, kind=row.dataset.kind||'';
+      files.forEach(function(f,i){
+        var im=document.createElement('img');
+        im.className='insta-art';
+        im.loading='lazy';
+        im.dataset.file=slug+'-'+f+'.png';
+        im.src='../images/cards/'+folder+'/'+slug+'-'+f+'.png';
+        im.alt=kind+' '+(i+1)+'/'+files.length;
+        row.appendChild(im);
+      });
+    });
   })();
 
   function downloadImg(img){
