@@ -114,6 +114,17 @@ https://mkrealestate4s.github.io/mynews/images/cards/reels/isipdae-01-cover.png
 #30대재테크 #부동산중개 #공인중개사 #서울아파트
 
 ═════════════════════════════════════════════
+■ 캐러셀(4:5) 이미지 — 같은 6장, 1080x1350
+https://mkrealestate4s.github.io/mynews/images/cards/carousel/isipdae-01-cover.png
+                                                            ...-02-flow.png
+                                                            ...-03-drop.png
+                                                            ...-04-age.png
+                                                            ...-05-share.png
+                                                            ...-06-check.png
+캐러셀은 카드 번호 순서(1→2→3→4→5→6) 그대로 올리면 됩니다.
+캡션은 위 '인스타 캡션'을 그대로 쓰세요.
+
+
 ■ VLLO 작업 순서 (참고)
 1) 위 6장을 순서(1-3-4-2-5-6)대로 불러오고 씬별 길이를 위 초수로 맞춥니다.
 2) 나레이션은 VLLO에 TTS가 있으면 씬별로 바로 입력, 없으면
