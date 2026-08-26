@@ -107,12 +107,44 @@ def wait_ready(container: str, token: str, tries: int = 30) -> None:
     raise SystemExit("❌ 컨테이너가 준비되지 않았습니다 (시간 초과)")
 
 
+def check_account(ig: str, token: str) -> None:
+    """계정이 발행 자격을 갖췄는지 확인한다 — 전환·토큰 발급 직후 먼저 이걸 돌린다.
+
+    account_type 이 BUSINESS 또는 MEDIA_CREATOR 여야 발행이 된다(개인 계정은 불가).
+    content_publishing_limit 은 발행 권한이 실제로 열려 있을 때만 응답하므로
+    자격 확인과 남은 할당량 확인을 겸한다.
+    """
+    me = _api("GET", ig, {"fields": "id,username,account_type"}, token)
+    kind = me.get("account_type", "?")
+    ok = kind in ("BUSINESS", "MEDIA_CREATOR")
+    print(f"  계정  @{me.get('username', '?')}  ({kind})  {'✓ 발행 가능' if ok else '❌ 프로페셔널 계정이 아닙니다'}")
+    if not ok:
+        raise SystemExit("설정 → 계정 유형 및 도구 → 프로페셔널 계정으로 전환 (무료)")
+
+    lim = _api("GET", f"{ig}/content_publishing_limit",
+               {"fields": "quota_usage,config"}, token)
+    d = (lim.get("data") or [{}])[0]
+    cap = (d.get("config") or {}).get("quota_total", 25)
+    print(f"  할당량  24시간 내 {d.get('quota_usage', 0)}/{cap}건 사용")
+    print("  토큰    ✓ 유효")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="인스타 캐러셀 발행")
     ap.add_argument("--dry-run", action="store_true",
                     help="API를 호출하지 않고 지시서·이미지·한도만 점검")
+    ap.add_argument("--check", action="store_true",
+                    help="계정 유형·토큰·남은 할당량만 확인 (발행하지 않음)")
     ap.add_argument("--force", action="store_true", help="이미 발행한 job_id도 다시 발행")
     a = ap.parse_args()
+
+    if a.check:
+        ig, token = os.environ.get("IG_USER_ID"), os.environ.get("IG_ACCESS_TOKEN")
+        if not ig or not token:
+            raise SystemExit("❌ IG_USER_ID · IG_ACCESS_TOKEN 환경변수가 필요합니다.")
+        print("■ 계정 점검")
+        check_account(ig, token)
+        return
 
     job = load_job()
     p = job["post"]

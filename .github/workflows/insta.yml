@@ -44,6 +44,17 @@ jobs:
             echo "ready=yes" >> $GITHUB_OUTPUT
           fi
 
+      # 계정 유형·토큰·남은 할당량을 먼저 확인한다. 개인 계정이거나 토큰이
+      # 만료됐으면 여기서 멈추므로 원인을 바로 알 수 있다.
+      - name: Check account
+        if: steps.gate.outputs.ready == 'yes'
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          python3 tools/insta_publish.py --check | tee /tmp/chk.txt
+          { echo '```'; cat /tmp/chk.txt; echo '```'; } >> $GITHUB_STEP_SUMMARY
+
       - name: Publish
         if: steps.gate.outputs.ready == 'yes'
         env:
