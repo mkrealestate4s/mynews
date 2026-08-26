@@ -73,9 +73,18 @@ URL: https://mkrealestate4s.github.io/mynews/
 
 ## 인스타 산출물 절차 (데일리 리포트 후속)
 1. 카드 1:1 생성 시 `insta` 테마까지 함께 렌더된다(`base.render`).
-2. `python3 make_reels.py <slug> "<릴스 상단 제목>" <리포트번호>` → 창 1080x2007 렌더 → 상단 1080x1920 크롭.
+2. `python3 make_reels.py <slug> "<릴스 상단 제목>" <리포트번호>` →
+   `node tools/shot_cards.js insta-reels pngr 1080 1920` (뷰포트 그대로 캡처 — 크롭 보정 없음).
    하단 400px는 인스타 UI가 덮으므로 본문을 상단 안전영역에 몰아 둔다.
-3. `python3 make_carousel.py <slug>` → 창 1080x1437 렌더 → 상단 1080x1350 크롭.
+3. `python3 make_carousel.py <slug>` → `node tools/shot_cards.js insta-car pngc 1080 1350`.
+   - **세로 프레임 자동 확대**: 1:1 활자를 그대로 9:16/4:5에 얹으면 가운데 좁은 띠에만
+     글자가 몰려 "눌린" 느낌이 된다(2026-08-26 사용자 지적). `make_cards.fit_script()`가
+     심는 스크립트가 `.mid`에 zoom을 걸고 폭을 그만큼 줄여 되레이아웃한다 —
+     릴스 최대 1.45배, 캐러셀 최대 1.35배, 프레임의 97%를 채우는 배율로 카드별 자동 결정.
+     가로로 넘치면(`.duo`처럼 nowrap 패널이 나란히 선 카드) 배율을 되돌리므로,
+     세로 프레임에서는 `.duo`를 위아래로 세워 확대 여지를 준다.
+   - `shot_cards.js`가 카드별 `zoom=`과 `over v/h`를 찍는다. **over가 0이 아니면 잘린 것** —
+     배율 상한을 낮추거나 해당 카드 본문을 줄인다.
 4. `publish/reels/<slug>-script.txt` 작성: 씬별 `[나레이션]`·`[자막]`, 인스타 캡션, 해시태그
    15개 내외. **숫자는 한글로 적는다**(TTS 오독 방지) — 자막은 숫자로.
    릴스 편집 순서는 카드 번호순이 아니라 기사 흐름순(예: 1-3-4-2-5-6), 캐러셀은 카드 번호순.

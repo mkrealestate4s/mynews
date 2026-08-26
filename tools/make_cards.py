@@ -103,6 +103,49 @@ INK_OVERRIDE = ('.serif.gtx{-webkit-text-fill-color:var(--ink);background:none;c
                 '.zcol .zv.gtx,.statrow .big.gtx{-webkit-text-fill-color:var(--accent);'
                 'background:none;color:var(--accent)}')
 
+_FIT_TPL = """
+<script>
+/* 세로 프레임(9:16 · 4:5) 자동 맞춤 — 1:1 기준 활자를 프레임 높이에 맞춰 확대한다.
+   1:1 카드는 .mid 를 꽉 채우지만 세로로 늘린 프레임에서는 같은 활자가 가운데
+   좁은 띠에만 모여 "눌린" 느낌이 된다. .mid 에 zoom 을 걸고 폭을 그만큼 줄여
+   되레이아웃하면 글자·그래프가 함께 커진다.
+   가로로 넘치는 경우(.duo 처럼 nowrap 패널이 나란히 선 카드)는 배율을 되돌린다. */
+(function(){
+  var m=document.querySelector('.mid'); if(!m) return;
+  var kids=[].slice.call(m.children); if(!kids.length) return;
+  function ink(z){
+    var t=1e9,b=-1e9;
+    kids.forEach(function(e){var r=e.getBoundingClientRect();
+      if(r.height){t=Math.min(t,r.top);b=Math.max(b,r.bottom);}});
+    return b>t?(b-t)/z:0;
+  }
+  function fit(){
+    m.style.zoom='';m.style.width='';                  // 여러 번 불려도 같은 결과
+    var cs=getComputedStyle(m);
+    var pad=parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom);
+    var rc=m.getBoundingClientRect(), box=rc.height, W=rc.width, z=1;
+    function set(v){z=v;m.style.zoom=v;m.style.width=(W/v)+'px';}
+    for(var i=0;i<12;i++){
+      var h=ink(z); if(!h) return;
+      var nz=Math.min(%(max)s,Math.max(1,box*%(fill)s/(h+pad)));
+      if(Math.abs(nz-z)<0.004) break;
+      set(nz);
+    }
+    for(var j=0;j<30 && m.scrollWidth>m.clientWidth+1 && z>1.01;j++) set(Math.max(1,z-0.02));
+    m.dataset.fit=z.toFixed(3);
+  }
+  fit();
+  document.fonts.ready.then(fit);                      // 폰트 로드 후 재측정
+  window.addEventListener('load',fit);
+})();
+</script>
+"""
+
+
+def fit_script(fill=0.97, maxz=1.45):
+    """세로 프레임용 자동 확대 스크립트. </body> 앞에 넣는다."""
+    return _FIT_TPL % {"fill": fill, "max": maxz}
+
 
 def render(slug, cards, extra_css="", outbase=None, themes=None, eyebrow=None):
     """카드 dict을 테마별로 렌더한다.

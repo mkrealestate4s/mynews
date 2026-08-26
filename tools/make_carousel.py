@@ -9,6 +9,8 @@
 """
 import pathlib, sys
 
+from make_cards import fit_script
+
 BASE = pathlib.Path(__file__).parent
 SLUG = sys.argv[1]
 THEMES = sys.argv[2:] or ["insta"]
@@ -18,6 +20,8 @@ html,body{height:1350px}
 body{padding:92px 92px 200px}
 .footwrap{bottom:66px}
 .mid{padding:20px 0}
+/* 나란히 선 nowrap 패널은 세로 프레임에서 폭을 잡아먹어 확대를 막는다 → 위아래로 */
+.duo{flex-direction:column;gap:18px}
 """
 
 n = 0
@@ -26,6 +30,7 @@ for th in THEMES:
     out = BASE / f"{th}-car"; out.mkdir(exist_ok=True)
     for f in sorted(src.glob(f"{SLUG}-*.html")):
         html = f.read_text(encoding="utf-8").replace("</style>", EXTRA + "</style>", 1)
+        html = html.replace("</body>", fit_script(0.97, 1.35) + "</body>", 1)
         (out / f.name).write_text(html, encoding="utf-8")
         n += 1
 print("wrote", n, "carousel pages")

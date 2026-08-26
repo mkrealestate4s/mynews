@@ -10,6 +10,8 @@
 """
 import pathlib, re, sys
 
+from make_cards import fit_script
+
 BASE = pathlib.Path(__file__).parent
 SLUG = sys.argv[1]
 STRIP = sys.argv[2]        # 릴스 상단 고정 제목(키워드)
@@ -20,7 +22,7 @@ THEMES = sys.argv[4:] or ["insta"]
 EXTRA = """
 html,body{height:1920px}
 /* 인스타 릴스 UI가 하단 ~380px를 덮으므로 본문을 상단 안전영역에 몰아둔다 */
-body{padding:104px 96px 620px}
+body{padding:92px 96px 580px}
 .footwrap{bottom:436px}
 .cta{position:absolute;left:96px;right:96px;bottom:516px;font-size:26px;color:var(--mute)}
 .strip{flex:none;margin:26px 0 0;padding:22px 30px;border-left:6px solid var(--accent);
@@ -28,11 +30,14 @@ body{padding:104px 96px 620px}
 .strip .sl{font-size:24px;color:var(--mute);letter-spacing:.1em;font-weight:700}
 .strip .st{font-size:40px;font-weight:900;line-height:1.3;margin-top:6px;word-break:keep-all}
 .mid{padding:26px 0}
+/* 나란히 선 nowrap 패널은 세로 프레임에서 폭을 잡아먹어 확대를 막는다 → 위아래로 */
+.duo{flex-direction:column;gap:18px}
 """
 
 def convert(html, strip_html):
     # </style> 앞에 9:16 오버라이드 삽입 (뒤에 와야 우선 적용됨)
     html = html.replace("</style>", EXTRA + "</style>", 1)
+    html = html.replace("</body>", fit_script(0.97, 1.45) + "</body>", 1)
     # .top 직후에 고정 제목 스트립 삽입
     m = re.search(r'(<div class="top">.*?</div></div>)', html, re.S)
     assert m, "top block not found"
