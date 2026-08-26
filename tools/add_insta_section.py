@@ -52,10 +52,34 @@ NAMES = [re.search(r'data-file="' + SLUG + r'-([0-9]{2}-[a-z]+)\.png"', m).group
 assert len(NAMES) == 6, NAMES
 
 
+# 릴스 스크립트에서 [나레이션] 블록을 뽑아 통스크립트를 만든다 (없으면 버튼 생략)
+SCRIPT = POST.parent.parent / "publish" / "reels" / f"{POST.stem}-script.txt"
+NARR = ""
+if SCRIPT.exists():
+    blocks = re.findall(r'\[나레이션\]\s*\n(.+?)\n\s*\n\[자막\]',
+                        SCRIPT.read_text(encoding="utf-8"), re.S)
+    NARR = "\n".join(b.strip() for b in blocks)
+    print(f"나레이션 {len(blocks)}씬 · {len(NARR.replace(' ', '').replace(chr(10), ''))}자 임베드")
+else:
+    print("경고: 스크립트 파일이 없어 나레이션 복사 버튼을 넣지 않습니다 —", SCRIPT)
+
+
+def esc(t):
+    return t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
 def allbtn(kind, fn):
     return (f'<button class="allbtn" type="button" data-all="{kind}" '
             f'data-fn="{fn}" data-count="6">⬇ 6장 전체 저장</button>')
 
+
+NARR_CHARS = len(NARR.replace(" ", "").replace("\n", ""))
+NARR_SEC = round(NARR_CHARS / 5.5 + 0.6 * max(1, NARR.count("\n") + 1))
+narrmeta = (f'{NARR.count(chr(10)) + 1}씬 · {NARR_CHARS}자 · 약 {NARR_SEC}초'
+            if NARR else '스크립트 파일 없음')
+narrbtn = ('<button class="allbtn" type="button" id="copyNarr">🎙 나레이션 전체 복사</button>'
+           if NARR else '')
+narrtext = esc(NARR)
 
 SECTION = f'''<div class="trace"></div>
 
@@ -76,8 +100,14 @@ SECTION = f'''<div class="trace"></div>
     {allbtn("reels", "reels")}</div>
   <div class="iscroll reel" data-folder="reels" data-kind="릴스"></div>
 
-  <p class="cards-hint" style="margin-top:16px">나레이션 스크립트·자막·초수와 인스타 캡션·해시태그는
-    <a href="../publish/reels/{POST.stem}-script.txt" style="color:var(--teal)">여기</a>에 있습니다.</p>
+  <div class="ilabel" style="margin-top:26px"><span class="t">나레이션 통스크립트</span>
+    <span class="s">{narrmeta}</span>
+    {narrbtn}</div>
+  <pre id="narration" hidden>{narrtext}</pre>
+  <p class="cards-hint" style="margin-top:10px">TTS(클로바더빙·VLLO)에 <b>한 번에 붙여넣는</b> 용도입니다 —
+    줄바꿈이 씬 경계입니다. 숫자는 TTS 오독을 막으려고 한글로 적었습니다.
+    씬별 자막·초수와 인스타 캡션·해시태그는
+    <a href="../publish/reels/{POST.stem}-script.txt" style="color:var(--teal)">전체 스크립트</a>에 있습니다.</p>
 </section>
 
 '''
@@ -205,7 +235,15 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
       btn.disabled=false;btn.textContent=old;
     });
   }
-  document.querySelectorAll('.allbtn').forEach(function(b){
+  var narrBtn=document.getElementById('copyNarr');
+  if(narrBtn){
+    narrBtn.addEventListener('click',function(e){
+      e.preventDefault();
+      var el=document.getElementById('narration');
+      copyText(el?el.textContent.trim():'', '나레이션 통스크립트가 복사됐습니다 ✓');
+    });
+  }
+  document.querySelectorAll('.allbtn:not(#copyNarr)').forEach(function(b){
     var n=b.dataset.count||'6';
     b.textContent=CAN_SHARE?('⬇ '+n+'장 한 번에 저장'):('⬇ '+n+'장 zip으로');
     b.title=CAN_SHARE?'공유 시트에서 원본 그대로 사진앱에 저장됩니다'

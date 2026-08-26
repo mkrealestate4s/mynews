@@ -376,8 +376,19 @@ footer a{color:var(--teal)}
     <button class="allbtn" type="button" data-all="reels" data-fn="reels" data-count="6">⬇ 6장 전체 저장</button></div>
   <div class="iscroll reel" data-folder="reels" data-kind="릴스"></div>
 
-  <p class="cards-hint" style="margin-top:16px">나레이션 스크립트·자막·초수와 인스타 캡션·해시태그는
-    <a href="../publish/reels/2026-08-26-isipdae-script.txt" style="color:var(--teal)">여기</a>에 있습니다.</p>
+  <div class="ilabel" style="margin-top:26px"><span class="t">나레이션 통스크립트</span>
+    <span class="s">6씬 · 246자 · 약 48초</span>
+    <button class="allbtn" type="button" id="copyNarr">🎙 나레이션 전체 복사</button></div>
+  <pre id="narration" hidden>모두 줄었는데, 이십 대만 늘었습니다. 이번 주 대출 통계 이야기예요.
+새로 받는 주택담보대출이 한 건당 이천백십만 원 줄었습니다. 역대 가장 큰 감소폭이에요.
+사십 대는 삼천오백만, 삼십 대는 이천육백만 원이 줄었습니다. 그런데 이십 대만 삼백구십이만 원 늘었어요.
+이십 대는 무주택, 생애 최초가 많아 규제 예외를 받습니다. 통과할 수 있는 사람만 남은 거죠.
+다만 새로 대출받은 사람 중 이십 대는 백 명에 여섯 명뿐입니다. 평균 이 억은 그 여섯 명의 평균이에요.
+젊은 손님은 생애 최초부터, 삼사십 대는 한도를 다시 확인하세요. 임장로그, 팔로우하면 매일 아침 받아보실 수 있어요.</pre>
+  <p class="cards-hint" style="margin-top:10px">TTS(클로바더빙·VLLO)에 <b>한 번에 붙여넣는</b> 용도입니다 —
+    줄바꿈이 씬 경계입니다. 숫자는 TTS 오독을 막으려고 한글로 적었습니다.
+    씬별 자막·초수와 인스타 캡션·해시태그는
+    <a href="../publish/reels/2026-08-26-isipdae-script.txt" style="color:var(--teal)">전체 스크립트</a>에 있습니다.</p>
 </section>
 
 <footer>
@@ -595,7 +606,15 @@ footer a{color:var(--teal)}
       btn.disabled=false;btn.textContent=old;
     });
   }
-  document.querySelectorAll('.allbtn').forEach(function(b){
+  var narrBtn=document.getElementById('copyNarr');
+  if(narrBtn){
+    narrBtn.addEventListener('click',function(e){
+      e.preventDefault();
+      var el=document.getElementById('narration');
+      copyText(el?el.textContent.trim():'', '나레이션 통스크립트가 복사됐습니다 ✓');
+    });
+  }
+  document.querySelectorAll('.allbtn:not(#copyNarr)').forEach(function(b){
     var n=b.dataset.count||'6';
     b.textContent=CAN_SHARE?('⬇ '+n+'장 한 번에 저장'):('⬇ '+n+'장 zip으로');
     b.title=CAN_SHARE?'공유 시트에서 원본 그대로 사진앱에 저장됩니다'
