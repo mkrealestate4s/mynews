@@ -22,7 +22,11 @@ import pathlib, re, sys
 POST = pathlib.Path(sys.argv[1])
 SLUG = sys.argv[2]
 s = POST.read_text(encoding="utf-8")
-assert "#insta" not in s, "이미 인스타 섹션이 있습니다"
+# 어제 글을 복제해 쓰므로 CSS·JS 는 이미 들어 있고 섹션만 없는 상태가 정상이다.
+# 예전 가드는 CSS 선택자 '#insta' 를 보고 오탐했다 → 실제 섹션 유무로 판단한다.
+assert '<section id="insta"' not in s, "이미 인스타 섹션이 있습니다"
+HAS_CSS = "#insta .cards-hint b" in s          # 복제본이면 True
+HAS_JS = "insta-art" in s and "downloadImg" in s
 
 CSS = """
 /* ── 인스타(임장로그) 이미지 받기 ─────────────────────────── */
@@ -44,7 +48,8 @@ CSS = """
   margin-left:auto;white-space:nowrap;transition:opacity .15s}
 .allbtn[disabled]{opacity:.5;cursor:default}
 """
-s = s.replace("</style>", CSS + "</style>", 1)
+if not HAS_CSS:
+    s = s.replace("</style>", CSS + "</style>", 1)
 
 # 갤러리에서 카드 파일 접미어를 읽어온다 (01-cover 등)
 NAMES = [re.search(r'data-file="' + SLUG + r'-([0-9]{2}-[a-z]+)\.png"', m).group(1)
@@ -126,7 +131,12 @@ SECTION = f'''<div class="trace"></div>
 </section>
 
 '''
+_before = s
 s = s.replace('<div class="trace"></div>\n\n<footer>', SECTION + "<footer>", 1)
+# 앵커가 안 맞으면 str.replace 는 조용히 아무것도 하지 않는다 — 그대로 두면
+# "added" 만 찍히고 섹션이 빠진 채 배포된다(2026-08-27 실제 발생).
+assert s != _before, ('삽입 지점을 찾지 못했습니다 — </article> 뒤에 '
+                      '구분선 div(class="trace")와 <footer>가 이어져 있어야 합니다')
 
 # 블로그 카드 갤러리에도 전체 저장 버튼 (현재 테마의 6장)
 s = s.replace(
@@ -307,7 +317,8 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
 
   function downloadImg(img){"""
 assert "  function downloadImg(img){" in s
-s = s.replace("  function downloadImg(img){", JS, 1)
+if not HAS_JS:
+    s = s.replace("  function downloadImg(img){", JS, 1)
 
 # 버튼 배선에 인스타 이미지 포함 (테마 전환 대상에는 넣지 않는다)
 s = s.replace(
