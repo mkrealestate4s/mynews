@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "job_id": "2026-08-26-isipdae-carousel",
+  "status": "ready",
+  "channel": "임장로그",
+  "media_type": "CAROUSEL",
+  "post": {
+    "report_no": 39,
+    "slug": "2026-08-26-isipdae",
+    "caption": "새로 받는 주택담보대출이 한 건당 2,110만원 줄었습니다.\n2013년 통계를 만든 뒤 가장 큰 감소폭입니다.\n\n그런데 연령대별로 뜯어보면 이야기가 달라집니다.\n40대 −3,537만원, 30대 −2,632만원, 50대 −1,281만원.\n20대만 +392만원.\n\n왜 20대만 늘었을까요?\n무주택·생애최초 비중이 높아 규제 예외를 받고,\n대출이 실행된 20대는 애초에 소득 심사를 통과한 사람들입니다.\n규제를 피한 게 아니라, 통과할 수 있는 사람만 남은 구조입니다.\n\n다만 착시가 하나 있습니다.\n신규 주담대를 받은 사람 중 20대 비중은 6%.\n'20대 평균 2억'은 20대 전체가 아니라, 빌릴 수 있었던 6%의 평균입니다.\n\n📌 중개 현장 체크\n① 젊은 손님은 생애최초·무주택 여부부터 (LTV 최대 80%)\n② 30·40대는 반년 전 예산을 그대로 쓰지 말 것\n③ 줄어든 건 '한 건의 크기' — 가계신용은 사상 첫 2,000조\n\n자료: 한국은행 2026년 2분기 차주별 가계부채 통계\n\n@임장로그 · 매일 아침 부동산 데이터 한 장\n\n#부동산 #주택담보대출 #가계부채 #대출규제 #생애최초 #LTV #DSR #내집마련 #부동산공부 #부동산정보 #한국은행 #20대재테크 #30대재테크 #부동산중개 #공인중개사 #서울아파트",
+    "caption_chars": 630,
+    "hashtags": [
+      "#부동산",
+      "#주택담보대출",
+      "#가계부채",
+      "#대출규제",
+      "#생애최초",
+      "#LTV",
+      "#DSR",
+      "#내집마련",
+      "#부동산공부",
+      "#부동산정보",
+      "#한국은행",
+      "#20대재테크",
+      "#30대재테크",
+      "#부동산중개",
+      "#공인중개사",
+      "#서울아파트"
+    ],
+    "images": [
+      {
+        "n": 1,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/carousel-jpg/isipdae-01-cover.jpg",
+        "bytes": 161445
+      },
+      {
+        "n": 2,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/carousel-jpg/isipdae-02-flow.jpg",
+        "bytes": 204469
+      },
+      {
+        "n": 3,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/carousel-jpg/isipdae-03-drop.jpg",
+        "bytes": 178109
+      },
+      {
+        "n": 4,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/carousel-jpg/isipdae-04-age.jpg",
+        "bytes": 156792
+      },
+      {
+        "n": 5,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/carousel-jpg/isipdae-05-share.jpg",
+        "bytes": 148882
+      },
+      {
+        "n": 6,
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/carousel-jpg/isipdae-06-check.jpg",
+        "bytes": 211790
+      }
+    ]
+  }
+}

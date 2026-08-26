@@ -1,0 +1,69 @@
+name: Publish Instagram carousel
+
+# 임장로그 캐러셀 자동 발행.
+# 카드 커밋·배포는 보통 07:13~07:26 KST 에 끝나므로 08:10 KST 에 돌린다
+# (배포된 JPEG URL 을 인스타 서버가 직접 받아가야 하므로 배포 뒤여야 한다).
+#
+# IG_USER_ID · IG_ACCESS_TOKEN 시크릿이 없으면 아무것도 하지 않고 끝난다 —
+# 시크릿을 넣는 순간부터 발행이 시작된다. 발행을 잠시 멈추려면
+# publish/insta.json 의 status 를 hold 로 바꾸면 된다.
+
+on:
+  schedule:
+    - cron: "10 23 * * *"        # 23:10 UTC = 08:10 KST
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "점검만 (발행하지 않음)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: insta
+  cancel-in-progress: false      # 발행 중 취소되면 중복 발행 위험이 있다
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check secrets
+        id: gate
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$IG_USER_ID" ] || [ -z "$IG_ACCESS_TOKEN" ]; then
+            echo "인스타 시크릿이 없습니다 — 발행을 건너뜁니다." >> $GITHUB_STEP_SUMMARY
+            echo "ready=no" >> $GITHUB_OUTPUT
+          else
+            echo "ready=yes" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Publish
+        if: steps.gate.outputs.ready == 'yes'
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          FLAG=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then FLAG="--dry-run"; fi
+          python3 tools/insta_publish.py $FLAG | tee /tmp/out.txt
+          { echo '```'; cat /tmp/out.txt; echo '```'; } >> $GITHUB_STEP_SUMMARY
+
+      - name: Record the published post
+        if: steps.gate.outputs.ready == 'yes' && inputs.dry_run != true
+        run: |
+          if git diff --quiet -- publish/insta-posted.json; then
+            echo "발행 기록 변화 없음 (건너뜀 또는 중복)"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publish/insta-posted.json
+          git commit -m "Record Instagram carousel publish"
+          git push

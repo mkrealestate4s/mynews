@@ -106,6 +106,27 @@ URL: https://mkrealestate4s.github.io/mynews/
      (외부 라이브러리 없음). 버튼 문구도 기기 능력에 맞춰 바뀐다.
    - 나레이션 통스크립트는 `<pre id="narration" hidden>`에 담고 `#copyNarr`로 복사한다.
      TTS에 한 번에 붙여넣는 용도 — 줄바꿈이 씬 경계다.
+7. `python3 tools/make_insta_post.py` — 캐러셀 자동 발행용 산출물
+   (`images/cards/carousel-jpg/*.jpg` + `publish/insta.json`). 아래 절 참조.
+
+## 인스타 캐러셀 자동 발행 (공식 Graph API)
+- 매일 08:10 KST에 `.github/workflows/insta.yml`이 `tools/insta_publish.py`를 돌린다.
+  카드 배포(07:13~07:26)가 끝난 뒤여야 한다 — **인스타 서버가 이미지 URL을 직접 받아간다.**
+- **이미지는 바이트로 못 올린다.** 공개 HTTPS URL만 받으므로 깃페이지 URL을 그대로 쓴다.
+  그래서 별도 이미지 호스팅이 필요 없다.
+- **PNG는 거부된다 — JPEG만 받는다.** `make_insta_post.py`가 `carousel-jpg/`에 파생을 만든다.
+  **`subsampling=0`(4:4:4)로 저장할 것** — 기본 4:2:0은 앰버(#FFB020) 글자 경계를 뭉갠다
+  (실측: 8단계 이상 어긋난 픽셀 4:4:4 70개 vs 4:2:0 11,754개).
+- **인스타에는 임시저장이 없다** — `media_publish`는 즉시 공개된다. 그래서 두 겹으로 막는다:
+  ① `publish/insta.json`의 `status`가 `ready`일 때만 발행(`hold`로 바꾸면 건너뛴다)
+  ② `publish/insta-posted.json`에 job_id를 기록해 중복 발행을 막는다(액션이 커밋한다)
+- 시크릿 `IG_USER_ID`·`IG_ACCESS_TOKEN`이 없으면 액션은 아무것도 하지 않는다.
+  계정은 **프로페셔널(비즈니스/크리에이터)**이어야 하고 토큰은 60일마다 갱신해야 한다.
+- 한도: 캐러셀 2~10장, 캡션 2,200자, 해시태그 30개, 장당 8MB, 하루 25건.
+  `make_insta_post.py`가 지시서를 만들 때 전부 검사하고 어기면 멈춘다.
+- **첫 장 비율로 캐러셀 전체가 잘린다** — 6장 크기가 섞이면 지시서 생성이 실패한다.
+- 비공식 자동화 라이브러리(instagrapi 등)는 쓰지 않는다 — 계정 제한 사유다.
+- 손으로 점검: `python3 tools/insta_publish.py --dry-run` (토큰 없이 URL·한도만 확인).
 
 ## 데이터 시각화 표준 (중요 — 사용자 요구사항)
 - **촘촘하게**: 헤드라인 숫자 2개 비교로 끝내지 않는다. 가능하면
