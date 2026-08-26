@@ -11,6 +11,10 @@ import subprocess
 BASE = pathlib.Path(__file__).parent
 CSS_URL = ("https://fonts.googleapis.com/css2?"
            "family=Noto+Serif+KR:wght@600;900&family=Noto+Sans+KR:wght@400;500;700&display=swap")
+# 인스타(임장로그) 전용 테마 — 고정폭 숫자용 세트. gf2-local.css + fonts2/ 로 분리 저장한다.
+CSS_URL2 = ("https://fonts.googleapis.com/css2?"
+            "family=IBM+Plex+Sans+KR:wght@400;500;600;700&"
+            "family=IBM+Plex+Mono:wght@500;700&display=swap")
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 CA = os.environ.get("CURL_CA", "/root/.ccr/ca-bundle.crt")
 
@@ -25,19 +29,24 @@ def curl(url, out=None):
     return subprocess.run(cmd, check=True, capture_output=out is None).stdout
 
 
-def main():
-    css = curl(CSS_URL).decode()
-    (BASE / "fonts").mkdir(exist_ok=True)
+def localize(css_url, subdir, out_css):
+    css = curl(css_url).decode()
+    (BASE / subdir).mkdir(exist_ok=True)
     urls = sorted(set(re.findall(r"url\((https://fonts\.gstatic\.com/[^)]+)\)", css)))
-    print(len(urls), "font files")
+    print(len(urls), "font files ->", subdir)
     for u in urls:
         name = hashlib.md5(u.encode()).hexdigest()[:16] + ".woff2"
-        p = BASE / "fonts" / name
+        p = BASE / subdir / name
         if not p.exists():
             curl(u, out=p)
-        css = css.replace(u, f"fonts/{name}")
-    (BASE / "gf-local.css").write_text(css)
-    print("wrote gf-local.css")
+        css = css.replace(u, f"{subdir}/{name}")
+    (BASE / out_css).write_text(css)
+    print("wrote", out_css)
+
+
+def main():
+    localize(CSS_URL, "fonts", "gf-local.css")
+    localize(CSS_URL2, "fonts2", "gf2-local.css")
 
 
 if __name__ == "__main__":

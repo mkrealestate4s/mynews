@@ -25,9 +25,42 @@ THEMES = {
     ),
 }
 
+# 인스타(임장로그) 전용 테마 — '터미널 데이터'. 블로그 3테마와 분리해서 관리한다.
+# 1:1로 만든 뒤 make_reels.py(9:16) / make_carousel.py(4:5)로 재조판해 쓴다.
+INSTA = {
+    "insta": dict(
+        bg="#0B0B0C", panel="#131316", ink="#EDEDEF", mute="#8A8A93",
+        accent="#FFB020", accent2="#FFB020", line="#26262C", rail="#0F0F11",
+        fillgray="#2A2A31", onfill="#0B0B0C", body="#D6D6DB",
+        head="'IBM Plex Sans KR',sans-serif", headspace="-0.01em", headink="ink",
+    ),
+}
+
+BRAND = {
+    "report": "부동산 인사이트 — 데일리 키워드 리포트",
+    "white": "부동산 인사이트 — 데일리 키워드 리포트",
+    "editorial": "부동산 인사이트 — 데일리 키워드 리포트",
+    "insta": "임장로그 — 매일 아침 부동산 데이터",
+}
+
+# 인스타 테마 오버라이드: 고정폭 숫자 · 곡률 0 · 격자 노출 · 자간 넓은 아이브로
+INSTA_CSS = """
+body{font-family:'IBM Plex Sans KR',sans-serif}
+.eyebrow{font-family:'IBM Plex Mono',monospace;letter-spacing:.24em}
+.pnum{font-family:'IBM Plex Mono',monospace}
+.col .v,.zcol .zv,.hbar .lb .v,.duo .dv,.bignum,.tl .r .d,.statrow .big{
+  font-family:'IBM Plex Mono',monospace;font-weight:700}
+.panel,.colwrap,.zwrap,.duo .box,.fbox,.tl,.badge,.sched,
+.hbar .railx,.hbar .fillx,.col .barv,.zcol .zbar,.cols,.zcols{border-radius:0}
+/* 격자는 플롯 영역 안에만 — 축 라벨 뒤로 넘기지 않는다 */
+.cols,.zcols{background-image:repeating-linear-gradient(
+  to right,transparent 0 63px,var(--line) 63px 64px)}
+"""
+
 HEAD_TPL = """<!DOCTYPE html>
 <html lang="ko"><head><meta charset="UTF-8">
 <link href="gf-local.css" rel="stylesheet">
+<link href="gf2-local.css" rel="stylesheet">
 <style>
 :root{{--bg:{bg};--panel:{panel};--ink:{ink};--mute:{mute};
   --accent:{accent};--accent2:{accent2};--line:{line};--rail:{rail};
@@ -61,6 +94,42 @@ h1{{font-weight:900;line-height:1.12}}
 {extra}</style></head><body>
 """
 FOOT = "</body></html>"
+
+INK_OVERRIDE = ('.serif.gtx{-webkit-text-fill-color:var(--ink);background:none;color:var(--ink)}'
+                '.fbox .n.gtx,.col .v.gtx,.hbar .v.gtx,.duo .dv.gtx,.bignum.gtx,'
+                '.zcol .zv.gtx,.statrow .big.gtx{-webkit-text-fill-color:var(--accent);'
+                'background:none;color:var(--accent)}')
+
+
+def render(slug, cards, extra_css="", outbase=None, themes=None):
+    """카드 dict을 테마별로 렌더한다.
+
+    themes=None  → 블로그 3테마 + 인스타 1테마 전부
+    본문에 {{BRAND}} 를 쓰면 테마별 채널명으로 치환된다
+    (블로그=부동산 인사이트 / 인스타=임장로그).
+    """
+    base_dir = pathlib.Path(outbase) if outbase else BASE
+    pool = dict(THEMES, **INSTA) if themes is None else {
+        k: dict(THEMES, **INSTA)[k] for k in themes}
+    for theme, pal in pool.items():
+        outdir = base_dir / theme
+        outdir.mkdir(exist_ok=True)
+        for css_name, font_dir in (("gf-local.css", "fonts"), ("gf2-local.css", "fonts2")):
+            src = base_dir / css_name
+            if src.exists():
+                (outdir / css_name).write_text(
+                    src.read_text().replace(f"url({font_dir}/", f"url(../{font_dir}/"))
+        extra = extra_css
+        if pal.get("headink") == "ink":
+            extra += INK_OVERRIDE
+        if theme in INSTA:
+            extra += INSTA_CSS
+        head = HEAD_TPL.format(extra=extra, **{k: v for k, v in pal.items() if k != "headink"})
+        brand = BRAND.get(theme, BRAND["report"])
+        for name, body in cards.items():
+            (outdir / f"{slug}-{name}.html").write_text(
+                head + body.replace("{{BRAND}}", brand) + FOOT, encoding="utf-8")
+        print("wrote", theme)
 
 def top(pnum):
     return ('<div class="top"><div class="eyebrow">2026 · 7월 부동산 키워드 리포트</div>'
@@ -151,14 +220,15 @@ def cards():
 </div>""" + foot()
     return c
 
-for theme, pal in THEMES.items():
-    outdir = BASE / theme
-    outdir.mkdir(exist_ok=True)
-    extra = ('.serif.gtx{-webkit-text-fill-color:var(--ink);background:none;color:var(--ink)}' if pal['headink']=='ink' else '')
-    head = HEAD_TPL.format(extra=extra, **pal)
-    for name, body in cards().items():
-        (outdir / f"{name}.html").write_text(head + body + FOOT, encoding="utf-8")
-    # each theme dir needs the font css path one level up
-    css = (BASE / "gf-local.css").read_text().replace("url(fonts/", "url(../fonts/")
-    (outdir / "gf-local.css").write_text(css)
-    print("wrote", theme)
+if __name__ == "__main__":
+    for theme, pal in THEMES.items():
+        outdir = BASE / theme
+        outdir.mkdir(exist_ok=True)
+        extra = ('.serif.gtx{-webkit-text-fill-color:var(--ink);background:none;color:var(--ink)}' if pal['headink']=='ink' else '')
+        head = HEAD_TPL.format(extra=extra, **pal)
+        for name, body in cards().items():
+            (outdir / f"{name}.html").write_text(head + body + FOOT, encoding="utf-8")
+        # each theme dir needs the font css path one level up
+        css = (BASE / "gf-local.css").read_text().replace("url(fonts/", "url(../fonts/")
+        (outdir / "gf-local.css").write_text(css)
+        print("wrote", theme)

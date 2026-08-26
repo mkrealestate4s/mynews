@@ -9,6 +9,11 @@ URL: https://mkrealestate4s.github.io/mynews/
 - `images/cards/{report,white,editorial}/<slug>-*.png` — 카드뉴스 (테마별 동일 파일명).
 - `themes/design-library.json` + `themes/preview.html` — 디자인 프리셋 라이브러리/카탈로그.
 - `tools/make_cards.py`, `tools/fetch_fonts.py` — 카드뉴스 생성 (스킬 `.claude/skills/theme-preset` 참조).
+  `make_cards.render(slug, cards, extra_css=COLCSS)`가 블로그 3테마 + `insta` 테마를 한 번에 뽑는다.
+  카드 본문의 `{{BRAND}}` 토큰은 테마별 채널명으로 치환된다.
+- `images/cards/reels/`(9:16 1080x1920) · `images/cards/carousel/`(4:5 1080x1350) — 인스타용.
+  `tools/make_reels.py`, `tools/make_carousel.py`가 1:1 카드 HTML을 재조판한다(기본 테마 `insta`).
+- `publish/reels/<slug>-script.txt` — 릴스 나레이션·자막·초수 + 인스타 캡션·해시태그.
 - `title.txt` — **당일 블로그 제목 추천 3줄만**(주석·빈줄 없음, UTF-8 BOM 없음, LF).
   로컬 포스팅 자동화 프로그램이 `https://mkrealestate4s.github.io/mynews/title.txt`로
   받아쓴다 → 형식을 바꾸지 말 것. 프로그램은 **첫 줄(1번 제목)만 사용**하며 날짜별로 한 줄씩
@@ -51,6 +56,25 @@ URL: https://mkrealestate4s.github.io/mynews/
 - 넘겨받은 브리프에 "미확인"으로 표시된 항목은 글에서 **단정하지 않는다** — 별도 확인 안내 문구로 처리.
 - 초안 단계에서는 `index.html`·`sitemap.xml`·`feed.xml`에 등록하지 않고 푸시해 미공개로 검토받는다
   (홈·검색·RSS 노출 없음, 컨테이너 회수 대비 원격 보관 겸용). 승인 후 세 파일에 등록.
+
+## 채널 두 개 — 브랜드가 다르다 (중요)
+- **블로그 = `부동산 인사이트`** (깃페이지 + 네이버). 테마는 기존 3종(report/white/editorial) **유지**.
+  테마 확장은 하지 않기로 결정(2026-08-26). `themes/directions.html`은 보류된 검토 자료.
+- **인스타 = `임장로그`**. 전용 테마 `insta` 한 종 고정 — '터미널 데이터'안
+  (bg #0B0B0C · 앰버 #FFB020 단색 · IBM Plex Sans KR + 숫자는 IBM Plex Mono · 라운드 0 ·
+  격자는 `.cols/.zcols` 플롯 영역 안에만). 후보 비교는 `themes/carousel-samples.html`.
+- 채널명을 섞지 말 것. 카드 푸터는 `{{BRAND}}` 토큰을 쓰면 자동으로 갈린다.
+- 인스타 폰트는 `gf2-local.css` + `fonts2/`가 필요하다 — 컨테이너 재생성 후에는
+  `python3 tools/fetch_fonts.py`를 카드 작업 폴더에서 먼저 돌린다(두 세트를 함께 내려받는다).
+
+## 인스타 산출물 절차 (데일리 리포트 후속)
+1. 카드 1:1 생성 시 `insta` 테마까지 함께 렌더된다(`base.render`).
+2. `python3 make_reels.py <slug> "<릴스 상단 제목>" <리포트번호>` → 창 1080x2007 렌더 → 상단 1080x1920 크롭.
+   하단 400px는 인스타 UI가 덮으므로 본문을 상단 안전영역에 몰아 둔다.
+3. `python3 make_carousel.py <slug>` → 창 1080x1437 렌더 → 상단 1080x1350 크롭.
+4. `publish/reels/<slug>-script.txt` 작성: 씬별 나레이션·자막·초수(총 45~60초, TTS 초당 5자),
+   인스타 캡션, 해시태그 15개 내외. **숫자는 한글로 적는다**(TTS 오독 방지) — 자막은 숫자로.
+   릴스 편집 순서는 카드 번호순이 아니라 기사 흐름순(예: 1-3-4-2-5-6), 캐러셀은 카드 번호순.
 
 ## 데이터 시각화 표준 (중요 — 사용자 요구사항)
 - **촘촘하게**: 헤드라인 숫자 2개 비교로 끝내지 않는다. 가능하면

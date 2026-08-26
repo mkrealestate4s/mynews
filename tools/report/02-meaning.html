@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8">
+<link href="gf-local.css" rel="stylesheet">
+<link href="gf2-local.css" rel="stylesheet">
+<style>
+:root{--bg:#0D1829;--panel:#132239;--ink:#F2F6FA;--mute:#96A5BA;
+  --accent:#5EE6D0;--accent2:#7C8CF8;--line:#2C3E5A;--rail:#0f1c30;
+  --onfill:#0D1829;--body:#DCE5EF;--fillgray:#2C3E5A;
+  --grad:linear-gradient(92deg,#5EE6D0,#7C8CF8)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1080px;overflow:hidden}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',sans-serif;
+  display:flex;flex-direction:column;position:relative;
+  padding:84px 96px 170px;line-height:1.6}
+.mid{min-height:0;overflow:hidden;flex:1;display:flex;flex-direction:column;justify-content:center}
+.serif{font-family:'Noto Serif KR',serif;letter-spacing:0}
+.gtx{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.16em;font-size:26px}
+.top{display:flex;justify-content:space-between;align-items:baseline;flex:none}
+.pnum{color:var(--mute);font-size:26px;letter-spacing:.1em}
+.foot{color:var(--mute);font-size:22px;line-height:1.3;display:flex;justify-content:space-between;align-items:center}
+.footwrap{position:absolute;left:96px;right:96px;bottom:56px;height:70px}
+.trace{height:2px;background:var(--line);position:relative;margin-bottom:28px}
+.trace::after{content:"";position:absolute;right:0;top:50%;width:20px;height:20px;
+  transform:translateY(-50%);border:4px solid var(--accent);border-radius:50%;background:var(--bg)}
+h1{font-weight:900;line-height:1.12}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:40px 44px}
+/* horizontal bar */
+.hbar{margin-bottom:30px}
+.hbar .lb{font-size:29px;font-weight:700;margin-bottom:10px;display:flex;justify-content:space-between;align-items:baseline}
+.hbar .lb .v{font-weight:900;font-size:30px}
+.hbar .railx{background:var(--rail);border-radius:12px;height:56px;position:relative}
+.hbar .fillx{height:100%;border-radius:12px;background:var(--grad)}
+.hbar .fillx.gray{background:var(--fillgray)}
+</style></head><body>
+<div class="top"><div class="eyebrow">2026 · 7월 부동산 키워드 리포트</div><div class="pnum">02 / 05</div></div>
+<div class="mid">
+  <h1 class="serif" style="font-size:60px;margin-bottom:40px">반세권이란?</h1>
+  <div class="panel" style="text-align:center;padding:52px 44px;margin-bottom:40px">
+    <div class="serif gtx" style="font-size:84px;font-weight:900">반도체 × 역세권</div>
+    <div style="font-size:33px;color:var(--mute);margin-top:16px">반도체 산업단지 인근 주거 지역을 뜻하는 신조어</div>
+  </div>
+  <div style="font-size:31px;color:var(--body);margin-bottom:28px">
+    대규모 반도체 시설이 들어서면 <strong>고소득 일자리·인구 유입·교통망 확충</strong>이
+    함께 따라와 주거 수요가 몰린다는 논리입니다.</div>
+  <div style="font-size:27px;color:var(--mute);margin-bottom:14px">대표 지역 · 반도체 벨트</div>
+  <div style="display:flex;gap:14px"><span style="border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:10px 28px;font-size:29px;font-weight:700">용인</span><span style="border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:10px 28px;font-size:29px;font-weight:700">화성</span><span style="border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:10px 28px;font-size:29px;font-weight:700">평택</span><span style="border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:10px 28px;font-size:29px;font-weight:700">수원</span><span style="border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:10px 28px;font-size:29px;font-weight:700">이천</span>
+  </div>
+</div><div class="footwrap"><div class="trace"></div><div class="foot"><span>부동산 인사이트 — 데일리 키워드 리포트</span><span>데이터 기준일 2026-07-17</span></div></div></body></html>

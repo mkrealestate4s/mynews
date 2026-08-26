@@ -11,7 +11,7 @@ import pathlib, sys
 
 BASE = pathlib.Path(__file__).parent
 SLUG = sys.argv[1]
-THEMES = sys.argv[2:] or ["report", "white", "editorial"]
+THEMES = sys.argv[2:] or ["insta"]
 
 EXTRA = """
 html,body{height:1350px}

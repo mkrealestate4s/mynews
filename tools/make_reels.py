@@ -2,7 +2,8 @@
 """1:1 카드 HTML을 9:16(1080x1920) 인스타 릴스용으로 재조판한다.
 
 사용법 (카드 HTML이 있는 디렉터리에서):
-    python3 make_reels.py <slug> "<릴스 상단 제목>" <리포트번호>
+    python3 make_reels.py <slug> "<릴스 상단 제목>" <리포트번호> [테마...]
+(테마 미지정 시 insta — 인스타 채널 "임장로그" 전용 테마)
 그 뒤 <theme>-reels/*.html 을 1080x2007 창으로 렌더 → 상단 1080x1920 크롭.
 
 하단 400px는 인스타 UI(캡션·버튼)가 덮으므로 비워 둔다.
@@ -13,7 +14,7 @@ BASE = pathlib.Path(__file__).parent
 SLUG = sys.argv[1]
 STRIP = sys.argv[2]        # 릴스 상단 고정 제목(키워드)
 NO = sys.argv[3] if len(sys.argv) > 3 else ""   # 리포트 번호
-THEMES = ["report", "white", "editorial"]
+THEMES = sys.argv[4:] or ["insta"]
 
 # 9:16 전용 추가 CSS
 EXTRA = """
@@ -38,7 +39,7 @@ def convert(html, strip_html):
     html = html[:m.end()] + strip_html + html[m.end():]
     # 하단 CTA
     html = html.replace('<div class="footwrap">',
-                        '<div class="cta">매일 아침 · 부동산 데이터 리포트</div><div class="footwrap">', 1)
+                        '<div class="cta">▶ 팔로우 · 저장</div><div class="footwrap">', 1)
     return html
 
 strip = (f'<div class="strip"><div class="sl">2026 · 8월 리포트 #{NO}</div>'
