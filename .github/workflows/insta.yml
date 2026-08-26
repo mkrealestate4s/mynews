@@ -1,16 +1,19 @@
 name: Publish Instagram carousel
 
-# 임장로그 캐러셀 자동 발행.
-# 카드 커밋·배포는 보통 07:13~07:26 KST 에 끝나므로 08:10 KST 에 돌린다
-# (배포된 JPEG URL 을 인스타 서버가 직접 받아가야 하므로 배포 뒤여야 한다).
+# 임장로그 캐러셀 자동 발행 — **현재 잠들어 있다(2026-08-26).**
 #
-# IG_USER_ID · IG_ACCESS_TOKEN 시크릿이 없으면 아무것도 하지 않고 끝난다 —
-# 시크릿을 넣는 순간부터 발행이 시작된다. 발행을 잠시 멈추려면
-# publish/insta.json 의 status 를 hold 로 바꾸면 된다.
+# 인스타 웹 로그인이 계정 보안 차단에 걸려 토큰을 발급받지 못했다(비밀번호를
+# 바꿔도, 시크릿 창에서도 같은 증상). 그래서 캐러셀은 폰 앱 예약 발행으로
+# 운영한다 — CLAUDE.md '인스타 캐러셀 예약 발행' 절 참조.
+#
+# 되살리는 방법: ① 토큰 발급 ② 시크릿 IG_USER_ID·IG_ACCESS_TOKEN 등록
+#   ③ 아래 schedule 주석 해제. 그날 아침부터 자동 발행된다.
+# 스케줄을 껐으므로 매일 빈 실행이 쌓이지 않는다. 수동 점검은 언제든
+# workflow_dispatch(기본 드라이런)로 가능하다.
 
 on:
-  schedule:
-    - cron: "10 23 * * *"        # 23:10 UTC = 08:10 KST
+  # schedule:
+  #   - cron: "10 23 * * *"      # 23:10 UTC = 08:10 KST (카드 배포 뒤)
   workflow_dispatch:
     inputs:
       dry_run:
