@@ -76,7 +76,11 @@ URL: https://mkrealestate4s.github.io/mynews/
 2. `python3 make_reels.py <slug> "<릴스 상단 제목>" <리포트번호>` → 창 1080x2007 렌더 → 상단 1080x1920 크롭.
    하단 400px는 인스타 UI가 덮으므로 본문을 상단 안전영역에 몰아 둔다.
 3. `python3 make_carousel.py <slug>` → 창 1080x1437 렌더 → 상단 1080x1350 크롭.
-4. `publish/reels/<slug>-script.txt` 작성: 씬별 나레이션·자막·초수(총 45~60초, TTS 초당 5자),
+4. `python3 tools/add_insta_section.py posts/<slug>.html <카드접두어>` —
+   포스트 페이지 맨 아래에 인스타 이미지 받기 섹션(캐러셀 6 + 릴스 6)을 붙인다.
+   **article 밖**에 두므로 복사 텍스트에는 영향이 없고, 인스타 이미지는 `img.insta-art`로
+   분리해 테마 전환 시 src가 바뀌지 않게 한다(테마 전환은 `img.card-art`만 대상).
+5. `publish/reels/<slug>-script.txt` 작성: 씬별 나레이션·자막·초수(총 45~60초, TTS 초당 5자),
    인스타 캡션, 해시태그 15개 내외. **숫자는 한글로 적는다**(TTS 오독 방지) — 자막은 숫자로.
    릴스 편집 순서는 카드 번호순이 아니라 기사 흐름순(예: 1-3-4-2-5-6), 캐러셀은 카드 번호순.
 
