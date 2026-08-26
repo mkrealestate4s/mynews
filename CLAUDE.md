@@ -121,6 +121,13 @@ URL: https://mkrealestate4s.github.io/mynews/
   ① `publish/insta.json`의 `status`가 `ready`일 때만 발행(`hold`로 바꾸면 건너뛴다)
   ② `publish/insta-posted.json`에 job_id를 기록해 중복 발행을 막는다(액션이 커밋한다)
 - 시크릿 `IG_USER_ID`·`IG_ACCESS_TOKEN`이 없으면 액션은 아무것도 하지 않는다.
+- **인스타 로그인 방식**(`graph.instagram.com`)이 기본이다 — 페이스북 페이지가 필요 없다.
+  페이스북 로그인 방식으로 토큰을 받았다면 저장소 변수 `IG_API_BASE`에
+  `https://graph.facebook.com/v21.0`을 넣는다. 액션은 미설정 변수를 빈 문자열로
+  넘기므로 스크립트는 `or`로 기본값을 잡는다(`get(key, default)`로는 안 잡힌다).
+- 권한은 `instagram_business_basic` + **`instagram_business_content_publish`**. 후자는
+  use case의 required 목록에 없어 직접 추가해야 한다. **권한을 나중에 추가하면 토큰을
+  다시 발급해야 한다** — 토큰에 권한이 박혀 나온다.
   계정은 **프로페셔널(비즈니스/크리에이터)**이어야 하고 토큰은 60일마다 갱신해야 한다.
 - 한도: 캐러셀 2~10장, 캡션 2,200자, 해시태그 30개, 장당 8MB, 하루 25건.
   `make_insta_post.py`가 지시서를 만들 때 전부 검사하고 어기면 멈춘다.

@@ -37,8 +37,22 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 JOB = ROOT / "publish/insta.json"
 POSTED = ROOT / "publish/insta-posted.json"
-BASE = os.environ.get("IG_API_BASE", "https://graph.facebook.com/v21.0")
+# 기본은 **인스타 로그인 방식**(graph.instagram.com) — 페이스북 페이지가 필요 없어
+# 개인 운영에 맞다. 페이스북 로그인 방식으로 토큰을 받았다면
+# IG_API_BASE=https://graph.facebook.com/v21.0 을 넣어야 한다. 둘은 호스트만 다르고
+# 엔드포인트 모양이 같아서 이 스크립트는 그대로 쓸 수 있다.
+# `or` 로 받는다 — 액션에서 미설정 변수는 빈 문자열로 넘어오므로
+# os.environ.get(key, default) 로는 기본값이 적용되지 않는다.
+BASE = os.environ.get("IG_API_BASE") or "https://graph.instagram.com/v21.0"
 UA = {"User-Agent": "mynews-insta/1"}
+
+
+def _api_soft(method: str, path: str, params: dict, token: str) -> dict | None:
+    """실패해도 멈추지 않는 호출 — 있으면 좋은 정보(할당량 등)에 쓴다."""
+    try:
+        return _api(method, path, params, token)
+    except SystemExit:
+        return None
 
 
 def _api(method: str, path: str, params: dict, token: str) -> dict:
@@ -114,19 +128,29 @@ def check_account(ig: str, token: str) -> None:
     content_publishing_limit 은 발행 권한이 실제로 열려 있을 때만 응답하므로
     자격 확인과 남은 할당량 확인을 겸한다.
     """
-    me = _api("GET", ig, {"fields": "id,username,account_type"}, token)
-    kind = me.get("account_type", "?")
-    ok = kind in ("BUSINESS", "MEDIA_CREATOR")
-    print(f"  계정  @{me.get('username', '?')}  ({kind})  {'✓ 발행 가능' if ok else '❌ 프로페셔널 계정이 아닙니다'}")
-    if not ok:
+    me = _api("GET", ig, {"fields": "id,user_id,username,account_type"}, token)
+    print(f"  계정  @{me.get('username', '?')}  (id {me.get('user_id') or me.get('id')})")
+    print(f"  토큰  ✓ 유효  ·  {BASE}")
+
+    # account_type 은 호스트·버전에 따라 안 내려오는 경우가 있다.
+    # 값이 있을 때만 판정하고, 없으면 발행 시도로 확인한다(여기서 막지 않는다).
+    kind = me.get("account_type")
+    if kind is None:
+        print("  유형  (응답에 없음 — 발행 단계에서 확인됩니다)")
+    elif kind in ("BUSINESS", "MEDIA_CREATOR"):
+        print(f"  유형  {kind} ✓ 발행 가능")
+    else:
+        print(f"  유형  {kind} ❌ 프로페셔널 계정이 아닙니다")
         raise SystemExit("설정 → 계정 유형 및 도구 → 프로페셔널 계정으로 전환 (무료)")
 
-    lim = _api("GET", f"{ig}/content_publishing_limit",
-               {"fields": "quota_usage,config"}, token)
-    d = (lim.get("data") or [{}])[0]
-    cap = (d.get("config") or {}).get("quota_total", 25)
-    print(f"  할당량  24시간 내 {d.get('quota_usage', 0)}/{cap}건 사용")
-    print("  토큰    ✓ 유효")
+    lim = _api_soft("GET", f"{ig}/content_publishing_limit",
+                    {"fields": "quota_usage,config"}, token)
+    if lim and lim.get("data"):
+        d = lim["data"][0]
+        cap = (d.get("config") or {}).get("quota_total", 25)
+        print(f"  할당량  24시간 내 {d.get('quota_usage', 0)}/{cap}건 사용")
+    else:
+        print("  할당량  조회 불가 (이 방식에서는 제공되지 않을 수 있습니다 · 하루 25건)")
 
 
 def main() -> None:
