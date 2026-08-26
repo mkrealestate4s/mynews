@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>임장로그 — 오늘 캐러셀</title>
+<!--
+  폰 홈화면에 등록해 두는 고정 주소.
+  publish/manifest.json 의 slug 를 읽어 그날 포스트의 #insta 로 넘긴다 —
+  글마다 URL 이 바뀌는 것을 사용자가 매일 찾지 않게 하려는 목적이다.
+  manifest.json 은 title.txt 와 같은 글을 가리키도록 매일 갱신된다.
+-->
+<style>
+  :root{--bg:#0f1115;--ink:#e8ebf0;--mute:#98a2b3;--teal:#38bdf8}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);display:flex;align-items:center;
+    justify-content:center;padding:32px;line-height:1.6;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif}
+  .box{max-width:420px;text-align:center}
+  .eyebrow{color:var(--teal);font-weight:700;letter-spacing:.14em;font-size:13px}
+  h1{font-size:22px;font-weight:800;margin:10px 0 8px}
+  p{color:var(--mute);font-size:15px}
+  a{display:inline-block;margin-top:18px;padding:12px 22px;border-radius:10px;
+    background:var(--teal);color:#04222e;font-weight:800;text-decoration:none}
+  .sp{margin-top:20px;width:28px;height:28px;border:3px solid #2a3444;
+    border-top-color:var(--teal);border-radius:50%;display:inline-block;
+    animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hide{display:none}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="eyebrow">임장로그</div>
+  <h1>오늘 캐러셀로 이동합니다</h1>
+  <p id="msg">잠시만요…</p>
+  <span class="sp" id="sp"></span>
+  <a class="hide" id="fb" href="index.html">리포트 목록으로</a>
+</div>
+<script>
+(function () {
+  var msg = document.getElementById('msg'),
+      sp  = document.getElementById('sp'),
+      fb  = document.getElementById('fb');
+
+  function fail(why) {
+    sp.className = 'hide';
+    msg.textContent = why;
+    fb.className = '';
+  }
+
+  fetch('publish/manifest.json', { cache: 'no-store' })
+    .then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    })
+    .then(function (j) {
+      var slug = j && j.post && j.post.slug;
+      if (!slug) throw new Error('slug 없음');
+      // replace 로 넘긴다 — 뒤로가기가 이 페이지에 갇히지 않게
+      location.replace('posts/' + slug + '.html#insta');
+    })
+    .catch(function () {
+      fail('오늘 글을 찾지 못했습니다. 목록에서 맨 위 글을 열어 주세요.');
+    });
+})();
+</script>
+<noscript>
+  <p>자바스크립트가 꺼져 있습니다 — <a href="index.html">리포트 목록</a>에서 맨 위 글을 열어 주세요.</p>
+</noscript>
+</body>
+</html>

@@ -154,6 +154,13 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
         row.appendChild(im);
       });
     });
+    /* insta.html(고정 주소)에서 #insta 로 들어오면 앵커 점프가 이미지 생성 전에
+       끝나 글 맨 위에 떨어진다 → 생성 후 다시 맞춘다(레이아웃 안정까지 한 번 더). */
+    if(location.hash==='#insta'){
+      var go=function(){sec.scrollIntoView();};
+      requestAnimationFrame(go);
+      setTimeout(go,350);
+    }
   })();
 
   /* ── 전체 저장 ────────────────────────────────────────────
