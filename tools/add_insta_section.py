@@ -87,8 +87,8 @@ SECTION = f'''<div class="trace"></div>
   <h2>인스타(임장로그)용 이미지</h2>
   <p class="cards-hint">위 카드뉴스와 같은 내용을, 인스타 규격으로 다시 조판한 것입니다 —
     채널명은 <b>임장로그</b>입니다. <b>캐러셀은 피드용, 릴스는 영상용</b>이라 비율이 다릅니다.
-    폰에서 전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 공유 시트로 넘어가 사진앱에
-    한 번에 저장됩니다.</p>
+    전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 저장됩니다 — 안드로이드는 갤러리(다운로드 폴더),
+    아이폰은 사진앱, PC는 zip입니다.</p>
 
   <div class="ilabel"><span class="t">캐러셀 · 4:5</span>
     <span class="s">1080 × 1350 · 피드에 카드 번호 순서(1→6)로</span>
@@ -144,6 +144,9 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
   /* ── 전체 저장 ────────────────────────────────────────────
      폰: 공유 시트로 원본 그대로 (압축 없음)
      PC: 무압축 zip을 직접 만들어 내려받기 (외부 라이브러리 없음) */
+  var UA=navigator.userAgent;
+  var IOS=/iPad|iPhone|iPod/.test(UA)||(/Macintosh/.test(UA)&&navigator.maxTouchPoints>1);
+  var ANDROID=/Android/.test(UA);
   var CAN_SHARE=(function(){
     try{
       if(!(navigator.share&&navigator.canShare&&window.File))return false;
@@ -151,6 +154,12 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
         'probe.png',{type:'image/png'})]});
     }catch(e){return false;}
   })();
+  /* 저장 경로 선택
+     iOS  : 공유 시트만 사진앱에 닿는다 (a[download]는 Photos로 못 간다)
+     안드로이드: 공유 시트에 '갤러리 저장'이 없는 기기가 많다 → 순차 다운로드
+                (다운로드 폴더에 떨어지고 갤러리에서 바로 보인다)
+     PC   : 무압축 zip */
+  var MODE=(IOS&&CAN_SHARE)?'share':(ANDROID?'files':'zip');
 
   var CRCT=(function(){
     var t=new Uint32Array(256),n,c,k;
@@ -186,6 +195,18 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
     eo.setUint32(12,cdSize,true);eo.setUint32(16,off,true);
     return new Blob(local.concat(central,[new Uint8Array(eo.buffer)]),{type:'application/zip'});
   }
+  function filesDown(items){
+    /* 안드로이드: 개별 원본을 순차로 내려받는다 (첫 파일 뒤 '여러 파일 다운로드' 확인이 한 번 뜰 수 있음) */
+    items.forEach(function(f,i){
+      setTimeout(function(){
+        var url=URL.createObjectURL(f.blob);
+        var a=document.createElement('a');a.href=url;a.download=f.name;
+        document.body.appendChild(a);a.click();a.remove();
+        setTimeout(function(){URL.revokeObjectURL(url);},4000);
+      }, i*350);
+    });
+    say(items.length+'장을 내려받습니다 — 갤러리/다운로드에서 확인하세요 ✓');
+  }
   function zipDown(items,btn){
     var sec=document.getElementById('insta');
     var fn=(sec?sec.dataset.slug:'cards')+'-'+(btn.dataset.fn||'images')+'-'+items.length+'.zip';
@@ -220,14 +241,15 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
       var fl=items.map(function(f){
         return new File([f.blob],f.name,{type:'image/png'});
       });
-      if(CAN_SHARE&&navigator.canShare({files:fl})){
+      if(MODE==='share'&&navigator.canShare({files:fl})){
         return navigator.share({files:fl,title:document.title}).then(function(){
           say("공유 시트에서 '이미지 저장'을 누르세요 ✓");
         },function(e){
           if(e&&e.name==='AbortError')return;   /* 사용자가 취소한 경우 */
-          zipDown(items,btn);                   /* 공유가 실패하면 zip으로 */
+          filesDown(items);                     /* 공유가 실패하면 개별 저장 */
         });
       }
+      if(MODE==='files'){filesDown(items);return;}
       zipDown(items,btn);
     }).catch(function(){
       say('전체 저장에 실패했습니다 — 이미지를 하나씩 저장해 주세요');
@@ -245,9 +267,11 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
   }
   document.querySelectorAll('.allbtn:not(#copyNarr)').forEach(function(b){
     var n=b.dataset.count||'6';
-    b.textContent=CAN_SHARE?('⬇ '+n+'장 한 번에 저장'):('⬇ '+n+'장 zip으로');
-    b.title=CAN_SHARE?'공유 시트에서 원본 그대로 사진앱에 저장됩니다'
-                     :'무압축 zip으로 내려받습니다';
+    b.textContent='⬇ '+n+'장 '+(MODE==='share'?'사진앱에 저장'
+                                :MODE==='files'?'갤러리에 저장':'zip으로');
+    b.title=MODE==='share'?"공유 시트에서 '이미지 저장'을 누르면 사진앱에 들어갑니다"
+           :MODE==='files'?'원본 6장을 순차로 내려받습니다 (다운로드 폴더 → 갤러리)'
+           :'무압축 zip으로 내려받습니다';
     b.addEventListener('click',function(e){e.preventDefault();saveAll(b);});
   });
 

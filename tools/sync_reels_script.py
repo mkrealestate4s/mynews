@@ -19,7 +19,7 @@ s = P.read_text(encoding="utf-8")
 
 SCENE_RE = re.compile(
     r'(씬\s*(\d+)\s*·\s*(\S+?)\s*·\s*)(\d+:\d{2}\s*~\s*\d+:\d{2})'
-    r'(\n\n\[나레이션\]\n)(.+?)(\n\n\[자막\])', re.S)
+    r'(\n\n\[나레이션\]\n)(.+?)(\n\n\[자막\])', re.S)  # [자막문장]은 뒤에 있어 영향 없음
 
 matches = list(SCENE_RE.finditer(s))
 assert matches, "씬 블록을 찾지 못했습니다 — 파일 형식을 확인하세요"
