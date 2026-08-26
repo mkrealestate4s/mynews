@@ -106,6 +106,9 @@ URL: https://mkrealestate4s.github.io/mynews/
      (외부 라이브러리 없음). 버튼 문구도 기기 능력에 맞춰 바뀐다.
    - 나레이션 통스크립트는 `<pre id="narration" hidden>`에 담고 `#copyNarr`로 복사한다.
      TTS에 한 번에 붙여넣는 용도 — 줄바꿈이 씬 경계다.
+   - 인스타 캡션은 `<pre id="instacap" hidden>` + `#copyCap`. 앱에서 직접 올릴 때
+     폰에서 캡션·해시태그를 한 번에 붙여넣는 용도다(캐러셀 6장 아래에 둔다).
+     `<article>` 밖이라 블로그 본문 복사에는 섞이지 않는다(실측 확인).
 7. `python3 tools/make_insta_post.py` — 캐러셀 자동 발행용 산출물
    (`images/cards/carousel-jpg/*.jpg` + `publish/insta.json`). 아래 절 참조.
 

@@ -55,13 +55,19 @@ assert len(NAMES) == 6, NAMES
 # 릴스 스크립트에서 [나레이션] 블록을 뽑아 통스크립트를 만든다 (없으면 버튼 생략)
 SCRIPT = POST.parent.parent / "publish" / "reels" / f"{POST.stem}-script.txt"
 NARR = ""
+CAP = ""
 if SCRIPT.exists():
     blocks = re.findall(r'\[나레이션\]\s*\n(.+?)\n\s*\n\[자막\]',
                         SCRIPT.read_text(encoding="utf-8"), re.S)
     NARR = "\n".join(b.strip() for b in blocks)
     print(f"나레이션 {len(blocks)}씬 · {len(NARR.replace(' ', '').replace(chr(10), ''))}자 임베드")
+    # 인스타 캡션(해시태그 포함) — 앱에서 직접 올릴 때 붙여넣는 용도
+    m = re.search(r'■ 인스타 캡션[^\n]*\n\n(.+?)\n═+',
+                  SCRIPT.read_text(encoding="utf-8"), re.S)
+    CAP = m.group(1).strip() if m else ""
+    print(f"인스타 캡션 {len(CAP)}자 임베드" if CAP else "경고: 캡션 블록을 찾지 못했습니다")
 else:
-    print("경고: 스크립트 파일이 없어 나레이션 복사 버튼을 넣지 않습니다 —", SCRIPT)
+    print("경고: 스크립트 파일이 없어 나레이션·캡션 복사 버튼을 넣지 않습니다 —", SCRIPT)
 
 
 def esc(t):
@@ -80,6 +86,10 @@ narrmeta = (f'{NARR.count(chr(10)) + 1}씬 · {NARR_CHARS}자 · 약 {NARR_SEC}�
 narrbtn = ('<button class="allbtn" type="button" id="copyNarr">🎙 나레이션 전체 복사</button>'
            if NARR else '')
 narrtext = esc(NARR)
+capbtn = ('<button class="allbtn" type="button" id="copyCap">📋 캡션 · 해시태그 복사</button>'
+          if CAP else '')
+captext = esc(CAP)
+capmeta = (f'{len(CAP)}자 · 해시태그 {CAP.count("#")}개' if CAP else '스크립트 파일 없음')
 
 SECTION = f'''<div class="trace"></div>
 
@@ -94,6 +104,11 @@ SECTION = f'''<div class="trace"></div>
     <span class="s">1080 × 1350 · 피드에 카드 번호 순서(1→6)로</span>
     {allbtn("carousel", "carousel")}</div>
   <div class="iscroll car" data-folder="carousel" data-kind="캐러셀"></div>
+
+  <div class="ilabel"><span class="t">인스타 캡션</span>
+    <span class="s">{capmeta}</span>
+    {capbtn}</div>
+  <pre id="instacap" hidden>{captext}</pre>
 
   <div class="ilabel"><span class="t">릴스 · 9:16</span>
     <span class="s">1080 × 1920 · 하단 400px는 인스타 UI 자리</span>
@@ -265,7 +280,15 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
       copyText(el?el.textContent.trim():'', '나레이션 통스크립트가 복사됐습니다 ✓');
     });
   }
-  document.querySelectorAll('.allbtn:not(#copyNarr)').forEach(function(b){
+  var capBtn=document.getElementById('copyCap');
+  if(capBtn){
+    capBtn.addEventListener('click',function(e){
+      e.preventDefault();
+      var el=document.getElementById('instacap');
+      copyText(el?el.textContent.trim():'', '캡션과 해시태그가 복사됐습니다 ✓');
+    });
+  }
+  document.querySelectorAll('.allbtn:not(#copyNarr):not(#copyCap)').forEach(function(b){
     var n=b.dataset.count||'6';
     b.textContent='⬇ '+n+'장 '+(MODE==='share'?'사진앱에 저장'
                                 :MODE==='files'?'갤러리에 저장':'zip으로');
