@@ -8,11 +8,12 @@ const { chromium } = require('playwright-core');
 const fs = require('fs'), path = require('path');
 (async () => {
   const [src, out, W, H] = [process.argv[2], process.argv[3], +process.argv[4], +process.argv[5]];
+  const only = process.argv[6] || '';   // 선택: 파일명 접두어만 캡처 (하루치만 다시 뽑을 때)
   fs.mkdirSync(out, { recursive: true });
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox'] });
   const p = await b.newPage({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
   const errs = []; p.on('pageerror', e => errs.push(String(e)));
-  for (const f of fs.readdirSync(src).filter(x => x.endsWith('.html')).sort()) {
+  for (const f of fs.readdirSync(src).filter(x => x.endsWith('.html') && x.startsWith(only)).sort()) {
     await p.goto('file://' + path.resolve(src, f), { waitUntil: 'load' });
     await p.evaluate(() => document.fonts.ready);
     await p.waitForTimeout(400);
