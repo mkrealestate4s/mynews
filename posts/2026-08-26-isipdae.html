@@ -219,9 +219,13 @@ footer a{color:var(--teal)}
 .iscroll.reel img{width:236px;max-width:54vw;aspect-ratio:9/16}
 .iscroll .imgbtns{top:7px;right:7px;gap:5px}
 .iscroll .imgbtns .cbtn{font-size:.68rem;padding:2px 9px}
-.ilabel{margin:22px 0 6px}
+.ilabel{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:22px 0 6px}
 .ilabel .t{font-weight:700;font-size:1.02rem}
-.ilabel .s{color:var(--mute);font-size:.82rem;margin-left:8px}
+.ilabel .s{color:var(--mute);font-size:.82rem}
+.allbtn{cursor:pointer;border:1px solid var(--teal);background:transparent;color:var(--teal);
+  font:inherit;font-size:.78rem;font-weight:700;border-radius:999px;padding:4px 14px;
+  margin-left:auto;white-space:nowrap;transition:opacity .15s}
+.allbtn[disabled]{opacity:.5;cursor:default}
 </style>
 </head>
 <body>
@@ -275,6 +279,7 @@ footer a{color:var(--teal)}
 <section id="cards">
   <h2>카드뉴스로 한눈에</h2>
   <p class="cards-hint">옆으로 넘기며 핵심만 — 이미지를 저장해 활용하셔도 좋습니다.</p>
+  <div class="ilabel"><span class="s">현재 테마의 카드 6장</span><button class="allbtn" type="button" data-all="theme" data-fn="cards" data-count="6">⬇ 6장 전체 저장</button></div>
   <div class="cards">
     <img class="card-art" data-file="isipdae-01-cover.png" src="../images/cards/report/isipdae-01-cover.png" alt="카드뉴스 1/6 — 표지: 모두 줄었는데 20대만 늘었다" loading="lazy" width="1080" height="1080">
     <img class="card-art" data-file="isipdae-02-flow.png" src="../images/cards/report/isipdae-02-flow.png" alt="카드뉴스 2/6 — 왜 20대만 비켜갔나 3단계" loading="lazy" width="1080" height="1080">
@@ -357,15 +362,18 @@ footer a{color:var(--teal)}
 <section id="insta" data-slug="isipdae" data-files="01-cover,02-flow,03-drop,04-age,05-share,06-check">
   <h2>인스타(임장로그)용 이미지</h2>
   <p class="cards-hint">위 카드뉴스와 같은 내용을, 인스타 규격으로 다시 조판한 것입니다 —
-    채널명은 <b>임장로그</b>입니다. 이미지를 눌러 <b>복사</b>·<b>저장</b>하세요.
-    폰에서는 이미지를 <b>길게 눌러 저장</b>하는 게 가장 확실합니다.</p>
+    채널명은 <b>임장로그</b>입니다. <b>캐러셀은 피드용, 릴스는 영상용</b>이라 비율이 다릅니다.
+    폰에서 전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 공유 시트로 넘어가 사진앱에
+    한 번에 저장됩니다.</p>
 
   <div class="ilabel"><span class="t">캐러셀 · 4:5</span>
-    <span class="s">1080 × 1350 · 카드 번호 순서(1→6)로 올리세요</span></div>
+    <span class="s">1080 × 1350 · 피드에 카드 번호 순서(1→6)로</span>
+    <button class="allbtn" type="button" data-all="carousel" data-fn="carousel" data-count="6">⬇ 6장 전체 저장</button></div>
   <div class="iscroll car" data-folder="carousel" data-kind="캐러셀"></div>
 
   <div class="ilabel"><span class="t">릴스 · 9:16</span>
-    <span class="s">1080 × 1920 · 하단 400px는 인스타 UI 자리로 비워 뒀습니다</span></div>
+    <span class="s">1080 × 1920 · 하단 400px는 인스타 UI 자리</span>
+    <button class="allbtn" type="button" data-all="reels" data-fn="reels" data-count="6">⬇ 6장 전체 저장</button></div>
   <div class="iscroll reel" data-folder="reels" data-kind="릴스"></div>
 
   <p class="cards-hint" style="margin-top:16px">나레이션 스크립트·자막·초수와 인스타 캡션·해시태그는
@@ -492,6 +500,108 @@ footer a{color:var(--teal)}
       });
     });
   })();
+
+  /* ── 전체 저장 ────────────────────────────────────────────
+     폰: 공유 시트로 원본 그대로 (압축 없음)
+     PC: 무압축 zip을 직접 만들어 내려받기 (외부 라이브러리 없음) */
+  var CAN_SHARE=(function(){
+    try{
+      if(!(navigator.share&&navigator.canShare&&window.File))return false;
+      return navigator.canShare({files:[new File([new Uint8Array([137,80,78,71])],
+        'probe.png',{type:'image/png'})]});
+    }catch(e){return false;}
+  })();
+
+  var CRCT=(function(){
+    var t=new Uint32Array(256),n,c,k;
+    for(n=0;n<256;n++){c=n;for(k=0;k<8;k++){c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1);}t[n]=c>>>0;}
+    return t;
+  })();
+  function crc32(u8){
+    var c=0xFFFFFFFF,i;
+    for(i=0;i<u8.length;i++){c=CRCT[(c^u8[i])&0xFF]^(c>>>8);}
+    return (c^0xFFFFFFFF)>>>0;
+  }
+  function zipStore(items){
+    var enc=new TextEncoder(),local=[],central=[],off=0;
+    items.forEach(function(f){
+      var nm=enc.encode(f.name),crc=crc32(f.data),sz=f.data.length;
+      var lh=new DataView(new ArrayBuffer(30));
+      lh.setUint32(0,0x04034b50,true);lh.setUint16(4,20,true);lh.setUint16(6,0x0800,true);
+      lh.setUint32(14,crc,true);lh.setUint32(18,sz,true);lh.setUint32(22,sz,true);
+      lh.setUint16(26,nm.length,true);
+      local.push(new Uint8Array(lh.buffer),nm,f.data);
+      var cd=new DataView(new ArrayBuffer(46));
+      cd.setUint32(0,0x02014b50,true);cd.setUint16(4,20,true);cd.setUint16(6,20,true);
+      cd.setUint16(8,0x0800,true);
+      cd.setUint32(16,crc,true);cd.setUint32(20,sz,true);cd.setUint32(24,sz,true);
+      cd.setUint16(28,nm.length,true);cd.setUint32(42,off,true);
+      central.push(new Uint8Array(cd.buffer),nm);
+      off+=30+nm.length+sz;
+    });
+    var cdSize=central.reduce(function(a,b){return a+b.length;},0);
+    var eo=new DataView(new ArrayBuffer(22));
+    eo.setUint32(0,0x06054b50,true);
+    eo.setUint16(8,items.length,true);eo.setUint16(10,items.length,true);
+    eo.setUint32(12,cdSize,true);eo.setUint32(16,off,true);
+    return new Blob(local.concat(central,[new Uint8Array(eo.buffer)]),{type:'application/zip'});
+  }
+  function zipDown(items,btn){
+    var sec=document.getElementById('insta');
+    var fn=(sec?sec.dataset.slug:'cards')+'-'+(btn.dataset.fn||'images')+'-'+items.length+'.zip';
+    var url=URL.createObjectURL(zipStore(items));
+    var a=document.createElement('a');a.href=url;a.download=fn;
+    document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(url);},5000);
+    say(items.length+'장을 zip으로 저장했습니다 ✓');
+  }
+  function saveAll(btn){
+    var kind=btn.dataset.all,imgs;
+    if(kind==='theme'){
+      imgs=[].slice.call(document.querySelectorAll('#cards img.card-art'));
+    }else{
+      imgs=[].slice.call(document.querySelectorAll(
+        '#insta .iscroll[data-folder="'+kind+'"] img'));
+    }
+    if(!imgs.length){say('이미지를 찾지 못했습니다');return;}
+    var old=btn.textContent;
+    btn.disabled=true;btn.textContent='모으는 중…';
+    Promise.all(imgs.map(function(im,i){
+      return fetch(im.src).then(function(r){
+        if(!r.ok)throw new Error('HTTP '+r.status);
+        return r.blob();
+      }).then(function(b){
+        return b.arrayBuffer().then(function(ab){
+          return {name:im.dataset.file||('image'+(i+1)+'.png'),
+                  data:new Uint8Array(ab),blob:b};
+        });
+      });
+    })).then(function(items){
+      var fl=items.map(function(f){
+        return new File([f.blob],f.name,{type:'image/png'});
+      });
+      if(CAN_SHARE&&navigator.canShare({files:fl})){
+        return navigator.share({files:fl,title:document.title}).then(function(){
+          say("공유 시트에서 '이미지 저장'을 누르세요 ✓");
+        },function(e){
+          if(e&&e.name==='AbortError')return;   /* 사용자가 취소한 경우 */
+          zipDown(items,btn);                   /* 공유가 실패하면 zip으로 */
+        });
+      }
+      zipDown(items,btn);
+    }).catch(function(){
+      say('전체 저장에 실패했습니다 — 이미지를 하나씩 저장해 주세요');
+    }).then(function(){
+      btn.disabled=false;btn.textContent=old;
+    });
+  }
+  document.querySelectorAll('.allbtn').forEach(function(b){
+    var n=b.dataset.count||'6';
+    b.textContent=CAN_SHARE?('⬇ '+n+'장 한 번에 저장'):('⬇ '+n+'장 zip으로');
+    b.title=CAN_SHARE?'공유 시트에서 원본 그대로 사진앱에 저장됩니다'
+                     :'무압축 zip으로 내려받습니다';
+    b.addEventListener('click',function(e){e.preventDefault();saveAll(b);});
+  });
 
   function downloadImg(img){
     var a=document.createElement('a');
