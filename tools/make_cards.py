@@ -36,11 +36,14 @@ INSTA = {
     ),
 }
 
+# 인스타 아이브로 — 블로그는 월별 리포트 표기, 인스타는 채널 고정 문구를 쓴다
+EYEBROW_INSTA = "임장로그 부동산 뉴스"
+
 BRAND = {
     "report": "부동산 인사이트 — 데일리 키워드 리포트",
     "white": "부동산 인사이트 — 데일리 키워드 리포트",
     "editorial": "부동산 인사이트 — 데일리 키워드 리포트",
-    "insta": "임장로그 — 매일 아침 부동산 데이터",
+    "insta": "매일 아침, 부동산 데이터 한 장",   # 아이브로가 채널명을 달고 있어 중복 회피
 }
 
 # 인스타 테마 오버라이드: 고정폭 숫자 · 곡률 0 · 격자 노출 · 자간 넓은 아이브로
@@ -101,13 +104,17 @@ INK_OVERRIDE = ('.serif.gtx{-webkit-text-fill-color:var(--ink);background:none;c
                 'background:none;color:var(--accent)}')
 
 
-def render(slug, cards, extra_css="", outbase=None, themes=None):
+def render(slug, cards, extra_css="", outbase=None, themes=None, eyebrow=None):
     """카드 dict을 테마별로 렌더한다.
 
     themes=None  → 블로그 3테마 + 인스타 1테마 전부
-    본문에 {{BRAND}} 를 쓰면 테마별 채널명으로 치환된다
-    (블로그=부동산 인사이트 / 인스타=임장로그).
+
+    본문 토큰 (테마별로 치환된다):
+      {{BRAND}}   블로그=부동산 인사이트 — 데일리 키워드 리포트 / 인스타=임장로그 — 매일 아침 부동산 데이터
+      {{EYEBROW}} 블로그=eyebrow 인자 값 (예: "2026 · 8월 부동산 키워드 리포트") / 인스타=임장로그 부동산 뉴스
     """
+    if any("{{EYEBROW}}" in b for b in cards.values()) and not eyebrow:
+        raise ValueError("본문에 {{EYEBROW}} 가 있으면 eyebrow= 로 블로그용 문구를 넘겨야 합니다")
     base_dir = pathlib.Path(outbase) if outbase else BASE
     pool = dict(THEMES, **INSTA) if themes is None else {
         k: dict(THEMES, **INSTA)[k] for k in themes}
@@ -125,10 +132,12 @@ def render(slug, cards, extra_css="", outbase=None, themes=None):
         if theme in INSTA:
             extra += INSTA_CSS
         head = HEAD_TPL.format(extra=extra, **{k: v for k, v in pal.items() if k != "headink"})
+        insta = theme in INSTA
         brand = BRAND.get(theme, BRAND["report"])
+        eb = EYEBROW_INSTA if insta else (eyebrow or "")
         for name, body in cards.items():
-            (outdir / f"{slug}-{name}.html").write_text(
-                head + body.replace("{{BRAND}}", brand) + FOOT, encoding="utf-8")
+            body = body.replace("{{BRAND}}", brand).replace("{{EYEBROW}}", eb)
+            (outdir / f"{slug}-{name}.html").write_text(head + body + FOOT, encoding="utf-8")
         print("wrote", theme)
 
 def top(pnum):

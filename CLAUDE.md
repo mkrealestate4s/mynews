@@ -63,7 +63,11 @@ URL: https://mkrealestate4s.github.io/mynews/
 - **인스타 = `임장로그`**. 전용 테마 `insta` 한 종 고정 — '터미널 데이터'안
   (bg #0B0B0C · 앰버 #FFB020 단색 · IBM Plex Sans KR + 숫자는 IBM Plex Mono · 라운드 0 ·
   격자는 `.cols/.zcols` 플롯 영역 안에만). 후보 비교는 `themes/carousel-samples.html`.
-- 채널명을 섞지 말 것. 카드 푸터는 `{{BRAND}}` 토큰을 쓰면 자동으로 갈린다.
+- 채널명을 섞지 말 것. 카드 본문에 토큰을 쓰면 테마별로 자동 치환된다:
+  `{{EYEBROW}}` → 블로그 `2026 · N월 부동산 키워드 리포트`(render에 `eyebrow=`로 전달) /
+  인스타 `임장로그 부동산 뉴스`
+  `{{BRAND}}` → 블로그 `부동산 인사이트 — 데일리 키워드 리포트` / 인스타 `매일 아침, 부동산 데이터 한 장`
+  (인스타는 아이브로가 채널명을 달고 있으므로 푸터에서 채널명을 반복하지 않는다)
 - 인스타 폰트는 `gf2-local.css` + `fonts2/`가 필요하다 — 컨테이너 재생성 후에는
   `python3 tools/fetch_fonts.py`를 카드 작업 폴더에서 먼저 돌린다(두 세트를 함께 내려받는다).
 
