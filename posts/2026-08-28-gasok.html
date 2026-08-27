@@ -289,6 +289,7 @@ footer a{color:var(--teal)}
   <h2>카드뉴스로 한눈에</h2>
   <p class="cards-hint">옆으로 넘기며 핵심만 — 이미지를 저장해 활용하셔도 좋습니다.</p>
   <div class="ilabel"><span class="s">현재 테마의 카드 6장</span><button class="allbtn" type="button" data-all="theme" data-fn="cards" data-count="6">⬇ 6장 전체 저장</button></div>
+  <div class="ilabel"><span class="s">현재 테마의 카드 6장</span><button class="allbtn" type="button" data-all="theme" data-fn="cards" data-count="6">⬇ 6장 전체 저장</button></div>
   <div class="cards">
     <img class="card-art" data-file="gasok-01-cover.png" src="../images/cards/report/gasok-01-cover.png" alt="카드뉴스 1/6 — 표지: 갈라지는 속도가 빨라졌다" loading="lazy" width="1080" height="1080">
     <img class="card-art" data-file="gasok-02-flow.png" src="../images/cards/report/gasok-02-flow.png" alt="카드뉴스 2/6 — 왜 속도가 붙었나 3단계" loading="lazy" width="1080" height="1080">
@@ -381,6 +382,81 @@ footer a{color:var(--teal)}
 </article>
 
 <div class="trace"></div>
+
+<section id="insta" data-slug="gasok" data-files="01-cover,02-flow,03-gap,04-accel,05-split,06-check">
+  <h2>인스타(임장로그)용 이미지</h2>
+  <p class="cards-hint">위 카드뉴스와 같은 내용을, 인스타 규격으로 다시 조판한 것입니다 —
+    채널명은 <b>임장로그</b>입니다. <b>캐러셀은 피드용, 릴스는 영상용</b>이라 비율이 다릅니다.
+    전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 저장됩니다 — 안드로이드는 갤러리(다운로드 폴더),
+    아이폰은 사진앱, PC는 zip입니다.</p>
+
+  <div class="ilabel"><span class="t">캐러셀 · 4:5</span>
+    <span class="s">1080 × 1350 · 피드에 카드 번호 순서(1→6)로</span>
+    <button class="allbtn" type="button" data-all="carousel" data-fn="carousel" data-count="6">⬇ 6장 전체 저장</button></div>
+  <div class="iscroll car" data-folder="carousel" data-kind="캐러셀"></div>
+
+  <div class="ilabel"><span class="t">인스타 캡션</span>
+    <span class="s">794자 · 해시태그 15개</span>
+    <button class="allbtn" type="button" id="copyCap">📋 캡션 · 해시태그 복사</button></div>
+  <pre id="instacap" hidden>어제는 "갈라졌다"는 이야기였습니다.
+오늘 숫자가 더한 것은 속도입니다.
+
+8월 4주(24일 기준) 서울 아파트값 +0.29%.
+강남·서초가 내리는데도 전주(+0.22%)보다 상승폭이 커졌습니다.
+
+성북구 +0.55%
+강북구 +0.55%
+도봉구 +0.54%
+강남구 −0.11%
+
+한 주 전 성북 +0.37% vs 강남 −0.05%였습니다.
+양 끝 격차가 0.42%p → 0.66%p, 1.5배로 벌어졌습니다.
+10억 기준이면 강북은 한 주에 +550만원, 강남은 −110만원입니다.
+
+그리고 하나 더 — 강남과 서초가 갈렸습니다.
+강남 −0.02 → −0.05 → −0.11 (계속 깊어짐)
+서초 −0.04 → −0.09 → −0.05 (낙폭 축소)
+
+"강남권이 빠진다"보다 "강남구가 빠진다"가 지금 더 정확한 문장입니다.
+
+왜 속도가 붙었을까요?
+세제개편으로 비싼 집에 급매가 나오고,
+대출 규제로 수요는 가격대를 내려 이동하고,
+오르는 것을 본 수요가 "지금 아니면 늦는다"로 더 붙습니다.
+가격이 다시 심리를 밀어 주는 구간입니다.
+
+📌 중개 현장 체크
+① '강남권'으로 묶어 말하지 말 것 — 구 단위로 확인
+② 강북 물건은 호가 갱신 주기를 주 단위로
+③ 월간이 아니라 주간으로 — 한 주에 격차가 1.5배
+
+자료: 한국부동산원 주간 아파트가격동향 2026년 8월 4주(8월 24일 기준)
+
+@임장로그 · 매일 아침 부동산 데이터 한 장
+
+#부동산 #아파트값 #강남집값 #성북구 #강북구 #도봉구 #세제개편안
+#대출규제 #서울아파트 #부동산공부 #부동산정보 #내집마련
+#부동산중개 #공인중개사 #주간아파트동향</pre>
+
+  <div class="ilabel"><span class="t">릴스 · 9:16</span>
+    <span class="s">1080 × 1920 · 하단 400px는 인스타 UI 자리</span>
+    <button class="allbtn" type="button" data-all="reels" data-fn="reels" data-count="6">⬇ 6장 전체 저장</button></div>
+  <div class="iscroll reel" data-folder="reels" data-kind="릴스"></div>
+
+  <div class="ilabel" style="margin-top:26px"><span class="t">나레이션 통스크립트</span>
+    <span class="s">6씬 · 246자 · 약 48초</span>
+    <button class="allbtn" type="button" id="copyNarr">🎙 나레이션 전체 복사</button></div>
+  <pre id="narration" hidden>어제는 갈라졌다는 이야기였고, 오늘은 그 속도가 빨라졌다는 이야기예요.
+강북은 영 점 오오 퍼센트로 올랐고, 강남은 영 점 일일 퍼센트 내렸습니다. 양쪽이 같이 빨라졌어요.
+양 끝 격차가 한 주 만에 한 배 반으로 벌어졌습니다. 십억이면 강북은 오백오십만 원, 강남은 백십만 원이에요.
+그리고 강남과 서초가 갈렸어요. 강남은 낙폭이 계속 깊어지는데 서초는 오히려 줄었습니다.
+비싼 집에 급매가 나오고, 수요는 아래로 내려가고, 오르는 걸 본 사람이 더 붙습니다.
+강남권으로 묶어 말하지 말고, 강북 호가는 주 단위로 갱신하세요. 임장로그, 팔로우하면 매일 아침 받아보실 수 있어요.</pre>
+  <p class="cards-hint" style="margin-top:10px">TTS(클로바더빙·VLLO)에 <b>한 번에 붙여넣는</b> 용도입니다 —
+    줄바꿈이 씬 경계입니다. 숫자는 TTS 오독을 막으려고 한글로 적었습니다.
+    씬별 자막·초수와 인스타 캡션·해시태그는
+    <a href="../publish/reels/2026-08-28-gasok-script.txt" style="color:var(--teal)">전체 스크립트</a>에 있습니다.</p>
+</section>
 
 <footer>
   참고 자료: 한국부동산원 「주간 아파트가격동향」 2026년 8월 4주(8월 24일 기준) · 같은 통계 8월 2~3주 · 기획재정부 2026년 세제개편안(2026.8.3) · 서울경제 · 헤럴드경제 · 경향신문<br>
