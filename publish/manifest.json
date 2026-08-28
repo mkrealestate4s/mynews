@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-08-28-gasok-01",
+  "job_id": "2026-08-29-isacheol-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-08-28T07:25:00+09:00",
+  "requested_at": "2026-08-29T07:25:00+09:00",
   "post": {
-    "report_no": 41,
-    "slug": "2026-08-28-gasok",
-    "title": "강북이 한 주에 0.55% 올랐습니다 — 강남은 −0.11%, 격차가 두 배로 (8월 4주 주간 아파트값)",
+    "report_no": 42,
+    "slug": "2026-08-29-isacheol",
+    "title": "9월 입주가 1만4,174가구뿐입니다 — 5년 5개월 만의 최저, 가을 이사철 전세 비상",
     "title_alts": [
-      "강남·서초 3주 연속 하락, 그런데 서울 집값은 더 올랐습니다",
-      "'강남권'으로 묶어 말하면 안 되는 이유 — 강남은 깊어지고 서초는 줄었다"
+      "이사철인데 이사 갈 집이 없다 — 서울 -38%, 인천 -90%",
+      "가을 전세 상담 전에 확인할 3가지 — 우리 지역 9월 입주 단지부터"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-28-gasok.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-29-isacheol.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gasok-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isacheol-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gasok-02-flow.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isacheol-02-flow.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gasok-03-gap.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isacheol-03-low.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gasok-04-accel.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isacheol-04-region.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gasok-05-split.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isacheol-05-wolse.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gasok-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/isacheol-06-check.png"
       }
     ],
     "tags": [
-      "아파트값",
-      "주간아파트가격동향",
-      "강남집값",
-      "성북구",
-      "강북구",
-      "도봉구",
-      "세제개편안",
-      "대출규제",
-      "매수세이동",
+      "입주물량",
+      "가을이사철",
+      "전세",
+      "월세",
+      "전세매물",
+      "서울아파트",
+      "인천입주",
+      "전월세",
+      "임대차",
       "중개실무"
     ]
   }

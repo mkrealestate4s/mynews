@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-28T07:25:00+09:00",
+  "updated_at": "2026-08-29T07:25:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다.",
   "items": [
+    {
+      "slug": "2026-08-29-isacheol",
+      "report_no": 42,
+      "date": "2026-08-29",
+      "keyword": "이사철인데 이사 갈 집이 없다",
+      "status": "designated",
+      "titles": [
+        "9월 입주가 1만4,174가구뿐입니다 — 5년 5개월 만의 최저, 가을 이사철 전세 비상",
+        "이사철인데 이사 갈 집이 없다 — 서울 -38%, 인천 -90%",
+        "가을 전세 상담 전에 확인할 3가지 — 우리 지역 9월 입주 단지부터"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-29-isacheol.txt"
+    },
     {
       "slug": "2026-08-28-gasok",
       "report_no": 41,
       "date": "2026-08-28",
       "keyword": "갈라지는 속도가 빨라졌다",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "강북이 한 주에 0.55% 올랐습니다 — 강남은 −0.11%, 격차가 두 배로 (8월 4주 주간 아파트값)",
         "강남·서초 3주 연속 하락, 그런데 서울 집값은 더 올랐습니다",
