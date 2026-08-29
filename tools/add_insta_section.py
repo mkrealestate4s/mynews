@@ -100,9 +100,9 @@ SECTION = f'''<div class="trace"></div>
 
 <section id="insta" data-slug="{SLUG}" data-files="{','.join(NAMES)}">
   <h2>인스타(임장로그)용 이미지</h2>
-  <p class="cards-hint">위 카드뉴스와 같은 내용을, 인스타 규격으로 다시 조판한 것입니다 —
+  <p class="cards-hint">위 카드뉴스와 같은 내용을, 인스타 규격으로 다시 조판한 것입니다.
     채널명은 <b>임장로그</b>입니다. <b>캐러셀은 피드용, 릴스는 영상용</b>이라 비율이 다릅니다.
-    전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 저장됩니다 — 안드로이드는 갤러리(다운로드 폴더),
+    전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 저장됩니다. 안드로이드는 갤러리(다운로드 폴더),
     아이폰은 사진앱, PC는 zip입니다.</p>
 
   <div class="ilabel"><span class="t">캐러셀 · 4:5</span>
@@ -124,7 +124,7 @@ SECTION = f'''<div class="trace"></div>
     <span class="s">{narrmeta}</span>
     {narrbtn}</div>
   <pre id="narration" hidden>{narrtext}</pre>
-  <p class="cards-hint" style="margin-top:10px">TTS(클로바더빙·VLLO)에 <b>한 번에 붙여넣는</b> 용도입니다 —
+  <p class="cards-hint" style="margin-top:10px">TTS(클로바더빙·VLLO)에 <b>한 번에 붙여넣는</b> 용도입니다.
     줄바꿈이 씬 경계입니다. 숫자는 TTS 오독을 막으려고 한글로 적었습니다.
     씬별 자막·초수와 인스타 캡션·해시태그는
     <a href="../publish/reels/{POST.stem}-script.txt" style="color:var(--teal)">전체 스크립트</a>에 있습니다.</p>
@@ -140,8 +140,8 @@ assert s != _before, ('삽입 지점을 찾지 못했습니다 — </article> �
 
 # 블로그 카드 갤러리에도 전체 저장 버튼 (현재 테마의 6장)
 s = s.replace(
-    '<p class="cards-hint">옆으로 넘기며 핵심만 — 이미지를 저장해 활용하셔도 좋습니다.</p>',
-    '<p class="cards-hint">옆으로 넘기며 핵심만 — 이미지를 저장해 활용하셔도 좋습니다.</p>\n'
+    '<p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>',
+    '<p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>\n'
     '  <div class="ilabel"><span class="s">현재 테마의 카드 6장</span>'
     + allbtn("theme", "cards") + '</div>')
 
@@ -237,7 +237,7 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
         setTimeout(function(){URL.revokeObjectURL(url);},4000);
       }, i*350);
     });
-    say(items.length+'장을 내려받습니다 — 갤러리/다운로드에서 확인하세요 ✓');
+    say(items.length+'장을 내려받습니다. 갤러리/다운로드에서 확인하세요 ✓');
   }
   function zipDown(items,btn){
     var sec=document.getElementById('insta');
@@ -284,7 +284,7 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
       if(MODE==='files'){filesDown(items);return;}
       zipDown(items,btn);
     }).catch(function(){
-      say('전체 저장에 실패했습니다 — 이미지를 하나씩 저장해 주세요');
+      say('전체 저장에 실패했습니다. 이미지를 하나씩 저장해 주세요');
     }).then(function(){
       btn.disabled=false;btn.textContent=old;
     });

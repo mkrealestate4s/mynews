@@ -134,9 +134,9 @@ _NON_TPL = {"headink", "css"}
 EYEBROW_INSTA = "임장로그 부동산 뉴스"
 
 BRAND = {
-    "report": "부동산 인사이트 — 데일리 키워드 리포트",
-    "white": "부동산 인사이트 — 데일리 키워드 리포트",
-    "editorial": "부동산 인사이트 — 데일리 키워드 리포트",
+    "report": "부동산 인사이트 · 데일리 키워드 리포트",
+    "white": "부동산 인사이트 · 데일리 키워드 리포트",
+    "editorial": "부동산 인사이트 · 데일리 키워드 리포트",
     "insta": "매일 아침, 부동산 데이터 한 장",   # 아이브로가 채널명을 달고 있어 중복 회피
 }
 
@@ -247,7 +247,7 @@ def render(slug, cards, extra_css="", outbase=None, themes=None, eyebrow=None):
                    후보 테마(insta-*)는 이름을 직접 넘겨야 렌더된다.
 
     본문 토큰 (테마별로 치환된다):
-      {{BRAND}}   블로그=부동산 인사이트 — 데일리 키워드 리포트 / 인스타=임장로그 — 매일 아침 부동산 데이터
+      {{BRAND}}   블로그=부동산 인사이트 · 데일리 키워드 리포트 / 인스타=매일 아침, 부동산 데이터 한 장
       {{EYEBROW}} 블로그=eyebrow 인자 값 (예: "2026 · 8월 부동산 키워드 리포트") / 인스타=임장로그 부동산 뉴스
     """
     if any("{{EYEBROW}}" in b for b in cards.values()) and not eyebrow:
@@ -285,7 +285,7 @@ def top(pnum):
 
 def foot():
     return ('<div class="footwrap"><div class="trace"></div><div class="foot">'
-            '<span>부동산 인사이트 — 데일리 키워드 리포트</span>'
+            '<span>부동산 인사이트 · 데일리 키워드 리포트</span>'
             '<span>데이터 기준일 2026-07-17</span></div></div>')
 
 def hbar(label, value, pct, gray=False):
@@ -347,7 +347,7 @@ def cards():
 """ + hbar("10대 건설사 브랜드 단지", "9.76 : 1", 100) \
     + hbar("그 외 건설사 단지", "2.17 : 1", 22, gray=True) + """
   <div class="serif gtx" style="font-size:96px;font-weight:900;line-height:1;margin-top:26px">4.5배</div>
-  <div style="font-size:31px;color:var(--body);margin-top:12px">격차 — 같은 반세권이어도 <strong>브랜드 단지에만</strong> 수요가 몰립니다.</div>
+  <div style="font-size:31px;color:var(--body);margin-top:12px">격차. 같은 반세권이어도 <strong>브랜드 단지에만</strong> 수요가 몰립니다.</div>
 </div>""" + foot()
 
     c["05-check"] = top("05") + """
@@ -359,9 +359,9 @@ def cards():
         f'<div><div style="font-size:33px;font-weight:700;margin-bottom:6px">{t}</div>'
         f'<div style="font-size:26px;color:var(--mute)">{d}</div></div></div>'
         for i, (t, d) in enumerate([
-            ("반도체 업황 리스크", "집값은 반도체 경기와 동행 — 2023~2025 불황기 평택은 2년 연속 하락"),
-            ("브랜드·입지 확인", "1순위 자격은 한 번뿐 — 브랜드·입지·분양가를 냉정하게 비교"),
-            ("입주 물량·교통망 시점", "클러스터·광역 교통망 완공은 수년 뒤 — 실제 개통 시기를 확인"),
+            ("반도체 업황 리스크", "집값은 반도체 경기와 동행. 2023~2025 불황기 평택은 2년 연속 하락"),
+            ("브랜드·입지 확인", "1순위 자격은 한 번뿐. 브랜드·입지·분양가를 냉정하게 비교"),
+            ("입주 물량·교통망 시점", "클러스터·광역 교통망 완공은 수년 뒤다. 실제 개통 시기를 확인"),
         ], start=1)) + """
   </div>
   <div style="font-size:23px;color:var(--mute);margin-top:26px">※ 시장 정보 제공 목적이며 특정 단지의 청약·투자를 권유하지 않습니다.</div>

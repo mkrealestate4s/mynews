@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""2026-08-26 '모두 줄었는데 20대만 늘었다' 카드뉴스 — 6장 × 3테마."""
+"""2026-08-26 '모두 줄었는데 20대만 늘었다' 카드뉴스 · 6장 × 3테마."""
 import pathlib
 import make_cards as base
 
@@ -68,7 +68,7 @@ cards = {}
 
 cards["01-cover"] = top("01") + """
 <div class="mid" style="justify-content:center">
-  <div style="font-size:35px;color:var(--mute);font-weight:500">2분기 신규 주택담보대출 —</div>
+  <div style="font-size:35px;color:var(--mute);font-weight:500">2분기 신규 주택담보대출</div>
   <h1 class="serif gtx" style="font-size:92px;margin:14px 0 28px;line-height:1.18">모두 줄었는데<br>20대만 늘었다</h1>
   <div style="font-size:38px;color:var(--ink);font-weight:700;line-height:1.55">
     한 건당 <span class="gtx" style="font-size:46px">2,110만원</span> 줄었는데<br>
@@ -82,11 +82,11 @@ cards["02-flow"] = top("02") + """
   <div class="flow">
     <div class="fbox"><span class="n gtx">1</span>
       <div><div class="t">문턱이 높아졌다</div>
-      <div class="s">DSR·총량 관리 강화 — 빌릴 수 있는 금액이 깎였다</div></div></div>
+      <div class="s">DSR·총량 관리 강화로 빌릴 수 있는 금액이 깎였다</div></div></div>
     <div class="farrow">↓</div>
     <div class="fbox"><span class="n gtx">2</span>
       <div><div class="t">20대는 예외 통로가 있다</div>
-      <div class="s">무주택·생애최초 비중이 높다 — LTV 최대 80%</div></div></div>
+      <div class="s">무주택·생애최초 비중이 높다 (LTV 최대 80%)</div></div></div>
     <div class="farrow">↓</div>
     <div class="fbox"><span class="n gtx">3</span>
       <div><div class="t">통과한 사람만 남았다</div>
@@ -111,7 +111,7 @@ cards["03-drop"] = top("03") + """
       <div class="ds"><strong>2013년 통계 시작 이후</strong> 최대 감소</div>
     </div>
   </div>
-  <div class="note" style="margin-top:28px;word-break:keep-all">※ 3억을 빌릴 계획이었다면 석 달 만에 2,100만원이 사라진 셈 — 한국은행 2026년 2분기</div>
+  <div class="note" style="margin-top:28px;word-break:keep-all">※ 3억을 빌릴 계획이었다면 석 달 만에 2,100만원이 사라진 셈 (한국은행 2026년 2분기)</div>
 </div>""" + foot()
 
 cards["04-age"] = top("04") + """
@@ -126,7 +126,7 @@ cards["04-age"] = top("04") + """
     <div class="zlbl"><span>20대</span><span>60대<br>이상</span><span>50대</span><span>30대</span><span>40대</span></div>
   </div>
   <div style="font-size:28px;color:var(--body);margin-top:20px;word-break:keep-all">
-    규제는 <strong>30·40대</strong>에 걸렸다 — 집을 사는 주력 연령대다.</div>
+    규제는 <strong>30·40대</strong>에 걸렸다. 집을 사는 주력 연령대다.</div>
 </div>""" + foot()
 
 cards["05-share"] = top("05") + """
@@ -150,9 +150,9 @@ cards["06-check"] = top("06") + """
     f'<div><div style="font-size:32px;font-weight:700;margin-bottom:6px">{t}</div>'
     f'<div style="font-size:25px;color:var(--mute);word-break:keep-all">{d}</div></div></div>'
     for i, (t, d) in enumerate([
-        ("젊은 손님은 생애최초부터", "무주택·생애최초면 LTV 최대 80% — 예산 구간이 바뀐다"),
-        ("30·40대는 한도 재확인", "한 분기에 3,537만원 · 2,632만원 줄었다 — 옛 예산은 안 나온다"),
-        ("줄어든 건 한 건의 크기", "가계신용은 사상 첫 2,000조 — 시장이 죽은 게 아니다"),
+        ("젊은 손님은 생애최초부터", "무주택·생애최초면 LTV 최대 80%, 예산 구간이 바뀐다"),
+        ("30·40대는 한도 재확인", "한 분기에 3,537만원 · 2,632만원 줄었다. 옛 예산은 안 나온다"),
+        ("줄어든 건 한 건의 크기", "가계신용은 사상 첫 2,000조, 시장이 죽은 게 아니다"),
     ], start=1)) + """
   </div>
   <div class="note" style="margin-top:22px">※ 시장 정보 제공 목적이며 특정 거래·투자를 권유하지 않습니다.</div>

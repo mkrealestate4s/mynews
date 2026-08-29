@@ -9,7 +9,7 @@ https://mkrealestate4s.github.io/mynews/images/cards/reels/isacheol-01-cover.png
                                                         ...-05-wolse.png
                                                         ...-06-check.png
 
-■ 편집 순서 (카드 번호와 다릅니다 — 영상은 이 순서가 자연스럽습니다)
+■ 편집 순서 (카드 번호와 다릅니다. 영상은 이 순서가 자연스럽습니다)
   1 → 3 → 4 → 5 → 2 → 6
   (표지 → 얼마나 적나 → 어디가 줄었나 → 바탕이 얇다 → 왜 문제 → 실무)
 
@@ -102,7 +102,7 @@ https://mkrealestate4s.github.io/mynews/images/cards/reels/isacheol-01-cover.png
 
 
 ═════════════════════════════════════════════
-■ 통스크립트 — TTS에 한 번에 넣는 용도 (씬 순서대로 이어붙임)
+■ 통스크립트 · TTS에 한 번에 넣는 용도 (씬 순서대로 이어붙임)
   6씬 · 214자(공백 제외) · 약 43초
   줄바꿈이 씬 경계입니다. 한 번에 음성으로 뽑은 뒤 씬 길이에 맞춰 자르세요.
 
@@ -149,7 +149,7 @@ https://mkrealestate4s.github.io/mynews/images/cards/reels/isacheol-01-cover.png
 📌 중개 현장 체크
 ① 전국 수치보다 담당 지역의 9~10월 입주 단지부터
 ② 전세 손님에게는 물건 확인 시점을 앞당기라고 안내
-③ 월세 전환 계산을 미리 — 못 구하면 월세로 갑니다
+③ 월세 전환 계산을 미리. 못 구하면 월세로 갑니다
 
 자료: 부동산R114 9월 아파트 입주 예정 물량 집계
 
@@ -160,7 +160,7 @@ https://mkrealestate4s.github.io/mynews/images/cards/reels/isacheol-01-cover.png
 #부동산중개 #공인중개사 #내집마련
 
 ═════════════════════════════════════════════
-■ 캐러셀(4:5) 이미지 — 같은 6장, 1080x1350 · 테마 insta
+■ 캐러셀(4:5) 이미지 · 같은 6장, 1080x1350 · 테마 insta
 https://mkrealestate4s.github.io/mynews/images/cards/carousel/isacheol-01-cover.png
                                                             ...-02-flow.png
                                                             ...-03-low.png

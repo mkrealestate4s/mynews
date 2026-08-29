@@ -1,8 +1,12 @@
-# 데일리 리포트 블로그 제목 추천 — 누적 기록 (최신이 맨 위)
+# 데일리 리포트 블로그 제목 추천 · 누적 기록 (최신이 맨 위)
 # 지정된 한 편만 필요하면 title.txt (제목 3줄만, 주석 없음)
 #   https://mkrealestate4s.github.io/mynews/title.txt
-# 여러 편(같은 날 2편·밀린 날)을 다뤄야 하면 queue.json — 프로그램용 목록
+# 여러 편(같은 날 2편·밀린 날)을 다뤄야 하면 queue.json (프로그램용 목록)
 #   https://mkrealestate4s.github.io/mynews/publish/queue.json
+#
+# 제목에 줄표(—)를 쓰지 않는다 (2026-08-29 지시). 구분이 필요하면 가운뎃점 ·,
+# 열거는 쉼표, 부연은 콜론을 쓴다. 아래 2026-08-29 이전 기록은 이미 발행된
+# 제목이라 그대로 둔다.
 
 2026-08-29 · #42 · 이사철인데 이사 갈 집이 없다 · posts/2026-08-29-isacheol.html
   ※ title.txt 반영 완료

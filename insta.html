@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>임장로그 — 오늘 캐러셀</title>
+<title>임장로그 · 오늘 캐러셀</title>
 <!--
   폰 홈화면에 등록해 두는 고정 주소.
-  publish/manifest.json 의 slug 를 읽어 그날 포스트의 #insta 로 넘긴다 —
+  publish/manifest.json 의 slug 를 읽어 그날 포스트의 #insta 로 넘긴다.
   글마다 URL 이 바뀌는 것을 사용자가 매일 찾지 않게 하려는 목적이다.
   manifest.json 은 title.txt 와 같은 글을 가리키도록 매일 갱신된다.
 -->
@@ -59,7 +59,7 @@
     .then(function (j) {
       var slug = j && j.post && j.post.slug;
       if (!slug) throw new Error('slug 없음');
-      // replace 로 넘긴다 — 뒤로가기가 이 페이지에 갇히지 않게
+      // replace 로 넘긴다. 뒤로가기가 이 페이지에 갇히지 않게
       location.replace('posts/' + slug + '.html#insta');
     })
     .catch(function () {
@@ -68,7 +68,7 @@
 })();
 </script>
 <noscript>
-  <p>자바스크립트가 꺼져 있습니다 — <a href="index.html">리포트 목록</a>에서 맨 위 글을 열어 주세요.</p>
+  <p>자바스크립트가 꺼져 있습니다. <a href="index.html">리포트 목록</a>에서 맨 위 글을 열어 주세요.</p>
 </noscript>
 </body>
 </html>
