@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-29T07:25:00+09:00",
-  "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다.",
+  "updated_at": "2026-08-29T11:40:00+09:00",
+  "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status가 dropped인 항목은 발행하지 않기로 결정된 글이므로 되살리지 말 것(dropped_reason 참고).",
   "items": [
     {
       "slug": "2026-08-29-isacheol",
@@ -183,7 +183,7 @@
       "report_no": 35,
       "date": "2026-08-22",
       "keyword": "SH 국민임대 특집",
-      "status": "pending",
+      "status": "dropped",
       "deadline": "2026-09-03",
       "titles": [
         "국민임대 접수 9월 3일까지 — 올해는 자동차 기준이 다릅니다",
@@ -212,7 +212,8 @@
         "무주택",
         "배점표"
       ],
-      "note": "사용자 판단으로 보류 (접수 마감 9/3 — 그 전에 올릴지 재검토)"
+      "note": "사용자 판단으로 보류 (접수 마감 9/3 — 그 전에 올릴지 재검토)",
+      "dropped_reason": "발행 안 함 (사용자 결정 2026-08-29). 깃페이지 글은 그대로 두고 네이버 블로그 발행만 취소한다. 접수 마감 2026-09-03."
     },
     {
       "slug": "2026-08-22-pyeongkyun",

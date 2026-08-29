@@ -62,20 +62,18 @@ def _round(rad, body_font=None, extra=""):
 
 INSTA = {
     # ── 운영 테마 ──────────────────────────────────────────────────
-    # '앰버 포스터' — 2026-08-29 어두운 판에서 밝은 판으로 전환.
-    # 브랜드 앰버는 그대로 두고 바탕만 뒤집었다(앰버는 릴스·기존 게시물과 이어진다).
-    # 앰버(#D97706)는 흰 바탕에서 대비 3.5:1 — 큰 활자에만 쓰고 본문에는 쓰지 않는다.
+    # '아이보리 명조' — 2026-08-29 어두운 판에서 밝은 판으로 전환(후보 A 채택).
+    # 따뜻한 종이색 바탕 + 흰 패널 + 테라코타. 제목은 고운바탕(명조).
+    # 테라코타(#C2542B)는 이 바탕에서 대비 5.4:1 — 큰 숫자뿐 아니라 강조 문구에도 쓸 수 있다.
     "insta": dict(
-        bg="#FFFFFF", panel="#FFF7E7", ink="#141210", mute="#6E655A",
-        accent="#D97706", accent2="#F59E0B", line="#EBD8B4", rail="#F6EBD8",
-        fillgray="#E4D2B2", onfill="#FFFFFF", body="#413A31",
-        head="'Gothic A1',sans-serif", headspace="-0.035em", headink="ink",
-        css=_round("0", "'Noto Sans KR',sans-serif",
-                   ".top{padding-bottom:18px;border-bottom:3px solid var(--ink)}"
-                   ".trace{height:3px;background:var(--ink)}"
-                   # 0선은 --line(연한 베이지)으로는 밝은 패널에서 사라진다.
+        bg="#FBF7F0", panel="#FFFFFF", ink="#191512", mute="#7C7065",
+        accent="#C2542B", accent2="#C2542B", line="#E5DCCE", rail="#F1EADD",
+        fillgray="#D8CDBA", onfill="#FFFFFF", body="#4A4038",
+        head="'Gowun Batang',serif", headspace="0", headink="ink",
+        css=_round("6px", "'IBM Plex Sans KR',sans-serif",
+                   # 0선은 --line(연한 베이지)으로는 흰 패널에서 사라진다.
                    # 위/아래가 곧 의미인 차트라 기준선은 눈에 보여야 한다.
-                   ".zcols::before{background:rgba(20,18,16,.42)}"),
+                   ".zcols::before{background:rgba(25,21,18,.40)}"),
     ),
 
     # ── 후보 테마 (검토용 · 결정되면 지운다) ────────────────────────
@@ -87,13 +85,17 @@ INSTA = {
         head="'IBM Plex Sans KR',sans-serif", headspace="-0.01em", headink="ink",
         css=_MONO_CSS,
     ),
-    # A. 아이보리 명조 — 따뜻한 종이 바탕 + 테라코타. 차분하고 신뢰감.
-    "insta-ivory": dict(
-        bg="#FBF7F0", panel="#FFFFFF", ink="#191512", mute="#7C7065",
-        accent="#C2542B", accent2="#C2542B", line="#E5DCCE", rail="#F1EADD",
-        fillgray="#D8CDBA", onfill="#FFFFFF", body="#4A4038",
-        head="'Gowun Batang',serif", headspace="0", headink="ink",
-        css=_round("6px", "'IBM Plex Sans KR',sans-serif"),
+    # A. 아이보리 명조 → 채택되어 'insta' 로 옮겼다(위).
+    # D. 앰버 포스터 — 브랜드 앰버를 밝은 판으로. 직각·굵은 활자, 피드에서 가장 세다.
+    "insta-amber": dict(
+        bg="#FFFFFF", panel="#FFF7E7", ink="#141210", mute="#6E655A",
+        accent="#D97706", accent2="#F59E0B", line="#EBD8B4", rail="#F6EBD8",
+        fillgray="#E4D2B2", onfill="#FFFFFF", body="#413A31",
+        head="'Gothic A1',sans-serif", headspace="-0.035em", headink="ink",
+        css=_round("0", "'Noto Sans KR',sans-serif",
+                   ".top{padding-bottom:18px;border-bottom:3px solid var(--ink)}"
+                   ".trace{height:3px;background:var(--ink)}"
+                   ".zcols::before{background:rgba(20,18,16,.42)}"),
     ),
     # B. 민트 리포트 — 흰 바탕 + 민트 블록. 테두리 없이 면으로만 구분.
     "insta-mint": dict(
@@ -112,7 +114,6 @@ INSTA = {
         head="'IBM Plex Sans KR',sans-serif", headspace="-0.01em", headink="ink",
         css=_MONO_CSS,
     ),
-    # D. 앰버 포스터 → 채택되어 'insta' 로 옮겼다(위).
     # E. 코랄 소프트 — 복숭아 바탕 + 흰 카드에 옅은 그림자. 가장 부드럽다.
     "insta-coral": dict(
         bg="#FFF5F2", panel="#FFFFFF", ink="#2A1A16", mute="#8A736C",
