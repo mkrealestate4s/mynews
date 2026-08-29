@@ -9,7 +9,7 @@
 """
 import pathlib, sys
 
-from make_cards import fit_script
+from make_cards import VFRAME_CSS, fit_script
 
 BASE = pathlib.Path(__file__).parent
 SLUG = sys.argv[1]
@@ -20,9 +20,7 @@ html,body{height:1350px}
 body{padding:92px 92px 200px}
 .footwrap{bottom:66px}
 .mid{padding:20px 0}
-/* 나란히 선 nowrap 패널은 세로 프레임에서 폭을 잡아먹어 확대를 막는다 → 위아래로 */
-.duo{flex-direction:column;gap:18px}
-"""
+""" + VFRAME_CSS
 
 n = 0
 for th in THEMES:

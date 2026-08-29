@@ -10,7 +10,7 @@
 """
 import pathlib, re, sys
 
-from make_cards import fit_script
+from make_cards import VFRAME_CSS, fit_script
 
 BASE = pathlib.Path(__file__).parent
 SLUG = sys.argv[1]
@@ -30,9 +30,7 @@ body{padding:92px 96px 580px}
 .strip .sl{font-size:24px;color:var(--mute);letter-spacing:.1em;font-weight:700}
 .strip .st{font-size:40px;font-weight:900;line-height:1.3;margin-top:6px;word-break:keep-all}
 .mid{padding:26px 0}
-/* 나란히 선 nowrap 패널은 세로 프레임에서 폭을 잡아먹어 확대를 막는다 → 위아래로 */
-.duo{flex-direction:column;gap:18px}
-"""
+""" + VFRAME_CSS
 
 def convert(html, strip_html):
     # </style> 앞에 9:16 오버라이드 삽입 (뒤에 와야 우선 적용됨)

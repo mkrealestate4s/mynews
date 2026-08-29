@@ -25,29 +25,17 @@ THEMES = {
     ),
 }
 
-# 인스타(임장로그) 전용 테마 — '터미널 데이터'. 블로그 3테마와 분리해서 관리한다.
+# 인스타(임장로그) 전용 테마. 블로그 3테마와 분리해서 관리한다.
 # 1:1로 만든 뒤 make_reels.py(9:16) / make_carousel.py(4:5)로 재조판해 쓴다.
-INSTA = {
-    "insta": dict(
-        bg="#0B0B0C", panel="#131316", ink="#EDEDEF", mute="#8A8A93",
-        accent="#FFB020", accent2="#FFB020", line="#26262C", rail="#0F0F11",
-        fillgray="#2A2A31", onfill="#0B0B0C", body="#D6D6DB",
-        head="'IBM Plex Sans KR',sans-serif", headspace="-0.01em", headink="ink",
-    ),
-}
+#
+# 팔레트에 'css' 키를 두면 그 테마에만 붙는 오버라이드가 된다(숫자체·곡률·격자 등).
+# 'css' 는 HEAD_TPL 에 넘기지 않는다 — _NON_TPL 에서 걸러진다.
+#
+# 인스타 후보 테마(insta-*)는 검토용이다. 하나를 고르면 그 팔레트를 'insta' 로
+# 옮기고 후보들은 삭제한다 — 매일 렌더에서 도는 인스타 테마는 언제나 한 종이다.
 
-# 인스타 아이브로 — 블로그는 월별 리포트 표기, 인스타는 채널 고정 문구를 쓴다
-EYEBROW_INSTA = "임장로그 부동산 뉴스"
-
-BRAND = {
-    "report": "부동산 인사이트 — 데일리 키워드 리포트",
-    "white": "부동산 인사이트 — 데일리 키워드 리포트",
-    "editorial": "부동산 인사이트 — 데일리 키워드 리포트",
-    "insta": "매일 아침, 부동산 데이터 한 장",   # 아이브로가 채널명을 달고 있어 중복 회피
-}
-
-# 인스타 테마 오버라이드: 고정폭 숫자 · 곡률 0 · 격자 노출 · 자간 넓은 아이브로
-INSTA_CSS = """
+# 고정폭 숫자 + 곡률 0 + 플롯 영역 격자 (데이터 성격을 강조하는 계열)
+_MONO_CSS = """
 body{font-family:'IBM Plex Sans KR',sans-serif}
 .eyebrow{font-family:'IBM Plex Mono',monospace;letter-spacing:.24em}
 .pnum{font-family:'IBM Plex Mono',monospace}
@@ -59,6 +47,97 @@ body{font-family:'IBM Plex Sans KR',sans-serif}
 .cols,.zcols{background-image:repeating-linear-gradient(
   to right,transparent 0 63px,var(--line) 63px 64px)}
 """
+
+
+def _round(rad, body_font=None, extra=""):
+    """곡률·본문 서체만 바꾸는 가벼운 오버라이드."""
+    css = f"""
+.panel,.colwrap,.zwrap,.duo .box,.fbox,.tl,.badge,.sched{{border-radius:{rad}}}
+.hbar .railx,.hbar .fillx{{border-radius:{rad}}}
+"""
+    if body_font:
+        css += f"body{{font-family:{body_font}}}\n"
+    return css + extra
+
+
+INSTA = {
+    # ── 운영 테마 ──────────────────────────────────────────────────
+    # '앰버 포스터' — 2026-08-29 어두운 판에서 밝은 판으로 전환.
+    # 브랜드 앰버는 그대로 두고 바탕만 뒤집었다(앰버는 릴스·기존 게시물과 이어진다).
+    # 앰버(#D97706)는 흰 바탕에서 대비 3.5:1 — 큰 활자에만 쓰고 본문에는 쓰지 않는다.
+    "insta": dict(
+        bg="#FFFFFF", panel="#FFF7E7", ink="#141210", mute="#6E655A",
+        accent="#D97706", accent2="#F59E0B", line="#EBD8B4", rail="#F6EBD8",
+        fillgray="#E4D2B2", onfill="#FFFFFF", body="#413A31",
+        head="'Gothic A1',sans-serif", headspace="-0.035em", headink="ink",
+        css=_round("0", "'Noto Sans KR',sans-serif",
+                   ".top{padding-bottom:18px;border-bottom:3px solid var(--ink)}"
+                   ".trace{height:3px;background:var(--ink)}"
+                   # 0선은 --line(연한 베이지)으로는 밝은 패널에서 사라진다.
+                   # 위/아래가 곧 의미인 차트라 기준선은 눈에 보여야 한다.
+                   ".zcols::before{background:rgba(20,18,16,.42)}"),
+    ),
+
+    # ── 후보 테마 (검토용 · 결정되면 지운다) ────────────────────────
+    # 이전 운영 테마 '터미널 데이터' — 되돌릴 때 쓴다.
+    "insta-dark": dict(
+        bg="#0B0B0C", panel="#131316", ink="#EDEDEF", mute="#8A8A93",
+        accent="#FFB020", accent2="#FFB020", line="#26262C", rail="#0F0F11",
+        fillgray="#2A2A31", onfill="#0B0B0C", body="#D6D6DB",
+        head="'IBM Plex Sans KR',sans-serif", headspace="-0.01em", headink="ink",
+        css=_MONO_CSS,
+    ),
+    # A. 아이보리 명조 — 따뜻한 종이 바탕 + 테라코타. 차분하고 신뢰감.
+    "insta-ivory": dict(
+        bg="#FBF7F0", panel="#FFFFFF", ink="#191512", mute="#7C7065",
+        accent="#C2542B", accent2="#C2542B", line="#E5DCCE", rail="#F1EADD",
+        fillgray="#D8CDBA", onfill="#FFFFFF", body="#4A4038",
+        head="'Gowun Batang',serif", headspace="0", headink="ink",
+        css=_round("6px", "'IBM Plex Sans KR',sans-serif"),
+    ),
+    # B. 민트 리포트 — 흰 바탕 + 민트 블록. 테두리 없이 면으로만 구분.
+    "insta-mint": dict(
+        bg="#FFFFFF", panel="#EDF7F4", ink="#0D2B26", mute="#5F8480",
+        accent="#0B8C79", accent2="#0B8C79", line="#D3E9E4", rail="#E4F2EF",
+        fillgray="#B4D9D2", onfill="#FFFFFF", body="#33544F",
+        head="'Gothic A1',sans-serif", headspace="-0.025em", headink="ink",
+        css=_round("20px", "'Noto Sans KR',sans-serif",
+                   ".panel,.duo .box,.fbox,.zwrap,.colwrap{border-color:transparent}"),
+    ),
+    # C. 블루프린트 — 지금 테마의 밝은 판. 고정폭 숫자·격자·직각을 그대로 유지.
+    "insta-blueprint": dict(
+        bg="#F2F5FA", panel="#FFFFFF", ink="#0E2340", mute="#6B7C93",
+        accent="#1A5FD6", accent2="#1A5FD6", line="#D5DEEB", rail="#E8EDF5",
+        fillgray="#B9C7DA", onfill="#FFFFFF", body="#38495E",
+        head="'IBM Plex Sans KR',sans-serif", headspace="-0.01em", headink="ink",
+        css=_MONO_CSS,
+    ),
+    # D. 앰버 포스터 → 채택되어 'insta' 로 옮겼다(위).
+    # E. 코랄 소프트 — 복숭아 바탕 + 흰 카드에 옅은 그림자. 가장 부드럽다.
+    "insta-coral": dict(
+        bg="#FFF5F2", panel="#FFFFFF", ink="#2A1A16", mute="#8A736C",
+        accent="#E8452B", accent2="#FF8A5B", line="#F5DED6", rail="#FBE9E3",
+        fillgray="#F7C9BB", onfill="#FFFFFF", body="#55423C",
+        head="'Gothic A1',sans-serif", headspace="-0.02em", headink="ink",
+        css=_round("28px", "'Noto Sans KR',sans-serif",
+                   ".panel,.duo .box,.fbox,.zwrap,.colwrap{border-color:transparent;"
+                   "box-shadow:0 6px 22px rgba(180,80,55,.10)}"),
+    ),
+}
+
+# HEAD_TPL 의 서식 인자가 아닌 팔레트 키 — format() 에 넘기면 KeyError 가 아니라
+# 조용히 무시되므로(**kwargs) 오타를 못 잡는다. 명시적으로 걸러 둔다.
+_NON_TPL = {"headink", "css"}
+
+# 인스타 아이브로 — 블로그는 월별 리포트 표기, 인스타는 채널 고정 문구를 쓴다
+EYEBROW_INSTA = "임장로그 부동산 뉴스"
+
+BRAND = {
+    "report": "부동산 인사이트 — 데일리 키워드 리포트",
+    "white": "부동산 인사이트 — 데일리 키워드 리포트",
+    "editorial": "부동산 인사이트 — 데일리 키워드 리포트",
+    "insta": "매일 아침, 부동산 데이터 한 장",   # 아이브로가 채널명을 달고 있어 중복 회피
+}
 
 HEAD_TPL = """<!DOCTYPE html>
 <html lang="ko"><head><meta charset="UTF-8">
@@ -147,10 +226,24 @@ def fit_script(fill=0.97, maxz=1.45):
     return _FIT_TPL % {"fill": fill, "max": maxz}
 
 
+# 세로 프레임(9:16 · 4:5) 공통 오버라이드. make_reels / make_carousel 양쪽이 쓴다.
+VFRAME_CSS = """
+/* 나란히 선 nowrap 패널은 세로 프레임에서 폭을 잡아먹어 확대를 막는다 → 위아래로 */
+.duo{flex-direction:column;gap:18px}
+/* 제목은 줄바꿈을 금지한다. zoom 은 활자만 키우고 줄 폭은 그만큼 좁히므로,
+   1:1 에서 한 줄에 겨우 들어가던 제목이 확대되면 마지막 글자만 다음 줄로
+   떨어진다("… 없 / 다"). nowrap 으로 두면 가로 오버플로가 되어 fit_script 의
+   배율 되돌리기가 작동해 저절로 두 줄 안에 들어맞는다.
+   저자가 넣은 <br> 은 그대로 지켜진다. */
+h1{white-space:nowrap}
+"""
+
+
 def render(slug, cards, extra_css="", outbase=None, themes=None, eyebrow=None):
     """카드 dict을 테마별로 렌더한다.
 
-    themes=None  → 블로그 3테마 + 인스타 1테마 전부
+    themes=None  → 매일 쓰는 4종: 블로그 3테마 + 운영 인스타 테마('insta')
+                   후보 테마(insta-*)는 이름을 직접 넘겨야 렌더된다.
 
     본문 토큰 (테마별로 치환된다):
       {{BRAND}}   블로그=부동산 인사이트 — 데일리 키워드 리포트 / 인스타=임장로그 — 매일 아침 부동산 데이터
@@ -159,8 +252,9 @@ def render(slug, cards, extra_css="", outbase=None, themes=None, eyebrow=None):
     if any("{{EYEBROW}}" in b for b in cards.values()) and not eyebrow:
         raise ValueError("본문에 {{EYEBROW}} 가 있으면 eyebrow= 로 블로그용 문구를 넘겨야 합니다")
     base_dir = pathlib.Path(outbase) if outbase else BASE
-    pool = dict(THEMES, **INSTA) if themes is None else {
-        k: dict(THEMES, **INSTA)[k] for k in themes}
+    every = dict(THEMES, **INSTA)
+    pool = ({**THEMES, "insta": INSTA["insta"]} if themes is None
+            else {k: every[k] for k in themes})
     for theme, pal in pool.items():
         outdir = base_dir / theme
         outdir.mkdir(exist_ok=True)
@@ -172,11 +266,12 @@ def render(slug, cards, extra_css="", outbase=None, themes=None, eyebrow=None):
         extra = extra_css
         if pal.get("headink") == "ink":
             extra += INK_OVERRIDE
-        if theme in INSTA:
-            extra += INSTA_CSS
-        head = HEAD_TPL.format(extra=extra, **{k: v for k, v in pal.items() if k != "headink"})
+        extra += pal.get("css", "")   # 테마별 오버라이드는 항상 마지막에
+        head = HEAD_TPL.format(
+            extra=extra, **{k: v for k, v in pal.items() if k not in _NON_TPL})
+        # 후보 테마(insta-*)도 인스타 채널이다 — 브랜드·아이브로를 함께 따라가게 한다
         insta = theme in INSTA
-        brand = BRAND.get(theme, BRAND["report"])
+        brand = BRAND["insta"] if insta else BRAND["report"]
         eb = EYEBROW_INSTA if insta else (eyebrow or "")
         for name, body in cards.items():
             body = body.replace("{{BRAND}}", brand).replace("{{EYEBROW}}", eb)
