@@ -22,7 +22,7 @@ SCENE_RE = re.compile(
     r'(\n\n\[나레이션\]\n)(.+?)(\n\n\[자막\])', re.S)  # [자막문장]은 뒤에 있어 영향 없음
 
 matches = list(SCENE_RE.finditer(s))
-assert matches, "씬 블록을 찾지 못했습니다 — 파일 형식을 확인하세요"
+assert matches, "씬 블록을 찾지 못했습니다. 파일 형식을 확인하세요"
 
 
 def ts(x):
@@ -51,7 +51,7 @@ s = re.sub(r'■ 총 길이[^\n]*',
 # 2) 통스크립트 블록 (있으면 교체, 없으면 캡션 블록 앞에 삽입)
 full = "\n".join(narrations)
 BLOCK = ("═════════════════════════════════════════════\n"
-         "■ 통스크립트 — TTS에 한 번에 넣는 용도 (씬 순서대로 이어붙임)\n"
+         "■ 통스크립트 · TTS에 한 번에 넣는 용도 (씬 순서대로 이어붙임)\n"
          f"  {len(narrations)}씬 · {total_chars}자(공백 제외) · 약 {int(round(cum))}초\n"
          "  줄바꿈이 씬 경계입니다. 한 번에 음성으로 뽑은 뒤 씬 길이에 맞춰 자르세요.\n\n"
          + full + "\n\n")
@@ -63,4 +63,4 @@ else:
                   BLOCK + "═════════════════════════════════════════════\n■ 인스타 캡션", 1)
 
 P.write_text(s, encoding="utf-8")
-print(f"{len(narrations)}씬 · {total_chars}자 · 약 {int(round(cum))}초 — 초수 재계산 + 통스크립트 갱신")
+print(f"{len(narrations)}씬 · {total_chars}자 · 약 {int(round(cum))}초 · 초수 재계산 + 통스크립트 갱신")
