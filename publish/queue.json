@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-30T07:20:00+09:00",
+  "updated_at": "2026-08-31T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status가 dropped인 항목은 발행하지 않기로 결정된 글이므로 되살리지 말 것(dropped_reason 참고).",
   "items": [
+    {
+      "slug": "2026-08-31-jungong",
+      "report_no": 44,
+      "date": "2026-08-31",
+      "keyword": "착공은 20배, 준공은 8.8%",
+      "status": "designated",
+      "titles": [
+        "서울 아파트 착공이 1년 만에 20배가 됐습니다 · 그런데 준공은 8.8%뿐입니다 (7월 주택통계)",
+        "\"서울에 집 많이 짓는다\"는 뉴스, 왜 체감이 안 될까 · 착공과 준공 사이 2~3년",
+        "착공 뉴스로 올해 전월세를 설명하면 안 되는 이유 · 담당 지역 준공 단지부터 확인"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-31-jungong.txt"
+    },
     {
       "slug": "2026-08-30-jungwi",
       "report_no": 43,
       "date": "2026-08-30",
       "keyword": "절반은 10억 아래",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "서울 아파트 절반은 10억 아래에서 팔렸습니다 · 중위 9억1,600만원, 평균과 2억5,850만원 차이",
         "\"서울 아파트는 다 20억\"이라는 착각 · 30억 넘는 거래는 4.6%뿐이었습니다",

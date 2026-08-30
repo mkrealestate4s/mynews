@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-08-30-jungwi-01",
+  "job_id": "2026-08-31-jungong-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-08-30T07:20:00+09:00",
+  "requested_at": "2026-08-31T07:20:00+09:00",
   "post": {
-    "report_no": 43,
-    "slug": "2026-08-30-jungwi",
-    "title": "서울 아파트 절반은 10억 아래에서 팔렸습니다 · 중위 9억1,600만원, 평균과 2억5,850만원 차이",
+    "report_no": 44,
+    "slug": "2026-08-31-jungong",
+    "title": "서울 아파트 착공이 1년 만에 20배가 됐습니다 · 그런데 준공은 8.8%뿐입니다 (7월 주택통계)",
     "title_alts": [
-      "\"서울 아파트는 다 20억\"이라는 착각 · 30억 넘는 거래는 4.6%뿐이었습니다",
-      "손님 예산 상담 전에 볼 3가지 · 우리 구 중위가격부터 확인하세요"
+      "\"서울에 집 많이 짓는다\"는 뉴스, 왜 체감이 안 될까 · 착공과 준공 사이 2~3년",
+      "착공 뉴스로 올해 전월세를 설명하면 안 되는 이유 · 담당 지역 준공 단지부터 확인"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-30-jungwi.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-08-31-jungong.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungwi-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungong-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungwi-02-flow.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungong-02-pipe.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungwi-03-band.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungong-03-chakgong.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungwi-04-gap.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungong-04-now.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungwi-05-district.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungong-05-michak.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungwi-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jungong-06-check.png"
       }
     ],
     "tags": [
+      "주택통계",
+      "착공",
+      "인허가",
+      "준공",
       "서울아파트",
-      "실거래가",
-      "중위가격",
-      "노원구",
-      "강남구",
-      "아파트매매",
-      "매수예산",
-      "중저가아파트",
-      "부동산통계",
+      "공급물량",
+      "미분양",
+      "국토교통부",
+      "전월세",
       "중개실무"
     ]
   }
