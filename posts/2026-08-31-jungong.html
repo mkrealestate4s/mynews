@@ -292,6 +292,7 @@ footer a{color:var(--teal)}
   <h2>카드뉴스로 한눈에</h2>
   <p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>
   <div class="ilabel"><span class="s">현재 테마의 카드 6장</span><button class="allbtn" type="button" data-all="theme" data-fn="cards" data-count="6">⬇ 6장 전체 저장</button></div>
+  <div class="ilabel"><span class="s">현재 테마의 카드 6장</span><button class="allbtn" type="button" data-all="theme" data-fn="cards" data-count="6">⬇ 6장 전체 저장</button></div>
   <div class="cards">
     <img class="card-art" data-file="jungong-01-cover.png" src="../images/cards/report/jungong-01-cover.png" alt="카드뉴스 1/6 · 표지: 착공은 20배, 준공은 8.8%" loading="lazy" width="1080" height="1080">
     <img class="card-art" data-file="jungong-02-pipe.png" src="../images/cards/report/jungong-02-pipe.png" alt="카드뉴스 2/6 · 공급 3단계 가구 수 비교" loading="lazy" width="1080" height="1080">
@@ -387,6 +388,83 @@ footer a{color:var(--teal)}
 </article>
 
 <div class="trace"></div>
+
+<section id="insta" data-slug="jungong" data-files="01-cover,02-when,03-gap,04-now,05-michak,06-tip">
+  <h2>인스타(임장로그) 캐러셀</h2>
+  <p class="cards-hint">위 카드뉴스와 <b>같은 데이터를 일반인용으로 다시 쓴</b> 6장입니다.
+    채널명은 <b>임장로그</b>이고 규격은 피드용 4:5입니다.
+    전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 저장됩니다. 안드로이드는 갤러리(다운로드 폴더),
+    아이폰은 사진앱, PC는 zip입니다.</p>
+
+  <div class="ilabel"><span class="t">캐러셀 · 4:5</span>
+    <span class="s">1080 × 1350 · 앱에서 1번부터 차례로 탭</span>
+    <button class="allbtn" type="button" data-all="carousel" data-fn="carousel" data-count="6">⬇ 6장 전체 저장</button></div>
+  <div class="iscroll car" data-folder="carousel" data-kind="캐러셀"></div>
+
+  <div class="ilabel"><span class="t">인스타 캡션</span>
+    <span class="s">931자 · 해시태그 15개</span>
+    <button class="allbtn" type="button" id="copyCap">📋 캡션 · 해시태그 복사</button></div>
+  <pre id="instacap" hidden>"서울에 집 많이 짓는다는데
+왜 내가 살 집은 없을까요?"
+
+둘 다 사실이라서 그렇습니다.
+
+오늘 나온 국토교통부 7월 통계를 보면
+서울에서 공사를 시작한 아파트가
+작년 7월 278채에서 올해 5,574채로 늘었습니다.
+20배입니다.
+
+그런데 같은 달 '다 지어진 집'은
+4,919채에서 5,352채로 8.8%만 늘었습니다.
+
+왜 이렇게 다를까요?
+
+집은 하루에 생기지 않습니다.
+허가를 받고, 공사를 시작하고, 완성되기까지
+아파트는 보통 2~3년이 걸립니다.
+
+허가 → 지어도 된다는 승인
+착공 → 이제 공사를 시작한다
+준공 → 완성, 이제 들어갈 수 있다
+
+뉴스에 "많이 짓는다"고 나오는 건 착공입니다.
+올해 시작한 5,574채는
+대체로 2028~2029년에 입주하는 집이에요.
+
+제가 올해 이사할 집은 '준공'에 달려 있습니다.
+그리고 9월에 전국에서 입주하는 아파트는
+1만 4,174가구, 5년 5개월 만에 가장 적습니다.
+
+그래서 올해 가을은 여전히 빡빡합니다.
+착공이 늘었다는 소식은 반가운 일이지만
+그건 몇 년 뒤의 이야기입니다.
+
+다 지어놓고 주인을 못 찾은 집도 있습니다.
+전국 미분양이 6만 8,217채,
+그중 이미 완성된 집이 2만 9,152채입니다.
+다만 전국을 합친 숫자라
+제가 원하는 동네에 있다는 뜻은 아닙니다.
+
+📌 뉴스 읽을 때 이렇게
+① '착공'과 '준공'을 구분하세요. 준공이 지금 들어갈 수 있는 집입니다
+② "몇 배 늘었다"는 말은 한 번 더 보세요. 작년에 278채였습니다
+③ 전국 숫자와 우리 동네 사정은 다를 수 있습니다
+
+자료: 국토교통부 2026년 7월 주택통계 (2026.8.31 발표)
+9월 입주 물량은 부동산R114 집계
+
+@임장로그 · 매일 아침 부동산 데이터 한 장
+
+#부동산 #서울아파트 #내집마련 #집값 #아파트 #청약
+#입주 #전세 #월세 #부동산공부 #부동산정보
+#첫집 #신혼부부 #임장 #부동산초보</pre>
+  <p class="cards-hint" style="margin-top:10px">캐러셀은 <b>탭한 순서로 배치</b>됩니다.
+    저장은 <b>6번부터 거꾸로</b> 한 장씩 진행되므로(약 7초) 갤러리 <b>맨 앞이 1번</b>입니다.
+    처음 한 번은 <b>"여러 파일 다운로드" 확인이 뜨니 허용</b>해 주세요. 막으면 순서가 깨집니다.
+    헷갈리면 카드 오른쪽 위 <b>큰 번호</b>를 보세요. 그게 최종 기준입니다.
+    카드별 문안과 캡션 원본은
+    <a href="../publish/insta/2026-08-31-jungong-caption.txt" style="color:var(--teal)">캡션 파일</a>에 있습니다.</p>
+</section>
 
 <footer>
   참고 자료: 국토교통부 2026년 7월 주택통계(2026.8.31 발표) · 부동산R114 9월 아파트 입주 예정 물량 집계 · 헤럴드경제 · 머니투데이 · 한국경제<br>
