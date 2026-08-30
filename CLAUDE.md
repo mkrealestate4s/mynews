@@ -5,7 +5,7 @@ URL: https://mkrealestate4s.github.io/mynews/
 
 ## 글쓰기 규칙 (최우선 — 모든 산출물에 적용)
 - **줄표(em dash) `—` 를 쓰지 않는다.** 2026-08-29 사용자 지시: "AI가 쓴 글처럼 보인다."
-  포스트 본문·제목·메타·카드 문안·릴스 나레이션·인스타 캡션·`title.txt`·index 카드 요약·
+  포스트 본문·제목·메타·카드 문안·인스타 캡션·`title.txt`·index 카드 요약·
   포스트 안 안내문과 버튼 문구까지 **전부** 해당한다. 반각 하이픈으로 바꾸는 것도 아니다.
   문맥에 맞게 다시 쓴다:
   - 제목·라벨을 잇는 자리 → **가운뎃점 `·`** (사이트가 이미 쓰는 기호)
@@ -26,11 +26,15 @@ URL: https://mkrealestate4s.github.io/mynews/
 - `images/cards/{report,white,editorial}/<slug>-*.png` — 카드뉴스 (테마별 동일 파일명).
 - `themes/design-library.json` + `themes/preview.html` — 디자인 프리셋 라이브러리/카탈로그.
 - `tools/make_cards.py`, `tools/fetch_fonts.py` — 카드뉴스 생성 (스킬 `.claude/skills/theme-preset` 참조).
-  `make_cards.render(slug, cards, extra_css=COLCSS)`가 블로그 3테마 + `insta` 테마를 한 번에 뽑는다.
+  `make_cards.render(slug, cards, extra_css=..., themes=[...])`로 테마를 골라 렌더한다.
+  **블로그와 인스타는 카드 문안이 다르므로 render를 두 번 부른다** (아래 인스타 절차 참조).
   카드 본문의 `{{BRAND}}` 토큰은 테마별 채널명으로 치환된다.
-- `images/cards/reels/`(9:16 1080x1920) · `images/cards/carousel/`(4:5 1080x1350) — 인스타용.
-  `tools/make_reels.py`, `tools/make_carousel.py`가 1:1 카드 HTML을 재조판한다(기본 테마 `insta`).
-- `publish/reels/<slug>-script.txt` — 릴스 나레이션·자막·초수 + 인스타 캡션·해시태그.
+- `images/cards/carousel/`(4:5 1080x1350) — 인스타용. `tools/make_carousel.py`가 1:1 카드
+  HTML을 재조판한다(테마 `insta`).
+  `images/cards/reels/`(9:16)와 `tools/make_reels.py`는 **2026-08-30부터 쓰지 않는다**.
+  지우지는 않는다 — #39~#42 포스트가 그 이미지를 참조한다.
+- `publish/insta/<slug>-caption.txt` — 인스타 캡션·해시태그 + 카드별 문안 요약.
+  (2026-08-29까지는 `publish/reels/<slug>-script.txt`였다. add_insta_section이 옛 경로도 읽는다.)
 - `title.txt` — **당일 블로그 제목 추천 3줄만**(주석·빈줄 없음, UTF-8 BOM 없음, LF).
   로컬 포스팅 자동화 프로그램이 `https://mkrealestate4s.github.io/mynews/title.txt`로
   받아쓴다 → 형식을 바꾸지 말 것. 프로그램은 **첫 줄(1번 제목)만 사용**하며 날짜별로 한 줄씩
@@ -90,44 +94,61 @@ URL: https://mkrealestate4s.github.io/mynews/
     렌더하므로 후보가 매일 돌지는 않는다. 결정이 굳으면 후보들을 지운다.
   - **밝은 테마는 차트 0선을 따로 챙긴다** — `--line`(연한 베이지)은 흰 패널에서 사라진다.
     위/아래가 곧 의미인 `.zcols`는 팔레트 css에서 `::before` 색을 올려 둔다.
-  - **테마는 캐러셀·릴스가 함께 쓴다** — 하나를 바꾸면 9:16·4:5가 같이 바뀐다.
+  - 테마를 바꾸면 캐러셀(4:5)이 함께 바뀐다.
 - 채널명을 섞지 말 것. 카드 본문에 토큰을 쓰면 테마별로 자동 치환된다:
   `{{EYEBROW}}` → 블로그 `2026 · N월 부동산 키워드 리포트`(render에 `eyebrow=`로 전달) /
   인스타 `임장로그 부동산 뉴스`
-  `{{BRAND}}` → 블로그 `부동산 인사이트 — 데일리 키워드 리포트` / 인스타 `매일 아침, 부동산 데이터 한 장`
+  `{{BRAND}}` → 블로그 `부동산 인사이트 · 데일리 키워드 리포트` / 인스타 `매일 아침, 부동산 데이터 한 장`
   (인스타는 아이브로가 채널명을 달고 있으므로 푸터에서 채널명을 반복하지 않는다)
 - 인스타 폰트는 `gf2-local.css` + `fonts2/`가 필요하다 — 컨테이너 재생성 후에는
   `python3 tools/fetch_fonts.py`를 카드 작업 폴더에서 먼저 돌린다(두 세트를 함께 내려받는다).
 
-## 인스타 산출물 절차 (데일리 리포트 후속)
-1. 카드 1:1 생성 시 `insta` 테마까지 함께 렌더된다(`base.render`).
-2. `python3 make_reels.py <slug> "<릴스 상단 제목>" <리포트번호>` →
-   `node tools/shot_cards.js insta-reels pngr 1080 1920` (뷰포트 그대로 캡처 — 크롭 보정 없음).
-   하단 400px는 인스타 UI가 덮으므로 본문을 상단 안전영역에 몰아 둔다.
-3. `python3 make_carousel.py <slug>` → `node tools/shot_cards.js insta-car pngc 1080 1350`.
-   - **세로 프레임 자동 확대**: 1:1 활자를 그대로 9:16/4:5에 얹으면 가운데 좁은 띠에만
+## 인스타 산출물 절차 (데일리 리포트 후속) — 캐러셀만
+**릴스는 만들지 않는다 (2026-08-30 사용자 결정).** 캐러셀 6장 + 캡션이 전부다.
+
+### 인스타 카드는 블로그 카드와 **다른 글**이다 (2026-08-30 사용자 지적)
+블로그 카드를 그대로 인스타에 올리면 **공인중개사 실무 자료처럼 읽힌다.**
+같은 데이터로 독자를 바꿔 다시 쓴다. 일일 카드 스크립트에 `cards`(블로그)와
+`insta`(인스타) 두 dict을 두고 `base.render`를 두 번 부른다:
+```python
+base.render(SLUG, cards, extra_css=COLCSS, themes=["report","white","editorial"],
+            eyebrow="2026 · N월 부동산 키워드 리포트")
+base.render(SLUG, insta, extra_css=INSTACSS, themes=["insta"])   # eyebrow 불필요
+```
+인스타 문안 원칙:
+- 읽는 사람은 **집을 보러 다니는 일반인**이다. `중위가격`·`실거래가`·`낙폭` 같은 말을
+  쓰지 않고 **가운데 값 · 실제로 팔린 값**으로 바꿔 쓴다.
+- 비율(%)은 **100명 기준 사람 수**로 환산한다("10억 아래에서 산 사람 56명").
+- 카드마다 **독자의 질문에 답한다.** "내 예산이면 어떤데?"가 가장 중요한 카드다.
+- 마무리는 실무 팁이 아니라 **"집 보러 가기 전에 볼 것"**이다.
+- 카드 이름도 내용에 맞게 새로 짠다(예: `02-people`·`04-budget`·`06-tip`).
+  블로그 카드 이름과 같을 필요가 없다.
+
+### 순서
+1. 일일 카드 스크립트를 돌리면 블로그 3테마와 `insta` 세트가 함께 렌더된다.
+2. `python3 make_carousel.py <slug> insta` →
+   `node tools/shot_cards.js insta-car pngc 1080 1350 <slug>`
+   - **세로 프레임 자동 확대**: 1:1 활자를 그대로 4:5에 얹으면 가운데 좁은 띠에만
      글자가 몰려 "눌린" 느낌이 된다(2026-08-26 사용자 지적). `make_cards.fit_script()`가
-     심는 스크립트가 `.mid`에 zoom을 걸고 폭을 그만큼 줄여 되레이아웃한다 —
-     릴스 최대 1.45배, 캐러셀 최대 1.35배, 프레임의 97%를 채우는 배율로 카드별 자동 결정.
+     심는 스크립트가 `.mid`에 zoom을 걸고 폭을 그만큼 줄여 되레이아웃한다.
+     캐러셀 최대 1.35배, 프레임의 97%를 채우는 배율로 카드별 자동 결정.
      가로로 넘치면(`.duo`처럼 nowrap 패널이 나란히 선 카드) 배율을 되돌리므로,
      세로 프레임에서는 `.duo`를 위아래로 세워 확대 여지를 준다.
    - `shot_cards.js`가 카드별 `zoom=`과 `over v/h`를 찍는다. **over가 0이 아니면 잘린 것** —
      배율 상한을 낮추거나 해당 카드 본문을 줄인다(`h1` 정도의 1px은 서브픽셀 반올림).
-   - **제목은 `h1{white-space:nowrap}`** (`make_cards.VFRAME_CSS`, 두 재조판 스크립트가 공유).
-     zoom은 활자만 키우고 줄 폭은 그만큼 좁히므로, 1:1에서 한 줄에 겨우 들어가던 제목이
-     확대되면 **마지막 글자만 다음 줄로 떨어진다**("… 없 / 다" — 2026-08-29까지 실제로
-     그렇게 배포됐다). nowrap이면 가로 오버플로가 되어 배율 되돌리기가 작동해 저절로 맞는다.
-     저자가 넣은 `<br>`은 그대로 지켜진다.
-4. `publish/reels/<slug>-script.txt` 작성: 씬별 `[나레이션]`·`[자막]`, 인스타 캡션, 해시태그
-   15개 내외. **숫자는 한글로 적는다**(TTS 오독 방지) — 자막은 숫자로.
-   릴스 편집 순서는 카드 번호순이 아니라 기사 흐름순(예: 1-3-4-2-5-6), 캐러셀은 카드 번호순.
-   초수는 눈대중으로 적지 말 것 — 다음 단계에서 자동 계산된다.
-5. `python3 tools/sync_reels_script.py publish/reels/<slug>-script.txt` —
-   씬 초수를 **공백 제외 글자 수 ÷ 5.5 + 0.6초**로 재계산하고 `■ 통스크립트` 블록을
-   `[나레이션]` 본문과 일치시킨다(멱등). 눈대중 초수는 실제 렌더 길이와 어긋난다.
-6. `python3 tools/add_insta_section.py posts/<slug>.html <카드접두어>` —
-   포스트 페이지 맨 아래에 인스타 섹션(캐러셀 6 + 릴스 6 + 나레이션 통스크립트)을 붙인다.
-   통스크립트는 5단계 파일의 `[나레이션]` 블록을 읽어 심으므로 **반드시 5단계 뒤에** 돌린다.
+   - **제목은 `h1{white-space:nowrap}`** (`make_cards.VFRAME_CSS`). zoom은 활자만 키우고
+     줄 폭은 그만큼 좁히므로, 1:1에서 한 줄에 겨우 들어가던 제목이 확대되면
+     **마지막 글자만 다음 줄로 떨어진다**("… 없 / 다"). nowrap이면 가로 오버플로가 되어
+     배율 되돌리기가 작동해 저절로 맞는다. 저자가 넣은 `<br>`은 그대로 지켜진다.
+   - **제목이 아닌 큰 금액에도 같은 함정이 있다** — `9억 1,600만원`의 `원`만 떨어졌다
+     (2026-08-30). 금액 span에 `white-space:nowrap`을 직접 걸어 준다.
+3. `publish/insta/<slug>-caption.txt` 작성: 카드별 문안 요약 + `■ 인스타 캡션` 블록
+   (해시태그 15개 내외, 일반인 대상 태그로). 캡션도 일반인 말투로 쓴다.
+   블록은 `═══` 줄로 닫아야 `add_insta_section.py`가 파싱한다.
+4. `python3 tools/add_insta_section.py posts/<slug>.html <카드접두어>` —
+   포스트 페이지 맨 아래에 인스타 섹션(캐러셀 6 + 캡션 복사)을 붙인다.
+   캐러셀 파일명은 **`images/cards/carousel/` 실제 파일에서** 읽는다(블로그 카드 이름과
+   다르므로 갤러리에서 뽑으면 엉뚱한 경로가 박힌다 — 2026-08-30 실제로 발생).
    **로컬 자동포스팅 프로그램을 깨지 않기 위한 3중 격리** — 바꾸지 말 것:
    ① `<article>` 밖에 둔다 → blogText()는 article.children만 훑으므로 [이미지1~6] 유지.
    ② **서빙 HTML에 `<img>` 태그를 남기지 않는다** → JS가 data 속성에서 생성한다.

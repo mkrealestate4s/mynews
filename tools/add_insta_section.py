@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-"""포스트 페이지에 인스타(임장로그) 이미지 받기 섹션 + 전체 저장 버튼을 추가한다.
+"""포스트 페이지에 인스타(임장로그) 캐러셀 받기 섹션 + 전체 저장 버튼을 추가한다.
+
+**캐러셀만 만든다 (2026-08-30 사용자 결정).** 릴스는 더 이상 제작하지 않는다.
+make_reels.py 와 이전 글의 reels 이미지는 남겨 둔다 (지우면 #39~#42 페이지가 깨진다).
 
 로컬 블로그 자동포스팅 프로그램을 깨지 않기 위한 3중 격리 (바꾸지 말 것):
 
@@ -37,7 +40,6 @@ CSS = """
 .iscroll img{height:auto;border-radius:10px;border:1px solid var(--line);
   scroll-snap-align:start;flex:none;display:block}
 .iscroll.car img{width:300px;max-width:66vw;aspect-ratio:4/5}
-.iscroll.reel img{width:236px;max-width:54vw;aspect-ratio:9/16}
 .iscroll .imgbtns{top:7px;right:7px;gap:5px}
 .iscroll .imgbtns .cbtn{font-size:.68rem;padding:2px 9px}
 .ilabel{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:22px 0 6px}
@@ -51,28 +53,29 @@ CSS = """
 if not HAS_CSS:
     s = s.replace("</style>", CSS + "</style>", 1)
 
-# 갤러리에서 카드 파일 접미어를 읽어온다 (01-cover 등)
-NAMES = [re.search(r'data-file="' + SLUG + r'-([0-9]{2}-[a-z]+)\.png"', m).group(1)
-         for m in re.findall(r'<img class="card-art"[^>]*>', s)[:6]]
-assert len(NAMES) == 6, NAMES
+# 캐러셀 파일 접미어는 **실제 파일에서** 읽는다.
+# 예전에는 블로그 카드 갤러리의 data-file 에서 뽑았는데, 인스타 카드가 별도 세트가 된
+# 뒤로는 이름이 서로 달라 엉뚱한 경로가 박힌다(2026-08-30 실제로 발생).
+CAROUSEL = POST.parent.parent / "images" / "cards" / "carousel"
+NAMES = sorted(f.stem[len(SLUG) + 1:] for f in CAROUSEL.glob(f"{SLUG}-*.png"))
+assert len(NAMES) == 6, f"캐러셀 이미지가 6장이 아닙니다: {NAMES}"
 
 
-# 릴스 스크립트에서 [나레이션] 블록을 뽑아 통스크립트를 만든다 (없으면 버튼 생략)
-SCRIPT = POST.parent.parent / "publish" / "reels" / f"{POST.stem}-script.txt"
-NARR = ""
+# 캡션 원본. 새 경로를 먼저 보고, 없으면 예전 릴스 스크립트에서 캡션만 꺼낸다
+# (2026-08-29 이전 글을 다시 만들 때를 위한 호환 경로).
+PUB = POST.parent.parent / "publish"
+CAP_SRC = PUB / "insta" / f"{POST.stem}-caption.txt"
+if not CAP_SRC.exists():
+    CAP_SRC = PUB / "reels" / f"{POST.stem}-script.txt"
 CAP = ""
-if SCRIPT.exists():
-    blocks = re.findall(r'\[나레이션\]\s*\n(.+?)\n\s*\n\[자막\]',
-                        SCRIPT.read_text(encoding="utf-8"), re.S)
-    NARR = "\n".join(b.strip() for b in blocks)
-    print(f"나레이션 {len(blocks)}씬 · {len(NARR.replace(' ', '').replace(chr(10), ''))}자 임베드")
-    # 인스타 캡션(해시태그 포함) — 앱에서 직접 올릴 때 붙여넣는 용도
+if CAP_SRC.exists():
     m = re.search(r'■ 인스타 캡션[^\n]*\n\n(.+?)\n═+',
-                  SCRIPT.read_text(encoding="utf-8"), re.S)
+                  CAP_SRC.read_text(encoding="utf-8"), re.S)
     CAP = m.group(1).strip() if m else ""
-    print(f"인스타 캡션 {len(CAP)}자 임베드" if CAP else "경고: 캡션 블록을 찾지 못했습니다")
+    print(f"인스타 캡션 {len(CAP)}자 임베드 ({CAP_SRC.name})" if CAP
+          else f"경고: 캡션 블록을 찾지 못했습니다 ({CAP_SRC.name})")
 else:
-    print("경고: 스크립트 파일이 없어 나레이션·캡션 복사 버튼을 넣지 않습니다 —", SCRIPT)
+    print("경고: 캡션 파일이 없어 캡션 복사 버튼을 넣지 않습니다.", CAP_SRC)
 
 
 def esc(t):
@@ -84,29 +87,22 @@ def allbtn(kind, fn):
             f'data-fn="{fn}" data-count="6">⬇ 6장 전체 저장</button>')
 
 
-NARR_CHARS = len(NARR.replace(" ", "").replace("\n", ""))
-NARR_SEC = round(NARR_CHARS / 5.5 + 0.6 * max(1, NARR.count("\n") + 1))
-narrmeta = (f'{NARR.count(chr(10)) + 1}씬 · {NARR_CHARS}자 · 약 {NARR_SEC}초'
-            if NARR else '스크립트 파일 없음')
-narrbtn = ('<button class="allbtn" type="button" id="copyNarr">🎙 나레이션 전체 복사</button>'
-           if NARR else '')
-narrtext = esc(NARR)
 capbtn = ('<button class="allbtn" type="button" id="copyCap">📋 캡션 · 해시태그 복사</button>'
           if CAP else '')
 captext = esc(CAP)
-capmeta = (f'{len(CAP)}자 · 해시태그 {CAP.count("#")}개' if CAP else '스크립트 파일 없음')
+capmeta = (f'{len(CAP)}자 · 해시태그 {CAP.count("#")}개' if CAP else '캡션 파일 없음')
 
 SECTION = f'''<div class="trace"></div>
 
 <section id="insta" data-slug="{SLUG}" data-files="{','.join(NAMES)}">
-  <h2>인스타(임장로그)용 이미지</h2>
-  <p class="cards-hint">위 카드뉴스와 같은 내용을, 인스타 규격으로 다시 조판한 것입니다.
-    채널명은 <b>임장로그</b>입니다. <b>캐러셀은 피드용, 릴스는 영상용</b>이라 비율이 다릅니다.
+  <h2>인스타(임장로그) 캐러셀</h2>
+  <p class="cards-hint">위 카드뉴스와 <b>같은 데이터를 일반인용으로 다시 쓴</b> 6장입니다.
+    채널명은 <b>임장로그</b>이고 규격은 피드용 4:5입니다.
     전체 저장을 누르면 <b>원본 6장이 압축 없이</b> 저장됩니다. 안드로이드는 갤러리(다운로드 폴더),
     아이폰은 사진앱, PC는 zip입니다.</p>
 
   <div class="ilabel"><span class="t">캐러셀 · 4:5</span>
-    <span class="s">1080 × 1350 · 피드에 카드 번호 순서(1→6)로</span>
+    <span class="s">1080 × 1350 · 앱에서 1번부터 차례로 탭</span>
     {allbtn("carousel", "carousel")}</div>
   <div class="iscroll car" data-folder="carousel" data-kind="캐러셀"></div>
 
@@ -114,20 +110,10 @@ SECTION = f'''<div class="trace"></div>
     <span class="s">{capmeta}</span>
     {capbtn}</div>
   <pre id="instacap" hidden>{captext}</pre>
-
-  <div class="ilabel"><span class="t">릴스 · 9:16</span>
-    <span class="s">1080 × 1920 · 하단 400px는 인스타 UI 자리</span>
-    {allbtn("reels", "reels")}</div>
-  <div class="iscroll reel" data-folder="reels" data-kind="릴스"></div>
-
-  <div class="ilabel" style="margin-top:26px"><span class="t">나레이션 통스크립트</span>
-    <span class="s">{narrmeta}</span>
-    {narrbtn}</div>
-  <pre id="narration" hidden>{narrtext}</pre>
-  <p class="cards-hint" style="margin-top:10px">TTS(클로바더빙·VLLO)에 <b>한 번에 붙여넣는</b> 용도입니다.
-    줄바꿈이 씬 경계입니다. 숫자는 TTS 오독을 막으려고 한글로 적었습니다.
-    씬별 자막·초수와 인스타 캡션·해시태그는
-    <a href="../publish/reels/{POST.stem}-script.txt" style="color:var(--teal)">전체 스크립트</a>에 있습니다.</p>
+  <p class="cards-hint" style="margin-top:10px">캐러셀은 <b>탭한 순서로 배치</b>됩니다.
+    갤러리는 최신순(6번이 위)으로 보이므로 <b>1번부터 차례로</b> 탭하세요.
+    카드별 문안과 캡션 원본은
+    <a href="../publish/insta/{POST.stem}-caption.txt" style="color:var(--teal)">캡션 파일</a>에 있습니다.</p>
 </section>
 
 '''
@@ -289,14 +275,6 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
       btn.disabled=false;btn.textContent=old;
     });
   }
-  var narrBtn=document.getElementById('copyNarr');
-  if(narrBtn){
-    narrBtn.addEventListener('click',function(e){
-      e.preventDefault();
-      var el=document.getElementById('narration');
-      copyText(el?el.textContent.trim():'', '나레이션 통스크립트가 복사됐습니다 ✓');
-    });
-  }
   var capBtn=document.getElementById('copyCap');
   if(capBtn){
     capBtn.addEventListener('click',function(e){
@@ -305,7 +283,7 @@ JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지
       copyText(el?el.textContent.trim():'', '캡션과 해시태그가 복사됐습니다 ✓');
     });
   }
-  document.querySelectorAll('.allbtn:not(#copyNarr):not(#copyCap)').forEach(function(b){
+  document.querySelectorAll('.allbtn:not(#copyCap)').forEach(function(b){
     var n=b.dataset.count||'6';
     b.textContent='⬇ '+n+'장 '+(MODE==='share'?'사진앱에 저장'
                                 :MODE==='files'?'갤러리에 저장':'zip으로');

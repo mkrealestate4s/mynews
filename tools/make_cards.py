@@ -250,12 +250,15 @@ def render(slug, cards, extra_css="", outbase=None, themes=None, eyebrow=None):
       {{BRAND}}   블로그=부동산 인사이트 · 데일리 키워드 리포트 / 인스타=매일 아침, 부동산 데이터 한 장
       {{EYEBROW}} 블로그=eyebrow 인자 값 (예: "2026 · 8월 부동산 키워드 리포트") / 인스타=임장로그 부동산 뉴스
     """
-    if any("{{EYEBROW}}" in b for b in cards.values()) and not eyebrow:
-        raise ValueError("본문에 {{EYEBROW}} 가 있으면 eyebrow= 로 블로그용 문구를 넘겨야 합니다")
     base_dir = pathlib.Path(outbase) if outbase else BASE
     every = dict(THEMES, **INSTA)
     pool = ({**THEMES, "insta": INSTA["insta"]} if themes is None
             else {k: every[k] for k in themes})
+    # eyebrow 는 블로그 테마에만 필요하다. 인스타는 EYEBROW_INSTA 로 고정이므로
+    # 인스타만 렌더할 때(캐러셀 전용 세트) 인자를 요구하면 안 된다.
+    if (any(t not in INSTA for t in pool)
+            and any("{{EYEBROW}}" in b for b in cards.values()) and not eyebrow):
+        raise ValueError("블로그 테마를 렌더하는데 {{EYEBROW}} 가 있습니다. eyebrow= 로 문구를 넘기세요")
     for theme, pal in pool.items():
         outdir = base_dir / theme
         outdir.mkdir(exist_ok=True)
