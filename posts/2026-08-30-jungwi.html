@@ -452,7 +452,8 @@ footer a{color:var(--teal)}
 #아파트매매 #노원구 #강남구 #부동산공부 #부동산정보
 #첫집 #신혼부부 #임장 #부동산초보</pre>
   <p class="cards-hint" style="margin-top:10px">캐러셀은 <b>탭한 순서로 배치</b>됩니다.
-    갤러리는 최신순(6번이 위)으로 보이므로 <b>1번부터 차례로</b> 탭하세요.
+    저장은 <b>6번부터 거꾸로</b> 진행되므로 갤러리 <b>맨 앞이 1번</b>입니다.
+    헷갈리면 카드 오른쪽 위 <b>큰 번호</b>를 보세요. 그게 최종 기준입니다.
     카드별 문안과 캡션 원본은
     <a href="../publish/insta/2026-08-30-jungwi-caption.txt" style="color:var(--teal)">캡션 파일</a>에 있습니다.</p>
 </section>
@@ -640,16 +641,25 @@ footer a{color:var(--teal)}
     return new Blob(local.concat(central,[new Uint8Array(eo.buffer)]),{type:'application/zip'});
   }
   function filesDown(items){
-    /* 안드로이드: 개별 원본을 순차로 내려받는다 (첫 파일 뒤 '여러 파일 다운로드' 확인이 한 번 뜰 수 있음) */
-    items.forEach(function(f,i){
-      setTimeout(function(){
-        var url=URL.createObjectURL(f.blob);
-        var a=document.createElement('a');a.href=url;a.download=f.name;
-        document.body.appendChild(a);a.click();a.remove();
-        setTimeout(function(){URL.revokeObjectURL(url);},4000);
-      }, i*350);
-    });
-    say(items.length+'장을 내려받습니다. 갤러리/다운로드에서 확인하세요 ✓');
+    /* 폰 갤러리와 인스타 사진 선택 화면은 **파일명이 아니라 '추가된 시각'으로 정렬**한다.
+       6장을 한꺼번에 내려받으면 시각이 사실상 같아져 순서가 뒤섞인다(2026-08-30 사용자 보고).
+       ① 한 장씩 1.1초 간격으로 저장한다. 간격이 1초를 넘어야 초 단위로 기록되는
+          갤러리에서도 6장의 시각이 확실히 갈린다 (예전 350ms는 같은 초에 몰렸다)
+       ② **6번부터 거꾸로** 저장한다 → 최신순으로 보이는 목록에서 1번이 맨 앞에 온다 */
+    var seq=items.slice().reverse(), i=0;
+    (function step(){
+      if(i>=seq.length){
+        say(seq.length+'장 저장 완료 · 목록 맨 앞이 1번입니다 ✓');
+        return;
+      }
+      var f=seq[i++];
+      var url=URL.createObjectURL(f.blob);
+      var a=document.createElement('a');a.href=url;a.download=f.name;
+      document.body.appendChild(a);a.click();a.remove();
+      setTimeout(function(){URL.revokeObjectURL(url);},4000);
+      setTimeout(step,1100);
+    })();
+    say(items.length+'장을 한 장씩 저장합니다 (약 '+Math.ceil(items.length*1.1)+'초)');
   }
   function zipDown(items,btn){
     var sec=document.getElementById('insta');
@@ -682,7 +692,9 @@ footer a{color:var(--teal)}
         });
       });
     })).then(function(items){
-      var fl=items.map(function(f){
+      /* 공유 시트도 뒤에서부터 넘긴다: 사진앱이 배열 순서대로 시각을 매기면
+         1번이 가장 최신이 되어 최신순 목록의 맨 앞에 온다. */
+      var fl=items.slice().reverse().map(function(f){
         return new File([f.blob],f.name,{type:'image/png'});
       });
       if(MODE==='share'&&navigator.canShare({files:fl})){
