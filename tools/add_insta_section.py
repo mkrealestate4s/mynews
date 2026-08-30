@@ -111,7 +111,8 @@ SECTION = f'''<div class="trace"></div>
     {capbtn}</div>
   <pre id="instacap" hidden>{captext}</pre>
   <p class="cards-hint" style="margin-top:10px">캐러셀은 <b>탭한 순서로 배치</b>됩니다.
-    저장은 <b>6번부터 거꾸로</b> 진행되므로 갤러리 <b>맨 앞이 1번</b>입니다.
+    저장은 <b>6번부터 거꾸로</b> 한 장씩 진행되므로(약 7초) 갤러리 <b>맨 앞이 1번</b>입니다.
+    처음 한 번은 <b>"여러 파일 다운로드" 확인이 뜨니 허용</b>해 주세요. 막으면 순서가 깨집니다.
     헷갈리면 카드 오른쪽 위 <b>큰 번호</b>를 보세요. 그게 최종 기준입니다.
     카드별 문안과 캡션 원본은
     <a href="../publish/insta/{POST.stem}-caption.txt" style="color:var(--teal)">캡션 파일</a>에 있습니다.</p>
