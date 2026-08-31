@@ -25,6 +25,16 @@ URL: https://mkrealestate4s.github.io/mynews/
 - `posts/YYYY-MM-DD-slug.html` — 리포트 본문. 기존 포스트를 복제해 스타일 유지.
 - `images/cards/{report,white,editorial}/<slug>-*.png` — 카드뉴스 (테마별 동일 파일명).
 - `themes/design-library.json` + `themes/preview.html` — 디자인 프리셋 라이브러리/카탈로그.
+- **파비콘 · 홈화면 아이콘** (2026-08-31 신설) — `tools/make_favicon.py` 하나로 전부 만든다
+  (브라우저 없이 PIL로 그린다. `python3 tools/make_favicon.py`).
+  마크는 **지붕 + 오르는 막대 3개**. 채널이 둘이라 아이콘도 둘이고, 실루엣은 같고 팔레트만 다르다.
+  - 블로그 `favicon.svg` · `favicon.ico`(16/32/48) · `images/icons/blog-*.png` · `site.webmanifest`
+  - 인스타 `images/icons/insta-icon.svg` · `insta-*.png` · `insta.webmanifest` (테라코타 바탕)
+  - **깃페이지는 `/mynews/` 하위 경로라 브라우저가 자동으로 찾는 도메인 루트 `/favicon.ico`가
+    우리 저장소가 아니다.** 그래서 페이지마다 `<head>`에 명시해야 한다(포스트는 `../` 경로).
+    새 포스트는 어제 글을 복제하므로 자동으로 이어받는다 — 지우지 말 것.
+  - 아이콘 좌표(`ROOF`·`BARS`)는 SVG와 PNG가 공유하므로 한쪽만 고쳐도 어긋나지 않는다.
+    16px에서 지붕 각도와 막대 3단이 살아남는지가 유일한 판단 기준이다(반투명 막대는 먹힌다).
 - `tools/make_cards.py`, `tools/fetch_fonts.py` — 카드뉴스 생성 (스킬 `.claude/skills/theme-preset` 참조).
   `make_cards.render(slug, cards, extra_css=..., themes=[...])`로 테마를 골라 렌더한다.
   **블로그와 인스타는 카드 문안이 다르므로 render를 두 번 부른다** (아래 인스타 절차 참조).
