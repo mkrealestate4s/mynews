@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-01-bunyang9-01",
+  "job_id": "2026-09-02-jeonhwan-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-01T07:20:00+09:00",
+  "requested_at": "2026-09-02T07:20:00+09:00",
   "post": {
-    "report_no": 45,
-    "slug": "2026-09-01-bunyang9",
-    "title": "9월에 서울에서 청약할 수 있는 아파트는 29가구입니다 · 전국은 2만2,704가구",
+    "report_no": 46,
+    "slug": "2026-09-02-jeonhwan",
+    "title": "청약통장 갈아타기 마감이 9월 30일입니다 · 아직 113만 명이 옛 통장을 들고 있습니다",
     "title_alts": [
-      "전국에 2만2,704가구가 나오는데 서울만 85가구인 이유 · 100채 지으면 33채",
-      "9월 분양 물량 총정리 · 경기 9,544, 인천 3,908, 서울 85가구 어디를 볼까"
+      "20년 묵은 청약통장, 이번 달 지나면 못 바꿉니다 · 손님에게 먼저 물어볼 한 가지",
+      "청약통장 전환 전 확인할 3가지 · 국민주택 자격은 전환일부터 새로 셉니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-01-bunyang9.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-02-jeonhwan.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bunyang9-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonhwan-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bunyang9-02-total.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonhwan-02-who.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bunyang9-03-region.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonhwan-03-benefit.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bunyang9-04-drop.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonhwan-04-trap.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bunyang9-05-chungyak.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonhwan-05-leave.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bunyang9-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonhwan-06-check.png"
       }
     ],
     "tags": [
-      "분양",
+      "청약통장",
+      "주택청약종합저축",
+      "청약예금",
+      "청약부금",
+      "청약저축",
+      "전환",
       "청약",
-      "9월분양",
-      "서울분양",
-      "일반분양",
-      "경기분양",
-      "인천분양",
-      "공급물량",
-      "직방",
+      "소득공제",
+      "국민주택",
       "중개실무"
     ]
   }
