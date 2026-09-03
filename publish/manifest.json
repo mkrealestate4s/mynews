@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-03-wolsebi-01",
+  "job_id": "2026-09-04-geupnak-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-03T07:20:00+09:00",
+  "requested_at": "2026-09-04T07:20:00+09:00",
   "post": {
-    "report_no": 47,
-    "slug": "2026-09-03-wolsebi",
-    "title": "서울 아파트 월세 비중이 54.8%로 역대 최고입니다 · 40㎡ 미만은 83.4%가 월세",
+    "report_no": 48,
+    "slug": "2026-09-04-geupnak",
+    "title": "강남 −0.41%, 성북 +0.54% · 서울 25개 구 중 23곳은 올랐습니다 (9월 1주 주간 아파트값)",
     "title_alts": [
-      "같은 서울 아파트인데 소형만 83.4%가 월세입니다 · 46.6%p를 가른 것은 면적",
-      "전월세 상담 전 확인할 3가지 · 평균이 아니라 면적대별 월세 비중부터 보세요"
+      "\"강남 집값 급락\"을 숫자로 확인해 봤습니다 · 올해 누적은 강남 +1.43%, 서초 +2.65%",
+      "주간 아파트값 상담 전 체크 3가지 · 주간과 누적을 함께 보여 주세요"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-03-wolsebi.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-04-geupnak.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolsebi-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolsebi-02-record.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-02-count.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolsebi-03-decade.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-03-cumul.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolsebi-04-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-04-turn.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolsebi-05-new.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-05-gap.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolsebi-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-06-check.png"
       }
     ],
     "tags": [
-      "월세",
-      "전세",
-      "월세비중",
-      "전월세",
-      "소형아파트",
-      "신축아파트",
-      "임대차",
-      "주거비",
+      "주간아파트값",
+      "한국부동산원",
+      "강남집값",
+      "성북구",
+      "노원구",
+      "동남권",
       "서울아파트",
+      "전세",
+      "매매가격",
       "중개실무"
     ]
   }

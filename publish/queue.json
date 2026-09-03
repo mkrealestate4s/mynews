@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-03T07:20:00+09:00",
+  "updated_at": "2026-09-04T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status가 dropped인 항목은 발행하지 않기로 결정된 글이므로 되살리지 말 것(dropped_reason 참고).",
   "items": [
+    {
+      "slug": "2026-09-04-geupnak",
+      "report_no": 48,
+      "date": "2026-09-04",
+      "keyword": "강남 −0.41%, 성북 +0.54%",
+      "status": "designated",
+      "titles": [
+        "강남 −0.41%, 성북 +0.54% · 서울 25개 구 중 23곳은 올랐습니다 (9월 1주 주간 아파트값)",
+        "\"강남 집값 급락\"을 숫자로 확인해 봤습니다 · 올해 누적은 강남 +1.43%, 서초 +2.65%",
+        "주간 아파트값 상담 전 체크 3가지 · 주간과 누적을 함께 보여 주세요"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-04-geupnak.txt"
+    },
     {
       "slug": "2026-09-03-wolsebi",
       "report_no": 47,
       "date": "2026-09-03",
       "keyword": "40㎡ 미만은 83.4%가 월세",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "서울 아파트 월세 비중이 54.8%로 역대 최고입니다 · 40㎡ 미만은 83.4%가 월세",
         "같은 서울 아파트인데 소형만 83.4%가 월세입니다 · 46.6%p를 가른 것은 면적",
