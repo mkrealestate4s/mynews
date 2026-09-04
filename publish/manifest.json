@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-04-geupnak-01",
+  "job_id": "2026-09-04-jangjeonse-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-04T07:20:00+09:00",
+  "requested_at": "2026-09-04T18:00:00+09:00",
   "post": {
-    "report_no": 48,
-    "slug": "2026-09-04-geupnak",
-    "title": "강남 −0.41%, 성북 +0.54% · 서울 25개 구 중 23곳은 올랐습니다 (9월 1주 주간 아파트값)",
+    "report_no": 49,
+    "slug": "2026-09-04-jangjeonse",
+    "title": "SH 장기전세 9월 14일 접수 · 청담르엘 11억7,000만원, 디에이치방배 8억5,020만원 (제51차 공고 정리)",
     "title_alts": [
-      "\"강남 집값 급락\"을 숫자로 확인해 봤습니다 · 올해 누적은 강남 +1.43%, 서초 +2.65%",
-      "주간 아파트값 상담 전 체크 3가지 · 주간과 누적을 함께 보여 주세요"
+      "강남 새 아파트를 20년 전세로 · 그런데 지금 청약통장을 바꾸면 이번 1순위가 안 됩니다",
+      "장기전세 제51차 요건 총정리 · 소득 105%, 총자산 6억6,200만원, 청약저축 24회"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-04-geupnak.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-04-jangjeonse.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-02-count.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-02-schedule.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-03-cumul.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-03-deposit.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-04-turn.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-04-who.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-05-gap.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-05-trap.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/geupnak-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-06-check.png"
       }
     ],
     "tags": [
-      "주간아파트값",
-      "한국부동산원",
-      "강남집값",
-      "성북구",
-      "노원구",
-      "동남권",
-      "서울아파트",
+      "장기전세",
+      "SH공사",
+      "청담르엘",
+      "디에이치방배",
+      "공공임대",
+      "청약통장",
       "전세",
-      "매매가격",
+      "강남아파트",
+      "서초아파트",
       "중개실무"
     ]
   }

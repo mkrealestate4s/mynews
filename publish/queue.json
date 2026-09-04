@@ -1,14 +1,28 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-04T07:20:00+09:00",
+  "updated_at": "2026-09-04T18:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 pending인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status가 dropped인 항목은 발행하지 않기로 결정된 글이므로 되살리지 말 것(dropped_reason 참고).",
   "items": [
+    {
+      "slug": "2026-09-04-jangjeonse",
+      "report_no": 49,
+      "date": "2026-09-04",
+      "keyword": "청담르엘 전세 11억7,000만원 (장기전세 특집)",
+      "status": "designated",
+      "titles": [
+        "SH 장기전세 9월 14일 접수 · 청담르엘 11억7,000만원, 디에이치방배 8억5,020만원 (제51차 공고 정리)",
+        "강남 새 아파트를 20년 전세로 · 그런데 지금 청약통장을 바꾸면 이번 1순위가 안 됩니다",
+        "장기전세 제51차 요건 총정리 · 소득 105%, 총자산 6억6,200만원, 청약저축 24회"
+      ],
+      "note": "마감 있는 특집. 1순위 접수 2026-09-14. 9/13에 마감 임박편 예정",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-04-jangjeonse.txt"
+    },
     {
       "slug": "2026-09-04-geupnak",
       "report_no": 48,
       "date": "2026-09-04",
       "keyword": "강남 −0.41%, 성북 +0.54%",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "강남 −0.41%, 성북 +0.54% · 서울 25개 구 중 23곳은 올랐습니다 (9월 1주 주간 아파트값)",
         "\"강남 집값 급락\"을 숫자로 확인해 봤습니다 · 올해 누적은 강남 +1.43%, 서초 +2.65%",
