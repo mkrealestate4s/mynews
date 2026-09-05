@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-04-jangjeonse-01",
+  "job_id": "2026-09-05-palleok-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-04T18:00:00+09:00",
+  "requested_at": "2026-09-05T07:20:00+09:00",
   "post": {
-    "report_no": 49,
-    "slug": "2026-09-04-jangjeonse",
-    "title": "SH 장기전세 9월 14일 접수 · 청담르엘 11억7,000만원, 디에이치방배 8억5,020만원 (제51차 공고 정리)",
+    "report_no": 50,
+    "slug": "2026-09-05-palleok",
+    "title": "강북 5개구 8억 미만 거래 비중 68.3% · 1년 만에 11.9%p 줄었습니다 (성북구는 26.0%p)",
     "title_alts": [
-      "강남 새 아파트를 20년 전세로 · 청약통장 전환은 공고일 전일까지였습니다 (지금 바꿔도 이번엔 반영 안 됨)",
-      "장기전세 제51차 요건 총정리 · 소득 105%, 총자산 6억6,200만원, 청약저축 24회"
+      "\"강북은 8억이면 된다\"가 끝나는 중입니다 · 거래는 18.4% 늘었는데 8억 미만은 21건",
+      "강북 중소형 8억 미만 비중 구별 정리 · 성북 36.0%, 도봉 88.7% (1~7월 실거래)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-04-jangjeonse.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-05-palleok.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-02-schedule.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-02-share.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-03-deposit.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-03-gu.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-04-who.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-04-count.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-05-trap.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-05-kb.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangjeon-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-06-check.png"
       }
     ],
     "tags": [
-      "장기전세",
-      "SH공사",
-      "청담르엘",
-      "디에이치방배",
-      "공공임대",
-      "청약통장",
-      "전세",
-      "강남아파트",
-      "서초아파트",
+      "강북아파트",
+      "8억미만",
+      "실거래가",
+      "성북구",
+      "노원구",
+      "중랑구",
+      "도봉구",
+      "중소형아파트",
+      "서울아파트",
       "중개실무"
     ]
   }
