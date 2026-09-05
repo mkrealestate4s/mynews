@@ -1,58 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-09-05-palleok-01",
-  "status": "hold",
+  "job_id": "2026-09-06-jeonse9-01",
+  "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-05T07:20:00+09:00",
+  "requested_at": "2026-09-06T07:20:00+09:00",
   "post": {
-    "report_no": 50,
-    "slug": "2026-09-05-palleok",
-    "title": "강북 5개구 8억 미만 거래 비중 68.3% · 1년 만에 11.9%p 줄었습니다 (성북구는 26.0%p)",
+    "report_no": 51,
+    "slug": "2026-09-06-jeonse9",
+    "title": "9월 아파트 입주가 1만4,174가구로 6년 5개월 만에 최저입니다 · 서울은 3,438가구",
     "title_alts": [
-      "\"강북은 8억이면 된다\"가 끝나는 중입니다 · 거래는 18.4% 늘었는데 8억 미만은 21건",
-      "강북 중소형 8억 미만 비중 구별 정리 · 성북 36.0%, 도봉 88.7% (1~7월 실거래)"
+      "전세가 왜 계속 오르나 · 입주 6년 5개월 최저, 수급지수 126.2, 고소득 가구도 7년 반",
+      "서울 전셋값 1년 정리 · 중간 6억3,169만원(+11.5%), 상위 20% 13억2,759만원(+6.6%)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-05-palleok.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-jeonse9.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-02-share.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-02-ipju.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-03-gu.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-03-price.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-04-count.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-04-years.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-05-kb.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-05-supply.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/palleok-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-06-check.png"
       }
     ],
     "tags": [
-      "강북아파트",
-      "8억미만",
-      "실거래가",
-      "성북구",
-      "노원구",
-      "중랑구",
-      "도봉구",
-      "중소형아파트",
-      "서울아파트",
+      "전세",
+      "입주물량",
+      "전세수급지수",
+      "전셋값",
+      "서울전세",
+      "9월입주",
+      "전세대출",
+      "임대차",
+      "KB부동산",
       "중개실무"
     ]
-  },
-  "hold_reason": "사용자가 2026-09-05 네이버에 수동 발행 완료. 자동 발행 건너뛴다."
+  }
 }

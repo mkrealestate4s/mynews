@@ -1,8 +1,21 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-05T12:10:00+09:00",
+  "updated_at": "2026-09-06T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-09-06-jeonse9",
+      "report_no": 51,
+      "date": "2026-09-06",
+      "keyword": "9월 입주 1만4,174가구, 6년 5개월 최저",
+      "status": "designated",
+      "titles": [
+        "9월 아파트 입주가 1만4,174가구로 6년 5개월 만에 최저입니다 · 서울은 3,438가구",
+        "전세가 왜 계속 오르나 · 입주 6년 5개월 최저, 수급지수 126.2, 고소득 가구도 7년 반",
+        "서울 전셋값 1년 정리 · 중간 6억3,169만원(+11.5%), 상위 20% 13억2,759만원(+6.6%)"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-jeonse9.txt"
+    },
     {
       "slug": "2026-09-05-palleok",
       "report_no": 50,
