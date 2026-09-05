@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-05T07:20:00+09:00",
+  "updated_at": "2026-09-05T12:10:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
     {
@@ -8,13 +8,14 @@
       "report_no": 50,
       "date": "2026-09-05",
       "keyword": "강북 8억 미만 거래 비중 68.3%",
-      "status": "designated",
+      "status": "dropped",
       "titles": [
         "강북 5개구 8억 미만 거래 비중 68.3% · 1년 만에 11.9%p 줄었습니다 (성북구는 26.0%p)",
         "\"강북은 8억이면 된다\"가 끝나는 중입니다 · 거래는 18.4% 늘었는데 8억 미만은 21건",
         "강북 중소형 8억 미만 비중 구별 정리 · 성북 36.0%, 도봉 88.7% (1~7월 실거래)"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-05-palleok.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-05-palleok.txt",
+      "dropped_reason": "사용자가 2026-09-05 네이버에 수동 발행 완료. 수동 발행은 로컬 posted.log 에 없으므로 후보로 두면 중복 발행된다."
     },
     {
       "slug": "2026-09-04-jangjeonse",

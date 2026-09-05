@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "job_id": "2026-09-05-palleok-01",
-  "status": "ready",
+  "status": "hold",
   "mode": "draft",
   "requested_at": "2026-09-05T07:20:00+09:00",
   "post": {
@@ -53,5 +53,6 @@
       "서울아파트",
       "중개실무"
     ]
-  }
+  },
+  "hold_reason": "사용자가 2026-09-05 네이버에 수동 발행 완료. 자동 발행 건너뛴다."
 }

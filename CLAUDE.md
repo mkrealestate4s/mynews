@@ -78,6 +78,15 @@ URL: https://mkrealestate4s.github.io/mynews/
      아니라 posted로 내릴 것.** status 어휘는 queue.json의 `note`에 적어 두었다
      (designated=오늘 발행할 글 · pending=아직 안 올린 밀린 글 · posted=발행 완료 ·
      dropped=발행하지 않기로 결정).
+   - **사용자가 손으로 발행했다고 알려 주면 그 자리에서 두 파일을 내린다** (2026-09-05 지시).
+     ① `queue.json` 의 해당 항목 → `status: "dropped"` + `dropped_reason`
+     ② `publish/manifest.json` → `status: "hold"` + `hold_reason`
+     수동 발행은 로컬 `posted.log` 에 기록되지 않아서, 그대로 두면 다음 실행에 프로그램이
+     같은 글을 한 번 더 올린다. `fetch_job()` 은 `status != "ready"` 면 None 을 돌려주고
+     `fetch_queue()` 는 `designated`·`pending` 만 후보로 보므로 이 두 줄로 완전히 멈춘다.
+     수동 발행분에는 `posted` 대신 **`dropped`** 를 쓴다(사용자 지시. 프로그램 동작은 같다).
+     `insta.html` 은 manifest 의 `slug` 만 읽고 `status` 는 보지 않으므로, hold 로 내려도
+     폰 인스타 입구는 그대로 그날 글로 간다 — 캐러셀이 아직 안 올라갔어도 문제없다.
    - `title.txt`를 바꿀 때는 `publish/manifest.json`도 같은 글로 맞춘다 — 두 파일이 다른 글을
      가리키면 로컬 프로그램이 엉뚱한 글을 집는다.
    - 커밋·배포는 보통 07:13~07:26에 끝난다(로컬 프로그램은 07:40 이후 받아감). 크게 늦어지면
