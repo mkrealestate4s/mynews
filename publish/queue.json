@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-06T12:00:00+09:00",
+  "updated_at": "2026-09-06T17:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
     {
@@ -8,13 +8,13 @@
       "report_no": 52,
       "date": "2026-09-06",
       "keyword": "송파 재건축 3곳, 8,768 → 13,976세대",
-      "status": "pending",
+      "status": "designated",
       "titles": [
         "송파 재건축 3곳이 8,768세대에서 13,976세대로 · 이번 달 장미·오금현대 시공사 입찰",
         "잠실주공5단지 최고 65층 6,411세대 · 7월 사업시행인가 뒤 지금은 감정평가 단계입니다",
         "송파 정비사업 9월 일정 정리 · 장미1·2·3차 입찰공고, 가락미륭 관리처분 총회"
       ],
-      "note": "같은 날 두 번째 글(송파 재건축). title.txt·manifest 는 #51 데일리를 그대로 두고 큐에만 올렸다. 사용자가 이 글로 발행하겠다고 하면 title.txt·manifest 를 바꾼다.",
+      "note": "사용자 지시로 오늘 발행 대상. title.txt·manifest 를 이 글로 맞췄다.",
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-songpa.txt"
     },
     {
@@ -22,13 +22,14 @@
       "report_no": 51,
       "date": "2026-09-06",
       "keyword": "9월 입주 1만4,174가구, 6년 5개월 최저",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "9월 아파트 입주가 1만4,174가구로 6년 5개월 만에 최저입니다 · 서울은 3,438가구",
         "전세가 왜 계속 오르나 · 입주 6년 5개월 최저, 수급지수 126.2, 고소득 가구도 7년 반",
         "서울 전셋값 1년 정리 · 중간 6억3,169만원(+11.5%), 상위 20% 13억2,759만원(+6.6%)"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-jeonse9.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-jeonse9.txt",
+      "note": "오늘 아침 데일리로 배포됐지만 사용자가 이 글로는 발행하지 않기로 했다. 재발행 금지."
     },
     {
       "slug": "2026-09-05-palleok",

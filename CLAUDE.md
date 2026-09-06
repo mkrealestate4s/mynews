@@ -214,6 +214,11 @@ base.render(SLUG, insta, extra_css=INSTACSS, themes=["insta"])   # eyebrow 불�
       HTML을 파싱하는 프로그램에는 기존과 동일하게 `<img>` 7개(카드 6 + figure 1)만 보인다.
    ③ 인스타 이미지는 `img.insta-art` → 테마 전환은 `img.card-art`만 대상이라 경로가 안 덮인다.
    푸시 전 확인: `grep -c '<img' posts/<slug>.html` 이 어제 글과 같은 수인지.
+   - **카드 갤러리의 '전체 저장' 버튼은 한 개여야 한다** (2026-09-06 사용자 보고).
+     일일 생성기의 CARDS 블록에 `.ilabel` 줄이 굳어 들어간 뒤로 이 스크립트가 같은 줄을
+     한 번 더 넣어 **버튼이 매일 두 개씩** 나왔다(8/27 글은 두 번 돌려 네 개). 13편을
+     되돌리고 스크립트를 `data-all="theme"` 가 없을 때만 넣도록 고쳤다(끝에 assert 1개).
+     푸시 전 확인: `grep -c 'data-all="theme"' posts/<slug>.html` 이 **1**이어야 한다.
    - 전체 저장 버튼은 기기별로 갈린다 — 폰은 `navigator.share({files})`로 **원본 무압축**을
      공유 시트에 넘기고(사진앱에 한 번에 저장), PC는 무압축 zip을 직접 만들어 내려받는다
      (외부 라이브러리 없음). 버튼 문구도 기기 능력에 맞춰 바뀐다.

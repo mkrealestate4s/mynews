@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-06-jeonse9-01",
+  "job_id": "2026-09-06-songpa-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-06T07:20:00+09:00",
+  "requested_at": "2026-09-06T17:00:00+09:00",
   "post": {
-    "report_no": 51,
-    "slug": "2026-09-06-jeonse9",
-    "title": "9월 아파트 입주가 1만4,174가구로 6년 5개월 만에 최저입니다 · 서울은 3,438가구",
+    "report_no": 52,
+    "slug": "2026-09-06-songpa",
+    "title": "송파 재건축 3곳이 8,768세대에서 13,976세대로 · 이번 달 장미·오금현대 시공사 입찰",
     "title_alts": [
-      "전세가 왜 계속 오르나 · 입주 6년 5개월 최저, 수급지수 126.2, 고소득 가구도 7년 반",
-      "서울 전셋값 1년 정리 · 중간 6억3,169만원(+11.5%), 상위 20% 13억2,759만원(+6.6%)"
+      "잠실주공5단지 최고 65층 6,411세대 · 7월 사업시행인가 뒤 지금은 감정평가 단계입니다",
+      "송파 정비사업 9월 일정 정리 · 장미1·2·3차 입찰공고, 가락미륭 관리처분 총회"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-jeonse9.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-songpa.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-02-ipju.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-02-total.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-03-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-03-rate.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-04-years.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-04-when.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-05-supply.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-05-public.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jeonse9-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-06-check.png"
       }
     ],
     "tags": [
-      "전세",
-      "입주물량",
-      "전세수급지수",
-      "전셋값",
-      "서울전세",
-      "9월입주",
-      "전세대출",
-      "임대차",
-      "KB부동산",
+      "송파재건축",
+      "잠실주공5단지",
+      "장미아파트",
+      "오금현대",
+      "가락미륭",
+      "올림픽훼밀리타운",
+      "정비사업",
+      "시공사입찰",
+      "재건축",
       "중개실무"
     ]
   }

@@ -127,11 +127,21 @@ assert s != _before, ('삽입 지점을 찾지 못했습니다 — </article> �
                       '구분선 div(class="trace")와 <footer>가 이어져 있어야 합니다')
 
 # 블로그 카드 갤러리에도 전체 저장 버튼 (현재 테마의 6장)
-s = s.replace(
-    '<p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>',
-    '<p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>\n'
-    '  <div class="ilabel"><span class="s">현재 테마의 카드 6장</span>'
-    + allbtn("theme", "cards") + '</div>')
+# **이미 있으면 넣지 않는다** (2026-09-06 사용자 보고). 일일 생성기의 CARDS 블록에
+# 이 줄이 굳어 들어간 뒤로(어제 글을 복제하니까) 여기서 한 번 더 넣어 버튼이 매일
+# 두 개씩 나왔다. 8/27 글은 이 스크립트를 두 번 돌려 네 개였다. 13편을 되돌렸다.
+if 'data-all="theme"' not in s:
+    _b = s
+    s = s.replace(
+        '<p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>',
+        '<p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>\n'
+        '  <div class="ilabel"><span class="s">현재 테마의 카드 6장</span>'
+        + allbtn("theme", "cards") + '</div>', 1)
+    print("카드 갤러리 전체 저장 버튼 추가" if s != _b
+          else "경고: 카드 갤러리 앵커를 찾지 못해 전체 저장 버튼을 넣지 못했습니다")
+else:
+    print("카드 갤러리 전체 저장 버튼은 이미 있습니다 (건너뜀)")
+assert s.count('data-all="theme"') == 1, s.count('data-all="theme"')
 
 # ── JS: 인스타 이미지 생성 + 전체 저장 ─────────────────────────────
 JS = r"""  /* ── 인스타 이미지 생성 (HTML에 img 태그를 남기지 않는다:
