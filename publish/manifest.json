@@ -1,58 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-09-06-songpa-01",
-  "status": "hold",
+  "job_id": "2026-09-07-mokdong-01",
+  "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-06T17:00:00+09:00",
+  "requested_at": "2026-09-07T07:20:00+09:00",
   "post": {
-    "report_no": 52,
-    "slug": "2026-09-06-songpa",
-    "title": "송파 재건축 3곳이 8,768세대에서 13,976세대로 · 이번 달 장미·오금현대 시공사 입찰",
+    "report_no": 53,
+    "slug": "2026-09-07-mokdong",
+    "title": "목동윤슬자이 651실은 아파트가 아닙니다 · 9월 8일 청약, 청약통장 없이도 넣습니다",
     "title_alts": [
-      "잠실주공5단지 최고 65층 6,411세대 · 7월 사업시행인가 뒤 지금은 감정평가 단계입니다",
-      "송파 정비사업 9월 일정 정리 · 장미1·2·3차 입찰공고, 가락미륭 관리처분 총회"
+      "이번 주 서울 청약 두 곳 · 목동은 전용 114~204㎡, 월곡은 59·74㎡ 62가구입니다",
+      "9월 둘째 주 청약 정리 · 전국 2,852가구, 서울 713가구(목동윤슬자이·브라운스톤 월곡)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-06-songpa.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-07-mokdong.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-02-total.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-02-week.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-03-rate.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-03-mokdong.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-04-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-04-wolgok.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-05-public.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-05-diff.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/songpa-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-06-check.png"
       }
     ],
     "tags": [
-      "송파재건축",
-      "잠실주공5단지",
-      "장미아파트",
-      "오금현대",
-      "가락미륭",
-      "올림픽훼밀리타운",
-      "정비사업",
-      "시공사입찰",
-      "재건축",
+      "목동윤슬자이",
+      "브라운스톤월곡센트럴",
+      "이번주청약",
+      "주거형오피스텔",
+      "양천구",
+      "성북구",
+      "소규모재건축",
+      "청약일정",
+      "분양",
       "중개실무"
     ]
-  },
-  "hold_reason": "사용자가 2026-09-06 네이버에 수동 발행 완료. 자동 발행 건너뛴다."
+  }
 }

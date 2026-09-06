@@ -1,8 +1,21 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-06T18:00:00+09:00",
+  "updated_at": "2026-09-07T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-09-07-mokdong",
+      "report_no": 53,
+      "date": "2026-09-07",
+      "keyword": "목동윤슬자이 651실은 아파트가 아니다",
+      "status": "designated",
+      "titles": [
+        "목동윤슬자이 651실은 아파트가 아닙니다 · 9월 8일 청약, 청약통장 없이도 넣습니다",
+        "이번 주 서울 청약 두 곳 · 목동은 전용 114~204㎡, 월곡은 59·74㎡ 62가구입니다",
+        "9월 둘째 주 청약 정리 · 전국 2,852가구, 서울 713가구(목동윤슬자이·브라운스톤 월곡)"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-07-mokdong.txt"
+    },
     {
       "slug": "2026-09-06-songpa",
       "report_no": 52,
