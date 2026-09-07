@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-07-mokdong-01",
+  "job_id": "2026-09-08-eunma-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-07T07:20:00+09:00",
+  "requested_at": "2026-09-08T07:20:00+09:00",
   "post": {
-    "report_no": 53,
-    "slug": "2026-09-07-mokdong",
-    "title": "목동윤슬자이 651실은 아파트가 아닙니다 · 9월 8일 청약, 청약통장 없이도 넣습니다",
+    "report_no": 54,
+    "slug": "2026-09-08-eunma",
+    "title": "은마아파트 4,424세대가 약 5,900세대로 · 계획 세대수가 세 번 바뀌었습니다",
     "title_alts": [
-      "이번 주 서울 청약 두 곳 · 목동은 전용 114~204㎡, 월곡은 59·74㎡ 62가구입니다",
-      "9월 둘째 주 청약 정리 · 전국 2,852가구, 서울 713가구(목동윤슬자이·브라운스톤 월곡)"
+      "은마 7월 2일 사업시행인가 · 35층에서 49층으로, 착공은 이르면 2030년입니다",
+      "은마 재건축 상담 전 체크 3가지 · 세대수는 확정 전, 남은 단계는 다섯입니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-07-mokdong.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-08-eunma.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-02-week.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-02-plans.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-03-mokdong.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-03-step.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-04-wolgok.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-04-height.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-05-diff.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-05-gangnam.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mokdong-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-06-check.png"
       }
     ],
     "tags": [
-      "목동윤슬자이",
-      "브라운스톤월곡센트럴",
-      "이번주청약",
-      "주거형오피스텔",
-      "양천구",
-      "성북구",
-      "소규모재건축",
-      "청약일정",
-      "분양",
+      "은마아파트",
+      "강남재건축",
+      "대치동",
+      "압구정2구역",
+      "사업시행인가",
+      "정비사업",
+      "공정회의",
+      "35층룰",
+      "재건축",
       "중개실무"
     ]
   }
