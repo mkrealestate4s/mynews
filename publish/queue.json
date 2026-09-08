@@ -1,20 +1,34 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-08T07:20:00+09:00",
+  "updated_at": "2026-09-09T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-09-09-nakchalga",
+      "report_no": 55,
+      "date": "2026-09-09",
+      "keyword": "낙찰가율 97.0%, 감정가 아래로",
+      "status": "designated",
+      "titles": [
+        "서울 아파트 경매 낙찰가율이 97.0%로 감정가 아래로 내려왔습니다 · 중랑구는 115.2%",
+        "경매도 식는데 중저가만 반대로 · 응찰자 7.2명에서 6.1명, 낙찰률은 3개월째 30%대",
+        "경매 상담 전 체크 3가지 · 낙찰가율은 감정가 대비이고 물건 종류로 갈립니다"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-09-nakchalga.txt"
+    },
     {
       "slug": "2026-09-08-eunma",
       "report_no": 54,
       "date": "2026-09-08",
       "keyword": "은마 세대수, 세 번 바뀌었다",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "은마아파트 4,424세대가 약 5,900세대로 · 계획 세대수가 세 번 바뀌었습니다",
         "은마 7월 2일 사업시행인가 · 35층에서 49층으로, 착공은 이르면 2030년입니다",
         "은마 재건축 상담 전 체크 3가지 · 세대수는 확정 전, 남은 단계는 다섯입니다"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-08-eunma.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-08-eunma.txt",
+      "note": "당일 title.txt·manifest 로 처리 완료. 큐 재발행 금지."
     },
     {
       "slug": "2026-09-07-mokdong",

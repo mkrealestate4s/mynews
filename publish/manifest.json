@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-08-eunma-01",
+  "job_id": "2026-09-09-nakchalga-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-08T07:20:00+09:00",
+  "requested_at": "2026-09-09T07:20:00+09:00",
   "post": {
-    "report_no": 54,
-    "slug": "2026-09-08-eunma",
-    "title": "은마아파트 4,424세대가 약 5,900세대로 · 계획 세대수가 세 번 바뀌었습니다",
+    "report_no": 55,
+    "slug": "2026-09-09-nakchalga",
+    "title": "서울 아파트 경매 낙찰가율이 97.0%로 감정가 아래로 내려왔습니다 · 중랑구는 115.2%",
     "title_alts": [
-      "은마 7월 2일 사업시행인가 · 35층에서 49층으로, 착공은 이르면 2030년입니다",
-      "은마 재건축 상담 전 체크 3가지 · 세대수는 확정 전, 남은 단계는 다섯입니다"
+      "경매도 식는데 중저가만 반대로 · 응찰자 7.2명에서 6.1명, 낙찰률은 3개월째 30%대",
+      "경매 상담 전 체크 3가지 · 낙찰가율은 감정가 대비이고 물건 종류로 갈립니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-08-eunma.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-09-nakchalga.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakchalga-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-02-plans.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakchalga-02-three.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-03-step.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakchalga-03-gu.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-04-height.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakchalga-04-split.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-05-gangnam.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakchalga-05-bidder.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/eunma-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakchalga-06-check.png"
       }
     ],
     "tags": [
-      "은마아파트",
-      "강남재건축",
-      "대치동",
-      "압구정2구역",
-      "사업시행인가",
-      "정비사업",
-      "공정회의",
-      "35층룰",
-      "재건축",
+      "경매",
+      "낙찰가율",
+      "낙찰률",
+      "응찰자",
+      "서울아파트",
+      "중랑구",
+      "노원구",
+      "지지옥션",
+      "감정가",
       "중개실무"
     ]
   }
