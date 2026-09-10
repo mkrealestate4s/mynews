@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-10-moa-01",
+  "job_id": "2026-09-11-wolgok-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-10T07:20:00+09:00",
+  "requested_at": "2026-09-11T07:20:00+09:00",
   "post": {
-    "report_no": 56,
-    "slug": "2026-09-10-moa",
-    "title": "모아주택 112곳 중 준공은 1곳입니다 · 착공도 8곳뿐, 잠실동 329는 아직 맨 앞 칸",
+    "report_no": 57,
+    "slug": "2026-09-11-wolgok",
+    "title": "브라운스톤 월곡 센트럴 59.7 대 1로 마감 · 62가구에 3,703명, 1순위 일반은 61.9 대 1",
     "title_alts": [
-      "모아주택 1호 입주 시작 · 99가구가 215가구로, 착공에서 준공까지 30개월 걸렸습니다",
-      "우리 동네 모아타운은 지금 어디쯤인가 · 단계별 사업지 수와 확인할 3가지"
+      "8억대 아파트에 3,703명, 33억 오피스텔엔 32 대 1 · 통장이 필요한 쪽이 더 몰렸습니다",
+      "이번 주 서울 청약 결과 정리 · 월곡 59.7 대 1과 목동윤슬자이 군별 경쟁률, 계약 일정까지"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-10-moa.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-11-wolgok.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/moa-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/moa-02-funnel.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-02-wolgok.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/moa-03-first.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-03-mokdong.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/moa-04-time.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/moa-05-jamsil.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-05-size.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/moa-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-06-check.png"
       }
     ],
     "tags": [
-      "모아주택",
-      "모아타운",
-      "잠실동329",
-      "한양연립",
-      "소규모정비사업",
-      "가로주택정비사업",
-      "토지거래허가구역",
-      "SH공사",
-      "광진구",
+      "청약경쟁률",
+      "브라운스톤월곡센트럴",
+      "목동윤슬자이",
+      "성북구청약",
+      "양천구청약",
+      "하월곡동",
+      "주거형오피스텔",
+      "청약통장",
+      "서울청약",
       "중개실무"
     ]
   }
