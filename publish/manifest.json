@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-11-wolgok-01",
+  "job_id": "2026-09-12-gap-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-11T07:20:00+09:00",
+  "requested_at": "2026-09-12T07:20:00+09:00",
   "post": {
-    "report_no": 57,
-    "slug": "2026-09-11-wolgok",
-    "title": "브라운스톤 월곡 센트럴 59.7 대 1로 마감 · 62가구에 3,703명, 1순위 일반은 61.9 대 1",
+    "report_no": 58,
+    "slug": "2026-09-12-gap",
+    "title": "9월 1주 서울 아파트값 +0.20% · 강북구 +0.46%, 강남구 −0.35%로 갈렸습니다",
     "title_alts": [
-      "8억대 아파트에 3,703명, 33억 오피스텔엔 32 대 1 · 통장이 필요한 쪽이 더 몰렸습니다",
-      "이번 주 서울 청약 결과 정리 · 월곡 59.7 대 1과 목동윤슬자이 군별 경쟁률, 계약 일정까지"
+      "같은 서울인데 한쪽은 오르고 한쪽은 내렸습니다 · 송파구도 21주 만에 방향을 틀었습니다",
+      "자치구별 주간 변동률 한눈에 · 많이 오른 5곳과 내린 3곳, 실거래로 확인하는 법까지"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-11-wolgok.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-12-gap.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gap-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-02-wolgok.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gap-02-split.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-03-mokdong.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gap-03-north.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-04-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gap-04-south.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-05-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gap-05-deal.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolgok-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gap-06-check.png"
       }
     ],
     "tags": [
-      "청약경쟁률",
-      "브라운스톤월곡센트럴",
-      "목동윤슬자이",
-      "성북구청약",
-      "양천구청약",
-      "하월곡동",
-      "주거형오피스텔",
-      "청약통장",
-      "서울청약",
+      "주간아파트값",
+      "한국부동산원",
+      "강북구",
+      "강남구",
+      "서초구",
+      "송파구",
+      "서울아파트",
+      "매매가격변동률",
+      "중저가아파트",
       "중개실무"
     ]
   }
