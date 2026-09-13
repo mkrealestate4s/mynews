@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-13-sh51-01",
+  "job_id": "2026-09-14-jangmi-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-13T07:20:00+09:00",
+  "requested_at": "2026-09-14T07:20:00+09:00",
   "post": {
-    "report_no": 59,
-    "slug": "2026-09-13-sh51",
-    "title": "SH 장기전세 1순위 접수 내일(9/14)부터 · 1,381세대, 청담르엘·디에이치방배 포함",
+    "report_no": 60,
+    "slug": "2026-09-14-jangmi",
+    "title": "잠실 장미1·2·3차 이달 시공사 입찰공고 · 9/5 통합심의 신청, 선정 총회는 내년 1월",
     "title_alts": [
-      "오늘 청약통장 바꿔도 이번 장기전세엔 반영 안 됩니다 · 기준일은 8월 31일입니다",
-      "장기전세 제51차 접수 일정 총정리 · 순위별 날짜, 신규 291세대 구성, 발표까지 172일"
+      "3,522가구가 5,129가구로 · 잠실 장미 재건축, 지금 확정된 건 일정뿐입니다",
+      "잠실 장미 재건축 일정 총정리 · 입찰공고부터 선정 총회까지, 기사마다 세대수가 다른 이유"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-13-sh51.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-14-jangmi.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sh51-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sh51-02-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-02-sched.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sh51-03-new.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-03-size.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sh51-04-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-04-bid.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sh51-05-wait.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-05-number.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sh51-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-06-check.png"
       }
     ],
     "tags": [
-      "장기전세주택",
-      "SH공사",
-      "제51차장기전세",
-      "청담르엘",
-      "디에이치방배",
-      "장기전세신청",
-      "시프트",
-      "무주택",
-      "청약통장",
+      "잠실장미",
+      "장미아파트",
+      "송파재건축",
+      "신천동",
+      "시공사선정",
+      "입찰공고",
+      "통합심의",
+      "오금현대",
+      "정비사업",
       "중개실무"
     ]
   }
