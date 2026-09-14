@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-14-jangmi-01",
+  "job_id": "2026-09-15-hyeonseol-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-14T07:20:00+09:00",
+  "requested_at": "2026-09-15T07:20:00+09:00",
   "post": {
-    "report_no": 60,
-    "slug": "2026-09-14-jangmi",
-    "title": "잠실 장미1·2·3차 이달 시공사 입찰공고 · 9/5 통합심의 신청, 선정 총회는 내년 1월",
+    "report_no": 61,
+    "slug": "2026-09-15-hyeonseol",
+    "title": "이번 주 서울 7곳에서 시공사 현장설명회 · 쌍문한양1차 1,158가구, 강북3구역 920가구",
     "title_alts": [
-      "3,522가구가 5,129가구로 · 잠실 장미 재건축, 지금 확정된 건 일정뿐입니다",
-      "잠실 장미 재건축 일정 총정리 · 입찰공고부터 선정 총회까지, 기사마다 세대수가 다른 이유"
+      "920가구 중 239가구는 임대입니다 · 기사 제목의 숫자와 실제 분양 물량은 다릅니다",
+      "시공사 현장설명회 일정 총정리 · 도봉·강북·금천 세 곳 규모 비교와 입찰 마감일까지"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-14-jangmi.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-15-hyeonseol.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hyeonseol-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-02-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hyeonseol-02-week.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-03-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hyeonseol-03-area.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-04-bid.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hyeonseol-04-money.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-05-number.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hyeonseol-05-mix.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jangmi-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hyeonseol-06-check.png"
       }
     ],
     "tags": [
-      "잠실장미",
-      "장미아파트",
-      "송파재건축",
-      "신천동",
       "시공사선정",
-      "입찰공고",
-      "통합심의",
-      "오금현대",
+      "현장설명회",
+      "쌍문한양1차",
+      "강북3구역",
+      "무지개아파트",
+      "도봉구재건축",
+      "강북구재개발",
       "정비사업",
+      "입찰공고",
       "중개실무"
     ]
   }
