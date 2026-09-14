@@ -124,6 +124,27 @@ URL: https://mkrealestate4s.github.io/mynews/
      - 참고: 갱신 이력은 `git log -- title.txt` + `git show <커밋>:title.txt`로 확인한다.
        8/21~9/4는 매일 07:17~07:23(KST)에 정상 갱신됐다. 캐시 문제가 아니었다.
 
+## 컨테이너가 재생성된 날 (2026-09-15 실제 사고)
+원격 세션은 컨테이너가 회수되면 저장소를 **다시 클론**한다. 그날 아침에 두 가지가 무너진다.
+
+- **푸시는 `git push origin HEAD:main` 으로 한다.** `main:main` 을 쓰지 말 것.
+  재클론된 컨테이너는 **지정 브랜치(`claude/github-pages-deploy-lzb2mq`)를 HEAD 로 잡고**
+  로컬 `main` 은 클론 시점의 옛 커밋에 멈춰 있다. 9/15에 `main:main` 을 그대로 써서
+  #54 시점의 낡은 `main` 을 밀었다. main 푸시는 non-fast-forward 로 거부됐지만
+  뒤이은 `push -f origin main:<미러>` 가 **미러 브랜치를 #54로 되돌렸다.**
+  (main 은 뒤로 가지 않아 잘못된 배포는 없었다. 배포는 main push 에서만 돈다.)
+  - 푸시 전 `git log --oneline -2` 로 HEAD 가 오늘 커밋인지 본다.
+  - `git push ... | tail -2` 는 **파이프라 exit status 가 tail 것**이어서 `&&` 체인이
+    푸시 실패를 못 잡는다. 실패를 놓치지 않으려면 파이프를 빼거나 결과를 눈으로 본다.
+  - 사고 뒤 복구: `git push origin HEAD:main` + `git push -f origin HEAD:<미러>` +
+    `git branch -f main HEAD`.
+- **스크래치패드가 빈다.** 폰트·node_modules·헬퍼 스크립트가 전부 사라진다. 복구 순서:
+  ① `tools/` 에서 `make_cards.py`·`make_carousel.py`·`fetch_fonts.py` 를 작업 폴더로 복사
+  ② 그 폴더에서 `python3 fetch_fonts.py` (두 세트를 받는다. 약 3분)
+  ③ `npm install playwright-core` (shot_cards.js·grab_body.js 가 쓴다)
+  ④ `grab_body.js`·`site<N>.py`·`verify<N>.js` 는 어제 것이 없으므로 다시 쓴다
+  PIL 도 사라지지만 카드 렌더에는 필요 없다(대조 시트를 만들 때만 쓴다).
+
 ## 특집·안내성 글 (공고 안내 등 비데일리)
 - 리포트 번호는 데일리와 이어서 붙이고 eyebrow에 `· 특집`을 덧붙인다(예: `리포트 #35 · 임대주택 특집`).
   번호는 index.html 최상단 카드에서 읽으므로 자동으로 맞는다.
