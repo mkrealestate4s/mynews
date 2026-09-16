@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-16-ipju-01",
+  "job_id": "2026-09-17-wolse-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-16T07:20:00+09:00",
+  "requested_at": "2026-09-17T07:20:00+09:00",
   "post": {
-    "report_no": 62,
-    "slug": "2026-09-16-ipju",
-    "title": "9월 서울 입주 3,478세대 중 3,064세대가 디에이치방배 · 한 단지가 88%입니다",
+    "report_no": 63,
+    "slug": "2026-09-17-wolse",
+    "title": "전월세 100건 중 68건이 월세 · 서울 아파트도 52%로 절반을 넘겼습니다",
     "title_alts": [
-      "전국 입주 한 달 만에 30% 감소 · 서울은 세 단지가 전부, 빼면 414세대뿐입니다",
-      "9월 입주 물량 총정리 · 서울 단지별 세대수와 수도권·지방 배분, 상담에 쓸 3가지"
+      "4년 만에 51.5%에서 68.3%로 · 전세가 소수가 되는 중입니다",
+      "월세 비중 통계 읽는 법 · 전국 68.3%와 서울 52.0%는 세는 범위가 다릅니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-16-ipju.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-17-wolse.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipju-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipju-02-drop.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-02-trend.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipju-03-seoul.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-03-scope.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipju-04-share.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-04-speed.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipju-05-where.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-05-count.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipju-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-06-check.png"
       }
     ],
     "tags": [
-      "9월입주물량",
-      "디에이치방배",
-      "방배5구역",
-      "강변역센트럴아이파크",
-      "보문센트럴아이파크",
-      "입주장",
-      "서초구",
+      "월세비중",
+      "전세의월세화",
+      "국토교통부주택통계",
+      "서울아파트월세",
       "전월세",
-      "입주절벽",
+      "임대차",
+      "전세",
+      "월세전환",
+      "주택통계",
       "중개실무"
     ]
   }
