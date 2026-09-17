@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-17-wolse-01",
+  "job_id": "2026-09-18-nakpok-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-17T07:20:00+09:00",
+  "requested_at": "2026-09-18T07:20:00+09:00",
   "post": {
-    "report_no": 63,
-    "slug": "2026-09-17-wolse",
-    "title": "전월세 100건 중 68건이 월세 · 서울 아파트도 52%로 절반을 넘겼습니다",
+    "report_no": 64,
+    "slug": "2026-09-18-nakpok",
+    "title": "송파 −0.12%로 낙폭 6배 · 중랑 +0.51%로 서울 1위, 9월 2주 아파트값",
     "title_alts": [
-      "4년 만에 51.5%에서 68.3%로 · 전세가 소수가 되는 중입니다",
-      "월세 비중 통계 읽는 법 · 전국 68.3%와 서울 52.0%는 세는 범위가 다릅니다"
+      "지난주 물음에 답이 나왔습니다 · 송파는 흔들림이 아니라 전환이었습니다",
+      "자치구별 주간 변동률 한눈에 · 오른 5곳과 내린 3곳, 배수에 속지 않는 법까지"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-17-wolse.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-18-nakpok.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakpok-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-02-trend.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakpok-02-songpa.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-03-scope.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakpok-03-north.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-04-speed.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakpok-04-gap.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-05-count.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakpok-05-gyeonggi.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/wolse-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nakpok-06-check.png"
       }
     ],
     "tags": [
-      "월세비중",
-      "전세의월세화",
-      "국토교통부주택통계",
-      "서울아파트월세",
-      "전월세",
-      "임대차",
-      "전세",
-      "월세전환",
-      "주택통계",
+      "주간아파트값",
+      "한국부동산원",
+      "송파구",
+      "중랑구",
+      "강남구",
+      "서초구",
+      "서울아파트",
+      "매매가격변동률",
+      "경기아파트",
       "중개실무"
     ]
   }

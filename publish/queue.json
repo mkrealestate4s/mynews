@@ -1,20 +1,34 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-17T07:20:00+09:00",
+  "updated_at": "2026-09-18T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-09-18-nakpok",
+      "report_no": 64,
+      "date": "2026-09-18",
+      "keyword": "송파 낙폭 6배, 중랑 +0.51%로 서울 1위",
+      "status": "designated",
+      "titles": [
+        "송파 −0.12%로 낙폭 6배 · 중랑 +0.51%로 서울 1위, 9월 2주 아파트값",
+        "지난주 물음에 답이 나왔습니다 · 송파는 흔들림이 아니라 전환이었습니다",
+        "자치구별 주간 변동률 한눈에 · 오른 5곳과 내린 3곳, 배수에 속지 않는 법까지"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-18-nakpok.txt"
+    },
     {
       "slug": "2026-09-17-wolse",
       "report_no": 63,
       "date": "2026-09-17",
       "keyword": "월세 비중 68.3%, 4년 만에 51.5%에서",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "전월세 100건 중 68건이 월세 · 서울 아파트도 52%로 절반을 넘겼습니다",
         "4년 만에 51.5%에서 68.3%로 · 전세가 소수가 되는 중입니다",
         "월세 비중 통계 읽는 법 · 전국 68.3%와 서울 52.0%는 세는 범위가 다릅니다"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-17-wolse.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-17-wolse.txt",
+      "note": "당일 title.txt·manifest 로 처리 완료. 큐 재발행 금지."
     },
     {
       "slug": "2026-09-16-ipju",
