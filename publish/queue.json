@@ -1,20 +1,35 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-19T07:20:00+09:00",
+  "updated_at": "2026-09-19T12:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-09-19-toheo",
+      "report_no": 66,
+      "date": "2026-09-19",
+      "keyword": "토지거래허가구역 실거주 유예 1년 연장",
+      "status": "designated",
+      "titles": [
+        "토지거래허가구역 실거주 유예 2027년 말까지 1년 연장 · 10월 1일 시행 예정",
+        "전세 낀 집도 살 수 있다? 최장 3년 3개월, 대신 이 세 가지에서 걸립니다",
+        "토허구역 실거주 유예 총정리 · 신청 기한과 입주 기한은 다른 날짜입니다"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-19-toheo.txt",
+      "note": "특집. #65 와 같은 날 두 번째 글이다."
+    },
     {
       "slug": "2026-09-19-banpo2",
       "report_no": 65,
       "date": "2026-09-19",
       "keyword": "신반포2차 1,572 → 2,056가구",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "신반포2차 1,572가구가 2,056가구로 · 48층 12개동, 4월 통합심의 통과",
         "늘어난 484가구가 다 분양은 아닙니다 · 재건축 기사에서 가장 많이 어긋나는 숫자",
         "같은 재건축도 단계가 다릅니다 · 이번 주에 본 네 곳 비교와 입찰 마감일까지"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-19-banpo2.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-19-banpo2.txt",
+      "note": "오늘 아침 로컬 프로그램이 발행 완료. 큐 재발행 금지."
     },
     {
       "slug": "2026-09-18-nakpok",

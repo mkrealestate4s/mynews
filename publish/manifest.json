@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-19-banpo2-01",
+  "job_id": "2026-09-19-toheo-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-19T07:20:00+09:00",
+  "requested_at": "2026-09-19T12:00:00+09:00",
   "post": {
-    "report_no": 65,
-    "slug": "2026-09-19-banpo2",
-    "title": "신반포2차 1,572가구가 2,056가구로 · 48층 12개동, 4월 통합심의 통과",
+    "report_no": 66,
+    "slug": "2026-09-19-toheo",
+    "title": "토지거래허가구역 실거주 유예 2027년 말까지 1년 연장 · 10월 1일 시행 예정",
     "title_alts": [
-      "늘어난 484가구가 다 분양은 아닙니다 · 재건축 기사에서 가장 많이 어긋나는 숫자",
-      "같은 재건축도 단계가 다릅니다 · 이번 주에 본 네 곳 비교와 입찰 마감일까지"
+      "전세 낀 집도 살 수 있다? 최장 3년 3개월, 대신 이 세 가지에서 걸립니다",
+      "토허구역 실거주 유예 총정리 · 신청 기한과 입주 기한은 다른 날짜입니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-19-banpo2.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-19-toheo.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/banpo2-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/toheo-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/banpo2-02-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/toheo-02-when.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/banpo2-03-compare.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/toheo-03-howlong.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/banpo2-04-step.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/toheo-04-max.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/banpo2-05-deadline.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/toheo-05-req.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/banpo2-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/toheo-06-check.png"
       }
     ],
     "tags": [
-      "신반포2차",
-      "잠원동",
-      "서초구재건축",
-      "반포재건축",
-      "통합심의",
-      "특별건축구역",
-      "사업시행계획인가",
-      "정비사업",
-      "디에이치르블랑",
+      "토지거래허가구역",
+      "토허제",
+      "실거주의무",
+      "실거주유예",
+      "임대차갱신",
+      "무주택",
+      "부동산거래신고법",
+      "시행령개정",
+      "전세낀매물",
       "중개실무"
     ]
   }
