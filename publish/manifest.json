@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-09-20-georae-01",
+  "job_id": "2026-09-21-yeouido-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-20T07:35:00+09:00",
+  "requested_at": "2026-09-21T07:20:00+09:00",
   "post": {
-    "report_no": 67,
-    "slug": "2026-09-20-georae",
-    "title": "서울 아파트 매매 8월 3,046건 · 하루 289건에서 32건으로 줄었습니다",
+    "report_no": 68,
+    "slug": "2026-09-21-yeouido",
+    "title": "여의도 은하·삼익 오늘 시공사 현장설명회 · 합치면 1,302가구, 최고 56층",
     "title_alts": [
-      "9월에 449건뿐? 거래량 기사에서 가장 많이 속는 숫자가 이겁니다",
-      "서울 아파트 거래량 읽는 법 · 하루 평균으로 바꿔야 비교가 됩니다"
+      "52년 된 여의도 두 단지가 같은 날 움직입니다 · 오후 1시와 3시",
+      "1,302가구 중 196가구는 공공주택 · 재건축 기사에서 가장 자주 어긋나는 숫자"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-20-georae.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-21-yeouido.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/georae-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/georae-02-months.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-02-today.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/georae-03-daily.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-03-deadline.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/georae-04-unfinished.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-04-size.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/georae-05-change.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-05-public.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/georae-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-06-check.png"
       }
     ],
     "tags": [
-      "서울아파트",
-      "매매거래량",
-      "거래절벽",
-      "서울부동산정보광장",
-      "토지거래허가구역",
-      "실거래신고",
-      "부동산통계",
-      "중개실무",
-      "아파트매매",
-      "거래량"
+      "여의도재건축",
+      "은하아파트",
+      "삼익아파트",
+      "여의도동",
+      "영등포구재건축",
+      "시공사선정",
+      "현장설명회",
+      "신탁방식",
+      "정비사업",
+      "중개실무"
     ]
   }
 }
