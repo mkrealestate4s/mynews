@@ -1,55 +1,55 @@
 {
   "schema": 1,
-  "job_id": "2026-09-21-yeouido-01",
+  "job_id": "2026-09-22-ipchal-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-21T07:20:00+09:00",
+  "requested_at": "2026-09-22T07:20:00+09:00",
   "post": {
-    "report_no": 68,
-    "slug": "2026-09-21-yeouido",
-    "title": "여의도 은하·삼익 오늘 시공사 현장설명회 · 합치면 1,302가구, 최고 56층",
+    "report_no": 69,
+    "slug": "2026-09-22-ipchal",
+    "title": "목동8단지 오늘 오후 2시 시공사 입찰 마감 · 공사비 1조1,119억, 보증금 700억",
     "title_alts": [
-      "52년 된 여의도 두 단지가 같은 날 움직입니다 · 오후 1시와 3시",
-      "1,302가구 중 196가구는 공공주택 · 재건축 기사에서 가장 자주 어긋나는 숫자"
+      "현설에 4곳이 왔다고 4파전이 아닙니다 · 봉투에는 현금 400억원이 붙습니다",
+      "평당 965만원이면 우리 집은 얼마? 그렇게 계산하면 틀리는 이유"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-21-yeouido.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-22-ipchal.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-02-today.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-02-today.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-03-deadline.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-03-bond.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-04-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-04-path.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-05-public.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-05-cost.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yeouido-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-06-check.png"
       }
     ],
     "tags": [
-      "여의도재건축",
-      "은하아파트",
-      "삼익아파트",
-      "여의도동",
-      "영등포구재건축",
+      "목동8단지",
+      "목동신시가지",
+      "양천구재건축",
+      "쌍문한양1차",
       "시공사선정",
-      "현장설명회",
-      "신탁방식",
+      "입찰마감",
+      "입찰보증금",
+      "경쟁입찰",
       "정비사업",
       "중개실무"
     ]
