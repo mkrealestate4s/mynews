@@ -1,55 +1,55 @@
 {
   "schema": 1,
-  "job_id": "2026-09-22-ipchal-01",
+  "job_id": "2026-09-23-yuchal-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-22T07:20:00+09:00",
+  "requested_at": "2026-09-23T07:20:00+09:00",
   "post": {
-    "report_no": 69,
-    "slug": "2026-09-22-ipchal",
-    "title": "목동8단지 오늘 오후 2시 시공사 입찰 마감 · 공사비 1조1,119억, 보증금 700억",
+    "report_no": 70,
+    "slug": "2026-09-23-yuchal",
+    "title": "목동8단지 시공사 입찰 유찰 · 현설 4곳 중 1곳만 응찰, 2차 공고 남았습니다",
     "title_alts": [
-      "현설에 4곳이 왔다고 4파전이 아닙니다 · 봉투에는 현금 400억원이 붙습니다",
-      "평당 965만원이면 우리 집은 얼마? 그렇게 계산하면 틀리는 이유"
+      "\"시공사 정해졌대요\"는 아직 아닙니다 · 응찰과 선정은 다른 말입니다",
+      "현설 참석 수를 경쟁 강도로 읽지 마세요 · 이번엔 4곳 중 1곳이었습니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-22-ipchal.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-23-yuchal.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-02-today.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-02-result.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-03-bond.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-03-gap.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-04-path.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-04-next.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-05-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-05-money.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ipchal-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-06-check.png"
       }
     ],
     "tags": [
       "목동8단지",
       "목동신시가지",
       "양천구재건축",
-      "쌍문한양1차",
       "시공사선정",
-      "입찰마감",
+      "유찰",
+      "단독응찰",
+      "수의계약",
       "입찰보증금",
-      "경쟁입찰",
       "정비사업",
       "중개실무"
     ]
