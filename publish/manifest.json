@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-23-yuchal-01",
+  "job_id": "2026-09-24-cheongyak-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-23T07:20:00+09:00",
+  "requested_at": "2026-09-24T07:20:00+09:00",
   "post": {
-    "report_no": 70,
-    "slug": "2026-09-23-yuchal",
-    "title": "목동8단지 시공사 입찰 유찰 · 현설 4곳 중 1곳만 응찰, 2차 공고 남았습니다",
+    "report_no": 71,
+    "slug": "2026-09-24-cheongyak",
+    "title": "청약통장 전환 기한 2027년 9월 30일로 1년 연장 · 6일 남았던 마감이 밀렸습니다",
     "title_alts": [
-      "\"시공사 정해졌대요\"는 아직 아닙니다 · 응찰과 선정은 다른 말입니다",
-      "현설 참석 수를 경쟁 강도로 읽지 마세요 · 이번엔 4곳 중 1곳이었습니다"
+      "청약예금·부금·저축 가진 분들, 이번 주 마감 아닙니다 · 371일 늘었어요",
+      "전환하면 국민·민영 둘 다 청약 · 다만 실적은 전환 뒤부터 쌓입니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-23-yuchal.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-24-cheongyak.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-02-result.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-02-what.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-03-gap.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-03-type.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-04-next.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-04-benefit.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-05-money.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-05-deadline.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/yuchal-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-06-check.png"
       }
     ],
     "tags": [
-      "목동8단지",
-      "목동신시가지",
-      "양천구재건축",
-      "시공사선정",
-      "유찰",
-      "단독응찰",
-      "수의계약",
-      "입찰보증금",
-      "정비사업",
+      "청약통장",
+      "주택청약종합저축",
+      "청약예금",
+      "청약부금",
+      "청약저축",
+      "통장전환",
+      "청약가점",
+      "순위확인서",
+      "국토교통부",
       "중개실무"
     ]
   }

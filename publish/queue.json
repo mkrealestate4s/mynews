@@ -1,20 +1,34 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-23T07:20:00+09:00",
+  "updated_at": "2026-09-24T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-09-24-cheongyak",
+      "report_no": 71,
+      "date": "2026-09-24",
+      "keyword": "청약통장 전환 기한 1년 연장",
+      "status": "designated",
+      "titles": [
+        "청약통장 전환 기한 2027년 9월 30일로 1년 연장 · 6일 남았던 마감이 밀렸습니다",
+        "청약예금·부금·저축 가진 분들, 이번 주 마감 아닙니다 · 371일 늘었어요",
+        "전환하면 국민·민영 둘 다 청약 · 다만 실적은 전환 뒤부터 쌓입니다"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-24-cheongyak.txt"
+    },
     {
       "slug": "2026-09-23-yuchal",
       "report_no": 70,
       "date": "2026-09-23",
       "keyword": "목동8단지 단독 응찰 유찰",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "목동8단지 시공사 입찰 유찰 · 현설 4곳 중 1곳만 응찰, 2차 공고 남았습니다",
         "\"시공사 정해졌대요\"는 아직 아닙니다 · 응찰과 선정은 다른 말입니다",
         "현설 참석 수를 경쟁 강도로 읽지 마세요 · 이번엔 4곳 중 1곳이었습니다"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-23-yuchal.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-23-yuchal.txt",
+      "note": "당일 title.txt·manifest 로 처리 완료. 큐 재발행 금지."
     },
     {
       "slug": "2026-09-22-ipchal",
