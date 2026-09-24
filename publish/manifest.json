@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-24-cheongyak-01",
+  "job_id": "2026-09-25-85ju-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-24T07:20:00+09:00",
+  "requested_at": "2026-09-25T07:20:00+09:00",
   "post": {
-    "report_no": 71,
-    "slug": "2026-09-24-cheongyak",
-    "title": "청약통장 전환 기한 2027년 9월 30일로 1년 연장 · 6일 남았던 마감이 밀렸습니다",
+    "report_no": 72,
+    "slug": "2026-09-25-85ju",
+    "title": "서울 아파트 85주 연속 상승, 역대 최장 동률 · 오름폭은 0.13%로 4주째 줄었습니다",
     "title_alts": [
-      "청약예금·부금·저축 가진 분들, 이번 주 마감 아닙니다 · 371일 늘었어요",
-      "전환하면 국민·민영 둘 다 청약 · 다만 실적은 전환 뒤부터 쌓입니다"
+      "최장 기록인데 상승세 꺾였다? 같은 날 나온 두 기사가 둘 다 맞는 이유",
+      "강남 7주째 하락, 서대문 0.44% 상승 · 서울 평균 대신 구별로 봐야 합니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-24-cheongyak.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-25-85ju.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-02-what.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-02-record.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-03-type.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-03-split.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-04-benefit.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-04-gangnam.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-05-deadline.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-05-region.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/tongjang-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-06-check.png"
       }
     ],
     "tags": [
-      "청약통장",
-      "주택청약종합저축",
-      "청약예금",
-      "청약부금",
-      "청약저축",
-      "통장전환",
-      "청약가점",
-      "순위확인서",
-      "국토교통부",
+      "서울아파트",
+      "85주연속상승",
+      "역대최장",
+      "한국부동산원",
+      "주간동향",
+      "강남구",
+      "서초구",
+      "송파구",
+      "서대문구",
       "중개실무"
     ]
   }
