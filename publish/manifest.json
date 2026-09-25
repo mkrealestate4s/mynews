@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-09-25-85ju-01",
+  "job_id": "2026-09-26-jeonse-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-25T07:20:00+09:00",
+  "requested_at": "2026-09-26T07:20:00+09:00",
   "post": {
-    "report_no": 72,
-    "slug": "2026-09-25-85ju",
-    "title": "서울 아파트 85주 연속 상승, 역대 최장 동률 · 오름폭은 0.13%로 4주째 줄었습니다",
+    "report_no": 73,
+    "slug": "2026-09-26-jeonse",
+    "title": "서울 전세 0.19% 상승, 매매보다 빠르다 · 노원 0.47%, 서초는 0.19% 하락",
     "title_alts": [
-      "최장 기록인데 상승세 꺾였다? 같은 날 나온 두 기사가 둘 다 맞는 이유",
-      "강남 7주째 하락, 서대문 0.44% 상승 · 서울 평균 대신 구별로 봐야 합니다"
+      "집값은 주춤한데 전세는 더 오른다 · 5억 전세면 노원은 한 주 235만원",
+      "재계약 앞두고 볼 숫자 · 서울 전세 구별로 갈렸습니다"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-25-85ju.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-26-jeonse.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-02-record.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-02-vs.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-03-split.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-03-split.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-04-gangnam.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-04-money.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-05-region.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-05-gyeonggi.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/record85-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-06-check.png"
       }
     ],
     "tags": [
-      "서울아파트",
-      "85주연속상승",
-      "역대최장",
-      "한국부동산원",
-      "주간동향",
-      "강남구",
+      "서울전세",
+      "전셋값",
+      "노원구",
+      "성북구",
+      "강북구",
       "서초구",
-      "송파구",
-      "서대문구",
+      "강남구",
+      "한국부동산원",
+      "전세재계약",
       "중개실무"
     ]
   }
