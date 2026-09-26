@@ -22,14 +22,14 @@
       "report_no": 73,
       "date": "2026-09-26",
       "keyword": "서울 전세 0.19% 상승",
-      "status": "posted",
+      "status": "pending",
       "titles": [
         "서울 전세 0.19% 상승, 매매보다 빠르다 · 노원 0.47%, 서초는 0.19% 하락",
         "집값은 주춤한데 전세는 더 오른다 · 5억 전세면 노원은 한 주 235만원",
         "재계약 앞두고 볼 숫자 · 서울 전세 구별로 갈렸습니다"
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-26-jeonse.txt",
-      "note": "당일 title.txt·manifest 로 처리 완료. 큐 재발행 금지."
+      "note": "2026-09-26 사용자 확인: 아직 발행 안 함(PC 자동등록 멈춤). posted로 잘못 내렸던 것을 pending으로 되돌림."
     },
     {
       "slug": "2026-09-25-85ju",
