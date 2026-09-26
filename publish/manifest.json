@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-09-26-jeonse-01",
+  "job_id": "2026-09-26-cheongdam-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-26T07:20:00+09:00",
+  "requested_at": "2026-09-26T12:00:00+09:00",
   "post": {
-    "report_no": 73,
-    "slug": "2026-09-26-jeonse",
-    "title": "서울 전세 0.19% 상승, 매매보다 빠르다 · 노원 0.47%, 서초는 0.19% 하락",
+    "report_no": 74,
+    "slug": "2026-09-26-cheongdam",
+    "title": "청담르엘 장기전세 11억7천, 10월 14일 서류심사 발표 · 자산 다 넣어도 5억800만원 부족",
     "title_alts": [
-      "집값은 주춤한데 전세는 더 오른다 · 5억 전세면 노원은 한 주 235만원",
-      "재계약 앞두고 볼 숫자 · 서울 전세 구별로 갈렸습니다"
+      "같은 11억7천인데 래미안대치팰리스는 미달 · 청담르엘 장기전세 넣은 분이 볼 숫자",
+      "SH 장기전세 51차 청담르엘·디에이치방배 보증금 비교와 남은 일정"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-26-jeonse.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-26-cheongdam.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/cdrl-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-02-vs.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/cdrl-02-when.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-03-split.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/cdrl-03-gap.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-04-money.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/cdrl-04-units.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-05-gyeonggi.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/cdrl-05-compare.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/js0926-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/cdrl-06-check.png"
       }
     ],
     "tags": [
-      "서울전세",
-      "전셋값",
-      "노원구",
-      "성북구",
-      "강북구",
-      "서초구",
-      "강남구",
-      "한국부동산원",
-      "전세재계약",
-      "중개실무"
+      "청담르엘",
+      "청담르엘장기전세",
+      "SH장기전세",
+      "장기전세51차",
+      "디에이치방배",
+      "래미안대치팰리스",
+      "미리내집",
+      "장기전세주택",
+      "강남장기전세",
+      "SH공사"
     ]
   }
 }
