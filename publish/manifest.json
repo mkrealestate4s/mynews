@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-09-27-bunyang-01",
+  "job_id": "2026-09-28-acro-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-26T07:20:00+09:00",
+  "requested_at": "2026-09-28T07:20:00+09:00",
   "post": {
-    "report_no": 75,
-    "slug": "2026-09-27-bunyang",
-    "title": "반포 디에이치 클래스트 일반분양 1,832가구 · 추석 뒤 11월까지 전국 4만8,829가구 분양",
+    "report_no": 76,
+    "slug": "2026-09-28-acro",
+    "title": "아크로 리버스카이 2차 무순위 오늘 접수 · 140㎡ 3가구 49억, 7월엔 100대 1",
     "title_alts": [
-      "서울 7천 가구 분양이라더니 청약은 2,398가구 · 반포 디에이치 클래스트와 신반포22차",
-      "10월 분양 일정 정리 · 반포 디에이치 클래스트, 고덕강일3단지, 신반포22차"
+      "청약통장 없어도 되는 49억 줍줍 · 아크로 리버스카이 같은 3가구가 다시 나왔다",
+      "아크로 리버스카이 무순위 자격·분양가·경쟁률 정리 (노량진8구역)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-27-bunyang.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-28-acro.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dhcl-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/acrors-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dhcl-02-month.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/acrors-02-who.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dhcl-03-banpo.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/acrors-03-price.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dhcl-04-seoul.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/acrors-04-rate.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dhcl-05-compare.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/acrors-05-size.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dhcl-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/acrors-06-check.png"
       }
     ],
     "tags": [
-      "반포디에이치클래스트",
-      "반포주공1단지",
-      "신반포22차",
-      "고덕강일3단지",
-      "10월분양",
-      "가을분양",
-      "서울분양",
-      "일반분양",
-      "청약일정",
-      "분양상담"
+      "아크로리버스카이",
+      "아크로리버스카이무순위",
+      "노량진8구역",
+      "노량진뉴타운",
+      "무순위청약",
+      "줍줍",
+      "동작구아파트",
+      "대방동",
+      "펜트하우스",
+      "청약"
     ]
   }
 }
