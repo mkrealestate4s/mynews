@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-09-29-hyeonseol-01",
+  "job_id": "2026-09-30-sintong-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-29T07:20:00+09:00",
+  "requested_at": "2026-09-30T07:20:00+09:00",
   "post": {
-    "report_no": 77,
-    "slug": "2026-09-29-hyeonseol",
-    "title": "청담현대1차 현장설명회 8개사 · 마천1구역·여의도 은하·삼익은 유찰, 10월 2일 재현설",
+    "report_no": 78,
+    "slug": "2026-09-30-sintong",
+    "title": "일원동 한솔 570→960가구 · 이촌 반도 58층 · 서울 정비사업 4곳 4,422가구 도계위 통과",
     "title_alts": [
-      "96가구엔 8곳, 1.8조 대어엔 1곳 · 이번 주 서울 재건축 시공사 현설 13곳",
-      "마천1구역 재입찰·청담현대1차 입찰 마감 11월 23일 · 서울 시공사 선정 일정 정리"
+      "강남 일원동 한솔 390가구 늘고 이촌 반도는 한강변 58층 · 재건축 4곳 정비계획 통과",
+      "일원동 한솔·이촌 반도·염창 우성·중곡1동 A구역 정비계획 정리 (9월 28일 도계위)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-29-hyeonseol.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-30-sintong.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hsl0929-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hsl0929-02-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-02-hansol.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hsl0929-03-chungdam.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-03-plus.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hsl0929-04-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-04-bando.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hsl0929-05-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-05-rental.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hsl0929-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-06-check.png"
       }
     ],
     "tags": [
-      "청담현대1차",
-      "마천1구역",
-      "여의도은하아파트",
-      "여의도삼익아파트",
-      "시공사선정",
-      "현장설명회",
-      "소규모재건축",
-      "송파재개발",
+      "일원동한솔아파트",
+      "이촌동반도아파트",
+      "염창우성",
+      "중곡1동A구역",
+      "신속통합기획",
+      "정비계획",
+      "도시계획위원회",
       "강남재건축",
-      "재건축일정"
+      "용산재건축",
+      "재건축"
     ]
   }
 }
