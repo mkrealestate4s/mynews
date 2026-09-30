@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-09-30-sintong-01",
+  "job_id": "2026-10-01-shrdv-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-09-30T07:20:00+09:00",
+  "requested_at": "2026-10-01T07:20:00+09:00",
   "post": {
-    "report_no": 78,
-    "slug": "2026-09-30-sintong",
-    "title": "일원동 한솔 570→960가구 · 이촌 반도 58층 · 서울 정비사업 4곳 4,422가구 도계위 통과",
+    "report_no": 79,
+    "slug": "2026-10-01-shrdv",
+    "title": "SH 재개발임대주택 3,821가구 10월 2일 마감 · 소득 50% 1순위, 연령 가점 빠졌다",
     "title_alts": [
-      "강남 일원동 한솔 390가구 늘고 이촌 반도는 한강변 58층 · 재건축 4곳 정비계획 통과",
-      "일원동 한솔·이촌 반도·염창 우성·중곡1동 A구역 정비계획 정리 (9월 28일 도계위)"
+      "나이 점수 없어졌다 · SH 재개발임대 3,821가구 청년에게 유리해진 재공고",
+      "SH 재개발임대주택 자격·일정 정리 (소득·자산 기준, 10월 23일 서류심사 발표)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-30-sintong.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-01-shrdv.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shrdv1001-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-02-hansol.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shrdv1001-02-when.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-03-plus.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shrdv1001-03-who.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-04-bando.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shrdv1001-04-wait.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-05-rental.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shrdv1001-05-change.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/stg0930-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shrdv1001-06-check.png"
       }
     ],
     "tags": [
-      "일원동한솔아파트",
-      "이촌동반도아파트",
-      "염창우성",
-      "중곡1동A구역",
-      "신속통합기획",
-      "정비계획",
-      "도시계획위원회",
-      "강남재건축",
-      "용산재건축",
-      "재건축"
+      "SH재개발임대주택",
+      "재개발임대",
+      "SH공사",
+      "임대주택",
+      "서울임대주택",
+      "청년임대주택",
+      "공공임대",
+      "SH청약",
+      "임대주택자격",
+      "주거복지"
     ]
   }
 }

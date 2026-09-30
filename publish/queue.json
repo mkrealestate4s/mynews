@@ -1,20 +1,34 @@
 {
   "schema": 1,
-  "updated_at": "2026-09-30T07:20:00+09:00",
+  "updated_at": "2026-10-01T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-10-01-shrdv",
+      "report_no": 79,
+      "date": "2026-10-01",
+      "keyword": "SH 재개발임대주택 3,821가구",
+      "status": "designated",
+      "titles": [
+        "SH 재개발임대주택 3,821가구 10월 2일 마감 · 소득 50% 1순위, 연령 가점 빠졌다",
+        "나이 점수 없어졌다 · SH 재개발임대 3,821가구 청년에게 유리해진 재공고",
+        "SH 재개발임대주택 자격·일정 정리 (소득·자산 기준, 10월 23일 서류심사 발표)"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-01-shrdv.txt"
+    },
     {
       "slug": "2026-09-30-sintong",
       "report_no": 78,
       "date": "2026-09-30",
       "keyword": "일원동 한솔 · 이촌 반도 · 신통기획 4곳",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "일원동 한솔 570→960가구 · 이촌 반도 58층 · 서울 정비사업 4곳 4,422가구 도계위 통과",
         "강남 일원동 한솔 390가구 늘고 이촌 반도는 한강변 58층 · 재건축 4곳 정비계획 통과",
         "일원동 한솔·이촌 반도·염창 우성·중곡1동 A구역 정비계획 정리 (9월 28일 도계위)"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-30-sintong.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-30-sintong.txt",
+      "note": "PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending."
     },
     {
       "slug": "2026-09-29-hyeonseol",
