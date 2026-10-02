@@ -1,20 +1,35 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-02T07:20:00+09:00",
+  "updated_at": "2026-10-02T12:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-10-02-dosim",
+      "report_no": 81,
+      "date": "2026-10-02",
+      "keyword": "도심복합사업 서울 11곳 후보지",
+      "status": "designated",
+      "titles": [
+        "도심복합사업 서울 11곳 1.8만호 후보지 · 서초 이수역·송파 올림픽공원·효창공원앞역 포함",
+        "3년 만의 도심복합 후보지 · 염창역 4,222호, 효창공원앞역 4,040호, 강남구는 없다",
+        "도심 공공주택 복합사업 서울 후보지 11곳 위치·규모·일정 정리 (국토부 9월 30일 발표)"
+      ],
+      "note": "특집. #80 과 같은 날 두 번째 글이다.",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-02-dosim.txt"
+    },
     {
       "slug": "2026-10-02-mokdong",
       "report_no": 80,
       "date": "2026-10-02",
       "keyword": "목동12단지 GS건설 · 목동 재건축 시공사",
-      "status": "designated",
+      "status": "pending",
       "titles": [
         "목동12단지 GS건설 우선협상대상자 · 2,810가구 43층 · 목동 재건축 14개 단지 시공사 지도",
         "목동12단지는 자이가 될까 · 6단지 DL, 10단지 현대, 13단지 삼성, 4단지는 경쟁 중",
         "목동 재건축 단지별 시공사 현황 정리 (10월 1일 기준, 4단지 현설·8단지 단독)"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-02-mokdong.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-02-mokdong.txt",
+      "note": "PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending."
     },
     {
       "slug": "2026-10-01-shrdv",
