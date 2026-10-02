@@ -9,5 +9,6 @@ Allow: /
 Disallow: /title.txt
 Disallow: /titles-archive.txt
 Disallow: /publish/
+Disallow: /ops/
 
 Sitemap: https://mkrealestate4s.github.io/mynews/sitemap.xml
