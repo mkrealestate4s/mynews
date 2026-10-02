@@ -21,14 +21,15 @@
       "report_no": 81,
       "date": "2026-10-02",
       "keyword": "도심복합사업 서울 11곳 후보지",
-      "status": "pending",
+      "status": "dropped",
       "titles": [
         "도심복합사업 서울 11곳 1.8만호 후보지 · 서초 이수역·송파 올림픽공원·효창공원앞역 포함",
         "3년 만의 도심복합 후보지 · 염창역 4,222호, 효창공원앞역 4,040호, 강남구는 없다",
         "도심 공공주택 복합사업 서울 후보지 11곳 위치·규모·일정 정리 (국토부 9월 30일 발표)"
       ],
       "note": "특집. #80 과 같은 날 두 번째 글이다. · PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending.",
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-02-dosim.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-02-dosim.txt",
+      "dropped_reason": "2026-10-03 사용자 확인: 손으로 발행 완료(PC 자동등록 멈춤 중). 큐 재발행 금지."
     },
     {
       "slug": "2026-10-02-mokdong",
