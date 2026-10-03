@@ -66,7 +66,7 @@
       "report_no": 79,
       "date": "2026-10-01",
       "keyword": "SH 재개발임대주택 3,821가구",
-      "status": "hold",
+      "status": "dropped",
       "titles": [
         "SH 재개발임대주택 3,821가구 10월 2일 마감 · 소득 50% 1순위, 연령 가점 빠졌다",
         "나이 점수 없어졌다 · SH 재개발임대 3,821가구 청년에게 유리해진 재공고",
@@ -74,14 +74,14 @@
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-01-shrdv.txt",
       "note": "PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending.",
-      "hold_reason": "2026-10-04 PC 자동등록 재개. 큐 경로가 밀린 글을 한꺼번에 올리지 않도록 사용자 확인 전까지 보류."
+      "dropped_reason": "2026-10-04 사용자 확인: 자동등록 멈춤 기간에 손으로 발행 완료."
     },
     {
       "slug": "2026-09-30-sintong",
       "report_no": 78,
       "date": "2026-09-30",
       "keyword": "일원동 한솔 · 이촌 반도 · 신통기획 4곳",
-      "status": "hold",
+      "status": "dropped",
       "titles": [
         "일원동 한솔 570→960가구 · 이촌 반도 58층 · 서울 정비사업 4곳 4,422가구 도계위 통과",
         "강남 일원동 한솔 390가구 늘고 이촌 반도는 한강변 58층 · 재건축 4곳 정비계획 통과",
@@ -89,14 +89,14 @@
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-30-sintong.txt",
       "note": "PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending.",
-      "hold_reason": "2026-10-04 PC 자동등록 재개. 큐 경로가 밀린 글을 한꺼번에 올리지 않도록 사용자 확인 전까지 보류."
+      "dropped_reason": "2026-10-04 사용자 확인: 자동등록 멈춤 기간에 손으로 발행 완료."
     },
     {
       "slug": "2026-09-29-hyeonseol",
       "report_no": 77,
       "date": "2026-09-29",
       "keyword": "청담현대1차 · 마천1구역 시공사 현설",
-      "status": "hold",
+      "status": "dropped",
       "titles": [
         "청담현대1차 현장설명회 8개사 · 마천1구역·여의도 은하·삼익은 유찰, 10월 2일 재현설",
         "96가구엔 8곳, 1.8조 대어엔 1곳 · 이번 주 서울 재건축 시공사 현설 13곳",
@@ -104,14 +104,14 @@
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-29-hyeonseol.txt",
       "note": "PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending.",
-      "hold_reason": "2026-10-04 PC 자동등록 재개. 큐 경로가 밀린 글을 한꺼번에 올리지 않도록 사용자 확인 전까지 보류."
+      "dropped_reason": "2026-10-04 사용자 확인: 자동등록 멈춤 기간에 손으로 발행 완료."
     },
     {
       "slug": "2026-09-28-acro",
       "report_no": 76,
       "date": "2026-09-28",
       "keyword": "아크로 리버스카이 2차 무순위",
-      "status": "hold",
+      "status": "dropped",
       "titles": [
         "아크로 리버스카이 2차 무순위 오늘 접수 · 140㎡ 3가구 49억, 7월엔 100대 1",
         "청약통장 없어도 되는 49억 줍줍 · 아크로 리버스카이 같은 3가구가 다시 나왔다",
@@ -119,14 +119,14 @@
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-28-acro.txt",
       "note": "PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending.",
-      "hold_reason": "2026-10-04 PC 자동등록 재개. 큐 경로가 밀린 글을 한꺼번에 올리지 않도록 사용자 확인 전까지 보류."
+      "dropped_reason": "2026-10-04 사용자 확인: 자동등록 멈춤 기간에 손으로 발행 완료."
     },
     {
       "slug": "2026-09-27-bunyang",
       "report_no": 75,
       "date": "2026-09-27",
       "keyword": "반포 디에이치 클래스트 · 가을 분양",
-      "status": "hold",
+      "status": "dropped",
       "titles": [
         "반포 디에이치 클래스트 일반분양 1,832가구 · 추석 뒤 11월까지 전국 4만8,829가구 분양",
         "서울 7천 가구 분양이라더니 청약은 2,398가구 · 반포 디에이치 클래스트와 신반포22차",
@@ -134,14 +134,14 @@
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-27-bunyang.txt",
       "note": "PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending.",
-      "hold_reason": "2026-10-04 PC 자동등록 재개. 큐 경로가 밀린 글을 한꺼번에 올리지 않도록 사용자 확인 전까지 보류."
+      "dropped_reason": "2026-10-04 사용자 확인: 자동등록 멈춤 기간에 손으로 발행 완료."
     },
     {
       "slug": "2026-09-26-cheongdam",
       "report_no": 74,
       "date": "2026-09-26",
       "keyword": "청담르엘 SH 장기전세",
-      "status": "hold",
+      "status": "dropped",
       "titles": [
         "청담르엘 장기전세 11억7천, 10월 14일 서류심사 발표 · 자산 다 넣어도 5억800만원 부족",
         "같은 11억7천인데 래미안대치팰리스는 미달 · 청담르엘 장기전세 넣은 분이 볼 숫자",
@@ -149,7 +149,7 @@
       ],
       "note": "특집. #73 과 같은 날 두 번째 글이다. · PC 자동등록 멈춤 중이라 발행 여부 미확인. 사용자 확인 전까지 pending.",
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-26-cheongdam.txt",
-      "hold_reason": "2026-10-04 PC 자동등록 재개. 큐 경로가 밀린 글을 한꺼번에 올리지 않도록 사용자 확인 전까지 보류."
+      "dropped_reason": "2026-10-04 사용자 확인: 자동등록 멈춤 기간에 손으로 발행 완료."
     },
     {
       "slug": "2026-09-26-jeonse",
@@ -164,7 +164,7 @@
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-09-26-jeonse.txt",
       "note": "2026-09-26 사용자 확인: 아직 발행 안 함(PC 자동등록 멈춤). posted로 잘못 내렸던 것을 pending으로 되돌림.",
-      "hold_reason": "2026-10-04 PC 자동등록 재개. 큐 경로가 밀린 글을 한꺼번에 올리지 않도록 사용자 확인 전까지 보류."
+      "hold_reason": "2026-10-04 사용자 확인: 미발행. 9/26 통계 글이라 발행 여부 사용자 결정 대기."
     },
     {
       "slug": "2026-09-25-85ju",
