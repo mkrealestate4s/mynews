@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-04-shmaeip-01",
+  "job_id": "2026-10-05-ilsi2-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-04T07:20:00+09:00",
+  "requested_at": "2026-10-05T07:20:00+09:00",
   "post": {
-    "report_no": 83,
-    "slug": "2026-10-04-shmaeip",
-    "title": "SH 신혼·신생아 매입임대 자격 3분 진단 · 10월 13일 접수",
+    "report_no": 84,
+    "slug": "2026-10-05-ilsi2",
+    "title": "일시적 2주택 비과세, 이제 2년 안에 팔아야",
     "title_alts": [
-      "SH 신혼 매입임대, 아기 있으면 1순위일까?",
-      "신혼·신생아 매입임대 소득·자산·순위 총정리"
+      "일시적 2주택, 8월에 집 샀다면 3년 아니라 2년?",
+      "10월부터 달라진 부동산 총정리 · 일시적 2주택·상생임대·실거주 유예"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-04-shmaeip.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-05-ilsi2.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shmi1004-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shmi1004-02-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-02-who.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shmi1004-03-rank.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-03-benefit.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shmi1004-04-income.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-04-deadline.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shmi1004-05-trap.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-05-relief.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shmi1004-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-06-check.png"
       }
     ],
     "tags": [
-      "SH신혼신생아매입임대",
-      "신혼신생아매입임대주택",
-      "매입임대주택",
-      "SH매입임대",
-      "신혼부부임대주택",
-      "신생아특례",
-      "서울임대주택",
-      "공공임대",
-      "SH청약",
-      "신혼부부청약"
+      "일시적2주택",
+      "일시적2주택비과세",
+      "조정대상지역",
+      "양도세비과세",
+      "갈아타기",
+      "상생임대주택",
+      "등록임대",
+      "토지거래허가구역",
+      "실거주유예",
+      "10월부터달라지는부동산"
     ]
   }
 }
