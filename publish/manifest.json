@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-05-ictsongpa-01",
+  "job_id": "2026-10-06-seongsu2-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-05T12:40:00+09:00",
+  "requested_at": "2026-10-06T07:20:00+09:00",
   "post": {
-    "report_no": 85,
-    "slug": "2026-10-05-ictsongpa",
-    "title": "송파 ICT 보안 클러스터 일정표, 청년주택은 언제?",
+    "report_no": 86,
+    "slug": "2026-10-06-seongsu2",
+    "title": "성수2지구 아크로 성수, 11월 21일 총회에서 결정",
     "title_alts": [
-      "가락동 중앙전파관리소 자리, 청년주택 300호 신청할 수 있을까?",
-      "송파 ICT 보안 클러스터 1·2·3단계 일정 총정리"
+      "성수2지구 DL이앤씨 단독, 수의계약이면 끝일까?",
+      "성수전략정비구역 1·2·4지구 시공사·공사비·일정 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-05-ictsongpa.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-06-seongsu2.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ss2-1006-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-02-what.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ss2-1006-02-when.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-03-timeline.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ss2-1006-03-size.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-04-agency.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ss2-1006-04-cost.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-05-youth.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ss2-1006-05-map.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ss2-1006-06-check.png"
       }
     ],
     "tags": [
-      "송파ICT보안클러스터",
-      "중앙전파관리소",
-      "가락동",
-      "송파청년주택",
-      "청년주택",
-      "한국인터넷진흥원",
-      "캠코",
-      "가락시장역",
-      "송파개발",
-      "송파구"
+      "성수2지구",
+      "아크로성수",
+      "성수전략정비구역",
+      "성수재개발",
+      "DL이앤씨",
+      "성수1지구",
+      "성수4지구",
+      "한강변재개발",
+      "성동구",
+      "시공사선정"
     ]
   }
 }
