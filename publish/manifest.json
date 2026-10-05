@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-05-ilsi2-01",
+  "job_id": "2026-10-05-ictsongpa-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-05T07:20:00+09:00",
+  "requested_at": "2026-10-05T12:40:00+09:00",
   "post": {
-    "report_no": 84,
-    "slug": "2026-10-05-ilsi2",
-    "title": "일시적 2주택 비과세, 이제 2년 안에 팔아야",
+    "report_no": 85,
+    "slug": "2026-10-05-ictsongpa",
+    "title": "송파 ICT 보안 클러스터 일정표, 청년주택은 언제?",
     "title_alts": [
-      "일시적 2주택, 8월에 집 샀다면 3년 아니라 2년?",
-      "10월부터 달라진 부동산 총정리 · 일시적 2주택·상생임대·실거주 유예"
+      "가락동 중앙전파관리소 자리, 청년주택 300호 신청할 수 있을까?",
+      "송파 ICT 보안 클러스터 1·2·3단계 일정 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-05-ilsi2.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-05-ictsongpa.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-02-who.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-02-what.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-03-benefit.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-03-timeline.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-04-deadline.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-04-agency.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-05-relief.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-05-youth.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ilsi1005-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ictsp1005-06-check.png"
       }
     ],
     "tags": [
-      "일시적2주택",
-      "일시적2주택비과세",
-      "조정대상지역",
-      "양도세비과세",
-      "갈아타기",
-      "상생임대주택",
-      "등록임대",
-      "토지거래허가구역",
-      "실거주유예",
-      "10월부터달라지는부동산"
+      "송파ICT보안클러스터",
+      "중앙전파관리소",
+      "가락동",
+      "송파청년주택",
+      "청년주택",
+      "한국인터넷진흥원",
+      "캠코",
+      "가락시장역",
+      "송파개발",
+      "송파구"
     ]
   }
 }
