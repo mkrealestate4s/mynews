@@ -1,20 +1,34 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-08T07:20:00+09:00",
+  "updated_at": "2026-10-09T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-10-09-newland",
+      "report_no": 89,
+      "date": "2026-10-09",
+      "keyword": "신규택지 발표 7.3만가구 · 10월 초에서 연내로",
+      "status": "designated",
+      "titles": [
+        "신규택지 발표 언제? 7.3만가구, 10월 초에서 연내로",
+        "신규택지 7.3만가구 후보지, 우리 동네 될까?",
+        "8·13 대책 신규택지 남양주·광주·염창 지정 현황과 남은 7.3만호 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-09-newland.txt"
+    },
     {
       "slug": "2026-10-08-toheoext",
       "report_no": 88,
       "date": "2026-10-08",
       "keyword": "토지거래허가구역 연장 검토 · 12월 31일 만료",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "토지거래허가구역 연장되나, 서울 전역 12월 31일 만료",
         "토허제 연말에 풀릴까? 국토부 장관 '연장 검토'",
         "토지거래허가구역 서울·경기 12곳 만료일·규칙·연장 기준 총정리"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-08-toheoext.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-08-toheoext.txt",
+      "note": "다음 날 자동등록 처리 완료로 보고 posted. 큐 재발행 금지."
     },
     {
       "slug": "2026-10-07-yeouidojinju",
