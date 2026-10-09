@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-09-newland-01",
+  "job_id": "2026-10-09-aptname-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-09T07:20:00+09:00",
+  "requested_at": "2026-10-09T15:00:00+09:00",
   "post": {
-    "report_no": 89,
-    "slug": "2026-10-09-newland",
-    "title": "신규택지 발표 언제? 7.3만가구, 10월 초에서 연내로",
+    "report_no": 90,
+    "slug": "2026-10-09-aptname",
+    "title": "아파트 이름 평균 9.8자, 왜 이렇게 길어졌나",
     "title_alts": [
-      "신규택지 7.3만가구 후보지, 우리 동네 될까?",
-      "8·13 대책 신규택지 남양주·광주·염창 지정 현황과 남은 7.3만호 총정리"
+      "아파트 이름 25자, 주민들은 뭐라고 부를까?",
+      "아파트 이름 짓기 서울시 길라잡이 5원칙 총정리 (한글날 특집)"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-09-newland.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-09-aptname.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1009-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/apnm1009-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1009-02-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/apnm1009-02-trend.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1009-03-done.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/apnm1009-03-recipe.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1009-04-left.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/apnm1009-04-longest.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1009-05-watch.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/apnm1009-05-guide.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1009-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/apnm1009-06-check.png"
       }
     ],
     "tags": [
-      "신규택지발표",
-      "신규택지",
-      "7만3천가구",
-      "8·13대책",
-      "남양주도심",
-      "경기광주역세권",
-      "염창공원",
-      "공공택지",
-      "그린벨트",
-      "3기신도시"
+      "아파트이름",
+      "아파트이름짓기",
+      "아파트펫네임",
+      "공동주택이름길라잡이",
+      "한글날",
+      "아파트단지명",
+      "외래어아파트이름",
+      "서울시가이드라인",
+      "순우리말아파트",
+      "아파트브랜드"
     ]
   }
 }
