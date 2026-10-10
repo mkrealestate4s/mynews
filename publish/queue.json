@@ -1,20 +1,34 @@
 {
   "schema": 1,
-  "updated_at": "2026-10-10T07:20:00+09:00",
+  "updated_at": "2026-10-11T07:20:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-10-11-weekcal",
+      "report_no": 92,
+      "date": "2026-10-11",
+      "keyword": "이번 주 청약 일정 (10/12~16)",
+      "status": "designated",
+      "titles": [
+        "이번 주 청약 일정, SH 신혼 매입임대부터 향남까지",
+        "이번 주 청약, 화요일 하루에 몰린 이유는?",
+        "10월 둘째 주 청약 달력 · SH 매입임대·향남·청담르엘 서류심사 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-11-weekcal.txt"
+    },
     {
       "slug": "2026-10-10-hyangnam",
       "report_no": 91,
       "date": "2026-10-10",
       "keyword": "향남역 그로브 스위첸 청약 · 12일 특공, 13일 1순위",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "향남역 그로브 스위첸 청약 12일 시작, 국평 5억대",
         "향남역 그로브 스위첸, 계약금 5%로 넣어도 될까?",
         "다음 주 청약 8곳 총정리 · 향남역 그로브 스위첸·쌍용 더 플래티넘 한강"
       ],
-      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-10-hyangnam.txt"
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-10-hyangnam.txt",
+      "note": "다음 날 자동등록 처리 완료로 보고 posted. 큐 재발행 금지."
     },
     {
       "slug": "2026-10-09-aptname",
