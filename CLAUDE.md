@@ -3,6 +3,8 @@
 GitHub Pages 사이트. main 푸시 → 워크플로우가 gh-pages로 미러링 → 자동 배포.
 URL: https://mkrealestate4s.github.io/mynews/
 
+**계정 이전 인수인계(2026-10-11): `ops/HANDOVER.md` 를 먼저 읽는다.** 매일 쓰는 헬퍼 스크립트 예시는 `tools/daily/`.
+
 ## 글쓰기 규칙 (최우선 — 모든 산출물에 적용)
 - **줄표(em dash) `—` 를 쓰지 않는다.** 2026-08-29 사용자 지시: "AI가 쓴 글처럼 보인다."
   포스트 본문·제목·메타·카드 문안·인스타 캡션·`title.txt`·index 카드 요약·
