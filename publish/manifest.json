@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-12-shmaeip2-01",
+  "job_id": "2026-10-13-banpo124-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-12T07:20:00+09:00",
+  "requested_at": "2026-10-13T07:20:00+09:00",
   "post": {
-    "report_no": 93,
-    "slug": "2026-10-12-shmaeip2",
-    "title": "SH 신혼 매입임대 내일부터 접수, Ⅰ·Ⅱ 중 하나만",
+    "report_no": 94,
+    "slug": "2026-10-13-banpo124",
+    "title": "디에이치 반포124, 반디클 새 이름으로 11월 분양",
     "title_alts": [
-      "SH 신혼 매입임대, 아기 낳은 지 2년 안이면 1순위?",
-      "SH 신혼·신생아 매입임대 자격·소득·일정 총정리 (10월 13~15일 접수)"
+      "반포 디에이치 클래스트, 이름 바꾸면 분양가도 달라질까?",
+      "디에이치 반포124 일반분양 1,832가구 일정·분양가·청약 준비 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-12-shmaeip2.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-13-banpo124.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shm1012-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bp1013-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shm1012-02-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bp1013-02-vote.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shm1012-03-rank.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bp1013-03-why.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shm1012-04-income.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bp1013-04-size.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shm1012-05-choose.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bp1013-05-price.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shm1012-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/bp1013-06-check.png"
       }
     ],
     "tags": [
-      "SH신혼매입임대",
-      "신혼신생아매입임대",
-      "SH매입임대",
-      "신혼부부임대주택",
-      "신생아특례",
-      "매입임대주택",
-      "SH청약",
-      "서울임대주택",
-      "한부모가족",
-      "내집마련"
+      "디에이치반포124",
+      "반포디에이치클래스트",
+      "반디클",
+      "반포주공1단지",
+      "반포재건축",
+      "현대건설",
+      "서초구분양",
+      "11월분양",
+      "반포아파트",
+      "청약"
     ]
   }
 }
