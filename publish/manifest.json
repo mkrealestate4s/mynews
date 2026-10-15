@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-10-15-yeouidosibum-01",
+  "job_id": "2026-10-16-jamsil5-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-15T07:15:00+09:00",
+  "requested_at": "2026-10-16T07:20:00+09:00",
   "post": {
-    "report_no": 96,
-    "slug": "2026-10-15-yeouidosibum",
-    "title": "여의도 시범아파트 재건축, 오늘 사업시행인가 고시",
+    "report_no": 97,
+    "slug": "2026-10-16-jamsil5",
+    "title": "잠실주공5단지 분양신청 31일 마감, 수영장 지분은 빠졌다",
     "title_alts": [
-      "여의도 시범아파트 재건축, 59층 2,491가구 시공사는 누가?",
-      "여의도 시범아파트 재건축 사업시행인가·시공사 입찰·분양가 추정 총정리"
+      "잠실주공5단지 34평, 84㎡ 받으면 5억 돌려받을까?",
+      "잠실주공5단지 분양신청 일정·조합원 분양가·환급 추정 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-15-yeouidosibum.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-16-jamsil5.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysb1015-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jsl1016-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysb1015-02-timeline.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jsl1016-02-timeline.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysb1015-03-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jsl1016-03-pool.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysb1015-04-bid.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jsl1016-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysb1015-05-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jsl1016-05-refund.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysb1015-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jsl1016-06-check.png"
       }
     ],
     "tags": [
-      "여의도시범아파트재건축",
-      "여의도시범아파트",
-      "여의도재건축",
-      "사업시행인가",
-      "삼성물산",
-      "한국자산신탁",
-      "신탁방식재건축",
-      "영등포구",
-      "여의도아파트",
+      "잠실주공5단지분양신청",
+      "잠실주공5단지",
+      "잠실5단지재건축",
+      "잠실재건축",
+      "송파재건축",
+      "조합원분양신청",
+      "조합원분양가",
+      "재건축분담금",
+      "은마아파트",
       "재건축일정"
     ]
   }
