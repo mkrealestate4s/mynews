@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-19-mokdong10-01",
+  "job_id": "2026-10-20-hyangnam-result-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-19T07:20:00+09:00",
+  "requested_at": "2026-10-20T07:20:00+09:00",
   "post": {
-    "report_no": 98,
-    "slug": "2026-10-19-mokdong10",
-    "title": "목동10단지 재건축 현대건설 확정, 단독 입찰에 96% 찬성",
+    "report_no": 99,
+    "slug": "2026-10-20-hyangnam-result",
+    "title": "향남역 그로브 스위첸 당첨자 발표, 1순위는 0.64 대 1",
     "title_alts": [
-      "목동10단지 재건축, 디에이치 목동 에세르 다음 순서는?",
-      "목동10단지 재건축 시공사·공사비·목동 단지별 선정 일정 총정리"
+      "향남역 그로브 스위첸 미달, 당첨되면 계약해도 될까?",
+      "향남역 그로브 스위첸 당첨 후 서류·계약·계약금 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-19-mokdong10.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-20-hyangnam-result.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkd1019-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkd1019-02-vote.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-02-apply.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkd1019-03-scale.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-03-ratio.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkd1019-04-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-04-date.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkd1019-05-next.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-05-money.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkd1019-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-06-check.png"
       }
     ],
     "tags": [
-      "목동10단지재건축",
-      "목동10단지",
-      "디에이치목동에세르",
-      "목동재건축",
-      "현대건설",
-      "목동신시가지",
-      "양천구재건축",
-      "재건축시공사선정",
-      "목동12단지",
-      "목동13단지"
+      "향남역그로브스위첸",
+      "향남역그로브스위첸당첨자발표",
+      "향남역",
+      "화성향남",
+      "KCC건설",
+      "스위첸",
+      "청약경쟁률",
+      "당첨자발표",
+      "경기분양",
+      "청약홈"
     ]
   }
 }

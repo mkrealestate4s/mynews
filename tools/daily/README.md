@@ -10,3 +10,4 @@
 
 경로가 `/home/user/mynews` 와 옛 스크래치패드로 박혀 있으니 새 환경에 맞게 바꾼다.
 - `gen_example_98.py` · `site_example_98.py` · `make_cards_example_mkd1019.py` : 2026-10-19 #98 최신 예시(경로 /home/claude/mynews, 6열 대시보드·가로막대 hb 카드).
+- `gen_example_99.py` · `site_example_99.py` · `make_cards_example_hng1020.py` : 2026-10-20 #99 최신 예시(경로 /home/user/mynews, 청약 결과 글: 가로막대·statrow 교대).
