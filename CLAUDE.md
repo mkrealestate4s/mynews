@@ -223,6 +223,10 @@ URL: https://mkrealestate4s.github.io/mynews/
   ③ `npm install playwright-core` (shot_cards.js·grab_body.js 가 쓴다)
   ④ `grab_body.js`·`site<N>.py`·`verify<N>.js` 는 어제 것이 없으므로 다시 쓴다
   PIL 도 사라지지만 카드 렌더에는 필요 없다(대조 시트를 만들 때만 쓴다).
+- **구글 폰트가 막힌 날 (2026-10-19)**: 클라우드·PC 모두 fonts.googleapis.com 이 프록시 403 이었다.
+  npm 레지스트리는 열려 있으므로 `npm install @fontsource/{noto-sans-kr,noto-serif-kr,ibm-plex-sans-kr,ibm-plex-mono,gowun-batang}`
+  후 각 패키지의 `<weight>.css` 를 이어 붙여 `gf-local.css`(fonts/)·`gf2-local.css`(fonts2/)를 만들고
+  `url(./files/` 를 `url(fonts/` · `url(fonts2/` 로 바꾸면 같은 글꼴로 렌더된다(.woff 폴백 줄은 지운다).
 
 ## 특집·안내성 글 (공고 안내 등 비데일리)
 - 리포트 번호는 데일리와 이어서 붙이고 eyebrow에 `· 특집`을 덧붙인다(예: `리포트 #35 · 임대주택 특집`).

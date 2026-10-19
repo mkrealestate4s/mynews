@@ -9,3 +9,4 @@
 - `verify_mobile.js` : 390px 가로 오버플로·이미지·인스타 섹션 검증 (localhost:8899).
 
 경로가 `/home/user/mynews` 와 옛 스크래치패드로 박혀 있으니 새 환경에 맞게 바꾼다.
+- `gen_example_98.py` · `site_example_98.py` · `make_cards_example_mkd1019.py` : 2026-10-19 #98 최신 예시(경로 /home/claude/mynews, 6열 대시보드·가로막대 hb 카드).
