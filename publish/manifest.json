@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-20-hyangnam-result-01",
+  "job_id": "2026-10-21-godeok3-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-20T07:20:00+09:00",
+  "requested_at": "2026-10-21T07:20:00+09:00",
   "post": {
-    "report_no": 99,
-    "slug": "2026-10-20-hyangnam-result",
-    "title": "향남역 그로브 스위첸 당첨자 발표, 1순위는 0.64 대 1",
+    "report_no": 100,
+    "slug": "2026-10-21-godeok3",
+    "title": "고덕강일3단지 본청약, 1,305가구 중 일반공급은 147가구",
     "title_alts": [
-      "향남역 그로브 스위첸 미달, 당첨되면 계약해도 될까?",
-      "향남역 그로브 스위첸 당첨 후 서류·계약·계약금 총정리"
+      "고덕강일3단지 토지임대부, 땅값 매달 내도 괜찮을까?",
+      "고덕강일3단지 본청약 자격·일정·분양가 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-20-hyangnam-result.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-21-godeok3.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gdk1021-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-02-apply.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gdk1021-02-supply.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-03-ratio.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gdk1021-03-date.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-04-date.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gdk1021-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-05-money.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gdk1021-05-rent.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/hng1020-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gdk1021-06-check.png"
       }
     ],
     "tags": [
-      "향남역그로브스위첸",
-      "향남역그로브스위첸당첨자발표",
-      "향남역",
-      "화성향남",
-      "KCC건설",
-      "스위첸",
-      "청약경쟁률",
-      "당첨자발표",
-      "경기분양",
-      "청약홈"
+      "고덕강일3단지본청약",
+      "고덕강일3단지",
+      "토지임대부",
+      "토지임대부분양주택",
+      "SH청약",
+      "강동구",
+      "고덕강일",
+      "공공분양",
+      "무주택청약",
+      "청약일정"
     ]
   }
 }
