@@ -12,3 +12,4 @@
 - `gen_example_98.py` · `site_example_98.py` · `make_cards_example_mkd1019.py` : 2026-10-19 #98 최신 예시(경로 /home/claude/mynews, 6열 대시보드·가로막대 hb 카드).
 - `gen_example_99.py` · `site_example_99.py` · `make_cards_example_hng1020.py` : 2026-10-20 #99 최신 예시(경로 /home/user/mynews, 청약 결과 글: 가로막대·statrow 교대).
 - `gen_example_100.py` · `site_example_100.py` · `make_cards_example_gdk1021.py` : 2026-10-21 #100 최신 예시(경로 /home/user/mynews, 공공분양 본청약 글: 공급·분양가 가로막대 + 일정·임대료 statrow).
+- `gen_example_101.py` · `site_example_101.py` · `make_cards_example_shd1022.py` : 2026-10-22 #101 최신 예시(경로 /home/user/mynews, 공공임대 발표 D-1 글: 일정 statrow + 날 수 가로막대 + 자격 statrow + 물량 가로막대).
