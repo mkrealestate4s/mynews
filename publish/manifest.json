@@ -1,56 +1,56 @@
 {
   "schema": 1,
-  "job_id": "2026-10-25-acmer-dongtan-01",
+  "job_id": "2026-10-26-trivn-centum-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-25T07:15:00+09:00",
+  "requested_at": "2026-10-26T07:15:00+09:00",
   "post": {
-    "report_no": 104,
-    "slug": "2026-10-25-acmer-dongtan",
-    "title": "아크메르 동탄 청약 내일 특공, 국평 17억 넘었다",
+    "report_no": 105,
+    "slug": "2026-10-26-trivn-centum",
+    "title": "트리븐센텀 청약 오늘 특공, 국평 7억대",
     "title_alts": [
-      "아크메르 동탄 국평 17억, 청약 넣어도 될까?",
-      "아크메르 동탄 95·99 청약 일정·분양가 총정리"
+      "트리븐센텀 1단지·2단지, 둘 다 넣어도 될까?",
+      "트리븐센텀 청약 일정·분양가·당첨발표 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-25-acmer-dongtan.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-26-trivn-centum.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1025-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/trv1026-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1025-02-date.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/trv1026-02-date.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1025-03-week.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/trv1026-03-size.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1025-04-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/trv1026-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1025-05-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/trv1026-05-check.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1025-06-tips.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/trv1026-06-tips.png"
       }
     ],
     "tags": [
-      "아크메르동탄",
-      "아크메르동탄청약",
-      "아크메르동탄분양가",
-      "동탄청약",
-      "동탄분양",
-      "화성청약",
-      "반송동",
-      "포스코이앤씨",
-      "경기청약",
+      "트리븐센텀",
+      "트리븐센텀청약",
+      "트리븐센텀분양가",
+      "해운대청약",
+      "부산청약",
+      "반여동",
+      "두산에너빌리티",
+      "부산분양",
+      "명장공원",
       "특별공급"
     ]
   }
