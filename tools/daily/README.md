@@ -17,3 +17,4 @@
 - `gen_example_103.py` · `site_example_103.py` · `make_cards_example_dhb1024.py` : 2026-10-24 #103 최신 예시(경로 /home/user/mynews, 대표 단지 공고 전 글: 물량 세로 컬럼 + 일정 statrow + 평형 가로막대(railval) + 가정 분양가 가로막대 + 미확정 statrow).
 - `gen_example_104.py` · `site_example_104.py` · `make_cards_example_akm1025.py` : 2026-10-25 #104 최신 예시(경로 /home/user/mynews, 민영 청약 D-1 글: 이번 주 물량 세로 컬럼 + 일정 statrow + 주간 단지 가로막대 + 분양가·계약금 가정 가로막대 + 확인 statrow).
 - `gen_example_105.py` · `site_example_105.py` · `make_cards_example_trv1026.py` : 2026-10-26 #105 최신 예시(경로 /home/user/mynews, 민영 청약 D-day 글: 물량 세로 컬럼 + 일정 타임라인 + 주간·단지 가로막대 + 타입별 분양가 가로막대 + 확인 statrow).
+- `gen_example_106.py` · `site_example_106.py` · `make_cards_example_gyd1027.py` : 2026-10-27 #106 최신 예시(경로 /home/user/mynews, 공공분양 접수 마감일 글: #102 수치 재사용 + 마감·다음 일정 statrow 2개 + 물량·분양가 가로막대).
