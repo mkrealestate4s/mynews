@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-27-gyeyang-deadline-01",
+  "job_id": "2026-10-28-acmer-2nd-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-27T07:15:00+09:00",
+  "requested_at": "2026-10-28T07:15:00+09:00",
   "post": {
-    "report_no": 106,
-    "slug": "2026-10-27-gyeyang-deadline",
-    "title": "계양 신혼희망타운 오늘 마감, 일반 176가구",
+    "report_no": 107,
+    "slug": "2026-10-28-acmer-2nd",
+    "title": "아크메르 동탄 오늘 2순위, 특공은 미달이었다",
     "title_alts": [
-      "계양 신혼희망타운, 오늘 안 넣으면 끝일까?",
-      "계양 신혼희망타운 마감·당첨발표·계약 일정 총정리"
+      "아크메르 동탄 2순위, 지금 넣어도 될까?",
+      "아크메르 동탄 특공 결과·2순위·당첨발표 일정 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-27-gyeyang-deadline.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-28-acmer-2nd.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gyd1027-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1028-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gyd1027-02-date.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1028-02-special.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gyd1027-03-supply.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1028-03-date.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gyd1027-04-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1028-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gyd1027-05-after.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1028-05-check.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gyd1027-06-tips.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/akm1028-06-tips.png"
       }
     ],
     "tags": [
-      "계양신혼희망타운",
-      "인천계양A17",
-      "신혼희망타운",
-      "신혼희망타운본청약",
-      "LH청약",
-      "계양신도시",
-      "3기신도시",
-      "신혼부부청약",
-      "공공분양",
-      "인천청약"
+      "아크메르동탄",
+      "아크메르동탄청약",
+      "아크메르동탄2순위",
+      "아크메르동탄경쟁률",
+      "동탄청약",
+      "동탄분양",
+      "화성청약",
+      "포스코이앤씨",
+      "경기청약",
+      "2순위청약"
     ]
   }
 }
