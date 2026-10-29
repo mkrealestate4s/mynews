@@ -20,3 +20,4 @@
 - `gen_example_106.py` · `site_example_106.py` · `make_cards_example_gyd1027.py` : 2026-10-27 #106 최신 예시(경로 /home/user/mynews, 공공분양 접수 마감일 글: #102 수치 재사용 + 마감·다음 일정 statrow 2개 + 물량·분양가 가로막대).
 - `gen_example_107.py` · `site_example_107.py` · `make_cards_example_akm1028.py` : 2026-10-28 #107 최신 예시(경로 /home/user/mynews, 민영 청약 결과 후속 D-day 글: 특공 모집·접수 세로 컬럼 + 가로막대 + 일정 statrow + 분양가 가로막대 + 확인 statrow).
 - `gen_example_108.py` · `site_example_108.py` · `make_cards_example_shh1029.py` : 2026-10-29 #108 최신 예시(경로 /home/user/mynews, 공공임대 당첨 발표 D-1 글: 모집 구성 세로 컬럼 + 구성 가로막대(railval) + 일정 statrow + 면적별 임대료 가로막대 + 확인 statrow).
+- `gen_example_109.py` · `site_example_109.py` · `make_cards_example_arw1030.py` : 2026-10-30 #109 최신 예시(경로 /home/user/mynews, 민영 분상제 단지 견본주택 개관일 글: 공급 구성 세로 컬럼 + 특공·일반 가로막대 + 일정 statrow + 분양가 범위 가로막대 + 계약금·지역 statrow).

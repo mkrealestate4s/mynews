@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-29-sh-happyhouse-01",
+  "job_id": "2026-10-30-cheongna-arkone-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-29T07:15:00+09:00",
+  "requested_at": "2026-10-30T07:15:00+09:00",
   "post": {
-    "report_no": 108,
-    "slug": "2026-10-29-sh-happyhouse",
-    "title": "SH 행복주택 내일 당첨 발표, 1,884세대 결과",
+    "report_no": 109,
+    "slug": "2026-10-30-cheongna-arkone",
+    "title": "청라 아크원 푸르지오 오늘 견본주택, 분양가 8억대",
     "title_alts": [
-      "SH 행복주택 당첨 발표, 예비라도 들어갈 수 있을까?",
-      "SH 행복주택 1차 당첨발표·계약·임대료 총정리"
+      "청라 아크원 푸르지오 분상제 청약, 넣어도 될까?",
+      "청라 아크원 푸르지오 분양가·청약 일정·자격 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-29-sh-happyhouse.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-30-cheongna-arkone.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shh1029-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/arw1030-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shh1029-02-mix.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/arw1030-02-supply.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shh1029-03-date.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/arw1030-03-date.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shh1029-04-rent.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/arw1030-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shh1029-05-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/arw1030-05-cash.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/shh1029-06-tips.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/arw1030-06-tips.png"
       }
     ],
     "tags": [
-      "SH행복주택",
-      "SH행복주택당첨자발표",
-      "행복주택당첨자발표",
-      "SH행복주택1차",
-      "행복주택",
-      "서울행복주택",
-      "SH청약",
-      "공공임대",
-      "청년주택",
-      "신혼부부임대"
+      "청라아크원푸르지오",
+      "아크원푸르지오",
+      "청라아크원푸르지오분양가",
+      "청라아크원푸르지오견본주택",
+      "청라국제도시",
+      "청라분양",
+      "인천분양",
+      "분양가상한제",
+      "아파트청약",
+      "11월청약"
     ]
   }
 }
