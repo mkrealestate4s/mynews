@@ -21,14 +21,15 @@
       "report_no": 109,
       "date": "2026-10-30",
       "keyword": "청라 아크원 푸르지오 · 견본주택 10/30 · 아파트 868가구(특공 514·일반 354) · 84㎡ 8억3,780만~9억2,070만 · 특공 11/2·1순위 11/3·당첨 11/10",
-      "status": "posted",
+      "status": "dropped",
       "titles": [
         "청라 아크원 푸르지오 오늘 견본주택, 분양가 8억대",
         "청라 아크원 푸르지오 분상제 청약, 넣어도 될까?",
         "청라 아크원 푸르지오 분양가·청약 일정·자격 총정리"
       ],
       "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-30-cheongna-arkone.txt",
-      "note": "다음 날 자동등록 처리 완료로 보고 posted. 큐 재발행 금지."
+      "note": "다음 날 자동등록 처리 완료로 보고 posted. 큐 재발행 금지.",
+      "dropped_reason": "2026-10-31 사용자: 비슷한 청약 일정 글이 이어져 발행하지 않음"
     },
     {
       "slug": "2026-10-29-sh-happyhouse",
