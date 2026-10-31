@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-10-31-newland6-01",
+  "job_id": "2026-11-01-mokdong9-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-10-31T07:15:00+09:00",
+  "requested_at": "2026-11-01T07:05:00+09:00",
   "post": {
-    "report_no": 111,
-    "slug": "2026-10-31-newland6",
-    "title": "신규택지 6곳 발표, 우리 동네 있을까",
+    "report_no": 112,
+    "slug": "2026-11-01-mokdong9",
+    "title": "목동9단지 재건축 내일 현설, 공사비 2.6조",
     "title_alts": [
-      "신규택지 김포 아라 3만7천가구, 서울은 왜 빠졌을까?",
-      "신규택지 발표 6곳 위치·물량·일정·토허제 총정리"
+      "목동9단지 재건축, 첫 경쟁입찰 나올까?",
+      "목동9단지 재건축 시공사 입찰 일정·조건 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-10-31-newland6.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-mokdong9.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1031-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1031-02-six.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-02-sched.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1031-03-total.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-03-cost.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1031-04-time.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-04-size.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1031-05-toheo.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-05-rule.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/nl1031-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-06-check.png"
       }
     ],
     "tags": [
-      "신규택지발표",
-      "신규택지",
-      "김포아라",
-      "구리건원",
-      "하남미사",
-      "하남감일2",
-      "고양대곡",
-      "의정부다락원",
-      "공공택지",
-      "토지거래허가구역해제"
+      "목동9단지재건축",
+      "목동9단지",
+      "목동재건축",
+      "목동신시가지",
+      "양천구재건축",
+      "시공사선정",
+      "현장설명회",
+      "삼성물산",
+      "GS건설",
+      "재건축입찰"
     ]
   }
 }

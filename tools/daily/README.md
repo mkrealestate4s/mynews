@@ -23,3 +23,4 @@
 - `gen_example_109.py` · `site_example_109.py` · `make_cards_example_arw1030.py` : 2026-10-30 #109 최신 예시(경로 /home/user/mynews, 민영 분상제 단지 견본주택 개관일 글: 공급 구성 세로 컬럼 + 특공·일반 가로막대 + 일정 statrow + 분양가 범위 가로막대 + 계약금·지역 statrow).
 - `gen_example_110.py` · `site_example_110.py` · `make_cards_example_gdk1031.py` : 2026-10-31 #110 최신 예시(경로 /home/user/mynews, #100 수치 재사용 후속 D-2 글: 특공·일반 세로 컬럼 + 공급 가로막대 + 일정 statrow + 분양가 가로막대 + 임대료 statrow).
 - `gen_example_111.py` · `site_example_111.py` · `make_cards_example_nl1031.py` : 2026-10-31 #111 오후 특집(정책 발표 글: 지구별 세로 컬럼 + 가로막대 6줄 + 누적 statrow + 기간 가로막대 + 토허 statrow). 청약 일정 꼴이 아닌 예시.
+- `gen_example_112.py` · `site_example_112.py` · `make_cards_example_mk9.py` : 2026-11-01 #112 (대표 단지 재건축 입찰 현설 D-1 글: 단지별 계획 세대 세로 컬럼 + 일정 statrow + 3.3㎡당 공사비 가로막대 + 입찰조건 statrow). 전날 오후 특집은 pending 으로 내리는 예시.
