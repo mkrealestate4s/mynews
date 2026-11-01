@@ -1,0 +1,264 @@
+{
+ "schema": 1,
+ "series": [
+  {
+   "id": "kb",
+   "title": "KB 숫자로 읽는 집값",
+   "desc": "KB부동산 월간 지표 10가지를 초보자 눈높이로 읽는 특집 10편",
+   "total": 10,
+   "data_basis": "KB 월간 주택가격동향 2026.10",
+   "episodes": [
+    {
+     "n": 1,
+     "slug": "2026-11-01-kb-ep01",
+     "title": "서울은 신기록, 지방은 아직 −15%",
+     "title_alts": [
+      "서울 아파트 지수 역대 최고, 지방 광역시는 고점보다 15% 아래",
+      "전국 집값 올랐다? 절반만 맞습니다 · KB 지수로 본 두 개의 시장"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep01.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb01-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep01.txt",
+     "tags": [
+      "KB부동산",
+      "아파트매매가격지수",
+      "서울아파트",
+      "집값",
+      "지방집값",
+      "부동산통계",
+      "KB시세",
+      "집값전망",
+      "부동산초보",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 2,
+     "slug": "2026-11-01-kb-ep02",
+     "title": "서울 매수우위 95.5→69.5, 집값보다 먼저 식었다",
+     "title_alts": [
+      "집값보다 먼저 꺾이는 숫자, 서울 매수우위지수 69.5",
+      "강남 매수우위 102→61.7, 1년 새 사려는 사람이 줄었다"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep02.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb02-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep02.txt",
+     "tags": [
+      "KB부동산",
+      "매수우위지수",
+      "서울아파트",
+      "강남아파트",
+      "집값전망",
+      "부동산심리",
+      "부동산통계",
+      "아파트매매",
+      "부동산초보",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 3,
+     "slug": "2026-11-01-kb-ep03",
+     "title": "서울 매매거래지수 12.9, 오르는데 손바뀜은 적다",
+     "title_alts": [
+      "오르는데 아무도 안 산다? 서울 거래지수 12.9의 진짜 뜻",
+      "거래 없이 오른 세 번, 1년 뒤 상승률은 모두 줄었다"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep03.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb03-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep03.txt",
+     "tags": [
+      "KB부동산",
+      "매매거래지수",
+      "서울아파트",
+      "아파트거래",
+      "거래절벽",
+      "집값전망",
+      "부동산통계",
+      "아파트매매",
+      "부동산초보",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 4,
+     "slug": "2026-11-01-kb-ep04",
+     "title": "전국 전세수급지수 175.9, 3년 9개월 만에 정반대가 됐다",
+     "title_alts": [
+      "전세 구하기 힘든 거 기분 탓 아닙니다, 전세수급 61.6→175.9",
+      "인천 전세수급 186.0, 9개 시·도 모두 전세 물건 부족"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep04.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb04-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep04.txt",
+     "tags": [
+      "KB부동산",
+      "전세수급지수",
+      "전세난",
+      "전세구하기",
+      "인천전세",
+      "계약갱신요구권",
+      "전세가격",
+      "세입자",
+      "부동산초보",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 5,
+     "slug": "2026-11-01-kb-ep05",
+     "title": "서울 전세거래지수 19.3, 물건도 없고 계약도 적다",
+     "title_alts": [
+      "전세가 없는데 계약도 없다? 서울 전세수급 176.2·거래 19.3",
+      "전세 시장 네 가지 유형, 서울은 '물건 부족·계약 조용'"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep05.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb05-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep05.txt",
+     "tags": [
+      "KB부동산",
+      "전세거래지수",
+      "전세수급지수",
+      "서울전세",
+      "전세난",
+      "전세계약",
+      "세입자",
+      "전세가격",
+      "부동산초보",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 6,
+     "slug": "2026-11-01-kb-ep06",
+     "title": "서울 전세가율 50%, 지방은 77% 역대 최고",
+     "title_alts": [
+      "기타지방 아파트 전세가율 77.3%, 1998년 통계 이후 최고",
+      "75% 뒤엔 늘 폭등? 전세가율 28년 치로 확인했습니다"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep06.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb06-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep06.txt",
+     "tags": [
+      "전세가율",
+      "아파트전세가율",
+      "KB부동산",
+      "갭투자",
+      "깡통전세",
+      "서울전세",
+      "지방아파트",
+      "전세보증금",
+      "부동산통계",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 7,
+     "slug": "2026-11-01-kb-ep07",
+     "title": "중개사 집값 전망, 6개월 뒤 적중률 69%",
+     "title_alts": [
+      "서울 매매가격 전망지수 112.8, 넉 달 연속 하락",
+      "'오른다'는 100% 맞고 '내린다'는 51%, KB 전망지수 13년 채점"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep07.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb07-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep07.txt",
+     "tags": [
+      "매매가격전망지수",
+      "KB전망지수",
+      "집값전망",
+      "KB부동산",
+      "서울아파트",
+      "부동산중개업소",
+      "집값예측",
+      "부동산통계",
+      "부동산초보",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 8,
+     "slug": "2026-11-01-kb-ep08",
+     "title": "서울 전세 전망 128.7, 2020년 뒤 가장 센 구간",
+     "title_alts": [
+      "집값보다 전셋값이 더 오른다? 지난 1년은 매매 +14.1%, 전세 +10.5%",
+      "전세 전망 120 넘은 22번, 6개월 뒤 전셋값 모두 올랐다"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep08.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb08-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep08.txt",
+     "tags": [
+      "전세가격전망지수",
+      "전세전망",
+      "서울전세",
+      "전셋값",
+      "세입자",
+      "전세계약",
+      "KB부동산",
+      "임대차법",
+      "부동산통계",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 9,
+     "slug": "2026-11-01-kb-ep09",
+     "title": "대장 아파트 50개, 1년 상승률 26%에서 1.6%로",
+     "title_alts": [
+      "KB선도아파트50, 2월 정점보다 1.6% 낮다",
+      "대장 아파트는 꺾였는데 서울은 아직 오른다, 과거 5번의 결과"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep09.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb09-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep09.txt",
+     "tags": [
+      "KB선도아파트50",
+      "선도아파트",
+      "대장아파트",
+      "강남아파트",
+      "서울아파트",
+      "집값",
+      "KB부동산",
+      "부동산통계",
+      "집값전망",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    },
+    {
+     "n": 10,
+     "slug": "2026-11-01-kb-ep10",
+     "title": "9개 숫자로 본 서울, 가장 닮은 달은 2020년 11월",
+     "title_alts": [
+      "서울 시장 계기판 9개 지표, 전세는 뜨겁고 대장주는 식었다",
+      "지금과 닮은 10개월, 그 뒤 1년과 2년에 일어난 일"
+     ],
+     "url": "https://mkrealestate4s.github.io/mynews/posts/2026-11-01-kb-ep10.html",
+     "cover": "https://mkrealestate4s.github.io/mynews/images/cards/report/kb10-01.png",
+     "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-kb-ep10.txt",
+     "tags": [
+      "KB부동산",
+      "서울집값",
+      "집값전망",
+      "2027집값",
+      "매수우위지수",
+      "전세수급지수",
+      "KB선도아파트50",
+      "부동산통계",
+      "부동산시나리오",
+      "KB숫자로읽는집값"
+     ],
+     "listed": false
+    }
+   ]
+  }
+ ]
+}
