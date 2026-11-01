@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-01-mokdong9-01",
+  "job_id": "2026-11-02-gyeyang-caive-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-01T07:05:00+09:00",
+  "requested_at": "2026-11-02T07:05:00+09:00",
   "post": {
-    "report_no": 112,
-    "slug": "2026-11-01-mokdong9",
-    "title": "목동9단지 재건축 내일 현설, 공사비 2.6조",
+    "report_no": 113,
+    "slug": "2026-11-02-gyeyang-caive",
+    "title": "계양 카이브 유보라 오늘 특공, 84㎡ 7억대",
     "title_alts": [
-      "목동9단지 재건축, 첫 경쟁입찰 나올까?",
-      "목동9단지 재건축 시공사 입찰 일정·조건 총정리"
+      "계양 카이브 유보라, 서울 살아도 1순위 될까?",
+      "계양 카이브 유보라 분양가·일정·자격 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-01-mokdong9.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-02-gyeyang-caive.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gcv1102-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-02-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gcv1102-02-supply.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-03-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gcv1102-03-date.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-04-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gcv1102-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-05-rule.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gcv1102-05-rule.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mk9-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gcv1102-06-tips.png"
       }
     ],
     "tags": [
-      "목동9단지재건축",
-      "목동9단지",
-      "목동재건축",
-      "목동신시가지",
-      "양천구재건축",
-      "시공사선정",
-      "현장설명회",
-      "삼성물산",
-      "GS건설",
-      "재건축입찰"
+      "계양카이브유보라",
+      "카이브유보라",
+      "계양신도시카이브유보라",
+      "계양카이브유보라분양가",
+      "계양신도시",
+      "계양신도시분양",
+      "인천분양",
+      "분양가상한제",
+      "아파트청약",
+      "11월청약"
     ]
   }
 }

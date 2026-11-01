@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-01T07:05:00+09:00",
+  "updated_at": "2026-11-02T07:05:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-02-gyeyang-caive",
+      "report_no": 113,
+      "date": "2026-11-02",
+      "keyword": "계양 카이브 유보라 특공 11/2 · 1순위 11/3 · 1,110가구(AC3 614·AC4 496) · 일반 472 · 84㎡ 7억3,100만~8억1,850만 · 분양가상한제 · 당첨 11/10·11",
+      "status": "designated",
+      "titles": [
+        "계양 카이브 유보라 오늘 특공, 84㎡ 7억대",
+        "계양 카이브 유보라, 서울 살아도 1순위 될까?",
+        "계양 카이브 유보라 분양가·일정·자격 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-02-gyeyang-caive.txt"
+    },
     {
       "slug": "2026-11-01-mokdong9",
       "report_no": 112,
       "date": "2026-11-01",
       "keyword": "목동9단지 재건축 시공사 입찰 현설 11/2 · 공사비 2조6,067억(3.3㎡당 980만) · 49층 3,961세대 · 보증금 800억 · 공동도급 불가 · 입찰 마감 2027-01-11 · 목동 5곳 단독 응찰",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "목동9단지 재건축 내일 현설, 공사비 2.6조",
         "목동9단지 재건축, 첫 경쟁입찰 나올까?",
