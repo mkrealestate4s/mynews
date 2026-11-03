@@ -26,3 +26,4 @@
 - `gen_example_112.py` · `site_example_112.py` · `make_cards_example_mk9.py` : 2026-11-01 #112 (대표 단지 재건축 입찰 현설 D-1 글: 단지별 계획 세대 세로 컬럼 + 일정 statrow + 3.3㎡당 공사비 가로막대 + 입찰조건 statrow). 전날 오후 특집은 pending 으로 내리는 예시.
 - `gen_example_113.py` · `site_example_113.py` · `make_cards_example_gcv1102.py` : 2026-11-02 #113 (민영 분상제 단지 특공 접수일 글: 블록별 세로 컬럼 + 특공·일반 가로막대 + 일정 statrow + 분양가 가로막대 + 자격 statrow).
 - `gen_example_114.py` · `site_example_114.py` · `make_cards_example_nov1103.py` : 2026-11-03 #114 (주간 견본주택 묶음 글: 단지별 규모 세로 컬럼 + 가로막대 + 일정 statrow + 이번 주 접수 statrow + 일반분양 비율 가로막대).
+- `gen_example_115.py` · `site_example_115.py` · `make_cards_example_gw1104.py` : 2026-11-04 #115 (재건축 단독 응찰 글: 3.3㎡당 공사비 세로 컬럼(대시보드) + 진행 statrow + 두 단지 세대 가로막대 + 수의계약 흐름 statrow). 청약 꼴이 2편 이어진 다음 날의 예시.
