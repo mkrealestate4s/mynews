@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-04-garak-woosung1-01",
+  "job_id": "2026-11-05-seoul-listings-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-04T07:15:00+09:00",
+  "requested_at": "2026-11-05T07:15:00+09:00",
   "post": {
-    "report_no": 115,
-    "slug": "2026-11-04-garak-woosung1",
-    "title": "가락우성1차 재건축, 두 번 다 대우건설 혼자 왔다",
+    "report_no": 116,
+    "slug": "2026-11-05-seoul-listings",
+    "title": "서울 아파트 매물 8만건, 우리 구는 얼마나 늘었나",
     "title_alts": [
-      "가락우성1차 재건축, 이대로 수의계약 갈까?",
-      "가락우성1차 재건축 시공사 일정·공사비 총정리"
+      "서울 아파트 매물 쌓이는데, 지금 사도 될까?",
+      "서울 아파트 매물 구별 증가·거래량 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-04-garak-woosung1.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-05-seoul-listings.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gw1104-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gw1104-02-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-02-trend.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gw1104-03-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-03-gangnam.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gw1104-04-ssang.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-04-rate.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gw1104-05-rule.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-05-deal.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gw1104-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-06-check.png"
       }
     ],
     "tags": [
-      "가락우성1차재건축",
-      "가락우성1차",
-      "송파재건축",
-      "가락동재건축",
-      "대우건설",
-      "써밋",
-      "쌍문한양1차",
-      "도봉구재건축",
-      "시공사선정",
-      "수의계약"
+      "서울아파트매물",
+      "서울아파트",
+      "아파트매물",
+      "서초구아파트",
+      "강남3구",
+      "성북구아파트",
+      "송파아파트",
+      "강남아파트",
+      "부동산세제개편",
+      "서울집값"
     ]
   }
 }
