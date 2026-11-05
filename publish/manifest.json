@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-05-seoul-listings-01",
+  "job_id": "2026-11-06-redev-center-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-05T07:15:00+09:00",
+  "requested_at": "2026-11-06T07:20:00+09:00",
   "post": {
-    "report_no": 116,
-    "slug": "2026-11-05-seoul-listings",
-    "title": "서울 아파트 매물 8만건, 우리 구는 얼마나 늘었나",
+    "report_no": 117,
+    "slug": "2026-11-06-redev-center",
+    "title": "재건축 통합지원센터 이달 말 출범, 뭐가 빨라지나",
     "title_alts": [
-      "서울 아파트 매물 쌓이는데, 지금 사도 될까?",
-      "서울 아파트 매물 구별 증가·거래량 총정리"
+      "재건축 통합지원센터, 우리 단지도 빨라질까?",
+      "재건축 통합지원센터 출범 일정·지원 내용 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-05-seoul-listings.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-06-redev-center.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-02-trend.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-02-what.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-03-gangnam.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-03-speed.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-04-rate.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-04-when.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-05-deal.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-05-gaepo.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/sl1105-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-06-check.png"
       }
     ],
     "tags": [
-      "서울아파트매물",
-      "서울아파트",
-      "아파트매물",
-      "서초구아파트",
-      "강남3구",
-      "성북구아파트",
-      "송파아파트",
-      "강남아파트",
-      "부동산세제개편",
-      "서울집값"
+      "재건축통합지원센터",
+      "재건축",
+      "재개발",
+      "정비사업",
+      "재건축인허가",
+      "개포주공",
+      "송파한양1차",
+      "서울재건축",
+      "정비사업금융",
+      "주택공급"
     ]
   }
 }
