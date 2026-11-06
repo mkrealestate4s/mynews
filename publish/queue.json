@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-06T07:20:00+09:00",
+  "updated_at": "2026-11-07T07:05:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-07-gwanggyo-equity",
+      "report_no": 118,
+      "date": "2026-11-07",
+      "keyword": "광교 지분적립형 · 특공 11/9 · 1순위 11/10 · 당첨 11/18 · 59㎡ 240가구(특공 168) · 25% 먼저, 75% 20년 · 최고 6억8,590만 → 첫 지분 약 1억7,150만",
+      "status": "designated",
+      "titles": [
+        "광교 지분적립형 월요일 특공, 1억7천으로 시작",
+        "광교 지분적립형, 25%만 내고 들어가도 될까?",
+        "광교 지분적립형 청약 일정·자격·분양가 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-07-gwanggyo-equity.txt"
+    },
     {
       "slug": "2026-11-06-redev-center",
       "report_no": 117,
       "date": "2026-11-06",
       "keyword": "재건축 통합지원센터 · 이달 말 출범(11/5 김이탁 1차관) · 감독원 1명 20개 사업장 · 서울 재건축·재개발 매년 3만호 착공 · 송파한양1차 인가 3일(법정 30일) · 개포주공6·7 1,960→2,698가구",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "재건축 통합지원센터 이달 말 출범, 뭐가 빨라지나",
         "재건축 통합지원센터, 우리 단지도 빨라질까?",

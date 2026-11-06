@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-06-redev-center-01",
+  "job_id": "2026-11-07-gwanggyo-equity-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-06T07:20:00+09:00",
+  "requested_at": "2026-11-07T07:05:00+09:00",
   "post": {
-    "report_no": 117,
-    "slug": "2026-11-06-redev-center",
-    "title": "재건축 통합지원센터 이달 말 출범, 뭐가 빨라지나",
+    "report_no": 118,
+    "slug": "2026-11-07-gwanggyo-equity",
+    "title": "광교 지분적립형 월요일 특공, 1억7천으로 시작",
     "title_alts": [
-      "재건축 통합지원센터, 우리 단지도 빨라질까?",
-      "재건축 통합지원센터 출범 일정·지원 내용 총정리"
+      "광교 지분적립형, 25%만 내고 들어가도 될까?",
+      "광교 지분적립형 청약 일정·자격·분양가 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-06-redev-center.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-07-gwanggyo-equity.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gk1107-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-02-what.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gk1107-02-how.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-03-speed.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gk1107-03-when.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-04-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gk1107-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-05-gaepo.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gk1107-05-supply.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rc1106-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/gk1107-06-check.png"
       }
     ],
     "tags": [
-      "재건축통합지원센터",
-      "재건축",
-      "재개발",
-      "정비사업",
-      "재건축인허가",
-      "개포주공",
-      "송파한양1차",
-      "서울재건축",
-      "정비사업금융",
-      "주택공급"
+      "광교지분적립형",
+      "지분적립형분양주택",
+      "광교A17",
+      "GH",
+      "경기주택도시공사",
+      "광교청약",
+      "공공분양",
+      "청년특별공급",
+      "신생아특별공급",
+      "수원청약"
     ]
   }
 }
