@@ -30,3 +30,4 @@
 - `gen_example_116.py` · `site_example_116.py` · `make_cards_example_sl1105.py` : 2026-11-05 #116 (서울 아파트 매물 집계 글: 매물 추이 세로 컬럼(대시보드) + 일정형 타임라인 + 구별 증가 statrow + 증가율 가로막대 + 매물·거래 statrow). 청약·재건축 꼴이 이어진 뒤 다른 꼴로 간 예시.
 - `gen_example_117.py` · `site_example_117.py` · `make_cards_example_rc1106.py` : 2026-11-06 #117 (제도 발표 글: 개포 가구 세로 컬럼(대시보드) + 두 창구 statrow + 인가 기간 가로막대 + 시점 statrow). 청약·재건축·매물 꼴 뒤 제도 꼴 예시.
 - `gen_example_118.py` · `site_example_118.py` · `make_cards_example_gk1107.py` : 2026-11-07 #118 (공공분양 신상품 특공 D-2 글: 공급 구성 세로 컬럼(대시보드) + 구조 statrow + 일정 statrow + 공급가·첫 지분 가로막대 + 특공 배분 imgslot).
+- `gen_example_119.py` · `site_example_119.py` · `make_cards_example_mk13.py` : 2026-11-08 #119 (대표 단지 시공사 확정 글: 계획 가구 세로 컬럼(대시보드) + 투표 가로막대 + 선정 흐름 statrow + 3.3㎡당 공사비 가로막대 + 목동 현황 statrow).
