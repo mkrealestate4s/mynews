@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-08T07:05:00+09:00",
+  "updated_at": "2026-11-09T07:05:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-09-yongsan-riverview",
+      "report_no": 120,
+      "date": "2026-11-09",
+      "keyword": "해링턴플레이스 용산 리버뷰 · 청년안심주택(공공지원민간임대) 635세대 · 특공 128·일반 507 · 11/12 1순위(보도) · 보증금 6,200만~2억3,800만 · 월 41만~121만 · 이번 주 전국 12곳 5,215가구",
+      "status": "designated",
+      "titles": [
+        "해링턴플레이스 용산 리버뷰, 분양 아닌 월세 임대",
+        "해링턴플레이스 용산 리버뷰, 월 41만원에 넣어도 될까?",
+        "해링턴플레이스 용산 리버뷰 자격·일정·임대료 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-09-yongsan-riverview.txt"
+    },
     {
       "slug": "2026-11-08-mokdong13",
       "report_no": 119,
       "date": "2026-11-08",
       "keyword": "목동13단지 재건축 · 11/7 전체회의 삼성물산 확정 · 1,884명 중 1,803명(95.7%) · 도급액 약 2조3,763억 · 3.3㎡당 980만원 · 49층 3,852세대(계획) · 목동 확정 3곳·우협 2곳 · 4단지 11/16 마감",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "목동13단지 재건축, 삼성물산 95.7%로 확정",
         "목동13단지 재건축, 두 번 다 단독인데 괜찮을까?",
