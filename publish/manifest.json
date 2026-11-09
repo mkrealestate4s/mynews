@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-09-yongsan-riverview-01",
+  "job_id": "2026-11-10-forena-jijeyeok-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-09T07:05:00+09:00",
+  "requested_at": "2026-11-10T07:05:00+09:00",
   "post": {
-    "report_no": 120,
-    "slug": "2026-11-09-yongsan-riverview",
-    "title": "해링턴플레이스 용산 리버뷰, 분양 아닌 월세 임대",
+    "report_no": 121,
+    "slug": "2026-11-10-forena-jijeyeok",
+    "title": "한화포레나 지제역 오늘 1순위, 84㎡ 6억대부터",
     "title_alts": [
-      "해링턴플레이스 용산 리버뷰, 월 41만원에 넣어도 될까?",
-      "해링턴플레이스 용산 리버뷰 자격·일정·임대료 총정리"
+      "한화포레나 지제역, 집 있어도 1순위 넣어도 될까?",
+      "한화포레나 지제역 분양가·일정·계약금 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-09-yongsan-riverview.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-10-forena-jijeyeok.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysr-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysr-02-mix.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-02-mix.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysr-03-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-03-sched.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysr-04-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysr-05-week.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-05-pay.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ysr-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-06-check.png"
       }
     ],
     "tags": [
-      "해링턴플레이스용산리버뷰",
-      "용산리버뷰",
-      "청년안심주택",
-      "용산청년안심주택",
-      "공공지원민간임대",
-      "용산임대주택",
-      "신혼부부임대",
-      "청년임대주택",
+      "한화포레나지제역",
+      "포레나지제역",
+      "평택지제역",
+      "평택청약",
+      "평택아파트분양",
+      "세교동",
       "11월청약일정",
-      "용산구"
+      "1순위청약",
+      "경기분양",
+      "삼성평택캠퍼스"
     ]
   }
 }
