@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-10-forena-jijeyeok-01",
+  "job_id": "2026-11-11-eunma-jaechohwan-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-10T07:05:00+09:00",
+  "requested_at": "2026-11-11T07:05:00+09:00",
   "post": {
-    "report_no": 121,
-    "slug": "2026-11-10-forena-jijeyeok",
-    "title": "한화포레나 지제역 오늘 1순위, 84㎡ 6억대부터",
+    "report_no": 122,
+    "slug": "2026-11-11-eunma-jaechohwan",
+    "title": "은마아파트 재초환 4.6억, 확정 아닙니다",
     "title_alts": [
-      "한화포레나 지제역, 집 있어도 1순위 넣어도 될까?",
-      "한화포레나 지제역 분양가·일정·계약금 총정리"
+      "은마아파트 재초환 4.6억, 오래 산 1주택자도 다 낼까?",
+      "은마아파트 재초환 예정액·부과율·감면 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-10-forena-jijeyeok.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-11-eunma-jaechohwan.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-02-mix.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-02-compare.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-03-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-03-stage.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-04-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-04-rate.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-05-pay.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-05-relief.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/fjj-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-06-check.png"
       }
     ],
     "tags": [
-      "한화포레나지제역",
-      "포레나지제역",
-      "평택지제역",
-      "평택청약",
-      "평택아파트분양",
-      "세교동",
-      "11월청약일정",
-      "1순위청약",
-      "경기분양",
-      "삼성평택캠퍼스"
+      "은마아파트재초환",
+      "은마아파트",
+      "은마재건축",
+      "재초환",
+      "재건축초과이익환수",
+      "재건축부담금",
+      "대치동재건축",
+      "강남재건축",
+      "재초환감면",
+      "재건축분담금"
     ]
   }
 }

@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-10T07:05:00+09:00",
+  "updated_at": "2026-11-11T07:05:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-11-eunma-jaechohwan",
+      "report_no": 122,
+      "date": "2026-11-11",
+      "keyword": "은마아파트 재초환 · 조합원 1인당 평균 예정액 4억6,334만원 · 강남구 통지(11/6 보도) · 준공 후 확정 · 한강맨션 6.8억·서울 평균 1.22억 추정 · 장기보유 최대 70% 감면",
+      "status": "designated",
+      "titles": [
+        "은마아파트 재초환 4.6억, 확정 아닙니다",
+        "은마아파트 재초환 4.6억, 오래 산 1주택자도 다 낼까?",
+        "은마아파트 재초환 예정액·부과율·감면 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-11-eunma-jaechohwan.txt"
+    },
     {
       "slug": "2026-11-10-forena-jijeyeok",
       "report_no": 121,
       "date": "2026-11-10",
       "keyword": "한화포레나 지제역 · 평택 세교동 1,098가구 · 특공 528·일반 570 · 11/10 1순위 · 11/18 당첨 · 84㎡ 6억2,695만~7억2,450만 · 계약금 10%",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "한화포레나 지제역 오늘 1순위, 84㎡ 6억대부터",
         "한화포레나 지제역, 집 있어도 1순위 넣어도 될까?",

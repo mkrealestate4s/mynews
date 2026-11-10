@@ -33,3 +33,4 @@
 - `gen_example_119.py` · `site_example_119.py` · `make_cards_example_mk13.py` : 2026-11-08 #119 (대표 단지 시공사 확정 글: 계획 가구 세로 컬럼(대시보드) + 투표 가로막대 + 선정 흐름 statrow + 3.3㎡당 공사비 가로막대 + 목동 현황 statrow).
 - `gen_example_120.py` · `site_example_120.py` · `make_cards_example_ysr1109.py` : 2026-11-09 #120 (청년안심주택 주의형 글: 주간 일정 세로 컬럼(대시보드) + 구성 가로막대(railval) + 일정 statrow + 보증금·월세 축 분리 가로막대 + 주간 시장 statrow).
 - `gen_example_121.py` · `site_example_121.py` · `make_cards_example_fjj1110.py` : 2026-11-10 #121 (민영 1순위 D-day 글: 특공 6유형 세로 컬럼(대시보드) + 공급 가로막대 + 일정 statrow + 타입별 최저 분양가 가로막대 + 계약금 statrow).
+- `gen_example_122.py` · `site_example_122.py` · `make_cards_example_emj1111.py` : 2026-11-11 #122 (대표 단지 재초환 예정액 글: 부과율 구간 세로 컬럼(대시보드) + 단지별 1인당 가로막대(railval) + 절차 statrow + 구간 가로막대 + 감면 statrow).
