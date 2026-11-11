@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-11-eunma-jaechohwan-01",
+  "job_id": "2026-11-12-floor-ratio-12-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-11T07:05:00+09:00",
+  "requested_at": "2026-11-12T07:05:00+09:00",
   "post": {
-    "report_no": 122,
-    "slug": "2026-11-11-eunma-jaechohwan",
-    "title": "은마아파트 재초환 4.6억, 확정 아닙니다",
+    "report_no": 123,
+    "slug": "2026-11-12-floor-ratio-12",
+    "title": "재건축 용적률 1.2배, 강남3구·용산은 빠진다",
     "title_alts": [
-      "은마아파트 재초환 4.6억, 오래 산 1주택자도 다 낼까?",
-      "은마아파트 재초환 예정액·부과율·감면 총정리"
+      "재건축 용적률 1.2배, 우리 단지도 해당될까?",
+      "재건축 용적률 1.2배 특례 대상·조건·일정 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-11-eunma-jaechohwan.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-12-floor-ratio-12.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/far-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-02-compare.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/far-02-zone.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-03-stage.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/far-03-rule.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-04-rate.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/far-04-gap.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-05-relief.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/far-05-when.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/emj-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/far-06-check.png"
       }
     ],
     "tags": [
-      "은마아파트재초환",
-      "은마아파트",
-      "은마재건축",
-      "재초환",
-      "재건축초과이익환수",
-      "재건축부담금",
-      "대치동재건축",
-      "강남재건축",
-      "재초환감면",
-      "재건축분담금"
+      "재건축용적률1.2배",
+      "재건축용적률",
+      "용적률특례",
+      "재개발용적률",
+      "도정법개정안",
+      "정비사업",
+      "재건축",
+      "강북재건축",
+      "중앙도시계획위원회",
+      "용적률완화"
     ]
   }
 }
