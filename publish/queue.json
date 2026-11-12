@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-12T07:05:00+09:00",
+  "updated_at": "2026-11-13T07:05:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-13-mokdong4",
+      "report_no": 124,
+      "date": "2026-11-13",
+      "keyword": "목동4단지 재건축 · 시공사 입찰 마감 11/16 14시(15시 개봉) · 3.3㎡당 1,010만원(목동 최고) · 공사비 1조6,389억 · 1,382→2,436가구 최고 49층 · 현설 4개사 · 현대 단독 관측",
+      "status": "designated",
+      "titles": [
+        "목동4단지 재건축, 16일 입찰 마감 경쟁 붙을까",
+        "목동4단지 재건축, 현대건설 혼자 올까?",
+        "목동4단지 재건축 입찰 일정·공사비·후보 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-13-mokdong4.txt"
+    },
     {
       "slug": "2026-11-12-floor-ratio-12",
       "report_no": 123,
       "date": "2026-11-12",
       "keyword": "재건축 용적률 1.2배 · 민간 정비사업 법적 상한의 1.2배 · 국무회의 보고(11/10~11 보도) · 3년 한시 · 강남·서초·송파·용산 제외 · 중도위 판단 · 3종 300→360% · 국민의힘 1.3배 · 국회 통과 전",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "재건축 용적률 1.2배, 강남3구·용산은 빠진다",
         "재건축 용적률 1.2배, 우리 단지도 해당될까?",
