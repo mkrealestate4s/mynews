@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-14-toheo-oct-01",
+  "job_id": "2026-11-15-gyeonghuigung-epit-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-14T07:05:00+09:00",
+  "requested_at": "2026-11-15T07:05:00+09:00",
   "post": {
-    "report_no": 125,
-    "slug": "2026-11-14-toheo-oct",
-    "title": "토지거래허가 신청 두 달째 증가, 강남은 내렸다",
+    "report_no": 126,
+    "slug": "2026-11-15-gyeonghuigung-epit",
+    "title": "경희궁 에피트 84㎡ 25억대, 분상제 아닙니다",
     "title_alts": [
-      "토지거래허가 신청 늘었는데, 강남 가격은 왜 내렸을까?",
-      "서울 토지거래허가 10월 신청 건수·가격·만료일 총정리"
+      "경희궁 에피트 청약, 25억 넣어도 될까?",
+      "경희궁 에피트 분양가·일정·1순위 조건 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-14-toheo-oct.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-15-gyeonghuigung-epit.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/th10-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ghe-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/th10-02-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ghe-02-mix.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/th10-03-count.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ghe-03-sched.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/th10-04-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ghe-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/th10-05-share.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ghe-05-site.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/th10-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ghe-06-check.png"
       }
     ],
     "tags": [
-      "토지거래허가신청",
-      "토지거래허가구역",
-      "토허제",
-      "서울토지거래허가",
-      "강남3구",
-      "용산구",
-      "한강벨트",
-      "서울아파트",
-      "실거주의무",
-      "부동산규제"
+      "경희궁에피트",
+      "경희궁에피트분양가",
+      "돈의문2구역",
+      "종로아파트분양",
+      "교남동",
+      "서울청약",
+      "11월청약일정",
+      "HL디앤아이한라",
+      "분양가상한제",
+      "투기과열지구"
     ]
   }
 }
