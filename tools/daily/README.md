@@ -38,3 +38,4 @@
 - `gen_example_124.py` · `site_example_124.py` · `make_cards_example_mk4.py` : 2026-11-13 #124 (대표 단지 입찰 마감 D-3 글: 지금/계획 가구 세로 컬럼(대시보드) + 일정 statrow + 3.3㎡당 공사비 가로막대 + 입찰 전 상황 statrow + 찬성률 가로막대).
 - `gen_example_125.py` · `site_example_125.py` · `make_cards_example_th10.py` : 2026-11-14 #125 (제도 집계 글: 월별 신청 5열 세로 컬럼(대시보드) + 일정 statrow + 권역별 증가율 가로막대 + 신청가격 statrow + 비중 가로막대).
 - `gen_example_126.py` · `site_example_126.py` · `make_cards_example_ghe1115.py` : 2026-11-15 #126 (서울 민영 분양 공고 글, 분상제 미적용 주의형: 타입별 최고가 세로 컬럼(대시보드) + 공급 가로막대 + 안내 일정 statrow + 84㎡ 가로막대 + 개요 statrow).
+- `gen_example_127.py` · `site_example_127.py` · `make_cards_example_jhr1116.py` : 2026-11-16 #127 (서울 민영 1순위 D-1 글: 타입별 일반분양 5열 세로 컬럼(대시보드) + 공급 가로막대 + 일정 statrow + 분양가 가로막대 + 개요 statrow).
