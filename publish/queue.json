@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-16T07:05:00+09:00",
+  "updated_at": "2026-11-17T07:12:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-17-mokdong4-rebid",
+      "report_no": 128,
+      "date": "2026-11-17",
+      "keyword": "목동4단지 재건축 유찰 · 11/16 마감 현대건설 단독 응찰 · 현설 4개사 중 1곳 · 재입찰 공고 뒤 단독이면 수의계약 가능 · 3.3㎡당 1,010만원 1조6,389억 · 조합 목표 2027년 2월 총회",
+      "status": "designated",
+      "titles": [
+        "목동4단지 재건축 유찰, 현설 4곳 중 1곳만 냈다",
+        "목동4단지 재건축 현대건설 단독, 수의계약으로 갈까?",
+        "목동4단지 재건축 재입찰 일정·공사비·절차 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-17-mokdong4-rebid.txt"
+    },
     {
       "slug": "2026-11-16-junghwa-raon",
       "report_no": 127,
       "date": "2026-11-16",
       "keyword": "중화역 라온프라이빗 센트로 · 중랑구 중화동 176가구(일반분양 113 = 특공 60 + 일반 53) · 특공 11/16 · 1순위 해당 11/17 기타 11/18 · 발표 11/25 · 59㎡ 9억원대 84㎡ 12억원대 · 3.3㎡당 3,750만",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "중화역 라온프라이빗 센트로 내일 1순위, 59㎡ 9억대",
         "중화역 라온프라이빗 센트로, 84㎡ 12억대 넣어도 될까?",

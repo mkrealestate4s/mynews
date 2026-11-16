@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-16-junghwa-raon-01",
+  "job_id": "2026-11-17-mokdong4-rebid-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-16T07:05:00+09:00",
+  "requested_at": "2026-11-17T07:12:00+09:00",
   "post": {
-    "report_no": 127,
-    "slug": "2026-11-16-junghwa-raon",
-    "title": "중화역 라온프라이빗 센트로 내일 1순위, 59㎡ 9억대",
+    "report_no": 128,
+    "slug": "2026-11-17-mokdong4-rebid",
+    "title": "목동4단지 재건축 유찰, 현설 4곳 중 1곳만 냈다",
     "title_alts": [
-      "중화역 라온프라이빗 센트로, 84㎡ 12억대 넣어도 될까?",
-      "중화역 라온프라이빗 센트로 청약 일정·분양가·자격 총정리"
+      "목동4단지 재건축 현대건설 단독, 수의계약으로 갈까?",
+      "목동4단지 재건축 재입찰 일정·공사비·절차 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-16-junghwa-raon.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-17-mokdong4-rebid.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jhr-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkr-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jhr-02-mix.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkr-02-result.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jhr-03-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkr-03-next.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jhr-04-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkr-04-cost.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jhr-05-site.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkr-05-mokdong.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jhr-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/mkr-06-check.png"
       }
     ],
     "tags": [
-      "중화역라온프라이빗센트로",
-      "중화역라온프라이빗센트로분양가",
-      "중랑구아파트분양",
-      "중화동",
-      "서울청약",
-      "11월청약일정",
-      "라온건설",
-      "1순위청약",
-      "중화역",
-      "7호선역세권"
+      "목동4단지재건축",
+      "목동4단지",
+      "목동4단지유찰",
+      "목동재건축",
+      "목동시공사선정",
+      "현대건설",
+      "양천구재건축",
+      "목동신시가지",
+      "재건축수의계약",
+      "재건축입찰"
     ]
   }
 }
