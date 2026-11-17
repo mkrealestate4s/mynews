@@ -40,3 +40,4 @@
 - `gen_example_126.py` · `site_example_126.py` · `make_cards_example_ghe1115.py` : 2026-11-15 #126 (서울 민영 분양 공고 글, 분상제 미적용 주의형: 타입별 최고가 세로 컬럼(대시보드) + 공급 가로막대 + 안내 일정 statrow + 84㎡ 가로막대 + 개요 statrow).
 - `gen_example_127.py` · `site_example_127.py` · `make_cards_example_jhr1116.py` : 2026-11-16 #127 (서울 민영 1순위 D-1 글: 타입별 일반분양 5열 세로 컬럼(대시보드) + 공급 가로막대 + 일정 statrow + 분양가 가로막대 + 개요 statrow).
 - `gen_example_128.py` · `site_example_128.py` · `make_cards_example_mkr1117.py` : 2026-11-17 #128 (화 재건축 해설형, 입찰 유찰 결과 글: 현설/입찰 3열 세로 컬럼(대시보드) + 현설·입찰 가로막대 + 남은 단계 statrow + 공사비 가로막대 + 목동 선정 statrow). 3줄 요약 `<p><strong>3줄 요약</strong><br>…`, 본문 2,926자.
+- `gen_example_129.py` · `site_example_129.py` · `make_cards_example_rmd1118.py` : 2026-11-18 #129 (수 제도 Q&A형, 리모델링 동의율 75→70%: 동의율 3열 세로 컬럼(대시보드) + 750/700 가로막대 + 시행 시점 statrow + 규모별 가로막대(railval) + 같이 바뀐 3가지 statrow + 그림 없는 Q5). 본문 2,865자. 생성기 꼬리는 #127 의 공용 블록을 인라인으로 넣었다(g_tail.py 는 저장소에 없다).
