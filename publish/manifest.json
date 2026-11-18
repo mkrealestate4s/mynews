@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-18-remodeling-consent-01",
+  "job_id": "2026-11-19-banpo124-vs-onebaily-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-18T07:12:00+09:00",
+  "requested_at": "2026-11-19T07:12:00+09:00",
   "post": {
-    "report_no": 129,
-    "slug": "2026-11-18-remodeling-consent",
-    "title": "리모델링 동의율 70%로 낮춘다, 우리 단지는 언제부터?",
+    "report_no": 130,
+    "slug": "2026-11-19-banpo124-vs-onebaily",
+    "title": "디에이치 반포124 분양가, 원베일리 70억과 비교하면",
     "title_alts": [
-      "리모델링 동의율 70%, 1,000가구면 몇 명 덜 받을까?",
-      "리모델링 동의율 완화 시행일·동별 요건·바뀐 점 총정리"
+      "디에이치 반포124, 30억 분양가에 내 돈 얼마 필요할까?",
+      "디에이치 반포124 청약 일정·평형·분양가 비교 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-18-remodeling-consent.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-19-banpo124-vs-onebaily.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rmd-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dbw-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rmd-02-rate.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dbw-02-vs.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rmd-03-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dbw-03-when.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rmd-04-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dbw-04-type.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rmd-05-more.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dbw-05-cash.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/rmd-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dbw-06-check.png"
       }
     ],
     "tags": [
-      "리모델링동의율",
-      "리모델링",
-      "주택법시행령",
-      "아파트리모델링",
-      "수직증축",
-      "리모델링조합",
-      "지역주택조합",
-      "분양가상한제거주의무",
-      "한국부동산원",
-      "국토교통부"
+      "디에이치반포124",
+      "반포124",
+      "반포주공1단지",
+      "래미안원베일리",
+      "반포청약",
+      "분양가상한제",
+      "로또청약",
+      "서초구청약",
+      "디에이치",
+      "현대건설"
     ]
   }
 }
