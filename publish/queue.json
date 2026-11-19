@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-19T07:12:00+09:00",
+  "updated_at": "2026-11-20T07:10:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-20-hanan5-hanwha",
+      "report_no": 131,
+      "date": "2026-11-20",
+      "keyword": "하안주공5단지 · 11/18 총회 한화 건설부문 시공사 선정 · 공사비 약 1조698억 · 지하5~지상45층 2,886가구(계획) · 하안주공 12개 단지 중 첫 선정 · 한화 올해 정비사업 2조5,264억(42%) · 착공 2030년(전체 계획)",
+      "status": "designated",
+      "titles": [
+        "하안주공5단지 재건축, 12개 단지 중 첫 시공사 한화",
+        "하안주공5단지 시공사 정해졌는데, 착공은 언제?",
+        "하안주공5단지 재건축 공사비·가구수·남은 일정 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-20-hanan5-hanwha.txt"
+    },
     {
       "slug": "2026-11-19-banpo124-vs-onebaily",
       "report_no": 130,
       "date": "2026-11-19",
       "keyword": "디에이치 반포124 · 모집공고 11/27 예정 · 1순위 12/8 계획 · 84㎡ 3.3㎡당 9,000만 가정 30.6억 vs 원베일리 84㎡ 70억(2025.3)·72억(2025.6) · 25억 초과 잔금대출 2억 · 일반분양 1,832(84㎡ 1,358)",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "디에이치 반포124 분양가, 원베일리 70억과 비교하면",
         "디에이치 반포124, 30억 분양가에 내 돈 얼마 필요할까?",
