@@ -1,14 +1,27 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-20T07:10:00+09:00",
+  "updated_at": "2026-11-21T07:10:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-21-seongsu2-dl",
+      "report_no": 132,
+      "date": "2026-11-21",
+      "keyword": "성수2지구 · 11/21 시공사 선정 총회(DL이앤씨 단독, 수의계약) · 사업비 2조137억 · 최고 65층 2,381가구(제안) · 1지구 GS(4월)·4지구 롯데(7/5, 72.4%)·3지구 삼성(9/19)",
+      "status": "designated",
+      "titles": [
+        "성수2지구 오늘 시공사 총회, 성수 4개 지구 정리",
+        "성수2지구 시공사 DL이앤씨로 확정될까?",
+        "성수 재개발 1~4지구 시공사·가구수·공사비 총정리"
+      ],
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-21-seongsu2-dl.txt"
+    },
     {
       "slug": "2026-11-20-hanan5-hanwha",
       "report_no": 131,
       "date": "2026-11-20",
       "keyword": "하안주공5단지 · 11/18 총회 한화 건설부문 시공사 선정 · 공사비 약 1조698억 · 지하5~지상45층 2,886가구(계획) · 하안주공 12개 단지 중 첫 선정 · 한화 올해 정비사업 2조5,264억(42%) · 착공 2030년(전체 계획)",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "하안주공5단지 재건축, 12개 단지 중 첫 시공사 한화",
         "하안주공5단지 시공사 정해졌는데, 착공은 언제?",
