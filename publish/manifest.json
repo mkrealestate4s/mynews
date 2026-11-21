@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-21-seongsu2-dl-01",
+  "job_id": "2026-11-21-jamsil-raemian-ipark-x1",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-21T07:10:00+09:00",
+  "requested_at": "2026-11-21T15:50:00+09:00",
   "post": {
-    "report_no": 132,
-    "slug": "2026-11-21-seongsu2-dl",
-    "title": "성수2지구 오늘 시공사 총회, 성수 4개 지구 정리",
+    "report_no": 133,
+    "slug": "2026-11-21-jamsil-raemian-ipark",
+    "title": "잠실 래미안아이파크 줍줍 신청자격, 23일부터 접수",
     "title_alts": [
-      "성수2지구 시공사 DL이앤씨로 확정될까?",
-      "성수 재개발 1~4지구 시공사·가구수·공사비 총정리"
+      "잠실 래미안아이파크 줍줍, 우리 집도 넣을 수 있을까?",
+      "잠실 래미안아이파크 무순위 3가구 자격·일정·계약금 총정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-21-seongsu2-dl.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-21-jamsil-raemian-ipark.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ssu-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ssu-02-cal.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-02-sched.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ssu-03-today.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-03-who.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ssu-04-size.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-04-price.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ssu-05-cost.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-05-cash.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/ssu-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-06-check.png"
       }
     ],
     "tags": [
-      "성수2지구",
-      "성수재개발",
-      "성수전략정비구역",
-      "아크로성수",
-      "DL이앤씨",
-      "성수3지구",
-      "성수4지구",
-      "성수1지구",
-      "성동구재개발",
-      "한강변재개발"
+      "잠실래미안아이파크줍줍",
+      "잠실래미안아이파크",
+      "무순위청약",
+      "줍줍",
+      "계약취소주택",
+      "로또청약",
+      "송파구청약",
+      "신혼부부특별공급",
+      "무주택세대주",
+      "청약홈"
     ]
   }
 }

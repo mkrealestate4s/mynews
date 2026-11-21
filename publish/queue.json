@@ -1,14 +1,28 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-21T07:10:00+09:00",
+  "updated_at": "2026-11-21T15:50:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-21-jamsil-raemian-ipark",
+      "report_no": 133,
+      "date": "2026-11-21",
+      "keyword": "잠실 래미안아이파크 줍줍 · 계약취소 3가구 무순위(공고 11/17) · 11/23 신혼 특공 84㎡D · 11/24 일반 43㎡·59㎡A · 서울 거주 무주택 추첨 · 84㎡ 공급가 18억5,607만 vs 입주권 43억 · 계약금 30% · 추가 발행 x1(공장 요청 #5)",
+      "status": "designated",
+      "titles": [
+        "잠실 래미안아이파크 줍줍 신청자격, 23일부터 접수",
+        "잠실 래미안아이파크 줍줍, 우리 집도 넣을 수 있을까?",
+        "잠실 래미안아이파크 무순위 3가구 자격·일정·계약금 총정리"
+      ],
+      "job_id": "2026-11-21-jamsil-raemian-ipark-x1",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-21-jamsil-raemian-ipark.txt"
+    },
     {
       "slug": "2026-11-21-seongsu2-dl",
       "report_no": 132,
       "date": "2026-11-21",
       "keyword": "성수2지구 · 11/21 시공사 선정 총회(DL이앤씨 단독, 수의계약) · 사업비 2조137억 · 최고 65층 2,381가구(제안) · 1지구 GS(4월)·4지구 롯데(7/5, 72.4%)·3지구 삼성(9/19)",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "성수2지구 오늘 시공사 총회, 성수 4개 지구 정리",
         "성수2지구 시공사 DL이앤씨로 확정될까?",
