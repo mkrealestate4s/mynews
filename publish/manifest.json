@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-21-jamsil-raemian-ipark-x1",
+  "job_id": "2026-11-22-dongtan-high-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-21T15:50:00+09:00",
+  "requested_at": "2026-11-22T07:00:00+09:00",
   "post": {
-    "report_no": 133,
-    "slug": "2026-11-21-jamsil-raemian-ipark",
-    "title": "잠실 래미안아이파크 줍줍 신청자격, 23일부터 접수",
+    "report_no": 134,
+    "slug": "2026-11-22-dongtan-high",
+    "title": "동탄 신고가 2건 중 1건, 한강벨트는 거래 73% 줄었다",
     "title_alts": [
-      "잠실 래미안아이파크 줍줍, 우리 집도 넣을 수 있을까?",
-      "잠실 래미안아이파크 무순위 3가구 자격·일정·계약금 총정리"
+      "동탄 신고가 계속될까, 15억 넘으면 대출이 줄어든다",
+      "동탄 신고가 단지·거래량·대출 한도 한눈에 정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-21-jamsil-raemian-ipark.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-22-dongtan-high.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dth-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-02-sched.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dth-02-drop.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-03-who.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dth-03-high.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-04-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dth-04-case.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-05-cash.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dth-05-loan.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrp-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/dth-06-check.png"
       }
     ],
     "tags": [
-      "잠실래미안아이파크줍줍",
-      "잠실래미안아이파크",
-      "무순위청약",
-      "줍줍",
-      "계약취소주택",
-      "로또청약",
-      "송파구청약",
-      "신혼부부특별공급",
-      "무주택세대주",
-      "청약홈"
+      "동탄신고가",
+      "동탄아파트",
+      "동탄실거래가",
+      "반도유보라아이비파크8.0",
+      "한강벨트",
+      "반도체벨트",
+      "화성동탄",
+      "아파트신고가",
+      "주택담보대출한도",
+      "10·15대책"
     ]
   }
 }
