@@ -1,14 +1,28 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-22T07:00:00+09:00",
+  "updated_at": "2026-11-23T07:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-23-nov-week4-seoul",
+      "report_no": 135,
+      "date": "2026-11-23",
+      "keyword": "11월 넷째 주 청약 · 전국 15곳 6,295가구(전주 1,681의 3.7배, 수도권 2,904·지방 3,391) · 래미안아이파크 줍줍 23·24일 · 해링턴 플레이스 문래 24일 1순위 84A 18억2,700만 · 경희궁 에피트 26일 1순위 84㎡ 25억7,484만 · 반포124 공고 27일 예정",
+      "status": "designated",
+      "titles": [
+        "11월 넷째 주 청약 일정, 서울 4곳 날짜순 정리",
+        "11월 넷째 주 청약, 18억 문래와 25억 경희궁 어디 넣을까?",
+        "11월 넷째 주 청약 일정·분양가·자격 총정리"
+      ],
+      "job_id": "2026-11-23-nov-week4-seoul-01",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-23-nov-week4-seoul.txt"
+    },
     {
       "slug": "2026-11-22-dongtan-high",
       "report_no": 134,
       "date": "2026-11-22",
       "keyword": "동탄 신고가 · 11월(18일까지 신고) 매매 211건 중 94건 신고가 44.5% · 반도유보라 아이비파크8.0 73.6㎡ 15억5,800만(+8,800만) · 한강벨트 7개구 10월 거래 2,865→770(−73.1%) · 반도체벨트 2,458→1,323(−46.2%) · 대출 한도 15억 이하 6억",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "동탄 신고가 2건 중 1건, 한강벨트는 거래 73% 줄었다",
         "동탄 신고가 계속될까, 15억 넘으면 대출이 줄어든다",
