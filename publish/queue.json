@@ -1,14 +1,28 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-23T07:00:00+09:00",
+  "updated_at": "2026-11-24T07:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-24-mokdong12",
+      "report_no": 136,
+      "date": "2026-11-24",
+      "keyword": "목동12단지 재건축 · 11/22 총회 GS건설 선정 · 두 차례 단독 응찰 뒤 수의계약 · 공사비 약 1조7,887억(3.3㎡당 980만) · 1,860→2,810가구 최고 43층(계획) · 목동 확정 10·13·12단지 · 4단지 재입찰 · 9단지 2027-01-11 마감",
+      "status": "designated",
+      "titles": [
+        "목동12단지 재건축 GS건설 확정, 공사비 1.8조",
+        "목동12단지 재건축, 두 번 단독 입찰인데 괜찮을까?",
+        "목동12단지 재건축 시공사·공사비·일정 총정리"
+      ],
+      "job_id": "2026-11-24-mokdong12-01",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-24-mokdong12.txt"
+    },
     {
       "slug": "2026-11-23-nov-week4-seoul",
       "report_no": 135,
       "date": "2026-11-23",
       "keyword": "11월 넷째 주 청약 · 전국 15곳 6,295가구(전주 1,681의 3.7배, 수도권 2,904·지방 3,391) · 래미안아이파크 줍줍 23·24일 · 해링턴 플레이스 문래 24일 1순위 84A 18억2,700만 · 경희궁 에피트 26일 1순위 84㎡ 25억7,484만 · 반포124 공고 27일 예정",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "11월 넷째 주 청약 일정, 서울 4곳 날짜순 정리",
         "11월 넷째 주 청약, 18억 문래와 25억 경희궁 어디 넣을까?",
