@@ -1,14 +1,28 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-24T07:00:00+09:00",
+  "updated_at": "2026-11-25T07:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-25-jongbu-nonresident",
+      "report_no": 137,
+      "date": "2026-11-25",
+      "keyword": "종부세 비거주 1주택 · 11/23 부총리 거주·비거주 차등 유지 · 정부안 실거주 14억 비거주 12억(8월 원안 9억은 9/1 철회) · 여당 14억 통일 요구 · 이번 주 조세소위 · 공정시장가액비율 1주택 60→70% · 세부담 상한 150% 유지 · 세액공제 한도 2027 800만 2028 600만",
+      "status": "designated",
+      "titles": [
+        "종부세 비거주 1주택 공제, 14억 확정 아닙니다",
+        "종부세 비거주 1주택, 집 비워 두면 공제 줄어들까?",
+        "종부세 비거주 1주택 공제·일정·공정시장가액비율 총정리"
+      ],
+      "job_id": "2026-11-25-jongbu-nonresident-01",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-25-jongbu-nonresident.txt"
+    },
     {
       "slug": "2026-11-24-mokdong12",
       "report_no": 136,
       "date": "2026-11-24",
       "keyword": "목동12단지 재건축 · 11/22 총회 GS건설 선정 · 두 차례 단독 응찰 뒤 수의계약 · 공사비 약 1조7,887억(3.3㎡당 980만) · 1,860→2,810가구 최고 43층(계획) · 목동 확정 10·13·12단지 · 4단지 재입찰 · 9단지 2027-01-11 마감",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "목동12단지 재건축 GS건설 확정, 공사비 1.8조",
         "목동12단지 재건축, 두 번 단독 입찰인데 괜찮을까?",
