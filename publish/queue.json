@@ -1,14 +1,28 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-25T07:00:00+09:00",
+  "updated_at": "2026-11-25T13:30:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-25-violation-building",
+      "report_no": 138,
+      "date": "2026-11-25",
+      "keyword": "위반건축물 양성화 · 특정건축물 정리에 관한 특별조치법 · 공포 6/16 · 시행 12/17 · 신고 2028-06-16까지 18개월 · 2023-12-31 이전 완공 소규모 주거용 · 단독 165㎡ 다가구 660㎡ · 국토부 추정 약 4만동 · 특집 추가 발행 x1(사용자 지시)",
+      "status": "designated",
+      "titles": [
+        "위반건축물 양성화 12월 17일 시행, 우리 집 해당될까",
+        "위반건축물 양성화, 불법 딱지 붙은 빌라도 될까?",
+        "위반건축물 양성화 대상·신고 절차·과태료 총정리"
+      ],
+      "job_id": "2026-11-25-violation-building-x1",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-25-violation-building.txt"
+    },
     {
       "slug": "2026-11-25-jongbu-nonresident",
       "report_no": 137,
       "date": "2026-11-25",
       "keyword": "종부세 비거주 1주택 · 11/23 부총리 거주·비거주 차등 유지 · 정부안 실거주 14억 비거주 12억(8월 원안 9억은 9/1 철회) · 여당 14억 통일 요구 · 이번 주 조세소위 · 공정시장가액비율 1주택 60→70% · 세부담 상한 150% 유지 · 세액공제 한도 2027 800만 2028 600만",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "종부세 비거주 1주택 공제, 14억 확정 아닙니다",
         "종부세 비거주 1주택, 집 비워 두면 공제 줄어들까?",
