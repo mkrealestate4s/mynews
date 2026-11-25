@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-25-violation-building-x1",
+  "job_id": "2026-11-26-jamsil-raemian-result-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-25T13:30:00+09:00",
+  "requested_at": "2026-11-26T07:00:00+09:00",
   "post": {
-    "report_no": 138,
-    "slug": "2026-11-25-violation-building",
-    "title": "위반건축물 양성화 12월 17일 시행, 우리 집 해당될까",
+    "report_no": 139,
+    "slug": "2026-11-26-jamsil-raemian-result",
+    "title": "잠실 래미안아이파크 줍줍, 3가구에 6만명 몰렸다",
     "title_alts": [
-      "위반건축물 양성화, 불법 딱지 붙은 빌라도 될까?",
-      "위반건축물 양성화 대상·신고 절차·과태료 총정리"
+      "잠실 래미안아이파크 줍줍 당첨 발표 내일, 내 확률은?",
+      "잠실 래미안아이파크 줍줍 경쟁률·당첨 발표·계약 일정 정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-25-violation-building.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-26-jamsil-raemian-result.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/vbl-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/vbl-02-scale.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-02-people.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/vbl-03-when.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-03-price.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/vbl-04-who.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-04-vs2024.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/vbl-05-how.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-05-next.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/vbl-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-06-check.png"
       }
     ],
     "tags": [
-      "위반건축물양성화",
-      "위반건축물",
-      "불법건축물양성화",
-      "특정건축물정리특별조치법",
-      "근생빌라",
-      "이행강제금",
-      "사용승인",
-      "다가구주택",
-      "빌라",
-      "건축물대장"
+      "잠실래미안아이파크줍줍",
+      "잠실래미안아이파크",
+      "줍줍경쟁률",
+      "무순위청약",
+      "로또청약",
+      "계약취소주택",
+      "송파구청약",
+      "신혼부부특별공급",
+      "당첨자발표",
+      "청약홈"
     ]
   }
 }
