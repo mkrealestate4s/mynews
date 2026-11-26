@@ -1,14 +1,28 @@
 {
   "schema": 1,
-  "updated_at": "2026-11-26T07:00:00+09:00",
+  "updated_at": "2026-11-27T07:00:00+09:00",
   "note": "발행 후보 목록(최신이 위). 프로그램은 status가 designated·pending 인 항목 중 로컬 posted.log에 없는 것만 처리하고, 처리 후 slug를 posted.log에 기록한다. title.txt는 designated 항목의 제목 3줄 사본이다. status 어휘: designated=오늘 발행할 글, pending=아직 발행하지 않은 밀린 글, posted=발행 완료(재발행 금지), dropped=발행하지 않기로 결정한 글(dropped_reason 참고). 당일 manifest(job_id)로 발행한 글은 fetch_queue가 slug로 조회해 걸러내지 못하므로, 다음 날 designated를 내릴 때 pending이 아니라 posted로 내린다.",
   "items": [
+    {
+      "slug": "2026-11-27-hanan67-ipark",
+      "report_no": 140,
+      "date": "2026-11-27",
+      "keyword": "하안주공6·7단지 재건축 시공사 IPARK현대산업개발 · 총회 2,092명 중 1,813표(86.7%) · 예정 공사비 1조1,549억 · 2,603→3,240가구 44층 · 5단지(한화 11/18)에 이어 두 번째",
+      "status": "designated",
+      "titles": [
+        "하안주공6·7단지 재건축, 시공사 IPARK현산 찬성 87%",
+        "하안주공6·7단지 시공사 확정, 착공은 언제쯤?",
+        "하안주공6·7단지 재건축 공사비·가구수·남은 일정 정리"
+      ],
+      "job_id": "2026-11-27-hanan67-ipark-01",
+      "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-27-hanan67-ipark.txt"
+    },
     {
       "slug": "2026-11-26-jamsil-raemian-result",
       "report_no": 139,
       "date": "2026-11-26",
       "keyword": "잠실 래미안아이파크 줍줍 경쟁률 · 3가구 6만3,950명 · 59㎡A 3만3,125 · 43㎡ 2만322 · 일반 2가구 5만3,447(2만6,723.5대 1) · 84㎡D 신혼 특공 1만503 · 2024 59㎡A 591.2대 1 · 발표 11/27 · 계약 12/4",
-      "status": "designated",
+      "status": "posted",
       "titles": [
         "잠실 래미안아이파크 줍줍, 3가구에 6만명 몰렸다",
         "잠실 래미안아이파크 줍줍 당첨 발표 내일, 내 확률은?",

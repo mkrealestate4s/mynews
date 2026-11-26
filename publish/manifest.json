@@ -1,57 +1,57 @@
 {
   "schema": 1,
-  "job_id": "2026-11-26-jamsil-raemian-result-01",
+  "job_id": "2026-11-27-hanan67-ipark-01",
   "status": "ready",
   "mode": "draft",
-  "requested_at": "2026-11-26T07:00:00+09:00",
+  "requested_at": "2026-11-27T07:00:00+09:00",
   "post": {
-    "report_no": 139,
-    "slug": "2026-11-26-jamsil-raemian-result",
-    "title": "잠실 래미안아이파크 줍줍, 3가구에 6만명 몰렸다",
+    "report_no": 140,
+    "slug": "2026-11-27-hanan67-ipark",
+    "title": "하안주공6·7단지 재건축, 시공사 IPARK현산 찬성 87%",
     "title_alts": [
-      "잠실 래미안아이파크 줍줍 당첨 발표 내일, 내 확률은?",
-      "잠실 래미안아이파크 줍줍 경쟁률·당첨 발표·계약 일정 정리"
+      "하안주공6·7단지 시공사 확정, 착공은 언제쯤?",
+      "하안주공6·7단지 재건축 공사비·가구수·남은 일정 정리"
     ],
-    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-26-jamsil-raemian-result.txt",
+    "body_url": "https://mkrealestate4s.github.io/mynews/publish/2026-11-27-hanan67-ipark.txt",
     "body_encoding": "utf-8",
     "image_theme": "white",
     "images": [
       {
         "n": 1,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-01-cover.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/h67-01-cover.png"
       },
       {
         "n": 2,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-02-people.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/h67-02-size.png"
       },
       {
         "n": 3,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-03-price.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/h67-03-homes.png"
       },
       {
         "n": 4,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-04-vs2024.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/h67-04-vote.png"
       },
       {
         "n": 5,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-05-next.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/h67-05-next.png"
       },
       {
         "n": 6,
-        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/jrr-06-check.png"
+        "url": "https://mkrealestate4s.github.io/mynews/images/cards/white/h67-06-check.png"
       }
     ],
     "tags": [
-      "잠실래미안아이파크줍줍",
-      "잠실래미안아이파크",
-      "줍줍경쟁률",
-      "무순위청약",
-      "로또청약",
-      "계약취소주택",
-      "송파구청약",
-      "신혼부부특별공급",
-      "당첨자발표",
-      "청약홈"
+      "하안주공6·7단지",
+      "하안주공재건축",
+      "광명재건축",
+      "하안주공",
+      "IPARK현대산업개발",
+      "아이파크",
+      "광명하안동",
+      "신탁방식재건축",
+      "재건축시공사",
+      "광명아파트"
     ]
   }
 }
