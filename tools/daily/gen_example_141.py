@@ -1,0 +1,262 @@
+# -*- coding: utf-8 -*-
+"""리포트 #141 (2026-11-28 토) 송파 아파트값 0.50% 하락 vs 성북 0.33% 상승. #140을 복제해 교체한다.
+
+메인 검색어: 송파 아파트값
+요일 종류: 토요일 구 단위 동네 리포트(일정형). 송파·성북 두 구를 맞대고, 12월에 볼 날짜를 맨 앞에 둔다.
+핫이슈 훑기: 잠실 래미안아이파크 줍줍(당첨 11/27) → #133·#139 로 2편, 2주 규칙 제외. 청약은 이번 주 #135·#139 로 2편이 차서 제외.
+  부동산원 11월 넷째 주(11/23 기준, 11/26 발표) 송파 −0.50%·성북 +0.33%·하락 9곳 → 헤럴드경제·서울경제·알파경제·매일일보·핀포인트뉴스 등 5곳 이상 → 오늘 씀.
+
+수치와 검산
+  사건일과 오늘의 간격: 발표 11/26 → 2일.
+  넷째 주(11/23 기준): 서울 +0.01%, 94주 연속, 전주(0.03%)의 3분의 1 · 하락 구 7 → 9곳(광진·영등포 하락 전환)
+  송파 −0.50%(잠실·문정, 서울 최대 낙폭, 205주 만에 최대) · 둘째 주 −0.35% · 셋째 주 −0.42%
+  성북 +0.33%(정릉·돈암, 서울 1위) · 둘째 주 +0.39%(서울 1위)
+  셋째 주(11/16 기준): 서초 −0.31% · 강남 −0.30% · 용산 −0.02% · 동작 −0.01% (아이뉴스24 11/19)
+  전세(넷째 주): 서울 +0.14%(전주와 같음) · 노원 +0.40% · 성북 +0.27%
+  대시보드 세로 (0.40 → 86): 0.27 → 58.1 · 0.14 → 30.1
+  카드3 가로 (0.50 → 100): 0.42 → 84 · 0.35 → 70
+  예시 계산: 20억 × 0.50% = 1,000만원 · 세 주 단순 합 1.27% × 20억 = 2,540만원 · 10억 × 0.33% = 330만원
+  잠실 래미안아이파크 줍줍 신청 6만3,950명(#139, 이데일리·한국경제 11/24)
+
+단정하지 않은 것
+  · 송파 연속 하락 주수: 매체마다 달라 쓰지 않는다 · 넷째 주 서초·강남 수치: 확인 못 해 셋째 주 값만 쓴다
+  · 다음 주 발표일 12/3: 매주 목요일 발표 관행 기준 '예정' · 토지거래허가구역 연장 여부: 발표 전
+  · 길음 84㎡ 20억: 7월 헤럴드경제 보도, 개별 거래는 실거래가 공개시스템 확인
+"""
+import pathlib
+import re
+
+ROOT = pathlib.Path("/home/user/mynews")
+SRC = ROOT / "posts/2026-11-27-hanan67-ipark.html"
+SLUG, PRE = "2026-11-28-songpa-seongbuk", "spsb"
+DST = ROOT / f"posts/{SLUG}.html"
+NO, DATE = 141, "2026-11-28"
+PREV_SLUG = "hanan67-ipark"
+BANNED = ["하안주공", "IPARK"]
+URL = f"https://mkrealestate4s.github.io/mynews/posts/{SLUG}.html"
+OG = f"https://mkrealestate4s.github.io/mynews/images/cards/report/{PRE}-01-cover.png"
+
+TITLE = "송파 아파트값 0.50% 내릴 때, 성북은 올랐다"
+DESC = ("한국부동산원 11월 넷째 주 조사에서 송파 아파트값은 0.50% 내려 서울에서 가장 많이 떨어졌고, 성북은 0.33% 올라 1위였습니다. "
+        "서울 전체는 0.01% 올랐지만 하락한 구는 9곳으로 늘었습니다. 두 구의 흐름과 12월에 볼 날짜를 정리했습니다.")
+
+HEAD = f'''<title>{TITLE} | 부동산 키워드 리포트</title>
+<meta name="description" content="{DESC}">
+<meta property="og:title" content="{TITLE}">
+<meta property="og:description" content="송파 −0.50%, 성북 +0.33%. 서울은 0.01% 올랐지만 하락한 구는 7곳에서 9곳으로. 12월에 볼 날짜 3개.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="{OG}">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="{URL}">
+<link rel="canonical" href="{URL}">
+<link rel="alternate" type="application/rss+xml" title="부동산 인사이트 RSS" href="../feed.xml">
+<script type="application/ld+json">
+{{"@context":"https://schema.org","@type":"NewsArticle",
+ "headline":"{TITLE}",
+ "description":"{DESC}",
+ "image":"{OG}",
+ "datePublished":"{DATE}","dateModified":"{DATE}",
+ "author":{{"@type":"Organization","name":"부동산 인사이트"}},
+ "publisher":{{"@type":"Organization","name":"부동산 인사이트"}},
+ "mainEntityOfPage":"{URL}","inLanguage":"ko"}}
+</script>'''
+
+HEADER = f'''<header>
+  <div class="eyebrow">2026 · 11월 부동산 키워드 리포트 #{NO}</div>
+  <h1 class="serif gtx" style="font-size:clamp(1.9rem,6.8vw,3.8rem);line-height:1.22">송파는 내리고,<br>성북은 올랐다</h1>
+  <p class="sub">한국부동산원 11월 넷째 주 조사에서 <strong>송파 아파트값</strong>은 0.50% 내려 서울에서 가장 많이 떨어졌습니다. 같은 주 성북은 <strong>0.33%</strong> 올라 서울 1위였습니다. <span class="mark">서울 전체는 0.01% 올랐지만 하락한 구는 9곳으로 늘었습니다.</span></p>
+</header>'''
+
+DASH = '''<section id="dashboard">
+  <h2>오늘의 상위 키워드 대시보드</h2>
+  <div class="grid">
+    <div class="kcard"><div class="hot">HOT · 11/26 발표</div><div class="kw">송파 −0.50%</div>
+      <p>서울 25개 구 중 <strong>가장 큰 하락</strong>.</p></div>
+    <div class="kcard"><div class="hot">상승 1위</div><div class="kw">성북 +0.33%</div>
+      <p>정릉·돈암동이 <strong>끌어올렸다</strong>.</p></div>
+    <div class="kcard"><div class="hot">서울 전체</div><div class="kw">+0.01%</div>
+      <p>94주째 상승, 전주의 <strong>3분의 1</strong>.</p></div>
+    <div class="kcard"><div class="hot">하락한 구</div><div class="kw">9곳</div>
+      <p>전주 7곳에서 <strong>광진·영등포</strong> 추가.</p></div>
+  </div>
+
+  <div class="colchart">
+    <h3>11월 넷째 주 아파트 전셋값 변동률 (%)</h3>
+    <span class="badge">전세는 강북이 더 올랐다</span>
+    <div class="cols">
+      <div class="col"><div class="v gtx" style="--h:86%">+0.40</div><div class="barv" style="--h:86%"></div></div>
+      <div class="col"><div class="v gtx" style="--h:58.1%">+0.27</div><div class="barv" style="--h:58.1%"></div></div>
+      <div class="col dim"><div class="v" style="--h:30.1%">+0.14</div><div class="barv" style="--h:30.1%"></div></div>
+    </div>
+    <div class="collbl"><span>노원</span><span>성북</span><span>서울 평균</span></div>
+    <p class="cap">한국부동산원 주간 아파트가격 동향(2026년 11월 23일 기준, 11월 26일 발표) 보도 기준입니다. 막대 길이는 최댓값 0.40%를 기준으로 맞췄습니다.</p>
+  </div>
+</section>'''
+
+CARDNAMES = [
+    ("01-cover", "표지: 송파 아파트값 0.50% 하락, 성북은 상승"),
+    ("02-dates", "송파·성북, 12월에 볼 날짜 3개"),
+    ("03-songpa", "송파, 3주째 하락폭이 커졌다"),
+    ("04-seongbuk", "성북, 서울 25개 구 중 1위"),
+    ("05-jeonse", "전세는 노원·성북이 더 올랐다"),
+    ("06-check", "송파·성북 집 보러 가기 전 3가지"),
+]
+
+imgs = "\n".join(
+    f'    <img class="card-art" data-file="{PRE}-{n}.png" src="../images/cards/report/{PRE}-{n}.png"'
+    f' alt="카드뉴스 {i}/6 · {d}" loading="lazy" width="1080" height="1080">'
+    for i, (n, d) in enumerate(CARDNAMES, 1))
+CARDS = f'''<section id="cards">
+  <h2>카드뉴스로 한눈에</h2>
+  <p class="cards-hint">옆으로 넘기며 핵심만. 이미지를 저장해 활용하셔도 좋습니다.</p>
+  <div class="ilabel"><span class="s">현재 테마의 카드 6장</span><button class="allbtn" type="button" data-all="theme" data-fn="cards" data-count="6">⬇ 6장 전체 저장</button></div>
+  <div class="cards">
+{imgs}
+  </div>
+</section>'''
+
+ARTICLE = '''<article data-tags="송파 아파트값,성북 아파트값,송파구아파트,성북구아파트,잠실아파트,정릉동,서울아파트값,부동산원주간동향,노원전세,서울전세">
+  <h2>송파 아파트값 0.50% 내릴 때, 성북은 올랐다</h2>
+  <div class="copybar">
+    <button class="cbtn" id="copyBody">📋 블로그용 본문 복사</button>
+    <button class="cbtn" id="copyLink">🔗 링크 복사</button>
+  </div>
+  <span class="imgslot" hidden data-img="카드뉴스 1번 · 표지: 송파 아파트값 0.50% 하락, 성북은 상승"></span>
+
+  <p><strong>3줄 요약</strong><br>한국부동산원 11월 넷째 주 조사에서 송파 아파트값은 0.50% 내려 서울 25개 구 가운데 가장 많이 떨어졌습니다.<br>같은 주 성북은 0.33% 올라 서울 1위였고, 전셋값은 노원 0.40%, 성북 0.27%로 강북이 더 올랐습니다.<br>서울 전체는 0.01% 올라 94주째 상승을 이어 갔지만 하락한 구는 7곳에서 9곳으로 늘었습니다.</p>
+
+  <p>송파 아파트값이 3주째 더 크게 떨어지고 있습니다. 한국부동산원이 11월 26일 발표한 주간 아파트가격 동향(23일 기준)에서 송파구는 0.50% 내려 서울에서 낙폭이 가장 컸습니다. 잠실동과 문정동 주요 단지가 하락을 이끌었고, 일부 매체는 205주, 약 4년 만의 최대 낙폭이라고 전했습니다. <span class="mark">같은 주 성북구는 0.33% 올라 서울 25개 구 가운데 상승률 1위였습니다.</span></p>
+
+  <h3>송파 아파트값, 12월에 볼 날짜 3개</h3>
+  <div class="chart" data-img="카드뉴스 2번 · 송파·성북, 12월에 볼 날짜 3개">
+    <h3>송파·성북 12월 달력</h3>
+    <h4>부동산원 다음 주간 발표</h4>
+    <div class="statrow"><span class="big" style="white-space:nowrap">12월 3일</span>
+      <span class="desc">매주 목요일 발표, 11월 30일 기준 수치.</span></div>
+    <h4>잠실 래미안아이파크 줍줍 계약</h4>
+    <div class="statrow"><span class="big" style="white-space:nowrap">12월 4일</span>
+      <span class="desc">3가구에 6만3,950명이 신청했던 단지.</span></div>
+    <h4>토지거래허가구역 지정 기한</h4>
+    <div class="statrow"><span class="big gtx" style="white-space:nowrap">12월 31일</span>
+      <span class="desc">연장 여부는 아직 발표 전.</span></div>
+    <p class="cap">발표일은 부동산원이 매주 목요일 공개해 온 관행 기준 예정일입니다. 계약일은 잠실 래미안아이파크 무순위 공고 기준, 토지거래허가구역 기한은 서울시 지정 공고 기준입니다.</p>
+  </div>
+  <p>결론부터 말하면 12월 첫 주 두 개의 날짜가 송파 분위기를 가늠하는 잣대가 됩니다. 12월 3일 부동산원 발표에서 송파 낙폭이 0.50%보다 커지는지 줄어드는지가 첫째입니다. 하락폭이 세 주 연속 커진 뒤라 네 번째 주에 방향이 바뀌는지가 관심입니다.</p>
+  <p>둘째는 12월 4일 잠실 래미안아이파크 무순위 계약입니다. 같은 송파에서 아파트값이 떨어지는 동안에도 분양가로 나온 3가구에는 6만3,950명이 몰렸습니다. 시세보다 한참 싼 물건에는 여전히 사람이 몰리고, 시세대로 사야 하는 기존 아파트에서는 매수자가 가격이 더 내려오기를 기다리는 셈입니다.</p>
+  <p>셋째는 연말입니다. 서울 토지거래허가구역 지정 기한이 12월 31일인데, 연장할지는 아직 발표되지 않았습니다. 허가구역에서는 실거주 목적이 아니면 집을 사기 어렵기 때문에, 연장 여부가 내년 초 매수 수요를 가르는 변수로 꼽힙니다. 2025년 10·15 대책으로 서울 25개 구 전체가 허가구역으로 묶였기 때문에 송파뿐 아니라 성북도 이 발표에서 예외가 아닙니다.</p>
+
+  <h3>송파 아파트값 0.35 → 0.42 → 0.50%, 3주째 하락폭이 커졌다</h3>
+  <div class="chart" data-img="카드뉴스 3번 · 송파, 3주째 하락폭이 커졌다">
+    <h3>송파구 아파트 매매가격 주간 하락률 (%)</h3>
+    <div class="bar"><label>11/9 기준</label>
+      <div class="rail"><div class="fill gray" style="width:70%">−0.35</div></div></div>
+    <div class="bar"><label>11/16 기준</label>
+      <div class="rail"><div class="fill gray" style="width:84%">−0.42</div></div></div>
+    <div class="bar"><label>11/23 기준</label>
+      <div class="rail"><div class="fill" style="width:100%">−0.50</div></div></div>
+    <p class="cap">한국부동산원 주간 아파트가격 동향 보도 기준입니다. 막대 길이는 하락폭 최댓값 0.50%를 기준으로 맞췄습니다.</p>
+  </div>
+  <p>송파는 둘째 주 0.35%, 셋째 주 0.42%, 넷째 주 0.50%로 하락폭이 매주 커졌습니다. 셋째 주에는 서초 0.31%, 강남 0.30% 하락과 함께 강남3구가 나란히 낙폭을 키웠고, 이 흐름이 용산과 동작, 이번 주에는 광진과 영등포로 번졌습니다.</p>
+  <p>숫자로 감을 잡아 보겠습니다. 20억원짜리 아파트라면 0.50%는 한 주에 1,000만원입니다. 세 주를 단순히 더하면 1.27%, 20억원 기준으로 약 2,540만원이 빠진 셈입니다. 다만 주간 동향은 표본 단지의 호가와 거래를 바탕으로 낸 지수라 내 집 값이 정확히 그만큼 움직였다는 뜻은 아닙니다.</p>
+  <p>자주 헷갈리는 점이 하나 있습니다. 송파가 떨어진다고 서울 전체가 떨어지는 건 아닙니다. 같은 주 서울 평균은 0.01% 올라 94주째 상승을 이어 갔습니다. 다만 전주 0.03%의 3분의 1 수준이라 보합에 거의 닿았고, 하락한 구가 7곳에서 9곳으로 늘었습니다.</p>
+  <p>송파 하락을 두고는 대출 한도와 토지거래허가가 겹쳐 고가 아파트를 살 수 있는 사람이 줄었다는 분석이 많습니다. 수도권 규제지역에서 주택담보대출 한도는 시가 15억원 이하 6억원, 25억원 초과 2억원입니다. 잠실 대단지 84㎡처럼 20억원을 넘는 아파트는 대부분 현금이 많아야 살 수 있다는 얘기입니다.</p>
+  <p>누가 영향을 받는지 보면, 송파 집을 팔고 다른 집으로 옮기려던 1주택자가 먼저입니다. 내 집 값이 주마다 내려가는 동안 사려는 쪽 집값도 같이 움직이므로, 파는 날과 사는 날이 몇 주만 벌어져도 계산이 달라집니다. 반대로 송파에 처음 들어가려는 무주택자에게는 급하게 정할 이유가 줄어든 셈입니다. 하락폭이 커지는 동안에는 호가와 실제 거래 가격의 차이도 벌어지기 쉬워, 매물 가격만 보고 판단하기 어렵습니다.</p>
+
+  <h3>성북 아파트값, 서울 25개 구 중 1위</h3>
+  <div class="chart" data-img="카드뉴스 4번 · 성북, 서울 25개 구 중 1위">
+    <h3>성북구 아파트값 (보도 기준)</h3>
+    <h4>11월 넷째 주 매매</h4>
+    <div class="statrow"><span class="big gtx" style="white-space:nowrap">+0.33%</span>
+      <span class="desc">서울 1위, 정릉·돈암동 위주.</span></div>
+    <h4>11월 둘째 주 매매</h4>
+    <div class="statrow"><span class="big" style="white-space:nowrap">+0.39%</span>
+      <span class="desc">이때도 서울 1위.</span></div>
+    <h4>길음 84㎡</h4>
+    <div class="statrow"><span class="big" style="white-space:nowrap">20억</span>
+      <span class="desc">7월 국평 20억 돌파 보도.</span></div>
+    <p class="cap">한국부동산원 주간 동향(11월 9일·23일 기준)과 헤럴드경제(2026년 7월) 보도 기준입니다. 개별 거래는 국토부 실거래가 공개시스템에서 확인하십시오.</p>
+  </div>
+  <p>성북은 반대로 움직였습니다. 넷째 주 0.33%로 서울 상승률 1위였고, 둘째 주에도 0.39%로 1위였습니다. 정릉동과 돈암동 단지가 오름세를 이끌었다고 부동산원은 설명했습니다. 송파와 성북의 차이는 한 주에 0.83%포인트입니다.</p>
+  <p>10억원짜리 성북 아파트라면 0.33%는 한 주에 330만원입니다. 송파 20억원 아파트가 1,000만원 빠지는 동안 성북 10억원 아파트는 330만원 오른 셈입니다. 대출 한도 6억원 안쪽에서 살 수 있는 가격대라 실수요가 이쪽으로 옮겨 왔다는 해석이 나옵니다.</p>
+  <p>성북 안에서도 가격대는 넓습니다. 길음뉴타운은 7월에 84㎡가 20억원을 넘었다는 보도가 나왔고, 정릉동은 59㎡ 8억원대 거래가 이어지는 곳입니다. 같은 성북이라도 길음과 정릉은 대출 한도 구간이 다르므로, 오른다는 소식만 보고 판단하지 말고 단지별 실거래를 따로 봐야 합니다.</p>
+  <p>성북만의 일도 아닙니다. 파이낸셜뉴스는 11월 26일 정릉동 59㎡ 신고가 거래를 전하면서 노원·도봉·강북과 금천·관악·구로 등 서울 외곽 중저가 지역에서도 신고가가 이어지고 있다고 보도했습니다. 강남3구와 한강변이 내리는 동안 대출 한도 안쪽 가격대의 외곽 지역이 오르는 그림이 몇 주째 반복되고 있습니다. 다만 외곽도 거래량 자체가 많지는 않아서, 한두 건의 신고가가 지수를 끌어올리는 경우가 있다는 점은 감안해야 합니다.</p>
+
+  <h3>서울 9개 구 하락, 전세는 노원·성북이 더 올랐다</h3>
+  <span class="imgslot" hidden data-img="카드뉴스 5번 · 전세는 노원·성북이 더 올랐다"></span>
+  <p>전셋값은 매매와 다르게 움직였습니다. 넷째 주 서울 아파트 전셋값은 0.14% 올라 전주와 같았고, 노원 0.40%, 성북 0.27%로 강북권이 두드러졌습니다. 매매가 멈칫하는 동안 전세는 계속 오르고 있다는 뜻입니다.</p>
+  <p>매매 쪽에서 하락한 구가 9곳으로 늘었다는 점도 같이 봐야 합니다. 셋째 주에 용산과 동작이 하락으로 돌아섰고, 넷째 주에는 광진과 영등포가 더해졌습니다. 강남3구에서 시작한 하락이 한강변 구로 번지는 모양새입니다. 반면 같은 기간 전셋값은 서울 평균으로 매주 0.14% 안팎씩 오르고 있어, 매매와 전세가 반대로 움직이는 구가 늘고 있습니다.</p>
+  <p>누가 영향을 받는지 보면, 내년 봄 전세 만기를 앞둔 강북 세입자가 가장 먼저입니다. 5억원 전세라면 0.40%는 한 주에 200만원입니다. 갱신청구권을 쓰면 인상률이 5% 이내로 묶이지만, 새 집을 구할 때는 오른 시세를 그대로 맞닥뜨립니다. 전셋값이 오르면 차라리 사자는 수요도 함께 늘어, 성북 매매 상승을 받쳐 주는 힘이 되기도 합니다.</p>
+  <p>다음에 열릴 숫자는 12월 중순 국토부 실거래 11월 확정치입니다. 주간 동향이 표본 지수라면, 실거래 확정치는 실제로 몇 건이 얼마에 팔렸는지를 보여 줍니다. 송파 하락과 성북 상승이 실제 거래 가격에서도 같은 방향인지 그때 다시 확인할 수 있습니다.</p>
+
+  <h3>송파·성북 집 보러 가기 전 3가지</h3>
+  <figure class="cardimg" data-img="카드뉴스 6번 · 송파·성북 집 보러 가기 전 3가지 (체크리스트)">
+    <img class="card-art" data-file="spsb-06-check.png" src="../images/cards/report/spsb-06-check.png" alt="체크포인트 카드 · 1. 주간 지수와 실거래는 다르다, 2. 대출 한도 구간, 3. 12월 날짜" loading="lazy" width="1080" height="1080">
+    <figcaption>송파·성북 아파트를 보기 전에 확인할 3가지. 저장해 두고 보세요.</figcaption>
+  </figure>
+  <ol class="check">
+    <li><strong>주간 지수와 실거래는 다르다</strong>. 0.50%와 0.33%는 표본 지수입니다. 관심 단지는 실거래가 공개시스템에서 최근 거래를 보십시오.</li>
+    <li><strong>대출 한도 구간</strong>. 시가 15억원 이하 6억원, 25억원 초과 2억원입니다. 같은 구라도 단지마다 구간이 다릅니다.</li>
+    <li><strong>12월 날짜</strong>. 12월 3일 다음 주간 발표, 12월 31일 토지거래허가구역 기한을 달력에 적어 두십시오.</li>
+  </ol>
+
+  <h3>정리</h3>
+  <p><strong>송파 아파트값</strong>은 11월 넷째 주 0.50% 내려 3주째 하락폭이 커졌고, 성북은 0.33% 올라 서울 1위였습니다. 서울 전체는 0.01%로 보합에 가까워졌고 하락한 구는 9곳으로 늘었습니다. <span class="mark">비싼 강남권은 내리고 대출 한도 안쪽의 강북은 오르는 흐름이 이번 주에도 이어졌습니다.</span> 12월 3일 발표와 연말 토지거래허가구역 연장 여부가 다음 방향을 가를 날짜입니다.</p>
+
+  <div class="note">※ 본 페이지는 정보 제공 목적이며, 투자 권유가 아닙니다. 주간 변동률은 한국부동산원 표본 지수로 개별 단지 가격과 다를 수 있습니다. 12월 3일 발표일은 관행 기준 예정일이며, 토지거래허가구역 연장 여부는 발표 전입니다. 개별 거래는 국토부 실거래가 공개시스템에서 확인하십시오.</div>
+</article>'''
+
+FOOTER = f'''<footer>
+  참고 자료: 한국부동산원 주간 아파트가격 동향(2026-11-23 기준) · 헤럴드경제·서울경제·알파경제·매일일보·핀포인트뉴스 11월 넷째 주 동향(2026-11-26~27) · 아이뉴스24 11월 둘째·셋째 주 동향(2026-11-12·19) · 이데일리·한국경제 잠실 래미안아이파크 무순위 경쟁률(2026-11-24) · 헤럴드경제 길음 국평 20억(2026-07)<br>
+  © 2026 부동산 인사이트 · 데이터 기준일 {DATE} · <a href="../index.html">← 홈으로</a>
+</footer>'''
+
+for _p in sorted((ROOT / "posts").glob("*.html")):
+    if _p.name != DST.name and f"{PRE}-01-cover.png" in _p.read_text(encoding="utf-8"):
+        raise SystemExit(f"접두어 {PRE} 를 {_p.name} 이 이미 쓰고 있다.")
+
+src = SRC.read_text(encoding="utf-8")
+
+
+def cut(text, start, end, block):
+    a = text.index(start)
+    b = text.index(end, a) + len(end)
+    return text[:a] + block + text[b:]
+
+
+out = cut(src, "<title>", "</script>", HEAD)
+out = cut(out, "<header>", "</header>", HEADER)
+out = cut(out, '<section id="dashboard">', "</section>", DASH)
+out = cut(out, '<section id="cards">', "</section>", CARDS)
+out = cut(out, "<article ", "</article>", ARTICLE)
+out = cut(out, "<footer>", "</footer>", FOOTER)
+out = re.sub(r'<div class="trace"></div>\n\n<section id="insta".*?</section>\n\n<footer>',
+             '<div class="trace"></div>\n\n<footer>', out, count=1, flags=re.S)
+
+assert PREV_SLUG not in out
+for _b in BANNED:
+    assert _b not in out, _b
+assert out.count(f"리포트 #{NO}") == 1
+assert f"데이터 기준일 {DATE}" in out
+assert '</article>\n\n<div class="trace"></div>\n\n<footer>' in out
+assert out.count("<script") == out.count("</script>")
+for _m in re.finditer(r'<span class="imgslot"[^>]*>', out):
+    assert out[_m.end():_m.end() + 7] == "</span>"
+assert "—" not in out
+assert 'rel="icon"' in out
+assert out.count('data-all="theme"') == 1
+for v, h in ((0.27, 58.1), (0.14, 30.1)):
+    assert round(v / 0.40 * 86, 1) == h
+assert round(0.42 / 0.50 * 100) == 84 and round(0.35 / 0.50 * 100) == 70
+assert round(0.35 + 0.42 + 0.50, 2) == 1.27 and 20e8 * 0.0127 == 2540e4
+KW = "송파 아파트값"
+art0 = out[out.index("<article "):out.index("</article>")]
+assert TITLE.startswith(KW)
+assert sum(1 for h in re.findall(r"<h3>(.*?)</h3>", art0) if KW in h) >= 2
+assert KW in re.sub(r"<[^>]+>", "", art0.split("<p>", 2)[2].split("</p>", 1)[0])[:40]
+assert art0.split('data-tags="', 1)[1].startswith(KW)
+slots = (art0.count('class="chart"') + art0.count('class="colchart"') + art0.count("<figure") + art0.count('class="imgslot"'))
+assert slots == 6, slots
+nums = sorted(int(m) for m in re.findall(r'data-img="카드뉴스 (\d+)번', art0))
+assert nums == [1, 2, 3, 4, 5, 6], nums
+DST.write_text(out, encoding="utf-8")
+print(f"{DST.name} · img {out.count('<img')} · 줄표 0")
